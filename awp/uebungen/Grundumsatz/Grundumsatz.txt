@@ -26,6 +26,12 @@ Aufgabenstellung
 Schreibe ein Programm, welches den Grundumsatz nach der Harris-Benedict-Formel be-
 rechnet und die Ergebnisse für beide Geschlechter in der Konsole ausgibt.
 
+Erstellen Sie dazu zunächst ein Formular, welches die notwendigen Daten erfragt 
+und an eine php-Seite zur Weiterverarbeitung sendet.
+
+Berechnen Sie innerhalb dieser Datei das jeweilige Ergebnis und geben Sie es per 
+echo()-Anweisung aus. 
+
 Testfälle
 ---------
 
