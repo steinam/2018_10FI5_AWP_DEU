@@ -1,0 +1,38 @@
+<!Doctype <!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>HTML DOM MANIPULATION</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+  <h1>HTML DOM MANIPULATION</h1>
+  <form id="form">
+    Vorname:
+    <input type="text"><br>
+    Nachname:
+    <input type="text"><br>
+    Alter:
+    <input type="number"><br>
+    Personen hinzufügen:<br>
+  </form>  
+    <span>Felder hinzufügen:</span>
+    <button onclick="increase()">+</button>
+    <button onclick="decrease()">-</button>
+  <script>
+    var container = document.getElementById("form");
+    function increase() {
+      var input = document.createElement("input");
+      input.type = "text";
+      input.name = "member";
+      container.appendChild(input);
+      container.appendChild(document.createElement("br"));
+    }
+    function decrease() {
+      container.removeChild(container.lastChild);
+      container.removeChild(container.lastChild);
+    }
+  </script>
+</body>
+</html>
