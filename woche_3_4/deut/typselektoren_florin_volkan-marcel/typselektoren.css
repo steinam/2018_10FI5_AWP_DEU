@@ -1,0 +1,22 @@
+body {
+    border: 3px solid red;
+}
+
+h1 {
+  color: blue;
+  /*border: 3px solid red; */
+  border: inherit;   /*Inherit: Hole das Format von dem ÜBERGEORDNETEN Parent-tag */ 
+}
+
+p {
+  color: red; 
+
+}
+
+span{
+  color: gray;  
+}
+
+b {
+  color: yellow;
+}
