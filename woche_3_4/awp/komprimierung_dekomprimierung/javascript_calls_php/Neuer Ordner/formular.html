@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="de">
+    <head>
+        <meta charset='utf-8'>
+        <title>cool titel</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"/>
+        <link rel="stylesheet" href="style.css">
+
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+        <script>
+            $(document).ready(function() {
+                $('#comp-input-btn').click(function(e) {
+                    e.preventDefault();
+                    var dataToken = "type=comp&value=" + $('#comp-input').val();
+                    $.ajax({
+                        type: 'POST',
+                        url: 'compromise.php',
+                        data: dataToken,
+                        success: function(data) {
+                            document.getElementById('output').value = data;
+                        }
+                    });
+                });
+
+                $('#decomp-input-btn').click(function(e) {
+                    e.preventDefault();
+                    var dataToken = "type=decomp&value=" + $('#decomp-input').val();
+                    $.ajax({
+                        type: 'POST',
+                        url: 'compromise.php',
+                        data: dataToken,
+                        success: function(data) {
+                            document.getElementById('output').value = data;
+                        }
+                    });
+                });
+            });
+        </script>
+    </head>
+
+    <body>
+
+        <div>
+            <div class="form-group">
+                <input id="comp-input" type="text" class="form-control" placeholder="Enter string to compromise">
+                <button id="comp-input-btn" type="button" class="btn btn-primary" >Komprimieren</button>
+            </div>
+
+            <div class="form-group">
+                <input id="decomp-input" type="text" class="form-control" placeholder="Enter string to decompromise">
+                <button id="decomp-input-btn" type="button" class="btn btn-primary">Dekomprimieren</button>
+            </div>
+
+            <div class="form-group">
+                <input id="output" type="text" class="form-control" disabled/>
+            </div>
+        </div>
+    
+    </body>
+
+</html>
