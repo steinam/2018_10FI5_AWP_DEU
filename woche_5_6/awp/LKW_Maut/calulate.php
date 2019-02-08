@@ -1,6 +1,6 @@
 <?php
 
-function calcTaxes($Schadstoffklasse="A", $km=0,  $Achsen=3): float
+function calcTaxes($Schadstoffklasse="A", $km=0,  $Achsen=3): double
 {
 
     if($Achsen <=3)
