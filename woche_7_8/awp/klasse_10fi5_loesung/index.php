@@ -1,10 +1,6 @@
 <?php
 
 
-    //require_once(__DIR__ . '/src/cd.php');
-    //require_once(__DIR__ . '/src/dvd.php');
-
-
     function autoload($className){
 
         $className = str_replace("\\","/", $className);
@@ -15,31 +11,27 @@
         }
     }
 
-
     spl_autoload_register("autoload");
 
-    $dire = new cd("Pink Floyd", 10, "Wish you were here", 50, false, "cool");
-    $f = new cd("sss",3, "jdjdjd", 5, true,"hfdhfh");
-    $f->setComment2("helll");
-    //var_dump($f->getTitle());
-    //$f->comment = "geht nicht";
+$direstraits = new cd("Dire", 10, "Mountain of Swings", 60, true, "Coole Musik");
+$steinam = new mensch();
 
 
-    $terminator = new dvd("One to kill them all", "Terminator", 200, true, "best film ever");
-    var_dump($terminator->print());
+//wir erwarten ein Objekt, dass die Anforderungen des iprintable-Interfaces erfüllt
+//wir können uns deshalb darauf verlassen, dass das Obejkt eine print()-Methode hat
+//im Beispiek akzeptiert es deshalb cd und mensch-Objekte
+function printDetails(iprintable $thing)
+{
+    return $thing->print();
 
-    function printMedia(items $media)
-    {
-        var_dump($media->print());
+}
 
+//printDetails nimmt eine cd
+var_dump(printDetails($direstraits));
 
-    }
-
-    printMedia($dire);
-    printMedia($terminator);
-
-    $f->play();
-
-    var_dump($terminator->play());
+//printDetails nimmt auch gerne Menschen
+var_dump(printDetails($steinam));
 
 
+
+//var_dump($direstraits);

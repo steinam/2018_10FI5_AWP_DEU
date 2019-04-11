@@ -1,37 +1,30 @@
 <?php
 
+//hier muss jetzt nicht da sInterface implementiert werden, weil es
+//die Oberklasse items schon getan hat
 class cd extends items
 {
     private $artist;
     private $numberOfTracks;
 
-
-    public function __construct(string $a, int $n, string $t, int $p, bool $g, string $c  )
+    public function __construct(string $a, int $n, string $title,  int $playTime, bool $got, string $comment)
     {
         $this->artist = $a;
         $this->numberOfTracks = $n;
-        parent::__construct($t, $p, $c, $g);
+        parent::__construct($title, $playTime, $comment, $got);
     }
 
-    public function setComment2(string $c)
+    public function getTitle():string
     {
-        $this->comment = $c;
-
+        return $this->title;
     }
 
 
     public function print():string
     {
-        return parent::print() . ", " . $this->artist . ", " . $this->numberOfTracks;
-
+        //das war in der Schule der Fehler, da parent eine Methode ansprach
+        //die es in der Oberklasse nicht gab
+        return parent::print2() . ", " . $this->artist . ", " . $this->numberOfTracks;
     }
-
-    function play():string
-    {
-
-        return"Ich spiele die CD";
-
-    }
-
 
 }

@@ -1,7 +1,9 @@
 <?php
 
-                     //astract class doesn*t know the subclasses will be played
-abstract class items implements ipayable {
+//implements zwingt alle Klassen, eine Methode zu implementieren
+//ansonsten kann kein Objekt erzeugt werden
+//wenn die Klasse items dies nicht umsetzt, müssen es halt die Unterklassen tun
+abstract class items implements iprintable{
 
     protected $title;
     protected $playingTime;
@@ -14,26 +16,15 @@ abstract class items implements ipayable {
         $this->playingTime = $p;
         $this->comment = $c;
         $this->gotIt = $g;
-
     }
 
-    public function getTitle():string
+    public function print2():string
     {
-        return $this->title;
+
+            return $this->title . ", " . $this->comment;
+
     }
-
-    public function setComment(string $c)
-    {
-        $this->comment = $c;
-    }
-
-    //Überschreiben einer Methode der Oberklasse
-    //public abstract function print():string
-    //{
-     //   //return $this->getTitle() . ", " . $this->comment;
-
-    //}
-
-    public abstract function print():string;
-    
 }
+
+
+
