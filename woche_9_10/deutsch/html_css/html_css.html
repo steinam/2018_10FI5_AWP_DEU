@@ -1,0 +1,2658 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>Die Grundlagen von CSS &#8212; Runestone Interactive Overview</title>
+    <link rel="stylesheet" href="_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-3.0.0/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="_static/presenter_mode.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/accessibility.css?v=808B982A" />
+    <link rel="stylesheet" type="text/css" href="_static/activecode.css?v=F471F95B" />
+    <link rel="stylesheet" type="text/css" href="_static/codemirror.css?v=1CE53237" />
+    <link rel="stylesheet" type="text/css" href="_static/clickable.css?v=58C4E18A" />
+    <link rel="stylesheet" type="text/css" href="_static/pytutor.css?v=239FC54E" />
+    <link rel="stylesheet" type="text/css" href="_static/modal-basic.css?v=8A1A42E4" />
+    <link rel="stylesheet" type="text/css" href="_static/datafile.css?v=C184EB8A" />
+    <link rel="stylesheet" type="text/css" href="_static/dragndrop.css?v=B9BAA0D1" />
+    <link rel="stylesheet" type="text/css" href="_static/fitb.css?v=3BA0E63E" />
+    <link rel="stylesheet" type="text/css" href="_static/matrixeq.css?v=58BC228F" />
+    <link rel="stylesheet" type="text/css" href="_static/parsons.css?v=2F3E13EE" />
+    <link rel="stylesheet" type="text/css" href="_static/js_lib/prettify.css?v=2A364B6B" />
+    <link rel="stylesheet" type="text/css" href="_static/poll.css?v=E220AC33" />
+    <link rel="stylesheet" type="text/css" href="_static/reveal.css?v=4A81D381" />
+    <link rel="stylesheet" type="text/css" href="_static/showEval.css?v=C6382F3" />
+    <link rel="stylesheet" type="text/css" href="_static/tabbedstuff.css?v=424F1CC9" />
+    <link rel="stylesheet" type="text/css" href="_static/video.css?v=E5385B3B" />
+    <link rel="stylesheet" type="text/css" href="_static/webgldemo.css?v=B36B48D" />
+    <link rel="stylesheet" type="text/css" href="_static/webglinteractive.css?v=910DF1E1" />
+    <link rel="stylesheet" href="_static/jquery-ui-1.10.3.custom.min.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-sphinx.css" type="text/css" />
+    <link rel="stylesheet" href="_static/user-highlights.css" type="text/css" />
+    <link rel="stylesheet" href="_static/runestone-custom-sphinx-bootstrap.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/runestonebase.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/language_data.js"></script>
+    <script type="text/javascript" src="_static/jquery.highlight.js?v=F1C496C8"></script>
+    <script type="text/javascript" src="_static/bookfuncs.js?v=21EFC8E1"></script>
+    <script type="text/javascript" src="_static/codemirror.js?v=94F552C9"></script>
+    <script type="text/javascript" src="_static/xml.js?v=236EDFF7"></script>
+    <script type="text/javascript" src="_static/css.js?v=623153CE"></script>
+    <script type="text/javascript" src="_static/python.js?v=14A28F1F"></script>
+    <script type="text/javascript" src="_static/htmlmixed.js?v=33B91944"></script>
+    <script type="text/javascript" src="_static/javascript.js?v=6F38CA04"></script>
+    <script type="text/javascript" src="_static/jquery_i18n/CLDRPluralRuleParser.js?v=599B42B0"></script>
+    <script type="text/javascript" src="_static/jquery_i18n/jquery.i18n.js?v=88A1430F"></script>
+    <script type="text/javascript" src="_static/jquery_i18n/jquery.i18n.messagestore.js?v=AE15A4A1"></script>
+    <script type="text/javascript" src="_static/jquery_i18n/jquery.i18n.fallbacks.js?v=8ABDFE7F"></script>
+    <script type="text/javascript" src="_static/jquery_i18n/jquery.i18n.language.js?v=747279FF"></script>
+    <script type="text/javascript" src="_static/jquery_i18n/jquery.i18n.parser.js?v=7B020E13"></script>
+    <script type="text/javascript" src="_static/jquery_i18n/jquery.i18n.emitter.js?v=660E85C3"></script>
+    <script type="text/javascript" src="_static/jquery_i18n/jquery.i18n.emitter.bidi.js?v=54B21948"></script>
+    <script type="text/javascript" src="_static/activecode-i18n.en.js?v=3FBAE230"></script>
+    <script type="text/javascript" src="_static/skulpt.min.js?v=DC7AC815"></script>
+    <script type="text/javascript" src="_static/skulpt-stdlib.js?v=48A5D93E"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega@4.0.0-rc.2/build/vega.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega-lite@2.5.0/build/vega-lite.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega-embed@3.14.0/build/vega-embed.js"></script>
+    <script type="text/javascript" src="_static/activecode.js?v=9FA573E1"></script>
+    <script type="text/javascript" src="_static/clike.js?v=2DCE0756"></script>
+    <script type="text/javascript" src="_static/timed_activecode.js?v=5150FA78"></script>
+    <script type="text/javascript" src="_static/animationbase.js?v=A043C3A7"></script>
+    <script type="text/javascript" src="_static/mchoice.js?v=8329CA55"></script>
+    <script type="text/javascript" src="_static/timedmc.js?v=B010A457"></script>
+    <script type="text/javascript" src="_static/timed.js?v=6789FE30"></script>
+    <script type="text/javascript" src="_static/clickable.js?v=9560E65E"></script>
+    <script type="text/javascript" src="_static/timedclickable.js?v=93989C23"></script>
+    <script type="text/javascript" src="_static/d3.v2.min.js?v=836E01C"></script>
+    <script type="text/javascript" src="_static/jquery.ba-bbq.min.js?v=B64CF0A8"></script>
+    <script type="text/javascript" src="_static/jquery.jsPlumb-1.3.10-all-min.js?v=42F9EBEA"></script>
+    <script type="text/javascript" src="_static/pytutor.js?v=82B022B9"></script>
+    <script type="text/javascript" src="_static/codelens.js?v=CABECD49"></script>
+    <script type="text/javascript" src="_static/datafile.js?v=3ED1A80C"></script>
+    <script type="text/javascript" src="_static/dragndrop.js?v=2B6403E8"></script>
+    <script type="text/javascript" src="_static/timeddnd.js?v=378F237E"></script>
+    <script type="text/javascript" src="_static/fitb.js?v=8E40E713"></script>
+    <script type="text/javascript" src="_static/timedfitb.js?v=2AA17071"></script>
+    <script type="text/javascript" src="_static/matrixeq.js?v=D64CFA5A"></script>
+    <script type="text/javascript" src="_static/js_lib/prettify.js?v=CA7E8928"></script>
+    <script type="text/javascript" src="_static/js_lib/hammer.min.js?v=73056367"></script>
+    <script type="text/javascript" src="_static/parsons.js?v=93EFFF39"></script>
+    <script type="text/javascript" src="_static/timedparsons.js?v=2EEA9E5A"></script>
+    <script type="text/javascript" src="_static/poll.js?v=6C59AE9F"></script>
+    <script type="text/javascript" src="_static/reveal.js?v=112CBFA2"></script>
+    <script type="text/javascript" src="_static/shortanswer.js?v=5EB6170D"></script>
+    <script type="text/javascript" src="_static/timed_shortanswer.js?v=B3A117D7"></script>
+    <script type="text/javascript" src="_static/showEval.js?v=C5CE0C81"></script>
+    <script type="text/javascript" src="_static/tabbedstuff.js?v=5BE6106"></script>
+    <script type="text/javascript" src="_static/runestonevideo.js?v=53E888DE"></script>
+    <script type="text/javascript" src="_static/webglinteractive.js?v=2B768384"></script>
+    <script type="text/javascript" src="_static/FileSaver.min.js?v=8408C997"></script>
+    <script type="text/javascript" src="_static/Blob.js?v=AEC2447"></script>
+    <script type="text/javascript" src="_static/jquery-ui-1.10.3.custom.min.js"></script>
+    <script type="text/javascript" src="_static/jquery-fix.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-3.0.0/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-sphinx.js"></script>
+    <script type="text/javascript" src="_static/waypoints.min.js"></script>
+    <script type="text/javascript" src="_static/user-highlights.js"></script>
+    <script type="text/javascript" src="_static/jquery.idle-timer.js"></script>
+    <script type="text/javascript" src="_static/processing-1.4.1.min.js"></script>
+    <script type="text/javascript" src="_static/jquery.hotkey.js"></script>
+    <script type="text/javascript" src="_static/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="_static/presenter_mode.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta content='width=device-width, initial-scale=1.0' name='viewport' />
+<link rel="shortcut icon" href="/runestone/static/favicon.ico" type="image/ico" />
+
+<script type="text/javascript">
+  eBookConfig = {};
+  eBookConfig.host = 'http://127.0.0.1:8000' ? 'http://127.0.0.1:8000' : 'http://127.0.0.1:8000';
+  eBookConfig.app = eBookConfig.host+'/runestone';
+  eBookConfig.ajaxURL = eBookConfig.app+'/ajax/';
+  eBookConfig.course = 'html_css';
+  eBookConfig.logLevel = 0;
+  eBookConfig.loginRequired = false;
+  eBookConfig.build_info = "unknown";
+  eBookConfig.isLoggedIn = false;
+  eBookConfig.useRunestoneServices = false;
+  eBookConfig.python3 = false;
+  eBookConfig.basecourse = 'html_css';
+  eBookConfig.acDefaultLanguage = 'html' ? 'html' : 'python'
+  eBookConfig.runestone_version = '3.4.5';
+  eBookConfig.jobehost = 'http://jobe2.cosc.canterbury.ac.nz';
+  eBookConfig.proxyuri_runs = '/jobe/index.php/restapi/runs/';
+  eBookConfig.proxyuri_files = '/jobe/index.php/restapi/files/';
+  eBookConfig.downloadsEnabled = true;
+  eBookConfig.enable_chatcodes = false ? false : false;
+  eBookConfig.allow_pairs = false ? false : false;
+</script>
+
+<div id="fb-root"></div>
+<script>
+  (function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&status=0";
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));
+</script>
+
+
+  </head><body>
+
+
+<!-- Begin navbar -->
+<div id="navbar" class="navbar navbar-default navbar-fixed-top" role="navigation">
+
+  <div class="container">
+
+    <div class="navbar-header">
+      <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+      <button type='button' class='navbar-toggle' data-toggle="collapse" data-target=".navbar-ex1-collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+
+      <div>
+        <a class="brand-logo" style='background: transparent url("_static/img/logo_small.png") no-repeat 0px 0px;' href="/runestone/default/user/login">&nbsp; </a>
+        <a class="navbar-brand" href="index.html" aria-label="index-page">HTML und CSS</a>
+      </div>
+    </div>
+
+
+
+    <div class="navbar-collapse collapse navbar-ex1-collapse">
+      <ul class="nav navbar-nav navbar-right" >
+
+        <li class="divider-vertical"></li>
+
+        <!-- social media dropdown -->
+        <li class="dropdown">
+          <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+            <i class="glyphicon glyphicon-globe" style="opacity: 0.9"></i>
+          </a>
+          <ul class="dropdown-menu social-menu">
+              <li>
+                <div>
+                  <b>Runestone in social media:</b>
+                </div>
+                <a href="https://twitter.com/iRunestone" class="twitter-follow-button" data-show-count="true">Follow @iRunestone</a><script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+                <div class="fb-like" data-href="https://www.facebook.com/RunestoneInteractive" data-send="false" data-layout="button_count" data-width="300" data-show-faces="false" data-font="arial"></div>
+              </li>
+
+              <li class="divider"></li>
+              <li>
+                <div>
+                  <b>Help support us:</b>
+                </div>
+                <div>
+                    <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+                  <input type="hidden" name="cmd" value="_s-xclick">
+                  <input type="hidden" name="encrypted" value="-----BEGIN PKCS7-----MIIHNwYJKoZIhvcNAQcEoIIHKDCCByQCAQExggEwMIIBLAIBADCBlDCBjjELMAkGA1UEBhMCVVMxCzAJBgNVBAgTAkNBMRYwFAYDVQQHEw1Nb3VudGFpbiBWaWV3MRQwEgYDVQQKEwtQYXlQYWwgSW5jLjETMBEGA1UECxQKbGl2ZV9jZXJ0czERMA8GA1UEAxQIbGl2ZV9hcGkxHDAaBgkqhkiG9w0BCQEWDXJlQHBheXBhbC5jb20CAQAwDQYJKoZIhvcNAQEBBQAEgYAcrkqh1hn3lYqIpfXxNqe1T82EhXzCJGy1yMAmklpyZshyMkfDGe1Bhx+iwyGeoYRTTyphFmP+9M3NyO0+Q5XdHxgZPx/zYjjBxlZHgEV6jhE8bN2fHkkPf0VHfz0a0QQylQOPlKiOTZV7B37Jpk6yM47oVZ1tG/KNm0NkfmB76DELMAkGBSsOAwIaBQAwgbQGCSqGSIb3DQEHATAUBggqhkiG9w0DBwQIi0GmFfOlcjuAgZBbYOo9UO+CpMQa+PYqwsUmUnJvXIImeMeNI3KVTUx5Cfk9gNMo3WzPeiB5IqZo9nRAQ0mf1qL2ecLeB5tidM+lgBUhOxfj3/FecpnVFa0263gp4g+PLw8jzhvVRdUon1K3SeO1Rzh23fIRKwnrD6btt73uwtj0sl3tGd8qz+6GIcwPDdRk9VcUffiBJT/ZagKgggOHMIIDgzCCAuygAwIBAgIBADANBgkqhkiG9w0BAQUFADCBjjELMAkGA1UEBhMCVVMxCzAJBgNVBAgTAkNBMRYwFAYDVQQHEw1Nb3VudGFpbiBWaWV3MRQwEgYDVQQKEwtQYXlQYWwgSW5jLjETMBEGA1UECxQKbGl2ZV9jZXJ0czERMA8GA1UEAxQIbGl2ZV9hcGkxHDAaBgkqhkiG9w0BCQEWDXJlQHBheXBhbC5jb20wHhcNMDQwMjEzMTAxMzE1WhcNMzUwMjEzMTAxMzE1WjCBjjELMAkGA1UEBhMCVVMxCzAJBgNVBAgTAkNBMRYwFAYDVQQHEw1Nb3VudGFpbiBWaWV3MRQwEgYDVQQKEwtQYXlQYWwgSW5jLjETMBEGA1UECxQKbGl2ZV9jZXJ0czERMA8GA1UEAxQIbGl2ZV9hcGkxHDAaBgkqhkiG9w0BCQEWDXJlQHBheXBhbC5jb20wgZ8wDQYJKoZIhvcNAQEBBQADgY0AMIGJAoGBAMFHTt38RMxLXJyO2SmS+Ndl72T7oKJ4u4uw+6awntALWh03PewmIJuzbALScsTS4sZoS1fKciBGoh11gIfHzylvkdNe/hJl66/RGqrj5rFb08sAABNTzDTiqqNpJeBsYs/c2aiGozptX2RlnBktH+SUNpAajW724Nv2Wvhif6sFAgMBAAGjge4wgeswHQYDVR0OBBYEFJaffLvGbxe9WT9S1wob7BDWZJRrMIG7BgNVHSMEgbMwgbCAFJaffLvGbxe9WT9S1wob7BDWZJRroYGUpIGRMIGOMQswCQYDVQQGEwJVUzELMAkGA1UECBMCQ0ExFjAUBgNVBAcTDU1vdW50YWluIFZpZXcxFDASBgNVBAoTC1BheVBhbCBJbmMuMRMwEQYDVQQLFApsaXZlX2NlcnRzMREwDwYDVQQDFAhsaXZlX2FwaTEcMBoGCSqGSIb3DQEJARYNcmVAcGF5cGFsLmNvbYIBADAMBgNVHRMEBTADAQH/MA0GCSqGSIb3DQEBBQUAA4GBAIFfOlaagFrl71+jq6OKidbWFSE+Q4FqROvdgIONth+8kSK//Y/4ihuE4Ymvzn5ceE3S/iBSQQMjyvb+s2TWbQYDwcp129OPIbD9epdr4tJOUNiSojw7BHwYRiPh58S1xGlFgHFXwrEBb3dgNbMUa+u4qectsMAXpVHnD9wIyfmHMYIBmjCCAZYCAQEwgZQwgY4xCzAJBgNVBAYTAlVTMQswCQYDVQQIEwJDQTEWMBQGA1UEBxMNTW91bnRhaW4gVmlldzEUMBIGA1UEChMLUGF5UGFsIEluYy4xEzARBgNVBAsUCmxpdmVfY2VydHMxETAPBgNVBAMUCGxpdmVfYXBpMRwwGgYJKoZIhvcNAQkBFg1yZUBwYXlwYWwuY29tAgEAMAkGBSsOAwIaBQCgXTAYBgkqhkiG9w0BCQMxCwYJKoZIhvcNAQcBMBwGCSqGSIb3DQEJBTEPFw0xMzExMDMxMzQxMzFaMCMGCSqGSIb3DQEJBDEWBBRDJF8w+zsMr7FSk+pwinB5f5D4rzANBgkqhkiG9w0BAQEFAASBgHw1LMHpkpaqHIvDGdFE0eG+2mZlmMnUeDCBhQlbc7QMzFQYKTV94NfaebBO4PmNdADe1rq4WidSRZZbE7CzkX9IGENYnBTWY0hb2l0lGdGrJdGeWyV3ekg9WVaFMMumrekds96h3Cx7dGz2kWDzIai2iEXE/qoE+xpkyXAYZNV3-----END PKCS7-----
+                  ">
+                  <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_SM.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+                  <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+                  </form>
+
+                </div>
+              </li>
+          </ul>
+        </li>
+        <!-- end social media dropdown -->
+
+        <li class="divider-vertical"></li>
+
+        <!-- search dropdown -->
+        <li class="dropdown">
+          <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+            <i class="glyphicon glyphicon-search" style='opacity:0.9;'></i>
+          </a>
+          <ul class='dropdown-menu'>
+            
+                <li><a href='index.html' aria-label="index-page">Table of Contents</a></li>
+            
+            <li><a href='/runestone/static/html_css/genindex.html'>Book Index</a></li>
+            <li class="divider"></li>
+            <li style="width: 240px;">
+              <form class="navbar-search" style="margin:10px;" action="search.html" method="get">
+                <div class="input-group">
+                  <input type="text" class="form-control" name="q" placeholder="Search this book" />
+                  <span class="input-group-btn">
+                    <button class="btn btn-primary" style="margin:0;" type="submit">
+                      <i class="glyphicon glyphicon-search"></i>
+                    </button>
+                  </span>
+                </div><!-- /input-group -->
+                <input type="hidden" name="check_keywords" value="yes" />
+                <input type="hidden" name="area" value="default" />
+              </form>
+            </li>
+          </ul>
+        </li>
+        <!-- end search dropdown -->
+
+        <li class="divider-vertical"></li>
+
+        
+        <li class="divider-vertical"></li>
+        <!-- <li id="scratch_ac_link"><a href="javascript:ACFactory.toggleScratchActivecode()">Scratch ActiveCode</a></li> -->
+
+        <!-- <li class="dropdown">             -->
+          <li id="scratch_ac_link" class="dropdown"><a href="javascript:ACFactory.toggleScratchActivecode()">
+              <i class="glyphicon glyphicon-pencil" style="opacity:0.9;"></i></a></li>
+        <!-- </li> -->
+
+        <li class="divider-vertical"></li>
+
+        <!-- help menu dropdown -->
+        <li class="dropdown">
+          <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+            <i class="glyphicon glyphicon-question-sign" style="opacity:0.9;"></i>
+          </a>
+          <ul class="dropdown-menu user-menu">
+            <li><a href='/runestone/static/html_css/navhelp.html'>Navigation Help</a></li>
+            <li><a href='/runestone/static/overview/instructor.html'>Help for Instructors</a></li>
+            <li class="divider"></li>
+            <li><a href='http://runestoneinteractive.org'>About Runestone</a></li>
+            <li><a href='/runestone/default/reportabug?course=html_css&page=html_css'>Report A Problem</a></li>
+          </ul>
+        </li>
+        <!-- end help menu dropdown -->
+
+        <li class="divider-vertical"></li>
+
+      </ul>
+      </div>
+
+
+
+
+
+
+      <ul class="nav navbar-nav">
+        <li class="divider-vertical"></li>
+        <!--
+          <li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Page <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"><ul>
+<li><a class="reference internal" href="#">Die Grundlagen von CSS</a><ul>
+<li><a class="reference internal" href="#aufbau-von-css-regeln">Aufbau von CSS-Regeln</a></li>
+<li><a class="reference internal" href="#einbinden-von-css">Einbinden von CSS</a></li>
+<li><a class="reference internal" href="#css-und-selektoren">CSS und Selektoren</a><ul>
+<li><a class="reference internal" href="#typselektoren">TypSelektoren</a></li>
+<li><a class="reference internal" href="#klassenselektor">Klassenselektor</a></li>
+<li><a class="reference internal" href="#ubung">Übung:</a></li>
+<li><a class="reference internal" href="#id-selektor">ID-Selektor</a></li>
+<li><a class="reference internal" href="#kontextselektor">Kontextselektor</a><ul>
+<li><a class="reference internal" href="#kindselektor">Kindselektor</a></li>
+<li><a class="reference internal" href="#nachfahrenselektor">Nachfahrenselektor</a></li>
+<li><a class="reference internal" href="#direkte-nachbar-selektoren-adjacent">Direkte Nachbar-Selektoren (Adjacent)</a></li>
+<li><a class="reference internal" href="#indirekte-nachbar-selektoren">Indirekte Nachbar-Selektoren</a></li>
+<li><a class="reference internal" href="#aufgaben-zu-selektoren">Aufgaben zu Selektoren</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#losungen">Lösungen</a></li>
+<li><a class="reference internal" href="#dein-bester-freund-div">Dein bester Freund DIV</a></li>
+<li><a class="reference internal" href="#das-box-modell-von-css">Das BOX-Modell von CSS</a><ul>
+<li><a class="reference internal" href="#gesamthohe-und-gesamtbreite">Gesamthöhe und Gesamtbreite</a></li>
+<li><a class="reference internal" href="#aufgabe">Aufgabe</a></li>
+<li><a class="reference internal" href="#box-sizing-border-box">box-sizing: border-box</a></li>
+<li><a class="reference internal" href="#aufgabe-1">Aufgabe</a></li>
+<li><a class="reference internal" href="#display-eigenschaft">DISPLAY-Eigenschaft</a><ul>
+<li><a class="reference internal" href="#inline-inline-box-en">inline: Inline-Box(en)</a></li>
+<li><a class="reference internal" href="#block-block-box">block: Block-Box</a></li>
+<li><a class="reference internal" href="#inline-block-auszen-inline-box-innen-block-box">inline-block: Außen Inline-Box, innen Block-Box</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#aufgabe-2">Aufgabe</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#float-und-clear">Float und Clear</a><ul>
+<li><a class="reference internal" href="#aufgabe-3">Aufgabe</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#css-eigenschaften-positionierung-position">CSS/Eigenschaften/Positionierung/position</a></li>
+<li><a class="reference internal" href="#groszenangaben">Größenangaben</a></li>
+<li><a class="reference internal" href="#arten-von-farben">Arten von Farben</a></li>
+<li><a class="reference internal" href="#schriftarten">Schriftarten</a></li>
+<li><a class="reference internal" href="#glossar">Glossar</a></li>
+<li><a class="reference internal" href="#die-wichtigsten-definitionen-in-css">Die wichtigsten Definitionen in CSS</a></li>
+</ul>
+</ul>
+</li>
+          <li class="divider-vertical"></li>
+        
+        
+          
+
+<script type="text/javascript">
+  opts = {'placement':'bottom',
+          'selector': '',
+          'delay': { show: 100, hide: 50}
+         };
+
+  $('#relations-prev').tooltip(opts);
+  $('#relations-next').tooltip(opts);
+</script>
+        -->
+        
+          <li></li>
+        
+      </ul>
+
+    </div>
+  </div>
+</div>
+
+
+<div class="container" id="continue-reading"></div>
+
+<div class="container" id="main-content">
+  
+  <div class="section" id="die-grundlagen-von-css">
+<h1>Die Grundlagen von CSS<a class="headerlink" href="#die-grundlagen-von-css" title="Permalink to this headline">¶</a></h1>
+<p>Im modernen Webdesign kommt den Webtechniken HTML, CSS und JavaScript jeweils eine bestimmte Rolle zu.</p>
+<p><a class="reference internal" href="_images/image17.png"><img alt="image17" src="_images/image17.png" style="width: 2.75833in; height: 2.64167in;" /></a></p>
+<ul class="simple">
+<li><p>HTML legt fest, was auf der Seite stehen soll (struktureller Aufbau einer Webseite)</p></li>
+<li><p>CSS legt fest, wie es dargestellt werden soll (Formatierung &amp; Gestaltung)</p></li>
+<li><p>JavaScript legt fest, was passieren soll. (interaktive Elemente)</p></li>
+</ul>
+<p>CSS (Cascading Style Sheets, zu deutsch „Mehrstufige Formatvorlagen“) ist eine Formatierungssprache für HTML-, SVG- und XML-Dokumente. Der „große Sinn von CSS“ besteht in der Trennung von Inhalt und Design. Das hört man oft, stellt sich nichts drunter vor und bastelt dann doch eine
+besondere Überschrift mit einem inline-style, einen neuen div-container mit einer ganz speziellen id oder Klasse, die später nirgends wieder
+auftaucht. Das funktioniert auch mehr oder weniger - man wird ohne viel Mühe eine fixe Seite zusammenstellen, die ihren Zweck erfüllt - und
+vergisst das ganze.</p>
+<p>Es ist aber beinahe unmöglich, einen so über die Zeit gewucherten
+Internetauftritt umzugestalten - man müsste dutzende oder mehr
+Einzeldateien umschreiben und im Gewusel der Klassen und Elemente wird
+man sich schnell verlieren. Letztlich dauert die Änderung beinahe länger
+als die Neuerstellung. Und genau darin liegt die Stärke von CSS:
+uneingeschränkte Flexibilität, wenn z.B. das Layout nicht mehr zeitgemäß
+ist oder wenn neue Strukturen, vor allem bei dynamischen Seiten,
+Änderungen erfordern. Dabei wäre man ohne CSS buchstäblich „verloren im
+Quelltext“.</p>
+<p><strong>Das erste Gebot von CSS lautet: „am Anfang ohne.“</strong></p>
+<p>Soll heißen - man gestaltet die Seite erst komplett ohne CSS, nur die
+Seitenstrukturierung in Kapitel und Absätze, bei diesen dann die
+Textauszeichnung von Überschriften und Ähnlichem. Es stellt auch die
+„allgemeine Gültigkeit“ des Layouts sicher - ist die Grundlage an sich
+stimmig, kann man die Seite beliebig umgestalten, jeder Fehler schränkt
+dies wieder ein.</p>
+<p>Eine solche Webseite sieht nicht gut aus, ist aber uneingeschränkt
+nutzbar. Die einzelnen Elemente werden vom Browser einfach untereinander
+auf dem Bildschirm angeordnet, und zwar in der Reihenfolge, in der sie
+in der HTML-Datei aufgeschrieben sind. Die Elemente selbst werden gemäß
+den Voreinstellungen des Browsers dargestellt; so ist z.B. festgelegt,
+dass der Hintergrund des Dokuments weiß oder grau darzustellen ist, dass
+Überschriften in fett und einer Größe von soundsoviel Punkten
+darzustellen sind.</p>
+<p>An diesem Punkt setzen die Cascading Stylesheets ein. Es handelt sich
+dabei um eine unmittelbare Ergänzungssprache, die vorwiegend für HTML
+(aber auch für SVG) entwickelt wurde. Sie klinkt sich nahtlos in HTML
+ein und erlaubt das beliebige Formatieren einzelner HTML-Elemente. Mit
+Hilfe von Stylesheets können Sie beispielsweise festlegen, dass alle
+Überschriften 24 Punkt groß sind und mit einem Nachabstand von 16 Punkt
+und mit einer grünen doppelten Rahmenlinie oberhalb dargestellt werden.
+Schematisch würde dies etwa so aussehen:</p>
+<p><a href="#id6"><span class="problematic" id="id7">|\_images/1200_Html_ohne_css.png|</span></a><a href="#id8"><span class="problematic" id="id9">|\_images/1200_Html_mit_css.png|</span></a></p>
+<p>CSS erlaubt es, Stile, Farben und Formen zu definieren, beispielsweise
+für alle Überschriften, oder für alle Textabsätze mit einem bestimmten
+Klassennamen, oder für kursiv ausgezeichneten Text, der innerhalb einer
+Tabellenzelle vorkommt.</p>
+<p><a class="reference internal" href="_images/image20.png"><img alt="image20" src="_images/image20.png" style="width: 3.09167in; height: 2.48333in;" /></a>Die zentralen Formate können sich auf eine HTML-Datei
+beziehen, aber auch in eine externe Style-Datei ausgelagert werden, die
+man in beliebig viele Seiten einbinden kann. So werden einheitliche
+Formatvorgaben möglich, und der HTML-Code wird von unnötigem Ballast
+befreit. Spätere Änderungen am Design können so leicht durchgeführt
+werden.</p>
+<p>In der folgenden Abbildung dient eine einzige CSS-Datei beispielsweise
+vier HTML-Dateien als Formatvorlage:</p>
+<ul class="simple" id="section-6">
+<li></li>
+</ul>
+<div class="section" id="aufbau-von-css-regeln">
+<h2>Aufbau von CSS-Regeln<a class="headerlink" href="#aufbau-von-css-regeln" title="Permalink to this headline">¶</a></h2>
+<p>Eine CSS-Regel besteht aus</p>
+<ul class="simple">
+<li><p>der Bezeichnung für das Element, auf das die Regel zielt
+(<strong>CSS-Selektor</strong>),</p></li>
+<li><p>aus Eigenschaften (Properties), die dem Element zugewiesen werden.</p></li>
+<li><p>CSS-Eigenschaften stehen in geschweiften Klammern und sind durch
+Semikolons voneinander getrennt.</p></li>
+<li><p>Klassen- und ID-Namen sind case-sensitiv</p></li>
+</ul>
+<p><a class="reference internal" href="_images/image21.png"><img alt="image21" src="_images/image21.png" style="width: 6.3in; height: 1.51597in;" /></a></p>
+<div class="line-block">
+<div class="line">selector { Eigenschaft: Wert;</div>
+<div class="line">Eigenschaft: Wert;</div>
+<div class="line">Eigenschaft: Wert</div>
+<div class="line">}</div>
+</div>
+<div class="line-block">
+<div class="line">h1 {</div>
+<div class="line">font-family: Helvetica;</div>
+<div class="line">font-size: 1.4em;</div>
+<div class="line">color: red</div>
+<div class="line">}</div>
+</div>
+</div>
+<div class="section" id="einbinden-von-css">
+<h2>Einbinden von CSS<a class="headerlink" href="#einbinden-von-css" title="Permalink to this headline">¶</a></h2>
+<p>Styleinformationen können auf verschiedene Arten in ein HTML-Dokument
+eingebunden werden</p>
+<p><strong>INLINE</strong></p>
+<p>Mit dem Universalattribut <strong>style</strong> können Sie Eigenschaften einem
+Element direkt zuweisen. Dabei sind nur Deklarationen, also
+Eigenschaft-Wert-Zuweisungen möglich.</p>
+<p>Beispiel:</p>
+<div class="line-block">
+<div class="line">&lt;p style=”text-align: center; color: green;”&gt;</div>
+<div class="line">Dieser Absatz wird über ein style-Attribut formatiert.</div>
+<div class="line">&lt;/p&gt;</div>
+</div>
+<p><strong>Bewertung:</strong></p>
+<ul class="simple">
+<li><p>Direktes Festlegen von Formaten pro Element</p></li>
+<li><p>Verlust vieler Vorteile</p></li>
+<li><p>Hoher Wartungsaufwand</p></li>
+<li><p>verringerte Flexibilität</p></li>
+<li><p>keine zentrale Bearbeitung</p></li>
+</ul>
+<p><strong>INTERNAL</strong></p>
+<p>Das HTML-Element <strong>style</strong> legt Formate zentral im Head des
+HTML-Dokuments fest.</p>
+<div class="line-block">
+<div class="line">&lt;html lang=”de”&gt;</div>
+<div class="line">&lt;head&gt;</div>
+<div class="line">&lt;style&gt;</div>
+<div class="line">h1 {</div>
+<div class="line">background-color: green;</div>
+<div class="line">color: blue;</div>
+<div class="line">}</div>
+<div class="line">p {</div>
+<div class="line">text-align: center;</div>
+<div class="line">color: red;</div>
+<div class="line">}</div>
+<div class="line">&lt;/style&gt;</div>
+<div class="line">&lt;/head&gt;</div>
+<div class="line">&lt;body&gt;</div>
+</div>
+<div class="line-block">
+<div class="line">&lt;h1&gt;Überschrift&lt;/h1&gt;</div>
+<div class="line">&lt;p&gt;Ein text halt&lt;/p&gt;</div>
+<div class="line">&lt;/body&gt;</div>
+<div class="line">&lt;/html&gt;</div>
+</div>
+<p>**
+EXTERNAL**</p>
+<p>Das CSS wird einem eigenen externen Stylesheet mit der Endung .css
+abgespeichert und mit dem HTML-Element link direkt im Head eingebunden.</p>
+<p>&lt;!–Einbinden eines externen Stylesheets –&gt;</p>
+<div class="line-block">
+<div class="line">&lt;!doctype html&gt;</div>
+<div class="line">&lt;html lang=”de”&gt;</div>
+<div class="line">&lt;head&gt;</div>
+<div class="line">&lt;link rel=”stylesheet” href=”stylesheet.css”&gt;</div>
+</div>
+</div>
+<div class="section" id="css-und-selektoren">
+<h2>CSS und Selektoren<a class="headerlink" href="#css-und-selektoren" title="Permalink to this headline">¶</a></h2>
+<p>Damit Formateigenschaften auf ein Element angewendet werden können, muss
+definiert werden, welche Elemente angesprochen werden. Dies geschieht
+über Selektoren. Als Selektoren bezeichnet man die Teile einer
+CSS-Regel, die vor dem Abschnitt aus geschweiften Klammern stehen.
+Voneinander unabhängige Selektoren, denen dieselben Eigenschaften
+zugewiesen werden, können mit Kommata getrennt werden. Es gibt
+verschiedene Arten von Selektoren.</p>
+<div class="section" id="typselektoren">
+<h3>TypSelektoren<a class="headerlink" href="#typselektoren" title="Permalink to this headline">¶</a></h3>
+<p>Der Element- bzw. Typselektor besteht aus dem Namen des Elements, das
+angesprochen werden soll. Mit diesem Selektor werden alle Elemente eines
+Typs angesprochen.</p>
+<p>&lt;!doctype html&gt;</p>
+<p>&lt;html&gt;</p>
+<p>&lt;head&gt;</p>
+<p>&lt;meta charset=”utf-8”&gt;</p>
+<p>&lt;title&gt;CSS-Beispiel: Typselektor&lt;/title&gt;</p>
+<p>&lt;style&gt; p {border: 3px solid green;} &lt;/style&gt;</p>
+<p>&lt;/head&gt;</p>
+<p>&lt;body&gt;</p>
+<p>&lt;p&gt;Dieses Beispiel demonstriert die Wirkung des Typselektors auf
+&lt;abbr&gt;HTML&lt;/abbr&gt;-Dokumente.&lt;/p&gt;</p>
+<p>&lt;/body&gt;</p>
+<p>&lt;/html&gt;</p>
+<p>Typselektoren geben manche Eigenschaften(z.B. Schriftgestaltung) an ihre
+Kinder weiter und manche nicht (z.B. background-color, border). Dies
+kann erwünscht bzw. unerwünscht sein. Man kann dies innerhalb von CSS
+durch den Attributwert <strong>inherit</strong> verändern.</p>
+</div>
+<div class="section" id="klassenselektor">
+<h3>Klassenselektor<a class="headerlink" href="#klassenselektor" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>spricht Elemente an, die einer bestimmten Klasse zugehörend sind</p></li>
+<li><p>mehrere HTML-Elemente können die gleichen Klasse zugeordnet bekommen</p></li>
+<li><p>Klassenselektoren können mit anderen Selektoren verbunden werden</p></li>
+<li><p>Klassenselektor kann auch mit dem Typselektor verbunden sein</p></li>
+<li><p><strong>Ein Klassenselektor wird gebildet, wenn vor dem Klassennamen ein
+Punkt notiert wird</strong></p></li>
+</ul>
+</div>
+<div class="section" id="ubung">
+<h3>Übung:<a class="headerlink" href="#ubung" title="Permalink to this headline">¶</a></h3>
+<p>Erzeugen Sie aus dem folgenden HTML das nebenstehende Aussehen mit Hilfe
+von Klassenselektoren</p>
+<p><a class="reference internal" href="_images/image22.png"><img alt="image22" src="_images/image22.png" style="width: 1.88958in; height: 2.20347in;" /></a></p>
+</div>
+<div class="section" id="id-selektor">
+<h3>ID-Selektor<a class="headerlink" href="#id-selektor" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Spricht ein Element an, dem eine ID zugeordnet wurde</p></li>
+<li><p>Gebildet durch Voranstellen des Gatterzeichens vor den ID-Namen</p></li>
+<li><p>ID-Selektoren können mit anderen Selektoren verbunden werden</p>
+<ul>
+<li><p>Mit Elementselektoren: elementname#id</p></li>
+<li><p>Mit Klassenselektoren: .klassenname#id bzw. #id.klassenname</p></li>
+</ul>
+</li>
+</ul>
+<p><a class="reference internal" href="_images/image23.png"><img alt="image23" src="_images/image23.png" style="width: 2.99236in; height: 0.91111in;" /></a>Beispiel:</p>
+</div>
+<div class="section" id="kontextselektor">
+<h3>Kontextselektor<a class="headerlink" href="#kontextselektor" title="Permalink to this headline">¶</a></h3>
+<p>Ein Nachfahren-Selektor oder Nachbar-Selektor wählt Elemente aus ihrer
+Position innerhalb von anderen Elementen aus – aus dem <strong>Kontext</strong> der
+HTML-Struktur. Sie sind also abhängig von der Struktur, in der sie
+auftreten: von ihren Nachbarn, Vorfahren und Nachfahren.</p>
+<ul class="simple">
+<li><dl class="simple">
+<dt>Ein Nachfahren-Selektor (<strong>Descendant Selector)</strong> filtert Elemente</dt><dd><p>unterhalb bestimmter Elemente.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>Ein Nachbar-Selektor (<strong>Adjacent Selector)</strong> filtert</dt><dd><p>aufeindnerfolgende Elemente der gleichen Ebene,</p>
+</dd>
+</dl>
+</li>
+</ul>
+<div class="section" id="kindselektor">
+<h4>Kindselektor<a class="headerlink" href="#kindselektor" title="Permalink to this headline">¶</a></h4>
+<ul>
+<li><p><a class="reference internal" href="_images/image24.png"><img alt="image24" src="_images/image24.png" style="width: 2.14653in; height: 1.35417in;" /></a>“&gt;” zwischen den beiden Selektoren</p></li>
+<li><div class="line-block">
+<div class="line">Trifft nur auf Elemente zu, die direkt innerhalb des div-
+| Elementes liegen</div>
+</div>
+</li>
+</ul>
+<blockquote>
+<div><p>div &gt; p { color: black; background-color: red; }</p>
+</div></blockquote>
+</div>
+<div class="section" id="nachfahrenselektor">
+<h4>Nachfahrenselektor<a class="headerlink" href="#nachfahrenselektor" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li><p><a class="reference internal" href="_images/image25.png"><img alt="image25" src="_images/image25.png" style="width: 2.09514in; height: 1.15278in;" /></a>Leerzeichen ” ” zwischen den Selektoren</p></li>
+</ul>
+<blockquote>
+<div><p>Alle p-Elemente, die innerhalb von div-Elementen liegen, werden durch
+die Regel angesprochen</p>
+<p>div p { color: black; background-color: red; }</p>
+</div></blockquote>
+</div>
+<div class="section" id="direkte-nachbar-selektoren-adjacent">
+<h4>Direkte Nachbar-Selektoren (Adjacent)<a class="headerlink" href="#direkte-nachbar-selektoren-adjacent" title="Permalink to this headline">¶</a></h4>
+<ul>
+<li><div class="line-block">
+<div class="line"><a class="reference internal" href="_images/image26.png"><img alt="image26" src="_images/image26.png" style="width: 2.35833in; height: 1.3125in;" /></a>Absteigender Selektor, angewendet auf ein p-Element,</div>
+<div class="line">das dem h2-Element direkt folgt.</div>
+</div>
+</li>
+<li><p>h2 und p haben dabei immer dieselben Eltern</p></li>
+</ul>
+</div>
+<div class="section" id="indirekte-nachbar-selektoren">
+<h4>Indirekte Nachbar-Selektoren<a class="headerlink" href="#indirekte-nachbar-selektoren" title="Permalink to this headline">¶</a></h4>
+<ul>
+<li><div class="line-block">
+<div class="line"><a class="reference internal" href="_images/image27.png"><img alt="image27" src="_images/image27.png" style="width: 2.60069in; height: 1.5in;" /></a>Angewendet auf alle p-Elemente, die dem h2-
+| Element folgen.</div>
+</div>
+</li>
+<li><div class="line-block">
+<div class="line">h2 und p haben dabei immer dieselben Eltern –
+| liegen also in derselben Ebene.</div>
+</div>
+</li>
+</ul>
+<p>h2 ~ p { color: white; background-color: red; }</p>
+</div>
+<div class="section" id="aufgaben-zu-selektoren">
+<h4>Aufgaben zu Selektoren<a class="headerlink" href="#aufgaben-zu-selektoren" title="Permalink to this headline">¶</a></h4>
+<ol class="arabic simple">
+<li><p>Folgende HTML-Datei ist vorhanden:</p></li>
+</ol>
+<p>&lt;!DOCTYPE html&gt;</p>
+<p>&lt;html lang=”de”&gt;</p>
+<p>&lt;head&gt;</p>
+<p>&lt;meta charset=”utf-8”&gt;</p>
+<p>&lt;title&gt;Typselektoren&lt;/title&gt;</p>
+<p>&lt;link rel=”stylesheet” type=”text/css” href=”typselektoren.css”&gt;</p>
+<p>&lt;/head&gt;</p>
+<p>&lt;body&gt;</p>
+<p>&lt;h1&gt;Leggings kickstarter&lt;/h1&gt;</p>
+<p>&lt;p&gt;</p>
+<p>Coloring book vaporware heirloom cloud bread man braid, ramps organic
+umami distillery.</p>
+<p>&lt;span&gt;</p>
+<p>Kale chips retro literally locavore migas raw denim.</p>
+<p>&lt;b&gt;Live-edge austin taiyaki four dollar toast, cray shoreditch.&lt;/b&gt;</p>
+<p>DIY meh wayfarers retro banh mi selfies food truck.</p>
+<p>&lt;/span&gt;</p>
+<p>Craft beer chicharrones gluten-free, intelligentsia humblebrag.</p>
+<p>&lt;/p&gt;</p>
+<p>&lt;/body&gt;</p>
+<p>&lt;/html&gt;</p>
+<div class="line-block">
+<div class="line">Erstellen Sie untenstehende HTML-Datei mit Hilfe von Typselektoren</div>
+<div class="line">Arbeiten Sie die Aufzählungspunkte hintereinander ab.</div>
+</div>
+<ul>
+<li><div class="line-block">
+<div class="line">Die Farbe des body-Tags soll einheitlich rot sein</div>
+<div class="line"><a class="reference internal" href="_images/image28.png"><img alt="image28" src="_images/image28.png" style="width: 5.10465in; height: 1.33356in;" /></a></div>
+</div>
+</li>
+<li><p>Die Farbe des span-tags soll grau sein</p></li>
+<li><p>Die Farbe des h1-Tags soll ausnahmsweise blau sein</p></li>
+<li><div class="line-block">
+<div class="line">Der body-Tag soll einen roten Rahmen erhalten</div>
+<div class="line">Warum erhalten die Kindelemente des body-Tags keinen Rahmen ?</div>
+</div>
+</li>
+<li><p>Geben Sie dem h1-Tag ebenfalls einen Rahmen, indem Sie von body den
+Rahmen erben.</p></li>
+</ul>
+<p>Aufgabe 2:</p>
+<p><a class="reference internal" href="_images/image29.png"><img alt="image29" src="_images/image29.png" style="width: 3.62576in; height: 3.86116in;" /></a></p>
+<p>Aufgabe 3</p>
+<p>Erstelle eine HTML Datei, welche folgenden Bedingungen erfüllt:</p>
+<ul class="simple">
+<li><p>Grundstruktur einer HTML Datei</p></li>
+<li><p>Verwendet einen Tag Selektor (z.B. p Tag) der die Farbe auf
+Dunkelgrau setzt</p></li>
+<li><p>Verwendet einen ID Selektor “viereck” welcher ein div 300px breit und
+300px hoch macht und ihm einen #b2d3e6 Hintergrund gibt.</p></li>
+<li><p>Verwende einen Class Selektor “monogross” der mindestens von zwei
+Elementen genutzt wird und die Schriftart zu monospace ändert und die
+Schriftgröße auf 150% setzt.</p></li>
+<li><p>Besitzt einen Link, der den Nutzer auf Google weiterleitet und beim
+Hovern die Farbe Rot annimmt.</p></li>
+</ul>
+<p>Aufgabe 4:</p>
+<p>Formatieren Sie die untenstehende HTML-Datei mit Hilfe von CSS.</p>
+<p><a class="reference internal" href="_images/image30.png"><img alt="image30" src="_images/image30.png" style="width: 3.04257in; height: 3.38064in;" /></a>body</p>
+<p>h1</p>
+<p><a class="reference external" href="https://www.inf-schule.de/information/informationsdarstellunginternet/formatierungcss/exkurs_css/selektoren">https://www.inf-schule.de/information/informationsdarstellunginternet/formatierungcss/exkurs_css/selektoren</a></p>
+<p>Aufgabe 5:</p>
+<p>Gegeben ist folgende DOM-Struktur</p>
+<p><a class="reference internal" href="_images/image16.png"><img alt="Baum der Elemente" src="_images/image16.png" style="width: 5.46492in; height: 1.58328in;" /></a></p>
+<p>Markieren Sie sich die Stellen, die durch den jeweiligen CSS-Selektor
+ausgewählt werden.</p>
+<p>Wie wird sich folgende CSS-Anweisung auf den DOM auswirken</p>
+<p>Was müssen Sie im HTML-Dokument ändern, damit folgende Regel wirken
+kann.</p>
+<p>Aufgabe 6:</p>
+<p>Lösen Sie das CSS-Rätsel unter</p>
+<p><a class="reference external" href="https://steinam.rigel.uberspace.de/css-diner/">https://steinam.rigel.uberspace.de/css-diner/</a></p>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="losungen">
+<h1>Lösungen<a class="headerlink" href="#losungen" title="Permalink to this headline">¶</a></h1>
+<p>Aufgabe 5:</p>
+<div class="system-message">
+<p class="system-message-title">System Message: SEVERE/4 (<span class="docutils literal">C:\schule\unterricht\web\runestone_html\_sources\html_css.rst</span>, line 436)</p>
+<p>Title level inconsistent:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Verdeutlichung</span> <span class="n">am</span> <span class="n">Strukturbaum</span>
+<span class="o">~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~</span>
+</pre></div>
+</div>
+</div>
+<p>em</p>
+<p>{</p>
+<p>color: blue;</p>
+<p>font-weight: bold;</p>
+<p>}</p>
+<p>Dieser Selektor wählt im Strukturbaum die farbig markierten Elemente
+aus. Für diese Elemente legt die Regel dann die Eigenschaften fest.</p>
+<p><a class="reference internal" href="_images/image35.png"><img alt="Veranschaulichung des Selektors am Strukturbaum" src="_images/image35.png" style="width: 5.75in; height: 1.45833in;" /></a></p>
+<p>Das zweite Beispiel betrifft den Selektor h1, em in der folgenden Regel,
+der zwei Elemente betrifft.</p>
+<p>h1, em</p>
+<p>{</p>
+<p>font-weight: bold;</p>
+<p>font-style: normal;</p>
+<p>}</p>
+<p>Dieser mit einem Komma zusammengesetzte Selektor wählt folgende Elemente
+aus:</p>
+<p><a class="reference internal" href="_images/image35.png"><img alt="Veranschaulichung des Selektors am Strukturbaum" src="_images/image35.png" style="width: 5.75in; height: 1.45833in;" /></a></p>
+<p>Im Style-Sheet stil.css kommt die folgende Regel mit einem
+zusamengesetzten Selektor ul em vor (Achtung: hier ohne ein Komma).</p>
+<p>ul em</p>
+<p>{</p>
+<p>color: red;</p>
+<p>}</p>
+<p>Hiermit werden alle &lt;em&gt;&lt;/em&gt;-Elemente ausgewählt, die Nachkommen eines
+&lt;ul&gt;&lt;/ul&gt;-Elementes sind.</p>
+<p><a class="reference internal" href="_images/image35.png"><img alt="Veranschaulichung des Selektors am Strukturbaum" src="_images/image35.png" style="width: 5.75in; height: 1.45833in;" /></a></p>
+<p>Eigenschaften vererben sich im Strukturbaum auf die Nachkommen - das
+sind die Elemente unterhalb des Ausgangselements. Die folgende Regel für
+das &lt;body&gt;&lt;/body&gt;-Element legt implizit fest, dass auch alle Nachfahren
+über dieselben Eigenschaften verfügen.</p>
+<p>body</p>
+<p>{</p>
+<p>background-color: orange;</p>
+<p>color: black;</p>
+<p>font-size: small;</p>
+<p>font-family: Georgia, “Trebuchet MS”, Verdana, sans-serif;</p>
+<p>}</p>
+<p>Im Strukturbaum sind das ausgewählte Element (gelb) und alle seine
+Nachkommen (rot) jetzt farbig markiert.</p>
+<p><a class="reference internal" href="_images/image35.png"><img alt="Veranschaulichung des Selektors am Strukturbaum" src="_images/image35.png" style="width: 5.75in; height: 1.45833in;" /></a></p>
+<p>Im vorliegenden Fall bewirkt diese Regel, dass u. a. die Schriftfarbe
+für alle Elemente schwarz ist.</p>
+<p>Kommt jetzt aber unterhalb einer allgemeinen Regel eine speziellere, so
+überschreibt diese die allgemeine, wie das folgende Beispiel zeigt.</p>
+<p>body</p>
+<p>{</p>
+<p>background-color: orange;</p>
+<p>color: black;</p>
+<p>font-size: small;</p>
+<p>font-family: Georgia, “Trebuchet MS”, Verdana, sans-serif;</p>
+<p>}</p>
+<p>em</p>
+<p>{</p>
+<p>color: blue;</p>
+<p>}</p>
+<p>Durch diese beiden Regeln wird festgelegt, dass zunächst einmal alle
+Elemente die Schriftfarbe schwarz haben. Für die &lt;em&gt;&lt;/em&gt;-Elemente wird
+durch die zweite Regel eine Ausnahme gesetzt. Diese Elemente sollen die
+Schriftfarbe blau erhalten.</p>
+<p>Es gibt auch die Möglichkeit, nur ganz bestimmte Elemente auszuwählen.
+Im folgenden Strukturbaum sind nur einige der &lt;p&gt;&lt;/p&gt;-Elemente markiert.
+Nur diese sollen z.B. die Hintergrundfarbe weiß erhalten.</p>
+<p><a class="reference internal" href="_images/image35.png"><img alt="Veranschaulichung des Selektors am Strukturbaum" src="_images/image35.png" style="width: 5.75in; height: 1.45833in;" /></a></p>
+<p>Damit das möglich wird, müssen zunächst die betreffenden
+&lt;p&gt;&lt;/p&gt;-Elemente im HTML-Quelltext markiert werden. Hierzu dient das
+Attribut class, dem man einen selbst gewählten Wert (hier: “wichtig”)
+zuweisen kann.</p>
+<p>&lt;!doctype html&gt;</p>
+<p>&lt;html&gt;</p>
+<p>&lt;html lang=”de”&gt;</p>
+<p>&lt;meta charset=”utf-8”&gt;</p>
+<p>&lt;link href=’styles/style.css’ rel=’stylesheet’ type=’text/css’&gt;</p>
+<p>&lt;title&gt;Steckbrief von Bailey&lt;/title&gt;</p>
+<p>&lt;/head&gt;</p>
+<p>&lt;body&gt;</p>
+<p>&lt;h1&gt;Steckbrief&lt;/h1&gt;</p>
+<p>&lt;p&gt;&lt;img src=”img/bailey.jpg” alt=”Foto von Bailey”&gt;&lt;/p&gt;</p>
+<p>&lt;p class=”wichtig”&gt;</p>
+<p>Ich heiße &lt;em&gt;Bailey&lt;/em&gt;. Ich lebe in der Nähe</p>
+<p>von Kaiserslautern.</p>
+<p>&lt;/p&gt;</p>
+<p>&lt;p&gt;</p>
+<p>Ich interessiere mich für &lt;em&gt;Agility-Sport&lt;/em&gt;.</p>
+<p>Meine Lieblingsdisziplinen sind:</p>
+<p>&lt;/p&gt;</p>
+<p>&lt;ul&gt;</p>
+<p>&lt;li&gt;&lt;em&gt;Sprung&lt;/em&gt; durch einen Reifen&lt;/li&gt;</p>
+<p>&lt;li&gt;&lt;em&gt;Lauf&lt;/em&gt; über eine Wippe&lt;/li&gt;</p>
+<p>&lt;li&gt;&lt;em&gt;Slalomlauf&lt;/em&gt; zwischen Stangen&lt;/li&gt;</p>
+<p>&lt;/ul&gt;</p>
+<p>&lt;p class=”wichtig”&gt;</p>
+<p>Ich gehe jedes Wochenende zur</p>
+<p>&lt;a href=”<a class="reference external" href="http://www.welpenschule-kl.de/index.html">http://www.welpenschule-kl.de/index.html</a>”&gt;Welpenschule&lt;/a&gt;</p>
+<p>.</p>
+<p>&lt;/p&gt;</p>
+<p>&lt;/body&gt;</p>
+<p>&lt;/html&gt;</p>
+<p>Jetzt kann für die Klasse der wichtigen Absätze eine neue Regel
+definiert werden.</p>
+<p>p.wichtig</p>
+<p>{</p>
+<p>background-color: white;</p>
+<p>}</p>
+<p>CSS</p>
+<p>Alles recht kompliziert, oder? Es gibt noch weitere Möglichkeiten,
+bestimmte Elementgruppen auszuwählen. Das kannst du dann in einem
+Nachschlagewerk wie
+<a class="reference external" href="https://www.inf-schule.de/information/informationsdarstellunginternet/hinweise">SELFHTML</a>
+nachlesen.</p>
+</div>
+<div class="section" id="dein-bester-freund-div">
+<h1>Dein bester Freund DIV<a class="headerlink" href="#dein-bester-freund-div" title="Permalink to this headline">¶</a></h1>
+<p>Das <strong>div</strong>-Element ist dazu gedacht, mehrere Elemente wie Text,
+Grafiken, Tabellen usw., in einen gemeinsamen Bereich einzuschließen.
+Dieses allgemeine Element bewirkt nichts weiter als dass es in einer
+neuen Zeile des Fließtextes beginnt. Ansonsten hat es keine
+Eigenschaften. Es ist dazu gedacht, Bereiche zu erzeugen, die mit Hilfe
+von CSS formatiert werden können. div bedeutet <em>division</em>, etwa
+Abteilung oder Bereich.</p>
+<p>Häufig werden div-Elemente als <strong>wrapper</strong> (englisch für <em>Verpackung</em>)
+oder Container-Element verwendet. Dabei wird die
+<a class="reference external" href="https://wiki.selfhtml.org/wiki/Semantisch">semantische</a> Struktur um
+ein weiteres, semantisch leeres Element ergänzt, dessen einziger Zweck
+beispielsweise die Zentrierung oder die Formatierung mit einer Randlinie
+ist.</p>
+<p>Beispiel: Erzeugen Sie folgende Ausgabe</p>
+<p><a class="reference internal" href="_images/image36.png"><img alt="image37" src="_images/image36.png" style="width: 3.77778in; height: 2.74583in;" /></a>Lösung:</p>
+<div class="line-block">
+<div class="line">&lt;!doctype html&gt;</div>
+<div class="line">&lt;html&gt;</div>
+<div class="line">&lt;head&gt; &lt;meta charset=”utf-8”&gt;</div>
+<div class="line">&lt;title&gt;Allgemeines Block-Element&lt;/title&gt;</div>
+<div class="line">&lt;style&gt; div { border: 1px solid; float: left; } &lt;/style&gt;</div>
+<div class="line">&lt;/head&gt;</div>
+<div class="line">&lt;body&gt;</div>
+<div class="line">&lt;h1&gt;Allgemeines Blockelement&lt;/h1&gt;</div>
+<div class="line"><strong>&lt;div&gt;</strong> &lt;h2&gt;Listenüberschrift&lt;/h2&gt;</div>
+<div class="line">&lt;ul&gt;</div>
+<div class="line">&lt;li&gt;Listenpunkt 1&lt;/li&gt;</div>
+<div class="line">&lt;li&gt;Listenpunkt 2&lt;/li&gt;</div>
+<div class="line">&lt;li&gt;Listenpunkt 3&lt;/li&gt;</div>
+<div class="line">&lt;/ul&gt;</div>
+<div class="line"><strong>&lt;/div&gt;</strong></div>
+<div class="line">&lt;/body&gt;</div>
+<div class="line">&lt;/html&gt;</div>
+</div>
+</div>
+<div class="section" id="das-box-modell-von-css">
+<h1>Das BOX-Modell von CSS<a class="headerlink" href="#das-box-modell-von-css" title="Permalink to this headline">¶</a></h1>
+<p><a class="reference external" href="https://codepen.io/carolineartz/full/ogVXZj">https://codepen.io/carolineartz/full/ogVXZj</a></p>
+<p><a class="reference external" href="https://de.wikibooks.org/wiki/Websiteentwicklung:_CSS:_Box-Modell">https://de.wikibooks.org/wiki/Websiteentwicklung:_CSS:_Box-Modell</a></p>
+<p>Das Box-Model gilt für alle HTML-Tags, die <strong>Block-Elemente</strong> sind,
+sowie für alle Inline-Elemente, auf die die CSS-Anweisung display:
+block; angewendet wurde. Natürlich trifft das nicht auf Block-Elemente
+mit der CSS-Eigenschaft display: inline; zu.</p>
+<p>Im visuellen Anzeigemodell erfolgt die Darstellung von Elementen durch
+das Zeichnen von Rechtecken. Die Bestandteile dieser Rechtecke
+beschreibt das „<strong>Box-Modell</strong>“. Eine Box kann bestehen aus:</p>
+<div class="line-block">
+<div class="line"><a class="reference internal" href="_images/image37.png"><img alt="image38" src="_images/image37.png" style="width: 3.6625in; height: 2.98333in;" /></a>- Dem Inhaltsbereich, also der Fläche, die durch Texte und
+Bilder oder Eigenschaften wie
+<a class="reference external" href="https://wiki.selfhtml.org/wiki/CSS/Eigenschaften/Gr%C3%B6%C3%9Fenangaben/width">width</a>
+und
+<a class="reference external" href="https://wiki.selfhtml.org/wiki/CSS/Eigenschaften/Gr%C3%B6%C3%9Fenangaben/height">height</a>
+vorgegeben wird,</div>
+<div class="line">- einem Innenabstand (padding),</div>
+<div class="line">- einem Rahmen (border) und</div>
+<div class="line">- einem Außenabstand (margin).</div>
+</div>
+<div class="line-block">
+<div class="line">Bei <a class="reference external" href="https://wiki.selfhtml.org/wiki/Block-Element">Block-Elementen</a>
+können Höhe und Breite beliebig festgelegt werden, bei Inlineelementen
+werden die Maße durch den Inhalt vorgegeben.</div>
+<div class="line">Innen- und Außenabstände sowie Rahmen können für jede der vier Seiten
+einer Box einzeln festgelegt werden.</div>
+</div>
+<p>Wird eine Box
+<a class="reference external" href="https://wiki.selfhtml.org/wiki/CSS/Eigenschaften/Positionierung/position">positioniert</a>,
+beginnt die linke Außenkante bei left, die obere Außenkante bei top, die
+rechte Außenkante bei right und die untere Außenkante bei bottom.</p>
+<p>Als Referenz-Box wird derjenige Teil einer Box bezeichnet, für den
+bestimmte Eigenschaften gelten sollen.</p>
+<p>Die einzelnen Rechtecke werden von innen nach außen bezeichnet als</p>
+<ul class="simple">
+<li><p>content-box: (Inhaltsbox) Bereich, der durch den Inhalt oder die
+Eigenschaften width und height festgelegt wurde.</p></li>
+<li><p>padding-box: (Polsterungsbox) Bereich, der content-box und padding
+(Innenabstand) umfasst. Besitzt eine Seite keinen Innenabstand, so
+ist die Polsterungskante mit der Innenkante identisch.</p></li>
+<li><p><a class="reference internal" href="_images/image38.png"><img alt="image39" src="_images/image38.png" style="width: 2.70417in; height: 1.75069in;" /></a>border-box: (Rahmenbox) Box, die content-box, einen
+möglichen Innenabstand und die durch border festgelegten Rahmen
+umfasst. Besitzt eine Box keinen Rahmen, so ist die Rahmenbox mit der
+Polsterungsbox identisch.</p></li>
+<li><p>margin-box: Box mitsamt durch margin festgelegten Außenabständen.
+Sind für eine Box keine Außenabstände definiert, so ist die
+Außenkante mit der Rahmenkante identisch.</p></li>
+</ul>
+<div class="section" id="gesamthohe-und-gesamtbreite">
+<h2>Gesamthöhe und Gesamtbreite<a class="headerlink" href="#gesamthohe-und-gesamtbreite" title="Permalink to this headline">¶</a></h2>
+<p>Für Anfänger irritierend ist, dass mehrere Boxen nicht nebeneinander
+dargestellt werden, obwohl deren Gesamtbreite genau der Breite des
+Eltern-Elements entspricht. Dies liegt daran, dass alle Bestandteile
+einer Box addiert werden.</p>
+<p>Die Gesamtbreite errechnet sich aus:</p>
+<p>margin-left + border-left + padding-left + width + padding-right +
+border-right + margin-right</p>
+<p>Die Gesamthöhe einer Box wird ebenso errechnet aus:</p>
+<p>margin-top + border-top + padding-top + height + padding-bottom +
+border-bottom + margin-bottom</p>
+</div>
+<div class="section" id="aufgabe">
+<h2>Aufgabe<a class="headerlink" href="#aufgabe" title="Permalink to this headline">¶</a></h2>
+<p>Erzeugen Sie folgendes Aussehen einer HTML-Seite. Benutzen Sie dazu
+mehrere DIVS</p>
+<p><a class="reference internal" href="_images/image39.png"><img alt="image40" src="_images/image39.png" style="width: 2.69384in; height: 5.40318in;" /></a></p>
+</div>
+<div class="section" id="box-sizing-border-box">
+<h2>box-sizing: border-box<a class="headerlink" href="#box-sizing-border-box" title="Permalink to this headline">¶</a></h2>
+<p>Die ursprüngliche Definition, die Angaben von width und height als
+Abmessungen lediglich des Inhaltes festzulegen ist wenig intuitiv.
+Eigentlich erwartet man, dass eine Breiten- bzw. Höhenangabe den
+gesamten Platzbedarf des Elementes widerspiegelt.</p>
+<p>Zudem interpretierten alte Internetexplorer das Box-Modell falsch,
+sodass Webentwickler auf diese besondere Rücksicht nehmen mussten.
+Ebenso war es schwierig bis unmöglich, ein responsives Layout zu
+erstellen, welches etwa prozentuale Breitenangaben mit pixelgenauen
+Angaben für die Rahmenbreite kombinierte.</p>
+<p>Mit der Eigenschaft box-sizing können Sie bestimmen, worauf sich Angaben
+zu den Abmessungen eines Elementes beziehen.</p>
+<p>Erlaubt sind dabei eine der folgenden Angaben.</p>
+<ul class="simple">
+<li><p>content-box, Standardwert, Angabe gilt nur für den Inhalt</p></li>
+<li><p>border-box, Angabe gilt für Inhalt, Innenabstand und Rahmen, Standard
+für IE im Quirksmodus</p></li>
+<li><p>inherit, box-sizing des Elternelements</p></li>
+</ul>
+</div>
+<div class="section" id="aufgabe-1">
+<span id="id1"></span><h2>Aufgabe<a class="headerlink" href="#aufgabe-1" title="Permalink to this headline">¶</a></h2>
+<p><a class="reference internal" href="_images/image40.png"><img alt="image41" src="_images/image40.png" style="width: 6.49722in; height: 6.02014in;" /></a></p>
+<p><a class="reference internal" href="_images/image41.png"><img alt="image42" src="_images/image41.png" style="width: 6.49722in; height: 1.26667in;" /></a></p>
+<p><a class="reference internal" href="_images/image42.png"><img alt="image43" src="_images/image42.png" style="width: 6.49722in; height: 1.02431in;" /></a></p>
+<p><a class="reference internal" href="_images/image43.png"><img alt="image44" src="_images/image43.png" style="width: 6.49722in; height: 4.97917in;" /></a></p>
+<p><a class="reference internal" href="_images/image44.png"><img alt="image45" src="_images/image44.png" style="width: 6.49722in; height: 2.09583in;" /></a></p>
+<p><a class="reference internal" href="_images/image45.png"><img alt="image46" src="_images/image45.png" style="width: 6.49722in; height: 1.01667in;" /></a></p>
+<div class="line-block">
+<div class="line">Inline- vs- Block-Elemente</div>
+<div class="line">Die Breite von <strong>Inline-Boxen</strong> wird allein durch den Inhalt bestimmt.
+Die width-Eigenschaft ist wirkungslos. Die Teile einer aufgeteilten
+Inline-Box nehmen nur die Breite ein, die der Inhalt auch tatsächlich
+benötigt.</div>
+</div>
+<p><strong>Block-Boxen</strong> nehmen die gesamte Breite des Elternelementes ein. Sie
+sind so hoch wie ihr Inhalt. Dadurch entsteht ein zusammenhängendes
+Rechteck, das aussieht wie eine Box und dieser Darstellungsart ihren
+Namen gibt.</p>
+<p>Mehrere Block-Boxen werden untereinander angeordnet (normaler
+Elementfluss).</p>
+<p>Beispiele für Blockelemente sind Absätze(p). Die Absätze dieses Artikels
+stehen alle untereinander und nehmen jeder für sich die gesamte Breite
+des Inhaltsbereiches ein.</p>
+<p>Die Höhe eines Blockelementes wird von der Höhe des Inhaltes bestimmt:
+hat ein Absatz viele Worte, wird das Element groß (hoch), enthält es gar
+nichts, ist die Höhe des Inhaltes gleich null.</p>
+<p>Beispiel</p>
+<p>&lt;!DOCTYPE html&gt;</p>
+<p>&lt;html lang=”de”&gt;</p>
+<p>&lt;head&gt;</p>
+<p>&lt;meta charset=”utf-8”&gt;</p>
+<p>&lt;title&gt;Inline- und Block-Elemente&lt;/title&gt;</p>
+<p>&lt;link rel=”stylesheet” type=”text/css”
+href=”<a class="reference external" href="view-source:file:///C:/schule/unterricht/web/10_html_css/uebungen/Grundlagen/049_inlineBlock/inlineBlock.css">inlineBlock.css</a>”&gt;</p>
+<p>&lt;/head&gt;</p>
+<p>&lt;body&gt;</p>
+<p>&lt;span&gt;Die Span ist ein Inline-Element&lt;/span&gt;&lt;u&gt; also fängt das nächste
+Inline-Element nicht in der nächsten Zeile an&lt;/u&gt;</p>
+<p>&lt;strong&gt; sondern die aktuelle Zeile wird einfach fortgesetzt.&lt;/strong&gt;</p>
+<p>&lt;p&gt;Dies ist ein Paragraph mit ganz viel tollem Text zu rumprobieren!&lt;/p&gt;</p>
+<p>&lt;div&gt;&lt;/div&gt;</p>
+<p>&lt;h1&gt;Dies ist ein Block-Element&lt;/h1&gt;</p>
+<p>&lt;/body&gt;</p>
+<p>&lt;/html&gt;</p>
+<p>inlineBlock.css</p>
+<div class="line-block">
+<div class="line">span, u, strong {</div>
+<div class="line">width: 300px;</div>
+<div class="line">height: 300px;</div>
+<div class="line">}</div>
+</div>
+<div class="line-block">
+<div class="line">div {</div>
+<div class="line">width: 300px;</div>
+<div class="line">height: 300px;</div>
+<div class="line">}</div>
+</div>
+<div class="line-block">
+<div class="line">p, div, h1 {</div>
+<div class="line">background-color: #00F;</div>
+<div class="line">}</div>
+</div>
+</div>
+<div class="section" id="display-eigenschaft">
+<h2>DISPLAY-Eigenschaft<a class="headerlink" href="#display-eigenschaft" title="Permalink to this headline">¶</a></h2>
+<p><a class="reference external" href="https://wiki.selfhtml.org/wiki/CSS/Eigenschaften/Anzeige/display">https://wiki.selfhtml.org/wiki/CSS/Eigenschaften/Anzeige/display</a></p>
+<p>Mit der Eigenschaft display wird festgelegt, welche Art von Box ein
+Element erzeugt. Jedes Element kann Null oder mehr Boxen erzeugen. Somit
+könne aus Block-Elementen inline-Elemente und aus Inline-Elementen
+Blockelemente geschaffen werden. Ein Mittelweg (InlineBlock) ist
+ebenfalls möglich.</p>
+<p>Mit der Eigenschaft display wird festgelegt, welche Art von Box von
+einem Element erzeugt wird. Jedes Element kann null oder mehr Boxen
+erzeugen.</p>
+<p>Die Werte, die die display-Eigenschaft besitzen kann, werden nachfolgend
+mit den typischen Verhaltensweisen der Elemente im normalen Elementfluss
+beschrieben.</p>
+<div class="section" id="inline-inline-box-en">
+<h3>inline: Inline-Box(en)<a class="headerlink" href="#inline-inline-box-en" title="Permalink to this headline">¶</a></h3>
+<p>Elemente mit display: inline; erzeugen eine oder mehrere Inline-Boxen.
+Inline-Boxen verlaufen auf einer Zeile horizontal in der Schreibrichtung
+der verwendeten Sprache. Im Deutschen also von links nach rechts, in
+hebräischen oder arabischen Texten von rechts nach links. Eine
+Inline-Box wird in mehrere Teile zerlegt, wenn sie nicht in einer Zeile
+Platz hat oder Zeilenumbrüche enthält.</p>
+</div>
+<div class="section" id="block-block-box">
+<h3>block: Block-Box<a class="headerlink" href="#block-block-box" title="Permalink to this headline">¶</a></h3>
+<p>Block-Boxen nehmen die gesamte Breite des Elternelementes ein. Sie sind
+so hoch wie ihr Inhalt. Dadurch entsteht ein zusammenhängendes Rechteck,
+das aussieht wie eine Box und dieser Darstellungsart ihren Namen gibt.</p>
+<p>Mehrere Block-Boxen werden untereinander angeordnet (normaler
+Elementfluss).</p>
+</div>
+<div class="section" id="inline-block-auszen-inline-box-innen-block-box">
+<h3>inline-block: Außen Inline-Box, innen Block-Box<a class="headerlink" href="#inline-block-auszen-inline-box-innen-block-box" title="Permalink to this headline">¶</a></h3>
+<p>Elemente mit display: inline-block; erzeugen eine Box, die Eigenschaften
+von Inline- und Block-Boxen kombiniert.</p>
+<p>Eine Inline-Block-Box verläuft wie eine Inline-Box auf einer Textzeile,
+kann aber nicht auf mehrere Zeilen aufgeteilt werden. Besitzt ein
+Inline-Block vertikale Innen- und Außenabstände oder Rahmen, so
+beeinflussen diese die Höhe der Zeile. Die horizontale und vertikale
+Ausrichtung von Inline-Block-Elementen erfolgt wie bei Inline-Boxen.</p>
+<p>Die Breite einer Inline-Block-Box wird mit dem <em>shrink-to-fit</em>-Verfahren
+berechnet, d.h. die Box ist so breit wie nötig und so schmal wie
+möglich. Die Breite eines Inline-Blocks kann mithilfe der
+width-Eigenschaft festgelegt werden.</p>
+<p>Die Höhe einer Inline-Block-Box ist wie bei Block-Boxen vom Inhalt
+abhängig, kann aber auch durch die height-Eigenschaft festgelegt werden.</p>
+<p>Inline-Blöcke erzeugen eine Block-Formatierungs-Umgebung, daher können
+sie – im Gegensatz zu Inline-Boxen – Block-Boxen enthalten.</p>
+<div class="line-block">
+<div class="line">Beispiel:</div>
+<div class="line">&lt;!DOCTYPE <em>html</em>&gt;</div>
+<div class="line">&lt;html <em>lang</em>=”de”&gt;</div>
+<div class="line">&lt;head&gt;</div>
+<div class="line">&lt;meta <em>charset</em>=”utf-8”&gt;</div>
+<div class="line">&lt;title&gt;display-Eigenschaft&lt;/title&gt;</div>
+<div class="line">&lt;link <em>rel</em>=”stylesheet” <em>type</em>=”text/css”
+<em>href</em>=”displayEigenschaft.css”&gt;</div>
+<div class="line">&lt;/head&gt;</div>
+</div>
+<p>&lt;body&gt;</p>
+<blockquote>
+<div><div class="line-block">
+<div class="line">&lt;span <em>class</em>=”test1”&gt;Wir stellen jetzt dieses Span &lt;/span&gt;</div>
+<div class="line">&lt;span <em>class</em>=”test1”&gt;statt Inline-Element als Block-Element
+dar.&lt;/span&gt;</div>
+</div>
+</div></blockquote>
+<p>&lt;div <em>class</em>=”test2”&gt;Text!&lt;/div&gt;</p>
+<p>&lt;div <em>class</em>=”test2”&gt;Text!&lt;/div&gt;</p>
+<p>&lt;div <em>class</em>=”test3”&gt;Text!&lt;/div&gt;</p>
+<p>&lt;div <em>class</em>=”test3”&gt;Text!&lt;/div&gt;</p>
+<p>&lt;/body&gt;</p>
+<p>&lt;/html&gt;</p>
+<p>Css</p>
+<div class="line-block">
+<div class="line">.test1 {</div>
+<div class="line">display: block;</div>
+<div class="line">background-color: #F00;</div>
+<div class="line">width: 300px;</div>
+<div class="line">height: 300px;</div>
+<div class="line">margin-bottom: 20px;</div>
+<div class="line">}</div>
+</div>
+<div class="line-block">
+<div class="line">.test2 {</div>
+<div class="line">width: 300px;</div>
+<div class="line">height: 300px;</div>
+<div class="line">background-color: #0F0;</div>
+<div class="line">margin-bottom: 20px;</div>
+<div class="line">display: inline;</div>
+<div class="line">}</div>
+</div>
+<div class="line-block">
+<div class="line">.test3 {</div>
+<div class="line">width: 300px;</div>
+<div class="line">height: 300px;</div>
+<div class="line">background-color: #000;</div>
+<div class="line">margin-bottom: 20px;</div>
+<div class="line">color: #FFF;</div>
+<div class="line">display: inline-block;}</div>
+</div>
+</div>
+</div>
+<div class="section" id="aufgabe-2">
+<span id="id2"></span><h2>Aufgabe<a class="headerlink" href="#aufgabe-2" title="Permalink to this headline">¶</a></h2>
+<p>Erstellen Sie folgendes Aussehen für eine Webseite. Die entsprechenden
+Ausgangsdateien finden Sie im Ordner Exercise 3. Folgen Sie den
+Anweisungen in der Datei exercise_students.css und binden Sie diese in
+ihr HTML-Dokument mit ein.</p>
+<p><a class="reference internal" href="_images/image46.png"><img alt="image47" src="_images/image46.png" style="width: 4.39535in; height: 4.39535in;" /></a></p>
+<p>Lösung: exercise3.css</p>
+</div>
+</div>
+<div class="section" id="float-und-clear">
+<h1>Float und Clear<a class="headerlink" href="#float-und-clear" title="Permalink to this headline">¶</a></h1>
+<p><a class="reference external" href="https://css-tricks.com/all-about-floats/">https://css-tricks.com/all-about-floats/</a></p>
+<p><a class="reference internal" href="_images/image47.png"><img alt="image48" src="_images/image47.png" style="width: 2.86111in; height: 1.43333in;" /></a><strong>Float</strong> bezeichnet eine Eigenschaft zur Positionierung. Um
+seinen Zweck zu verstehen, könne wir ein Print-Design betrachten. So
+können beispielsweise Bilder so gesetzt werden, dass sie von Text
+umflossen werden.</p>
+<p><a class="reference internal" href="_images/image48.png"><img alt="image49" src="_images/image48.png" style="width: 3.01181in; height: 1.50833in;" /></a>In Textsatzprogrammen können die Textboxen angewiesen werden,
+diesen Textumbruch zu beachten oder ihn zu ignorieren. Dies würde
+beispielsweise dazu führen, dass Text das Bild überschreibt. Das Bild
+ist damit entweder Teil des Textflusses (Flow) oder eben auch nicht.
+WebDesign ist hier dem Printdesign sehr ähnlich.</p>
+<p>Im WebDesign sind Seitenelemente, die mit der Float-Eigenschaft
+ausgestattet werden, wie die Bilder im Printdesign zu sehen. Umflossene
+Elemente bleiben Teil des Textflusses einer Webseite. Dies unterscheidet
+sich von Seitenelementen, die absolute Positionierung verwenden. Dies
+werden aus dem Textfluss der Webseite herausgenommen und beeinflussen
+nicht die Positionierung der anderen Elemente und umgekehrt.</p>
+<p>Die float-Eigenschaft wird in CSS wie folgt gesetzt:</p>
+<p>#sidebar {</p>
+<p>float: right;</p>
+<p>}</p>
+<p>Es gibt vier gültige Werte für die float-Eigenschaft: Left und Right
+lassen Elemente in die jeweilige Richtung fließen. None (default
+verhindert den Fluss und Inherit übernimmt den Wert vom übergeordneten
+Element.</p>
+<dl>
+<dt><a href="#id3"><span class="problematic" id="id4">`</span></a></dt><dd><div class="system-message" id="id3">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">C:\schule\unterricht\web\runestone_html\_sources\html_css.rst</span>, line 1042); <em><a href="#id4">backlink</a></em></p>
+<p>Inline interpreted text or phrase reference start-string without end-string.</p>
+</div>
+<p>&lt;<a class="reference external" href="https://css-tricks.com/all-about-floats/#article-header-id-1">https://css-tricks.com/all-about-floats/#article-header-id-1</a>&gt;`__Einsatzgebiet</p>
+</dd>
+</dl>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">C:\schule\unterricht\web\runestone_html\_sources\html_css.rst</span>, line 1044)</p>
+<p>Definition list ends without a blank line; unexpected unindent.</p>
+</div>
+<hr class="docutils" />
+<p>Neben dem oben angesprochenen Beispiel des Umfließens von Bildern können
+floats zum Erstellen eines ganzen Weblayouts verwendet werden.</p>
+<p><a class="reference internal" href="_images/image49.png"><img alt="image50" src="_images/image49.png" style="width: 3.60833in; height: 2.5in;" /></a>Auch wenn Web-Layouts heute durch Flexbox und Grid-Layout
+erstellt werden, haben floats doch einige besondere Eigenschaften.</p>
+<p>Floats sind auch hilfreich bei kleinen Problemen. Wenn wir den Avatar in
+der nebenstehenden Abbildung ändern, wird der Textfluss entsprechend
+angepasst.</p>
+<p><a class="reference internal" href="_images/image50.png"><img alt="https://css-tricks.com/wp-content/csstricks-uploads/reflow-example-1.png" src="_images/image50.png" style="width: 4.81667in; height: 1.57701in;" /></a></p>
+<p>Dasselbe Layout könnte auch mit einer relativen Positionierung für den
+Container und einer absoluten Positionierung für den Avatar erreicht
+werden, Der Text wäre aber jetzt vom Avatar nicht abhängig und würde
+sich bei einer Größenänderung nicht neu ausrichten.</p>
+<p><a class="reference internal" href="_images/image51.png"><img alt="https://css-tricks.com/wp-content/csstricks-uploads/reflow-example-2.png" src="_images/image51.png" style="width: 4.85833in; height: 1.59065in;" /></a></p>
+<div class="system-message">
+<p class="system-message-title">System Message: SEVERE/4 (<span class="docutils literal">C:\schule\unterricht\web\runestone_html\_sources\html_css.rst</span>, line 1065)</p>
+<p>Title level inconsistent:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Clearing</span> <span class="n">the</span> <span class="n">Float</span>
+<span class="o">~~~~~~~~~~~~~~~~~~</span>
+</pre></div>
+</div>
+</div>
+<p>Die zu float gegensätzliche Eigenschaft ist clear. Ein Element mit
+dieser Eigenschaft wird sich nicht am float ausrichten, sondern sich
+hinter den float anordnen. Ein Beispiel soll dies verdeutlichen.</p>
+<p><a class="reference internal" href="_images/image52.png"><img alt="https://css-tricks.com/wp-content/csstricks-uploads/unclearedfooter.png" src="_images/image52.png" style="width: 5.625in; height: 2.03333in;" /></a></p>
+<p><a class="reference internal" href="_images/image53.png"><img alt="image54" src="_images/image53.png" style="width: 4.975in; height: 2.4in;" /></a>Im obigen Beispiel ist die Sidebar rechts vom MainContent und
+etwas kleiner. Der footer muss nun diese Lücke aufnehmen und das obige
+Layout ist die Folge. Um dieses Problem zu lösen, kann der Footer mit
+einer clear-Eigenschaft versehen werden, um seine unten ausgerichtete
+Anordnung zu garantieren.</p>
+<p>#footer {</p>
+<p>clear: both;</p>
+<p>}</p>
+<p>Clear hat ebenfalls vier Eigenschaften, left, right, both, Inherit,
+None. Both ist die am meisten genutzte, die floats aus allen Richtungen
+beendet.</p>
+<p><a class="reference internal" href="_images/image54.png"><img alt="https://css-tricks.com/wp-content/csstricks-uploads/directionalclearing.png" src="_images/image54.png" style="width: 5.625in; height: 2.35833in;" /></a></p>
+<div class="system-message">
+<p class="system-message-title">System Message: SEVERE/4 (<span class="docutils literal">C:\schule\unterricht\web\runestone_html\_sources\html_css.rst</span>, line 1092)</p>
+<p>Title level inconsistent:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">The</span> <span class="n">Great</span> <span class="n">Collapse</span>
+<span class="o">~~~~~~~~~~~~~~~~~~</span>
+</pre></div>
+</div>
+</div>
+<p>One of the more bewildering things about working with floats is how they
+can affect the element that contains them (their “parent” element). If
+this parent element contained nothing but floated elements, the height
+of it would literally collapse to nothing. This isn’t always obvious if
+the parent doesn’t contain any visually noticeable background, but it is
+important to be aware of.</p>
+<p><a class="reference internal" href="_images/image55.png"><img alt="https://css-tricks.com/wp-content/csstricks-uploads/collapse.png" src="_images/image55.png" style="width: 5.625in; height: 1.9in;" /></a></p>
+<p>As anti-intuitive as collapsing seems to be, the alternative is worse.
+Consider this scenario:</p>
+<p><a class="reference internal" href="_images/image56.png"><img alt="https://css-tricks.com/wp-content/csstricks-uploads/whywecollapse.png" src="_images/image56.png" style="width: 5.625in; height: 2.5in;" /></a></p>
+<p>If the block element on top were to have automatically expanded to
+accommodate the floated element, we would have an unnatural spacing
+break in the flow of text between paragraphs, with no practical way of
+fixing it. If this were the case, us designers would be complaining much
+harder about this behavior than we do about collapsing.</p>
+<p>Collapsing almost always needs to be dealt with to prevent strange
+layout and cross-browser problems. We fix it by clearing the float
+<strong>after</strong> the floated elements in the container but <strong>before</strong> the close
+of the container.</p>
+<div class="system-message">
+<p class="system-message-title">System Message: SEVERE/4 (<span class="docutils literal">C:\schule\unterricht\web\runestone_html\_sources\html_css.rst</span>, line 1120)</p>
+<p>Title level inconsistent:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>`# &lt;https://css-tricks.com/all-about-floats/#article-header-id-7&gt;`__\ Video
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+</pre></div>
+</div>
+</div>
+<p>I did <a class="reference external" href="http://css-tricks.com/video-screencasts/42-all-about-floats-screencast/">a
+screencast</a>
+a while back explaining many of these float concepts.</p>
+<div class="section" id="aufgabe-3">
+<span id="id5"></span><h2>Aufgabe<a class="headerlink" href="#aufgabe-3" title="Permalink to this headline">¶</a></h2>
+<p>Quelle: <a class="reference external" href="https://github.com/char1eschen/40-Layout-Exercises">https://github.com/char1eschen/40-Layout-Exercises</a></p>
+<p>Speichern sie folgendes Fragment als vollständige HTML-Datei und
+schreiben Sie dazu Fülltext in die jeweiligen divs navigation, exctra
+und footer.</p>
+<p>&lt;div id=”container”&gt;</p>
+<p>&lt;div id=”header”&gt;Header&lt;/div&gt;</p>
+<p>&lt;div id=”wrapper”&gt;</p>
+<p>&lt;div id=”content”&gt;Content&lt;/div&gt;</p>
+<p>&lt;/div&gt;</p>
+<p>&lt;div id=”navigation”&gt;Navigation&lt;/div&gt;</p>
+<p>&lt;div id=”extra”&gt;Extra stuff&lt;/div&gt;</p>
+<p>&lt;div id=”footer”&gt;Footer&lt;/div&gt;</p>
+<p>&lt;/div&gt;</p>
+<p>Binden Sie dann folgende CSS-Datei ein</p>
+<p>#container {</p>
+<p>font-size: 12px;</p>
+<p>font-family: arial, sans-serif;</p>
+<p>}</p>
+<p>p {</p>
+<p>margin: 0 10px 10px;</p>
+<p>}</p>
+<p>#header {</p>
+<p>height: 80px;</p>
+<p>background-color: <strong>rgb</strong>(238,238,238);</p>
+<p>color: <strong>rgb</strong>(122,177,36);</p>
+<p>padding-left: 10px;</p>
+<p>line-height: 80px; }</p>
+<p>#header h1 {</p>
+<p>margin: 0;</p>
+<p>}</p>
+<p>#navigation {</p>
+<p>background-color: <strong>rgb</strong>(186,203,253);</p>
+<p>}</p>
+<p>#extra {</p>
+<p>background-color: <strong>rgb</strong>(253,133,67);</p>
+<p>}</p>
+<p>#footer {</p>
+<p>height: 14px;</p>
+<p>padding:5px 10px 5px 10px;</p>
+<p>color: #FFF;</p>
+<p>background-color: #333;</p>
+<p>}</p>
+<p>#footer p {</p>
+<p>line-height: 14px;</p>
+<p>margin: 0px;</p>
+<p>}</p>
+<p>Formatieren Sie dann die bestehende CSS-Datei so um, dass folgendes
+Layout entsteht.</p>
+<p>Setzen Sie dazu die</p>
+<ul class="simple">
+<li><p>die width des wrapper-divs auf 50 % und zentrieren Sie das
+wrapper-Element horizontal</p></li>
+<li><p>die width des navigation und extra – div auf jeweils 25 %</p></li>
+<li><p>navigation soll links vom wrapper, extra soll rechts vom wrapper
+erscheinen,</p></li>
+</ul>
+<p>Informieren Sie sich dazu über die float und clear – Eigenschaft von css</p>
+<p><a class="reference internal" href="_images/image57.png"><img alt="image58" src="_images/image57.png" style="width: 6.49722in; height: 2.93403in;" /></a></p>
+<p>Layout – float und clear</p>
+<p><a class="reference external" href="https://www.w3schools.com/css/tryit.asp?filename=trycss_float5">https://www.w3schools.com/css/tryit.asp?filename=trycss_float5</a></p>
+<p><a class="reference external" href="https://www.w3schools.com/css/css_float.asp">https://www.w3schools.com/css/css_float.asp</a></p>
+<p><a class="reference internal" href="_images/image58.jpeg"><img alt="image59" src="_images/image58.jpeg" style="width: 6.40347in; height: 2.50833in;" /></a><a class="reference external" href="https://www.w3schools.com/css/tryit.asp?filename=trycss_layout_cols">https://www.w3schools.com/css/tryit.asp?filename=trycss_layout_cols</a></p>
+<p>Aufgabe:</p>
+<p>Erzeugen Sie folgendes Aussehen untenstehender CSS-Datei.</p>
+<p><a class="reference internal" href="_images/image59.png"><img alt="image60" src="_images/image59.png" style="width: 4.64632in; height: 5.84167in;" /></a></p>
+</div>
+</div>
+<div class="section" id="css-eigenschaften-positionierung-position">
+<h1>CSS/Eigenschaften/Positionierung/position<a class="headerlink" href="#css-eigenschaften-positionierung-position" title="Permalink to this headline">¶</a></h1>
+<p>Quellen:</p>
+<p><a class="reference external" href="https://www.codeproject.com/Articles/567385/CSSplusBoxplusModelplusandplusPositioning">https://www.codeproject.com/Articles/567385/CSSplusBoxplusModelplusandplusPositioning</a></p>
+<p><a class="reference external" href="http://www.thestyleworks.de/basics/disposfloat.shtml">http://www.thestyleworks.de/basics/disposfloat.shtml</a></p>
+<p><a class="reference external" href="http://selfhtml.apsel-mv.de/position/position.html">http://selfhtml.apsel-mv.de/position/position.html</a></p>
+<p><a class="reference external" href="https://medium.freecodecamp.org/how-to-use-the-position-property-in-css-to-align-elements-d8f49c403a26">https://medium.freecodecamp.org/how-to-use-the-position-property-in-css-to-align-elements-d8f49c403a26</a></p>
+<p><a class="reference external" href="https://www.w3schools.com/css/css_positioning.asp">https://www.w3schools.com/css/css_positioning.asp</a></p>
+<p><a class="reference internal" href="_images/image60.png"><img alt="image61" src="_images/image60.png" style="width: 3.32917in; height: 1.10278in;" /></a>Elemente können durch Verwendung der Eigenschaft <strong>position</strong>
+aus dem normalen Elementfluss entfernt werden und an jede beliebige
+Stelle des Viewports positioniert werden. Auf andere Elemente haben
+positionierte Elemente keinen Einfluss.</p>
+<p><strong>position: static</strong></p>
+<p>position:static ist der Defaultwert der Eigenschaft position. Das
+Element verbleibt im Textfluss. Die Eigenschaften Top, Bottom, Left,
+Right werden ignoriert.</p>
+<p><strong>position: absolute</strong></p>
+<p>Mit position:absolute kann man Elemente losgelöst vom Textfluss
+positionieren, an eine Stelle, die per left, right, top und bottom
+festgelegt wird. Eine Lücke bleibt dabei nicht bestehen. Größenangaben,
+wie width und height, oder Abstände, wie margin und padding, sind
+ebenfalls möglich.</p>
+<p>Die Angaben left, right, top und bottom beziehen sich dabei auf das
+<strong>nächste Vorfahrenelement</strong>, welches mit position: positioniert wurde.
+Hat das Element keine solchen Vorfahrenelemente, wird als Bezugspunkt
+das Wurzelelement angesehen - in HTML-Dokumenten also das HTML-Element
+(bei XML wäre es das XML-Element). Im oberen Beispiel wird deshalb der
+Link mit der ID “info-box” relativ zum main-Element positioniert, wofür
+das main-Element die Eigenschaft position:relative erhält.</p>
+<p><strong>position: fixed</strong></p>
+<p>Möchte man ein Element starr am Viewport ausrichten, (beispielsweise
+eine <a class="reference external" href="https://wiki.selfhtml.org/wiki/CSS/Tutorials/feststehender_footer">fixe
+Fußzeile</a>
+oder einen Link zum Seitenanfang in einer Ecke) dann ist position:fixed
+das Mittel der Wahl. Genau wie bei position:absolute wird das Element
+aus dem Textfluss entnommen, es entsteht also keine Lücke. Positioniert
+wird klassisch mit den CSS-Eigenschaften top, bottom, left und right.</p>
+<p><strong>position: relative</strong></p>
+<p>Wie schon weiter oben erklärt, verwendet man position:relative als
+Bezugspunkt für absolut positionierte Kindelemente. Das Element an sich
+wird quasi “an sich selbst” ausgerichtet. Die Lücke im Textfluss bleibt
+bestehen. Trotzdem kann man das Element mit top, bottom, left und right
+ausrichten.</p>
+<p>position: sticky</p>
+<p>position: sticky: Elemente mit dieser Eigenschaft behalten ihre Position
+im Elementfluss, bis sie das obere oder untere Seitenende erreichen und
+dort „kleben“ bleiben.</p>
+<p>Ein Beispiel soll dies veranschaulichen:</p>
+<p>Static: Erzeugen Sie folgende Ausgabe mit Hilfe zweier DIVs</p>
+<table class="docutils align-center">
+<colgroup>
+<col style="width: 17%" />
+<col style="width: 83%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="_images/image61.png"><img alt="image62" src="_images/image61.png" style="width: 2.06181in; height: 1.31667in;" /></a></p></td>
+<td><p>&lt;style&gt;</p>
+<p>.box-orange{ <em>/*keine Positionsangabe</em>/*</p>
+<p>background:orange;</p>
+<p>height: 100px;</p>
+<p>width: 100px;</p>
+<p>}</p>
+<p>.box-blue{</p>
+<p>background: lightskyblue;</p>
+<p>height: 100px;</p>
+<p>width: 100px;</p>
+<p>position: static; <em>/* Declared as static */</em></p>
+<p>}</p>
+<p>&lt;/style&gt;</p>
+<p>&lt;/head&gt;</p>
+<p>&lt;body&gt;</p>
+<p>&lt;p&gt;Position Static ist der default- Wert.</p>
+<p>Die Elemente bleiben in ihrer normalen Position&lt;/p&gt;</p>
+<p>&lt;div class=”box-orange”&gt;&lt;/div&gt;</p>
+<p>&lt;div class=”box-blue”&gt;&lt;/div&gt;</p>
+<p>&lt;/body&gt;</p>
+<p>&lt;/html&gt;</p>
+</td>
+</tr>
+</tbody>
+</table>
+<div class="line-block">
+<div class="line"><strong>Relative:</strong></div>
+<div class="line">Die Position eines Elements ist relativ zu seiner normalen Position
+innerhalb des Textflusses. Um eine Änderung zu sehen, müssen
+Eigenschaften wie top und left angepasst werden.</div>
+</div>
+<p>Ausgehend vom vorherigen Beispiel soll die orangene Box vor die blaue
+Box geschoben werden.</p>
+<table class="docutils align-center">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="_images/image62.png"><img alt="image64" src="_images/image62.png" style="width: 2.51042in; height: 1.39583in;" /></a></p>
+<p>100 px vom top der alten Position</p>
+<p>100 px von links der alten
+Position</p>
+</td>
+<td><p>&lt;style&gt;</p>
+<p>.box-orange{</p>
+<p>position: relative; <em>/* We can
+now move the element</em>/*</p>
+<p>background: orange;</p>
+<p>width: 100px;</p>
+<p>height: 100px;</p>
+<p>top: 100px; <em>/* 100px from top
+relative to its old position</em>/*</p>
+<p>left: 100px; <em>/* 100px from left
+*/</em></p>
+<p>}</p>
+<p>.box-blue{</p>
+<p>background: lightskyblue;</p>
+<p>height: 100px;</p>
+<p>width: 100px;</p>
+<p>position: static;</p>
+<p>}</p>
+<p>&lt;/style&gt;</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Absolute:</strong></p>
+<p>Mit position: absolute wird ein Element relativ zu seinem Elternelement
+ausgerichtet. Wenn es kein Elternelement hat, wird es zum &lt;html&gt;-Element
+ausgerichtet.</p>
+<div class="line-block">
+<div class="line">Das Element wird außerdem aus dem normalen Textfluss herausgenommen
+und kann damit die Position andere Elemente ebenfalls beeinflussen.</div>
+<div class="line">Im ersten Beispiel wird die orangene Box herausgenommen, die blaue Box
+bleibt in ihrer Position und wird von der orangenen Box überdeckt.</div>
+</div>
+<table class="docutils align-center">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p><a class="reference internal" href="_images/image63.png"><img alt="image68" src="_images/image63.png" style="width: 1.71362in; height: 1.07917in;" /></a></p>
+<p>&lt;body&gt;</p>
+<p>&lt;div class=”container”&gt;</p>
+<p>&lt;div class=”box-orange”&gt;&lt;/div&gt;</p>
+<p>&lt;div class=”box-blue”&gt;&lt;/div&gt;</p>
+<p>&lt;/div&gt;</p>
+<p>&lt;/body&gt;</p>
+<p>&lt;/html&gt;</p>
+</th>
+<th class="head"><p>&lt;style&gt;</p>
+<p>.box-orange{ <em>/*keine
+Positionsangabe</em>/*</p>
+<p>position: absolute;</p>
+<p>background: orange;</p>
+<p>width: 100px;</p>
+<p>height: 100px;</p>
+<p>}</p>
+<p>.box-blue{</p>
+<p>background: lightskyblue;</p>
+<p>height: 100px;</p>
+<p>width: 100px;</p>
+<p>position: static</p>
+<p>}</p>
+<p>&lt;/style&gt;</p>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><a class="reference internal" href="_images/image64.png"><img alt="image69" src="_images/image64.png" style="width: 1.11458in; height: 1.02083in;" /></a></p>
+<p>Die Änderung der Position lässt
+die blaue Box erscheinen.</p>
+</td>
+<td><p>.box-orange {</p>
+<p>position: absolute;</p>
+<p>background: orange;</p>
+<p>width: 100px;</p>
+<p>height: 100px;</p>
+<p>left: 5px;</p>
+<p>top: 5px;</p>
+<p>}</p>
+</td>
+</tr>
+<tr class="row-odd"><td><p>Die Koordinaten eines absolut
+positionierten Elementes sind
+relativ zum Elternelement, wenn
+dieses nicht-static definiert
+ist.</p>
+<p><a class="reference internal" href="_images/image65.png"><img alt="image70" src="_images/image65.png" style="width: 2.84583in; height: 1.00831in;" /></a></p>
+</td>
+<td><div class="line-block">
+<div class="line">.container {</div>
+<div class="line">position: relative;</div>
+<div class="line">background: lightgray;</div>
+<div class="line">}</div>
+</div>
+<div class="line-block">
+<div class="line">.box-orange {</div>
+<div class="line">position: absolute;</div>
+<div class="line">background: orange;</div>
+<div class="line">width: 100px;</div>
+<div class="line">height: 100px;</div>
+<div class="line">right: 5px; /* 5px relative to
+the most-right of parent */</div>
+<div class="line">}</div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Fixed:</strong></p>
+<div class="line-block">
+<div class="line">Auch sie werden aus dem normalen Textfluss herausgenommen. Im
+Unterscheid zu absolute sind sie allerdings</div>
+<div class="line">- nur relative zum html-Element</div>
+<div class="line">- unbeinflusst vom Scrollen im Bowser</div>
+</div>
+<table class="docutils align-center">
+<colgroup>
+<col style="width: 57%" />
+<col style="width: 43%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="_images/image66.png"><img alt="image71" src="_images/image66.png" style="width: 2.24518in; height: 0.7in;" /></a></p>
+<p>&lt;body&gt;</p>
+<p>&lt;div class=”container”&gt;</p>
+<p>&lt;div class=”box-orange”&gt;&lt;/div&gt;</p>
+<p>&lt;div class=”box-blue”&gt;&lt;/div&gt;</p>
+<p>&lt;p&gt;Scroll down the page&lt;/p&gt;</p>
+<p>&lt;/div&gt;</p>
+<p>&lt;/body&gt;</p>
+</td>
+<td><p>.container {</p>
+<p>position: relative;</p>
+<p>background: lightgray;</p>
+<p>width: 50%;</p>
+<p>margin: 0 auto;</p>
+<p>height: 1000px;}</p>
+<p>.container p {</p>
+<p>text-align: center;</p>
+<p>font-size: 20px;}</p>
+<p>.box-orange {</p>
+<p>background: orange;</p>
+<p>width: 100px;</p>
+<p>height: 100px;</p>
+<p>position: fixed;</p>
+<p>right: 5px;}</p>
+<p>.box-blue {</p>
+<p>background: lightblue;</p>
+<p>width: 100px;</p>
+<p>height: 100px;</p>
+<p>}</p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="groszenangaben">
+<span id="section-9"></span><span id="section-8"></span><h1>Größenangaben<a class="headerlink" href="#groszenangaben" title="Permalink to this headline">¶</a></h1>
+</div>
+<div class="section" id="arten-von-farben">
+<h1>Arten von Farben<a class="headerlink" href="#arten-von-farben" title="Permalink to this headline">¶</a></h1>
+</div>
+<div class="section" id="schriftarten">
+<h1>Schriftarten<a class="headerlink" href="#schriftarten" title="Permalink to this headline">¶</a></h1>
+</div>
+<div class="section" id="glossar">
+<h1>Glossar<a class="headerlink" href="#glossar" title="Permalink to this headline">¶</a></h1>
+<p>Quelle: <a class="reference external" href="http://www.thestyleworks.de/basics/definitions.shtml">http://www.thestyleworks.de/basics/definitions.shtml</a></p>
+</div>
+<div class="section" id="die-wichtigsten-definitionen-in-css">
+<h1>Die wichtigsten Definitionen in CSS<a class="headerlink" href="#die-wichtigsten-definitionen-in-css" title="Permalink to this headline">¶</a></h1>
+<p>Absolute Positionierung (absolute positioning)</p>
+<blockquote>
+<div><p>Ein Element ist dann absolut positioniert, wenn seine Eigenschaft
+position mit
+<a class="reference external" href="http://www.thestyleworks.de/ref/position.shtml#absolute">absolute</a>
+oder <a class="reference external" href="http://www.thestyleworks.de/ref/position.shtml#fixed">fixed</a>
+deklariert ist. Die Box eines absolut positionierten Elements ist vom
+normalen Elementfluß vollständig losgelöst und hat keinerlei Einfluss
+auf nachfolgende
+<a class="reference external" href="http://www.thestyleworks.de/basics/doctree.shtml#sibling">Geschwisterelemente</a>.
+Sie bildet den umschließenden Block für alle ihre
+<a class="reference external" href="http://www.thestyleworks.de/basics/doctree.shtml#descendant">Nachkommenelemente</a>
+mit Ausnahme der fixed positionierten Elemente. Ihre Inhalte fließen
+nicht um andere Boxes herum ebenso wie die Inhalte anderer Boxes
+nicht von absolut positionierten Boxes beeinflusst werden. Wie
+überlappende Boxes sich gegenseitig überdecken, hängt vom
+<a class="reference external" href="http://www.thestyleworks.de/ref/z-index.shtml">Z-Index</a> ab.</p>
+</div></blockquote>
+<p>Absoluter Längenwert (absolute length)</p>
+<blockquote>
+<div><p>Absolute Längenwerte sind Zentimeter, Millimeter, Inch(Zoll), Points
+oder Picas. Längenwerte werden in einem <a class="reference external" href="http://www.thestyleworks.de/basics/lengthvalues.shtml">besonderen
+Artikel</a>
+ausführlich behandelt.</p>
+</div></blockquote>
+<p>Aktueller Wert (actual value)</p>
+<blockquote>
+<div><p>Relative Werte werden als Verhältnismaße zu anderen Größen definiert.
+Deshalb muss aus dem in einer CSS-Regel deklarierten Wert ein am
+Bildschirm darstellbarer Wert bestimmt werden. Dazu sind die
+folgenden vier Berechnungsschritte erforderlich:</p>
+<p>Spezifizierter Wert → Berechneter Wert → Verwendeter Wert → Aktueller
+Wert.</p>
+<p>Der Ablauf dieser Berechnung ist im Abschnitt <a class="reference external" href="http://www.thestyleworks.de/basics/lengthvalues.shtml#relative">Relative
+Längenwerte</a>
+detailliert erläutert.</p>
+</div></blockquote>
+<p>Ancestor</p>
+<blockquote>
+<div><p>Vorfahrenselektor / Vorfahrenelement. Wenn sich die Abstammungslinie
+von einem Element A nach unten direkt zu einem Element B verfolgen
+lässt, dann wird A als Vorfahrenelement von B bezeichnet. Dabei kann
+B das direkte Kindelement von A sein, es können aber auch beliebig
+viele Generationen dazwischen liegen. Diese und weitere Erläuterungen
+zum Konzept der Abstammung in CSS finden sich im Grundlagenartikel
+‘<a class="reference external" href="http://www.thestyleworks.de/basics/doctree.shtml">Der
+Dokumentstammbaum</a>’.</p>
+</div></blockquote>
+<p>Anonyme Boxes (anonyme boxes)</p>
+<blockquote>
+<div><p>Alle Elemente einer Website erzeugen Boxes: Block- Level- Elemente
+generieren Block- Boxes, Inline- Level- Elemente generieren Inline-
+Boxes und alle Inhalte, die zwischen den anderen Elementen liegen,
+erzeugen anonyme Boxes. Dadurch wird die Definition der Formatierung
+innerhalb des Box- Modells und des Line- Box- Modells vereinfacht.
+Der Inhalt von anonymen Boxes kann nicht durch CSS-Deklarationen
+angesprochen werden.</p>
+<p>Hat nun ein Block- Level- Element eine oder mehrere andere Block-
+Level- Elemente als Kindelement und dazwischen noch einige andere
+Inhalte, dann werden zunächst für die Kindelemente Block- Boxes
+gebildet. Die anderen Inhalte, die zwischen den generierten Block-
+Boxes liegen, werden dann in anonyme Block- Boxes eingefasst. Eine
+anonyme Block- Box kann Inline- Level- Elemente wie auch
+freistehenden Text oder anderes nebeneinander enthalten.</p>
+<p>Sind aber keine Block- Level- Elemente als Kindelemente vorhanden,
+sondern nur Inline- Level- Elemente und andere Inhalte, dann werden
+zunächst Inline- Boxes für die Kindelemente generiert, danach bilden
+die dazwischen liegenden Inhalte anonyme Inline- Boxes.</p>
+<p>Dasselbe gilt, wenn sich innerhalb einer anonymen Block- Box nur
+Inline-Elemente und weitere Inhalte befinden. Diese bilden dann
+Inline- Boxes und anonyme Inline- Boxes. Eine anonyme Block- Box kann
+keine weiteren Block- Boxes enthalten.</p>
+</div></blockquote>
+<p>Anonyme Block- Box (anonyme block box)</p>
+<blockquote>
+<div><p>Eine Block- Box kann auch andere Block- Boxes beinhalten, die durch
+Kindelemente generiert werden. Sind zudem andere Inhalte vorhanden,
+werden diese von (gedachten) anonymen Block- Boxes umgeben. Das
+bewirkt, dass in diesem Fall die erste Block- Box nur Kindelemente
+auf Block- Level- Ebene enthält und dass die Definition der
+Formatierung vereinfacht wird. Ein Beispiel dazu wird im Artikel
+‘<a class="reference external" href="http://www.thestyleworks.de/basics/boxmodel.shtml#anonym">Das Box-
+Modell</a>’
+vorgestellt.</p>
+</div></blockquote>
+<p>Anonyme Inline- Box (anonyme inline box)</p>
+<blockquote>
+<div><p>Alle Teile eines Textes oder einer Textzeile, die keinem Inline-
+Level- Element zugeordnet sind, werden Anonyme Inline- Boxes genannt.
+Der Inhalt von anonymen Inline- Boxes kann nicht durch
+CSS-Deklarationen angesprochen werden. Die Regeln der Inline-
+Formatierung in CSS werden im Artikel über das <a class="reference external" href="http://www.thestyleworks.de/basics/lineboxmodel.shtml#inline-example">Line- Box-
+Modell</a>
+ausführlich dargestellt.</p>
+</div></blockquote>
+<p>Anwenderprogramm (user application)</p>
+<blockquote>
+<div><p>Dieser Begriff wird auf dieser Website als übergreifender Ausdruck
+für alle Programme verwendet, die Websites darstellen können: normale
+Browser, Homepage-Reader, Brailleleser, Voice-Browser, PDA- oder
+Mobilephone-Browser (Smartphone) etc.</p>
+</div></blockquote>
+<p>Attribut (attribute)</p>
+<blockquote>
+<div><p>HTML- und XHTML-Elemente können Eigenschaften zugeordnet haben, die
+Attribute genannt werden. Es ist für jedes Element genau definiert,
+welche Attribute sie haben können und welche Art von Werten diese
+Attribute annehmen können. Das folgende Beispiel zeigt den HTML- Code
+einer Überschrift 1. Ordnung, der ein Attribut ID mit einem Wert von
+kapitel-1 zugeordnet wurde.</p>
+<p>&lt;h1 id=”kapitel-1”&gt;…&lt;/h1&gt;</p>
+</div></blockquote>
+<p>Äußere Kante (outer edge)</p>
+<blockquote>
+<div><p>Die Darstellung von padding, border und margin ist genaugenommen
+nicht linienförmig, sondern deckt eine bestimmte Fläche ab. Die
+Begriffe <em>äußere Kante</em> und <em>innere Kante</em> dienen dazu, die
+Begrenzungen dieser Flächen wie auch der Contentflächen im Box-
+Modell exakter zu beschreiben.</p>
+</div></blockquote>
+<p>Backslash() Escapes</p>
+<blockquote>
+<div><p>Ein Backslash kann in CSS verschiedene Bedeutungen haben:</p>
+</div></blockquote>
+<ul class="simple">
+<li><dl class="simple">
+<dt>Er hebt die besondere Bedeutung spezieller CSS-Zeichen auf. Jedem</dt><dd><p>Zeichen mit Ausnahme hexadezimaler Zeichen kann durch ein
+vorangestelltes ‘’ seine spezielle Bedeutung genommen werden.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>Mit Hilfe des Backslash lassen sich Sonderzeichen in ein Webdokument</dt><dd><p>einfügen, die anders nur schwer zu erzeugen wären. Dazu müssen auf
+den Backslash bis zu sechs Hexadezimalziffern (0-9, a-f) folgen,
+die für ein Zeichen nach ISO 10464 stehen. Diese Sequenz wird von
+den nachfolgenden Zeichen abgetrennt, indem man einen Leerraum
+nach ihr einfügt oder genau sechs Hexadezimalziffern verwendet.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>Ein Backslash am Ende der Zeile muss vom Anwenderprogramm ignoriert</dt><dd><p>werden.</p>
+</dd>
+</dl>
+</li>
+</ul>
+<blockquote>
+<div><p>Dieses Escape-Zeichen wird von allen modernen Browsern (Gecko-Engine,
+IE/Mac, Opera 6+, Safari usw.) korrekt interpretiert, nicht jedoch
+vom IE/Win 6 im
+<a class="reference external" href="http://www.thestyleworks.de/basics/doctypes.shtml#switching">Quirksmodus</a>,
+vom IE/Win 5 gar nicht. NN 4 wird das gesamte Stylesheet ignorieren.</p>
+</div></blockquote>
+<p>Berechneter Wert (calculated value)</p>
+<blockquote>
+<div><p>Relative Werte werden als Verhältnismaße zu anderen Größen definiert.
+Deshalb muss aus dem in einer CSS-Regel deklarierten Wert ein am
+Bildschirm darstellbarer Wert bestimmt werden. Dazu sind die
+folgenden vier Berechnungsschritte erforderlich:</p>
+<p>Spezifizierter Wert → Berechneter Wert → Verwendeter Wert → Aktueller
+Wert.</p>
+<p>Der Ablauf dieser Berechnung ist im Abschnitt <a class="reference external" href="http://www.thestyleworks.de/basics/lengthvalues.shtml#relative">Relative
+Längenwerte</a>
+detailliert erläutert.</p>
+</div></blockquote>
+<p>Bidirektionalität (bidirectionality)</p>
+<blockquote>
+<div><p>Normalerweise ist in allen Webdokumenten, die in westlichen Sprachen
+abgefasst sind, die Schreibrichtung von links nach rechts. In einigen
+Dokumenten, insbesondere in hebräischer oder arabischer Sprache, kann
+in einem Block- Element Text beider Schreibrichtungen
+(Direktionalitäten) auftreten. Dies nennt man Bidirektionalität oder
+kurz ‘bidi’. Genauere Erklärungen über die Behandlung verschiedener
+Schreibrichtungen in CSS 2.1 werden bei den Eigenschaften
+<a class="reference external" href="http://www.thestyleworks.de/ref/direction.shtml">direction</a> und
+<a class="reference external" href="http://www.thestyleworks.de/ref/unicode-bidi.shtml">unicode-bidi</a>
+gegeben.</p>
+</div></blockquote>
+<p>Block- Box (block box)</p>
+<blockquote>
+<div><p>Eine Block- Box ist die Box, die durch ein Block- Level- Element
+erzeugt wird. Der exakte Aufbau einer Block- Box wird durch das Box-
+Modell definiert. Das Box- Modell wird ausführlich im Artikel ‘<a class="reference external" href="http://www.thestyleworks.de/basics/boxmodel.shtml">Das
+Box- Modell</a>’
+erläutert.</p>
+</div></blockquote>
+<p>Block- Level- Element (block level element)</p>
+<blockquote>
+<div><p>Ein Block- Level- Element ist ein Element, das einen Kontext zur
+Blockformatierung etabliert. Siehe dazu <a class="reference external" href="http://www.thestyleworks.de/basics/boxmodel.shtml#blockcontext">Kontext zur
+Blockformatierung</a>
+im Grundlagenartikel ‘Das Box- Modell’.</p>
+</div></blockquote>
+<p>Box- Modell (box model)</p>
+<blockquote>
+<div><p>Das Box- Modell mit seinen Regeln ist einer der wichtigsten Teile von
+CSS 2.1. Es dient als Grundlage der Darstellung und Positionierung
+aller Elemente des sogenannten Kontexts zur Blockformatierung, ebenso
+zur Wiedergabe anderer visueller Eigenschaften und für dynamische
+Effekte mit Hilfe von Scripten. Eine umfassende Erläuterung des Box-
+Modells ist im Artikel ‘<a class="reference external" href="http://www.thestyleworks.de/basics/boxmodel.shtml">Das Box-
+Modell</a>’ zu
+finden.</p>
+</div></blockquote>
+<p>Collapsing margins</p>
+<blockquote>
+<div><p>Unter bestimmten Umständen kann die untere margin eines Block- Level-
+Elements mit der margin des darauf folgenden Elements zusammenfallen.
+Im Referenzartikel ‘margin’ sind die exakten Abläufe dieses
+Zusammenfallens im Unterthema ‘<a class="reference external" href="http://www.thestyleworks.de/ref/margin.shtml#collaps">Zusammenfallende
+Abstände</a>’
+erläutert, darüber hinaus gibt es auch ein <a class="reference external" href="http://www.thestyleworks.de/basics/margins.shtml">praktisches
+Beispiel</a>.</p>
+</div></blockquote>
+<p>Dargestellter Inhalt (rendered content)</p>
+<blockquote>
+<div><p>Der Inhalt eines Elementes, wie er am Bildschirm dargestellt wird,
+entspricht nicht dem im Quellcode stehenden Inhalt. Der dargestellte
+Inhalt entsteht aus dem Quellcode, nachdem alle in Frage kommenden
+Stylesheets ausgewertet wurden, alle Tabellen vollständig geladen
+sind, usw. Dazu gehören auch Listenbullets, durch das Stylesheet
+generierte Inhalte und die Werte der Attribute alt und title. Der
+dargestellte Inhalt replazierter Elemente wird von Quellen außerhalb
+des aktuellen Dokuments bezogen, z B. aus Grafikdateien.</p>
+</div></blockquote>
+<p>Deklaration (declaration)</p>
+<blockquote>
+<div><p>Jede Deklaration besteht aus <em>einer</em> Eigenschaft mit den zugehörigen
+Werten. Es ist wichtig, dass immer beide Komponenten vorhanden sind,
+da es sonst zu unvorhersehbaren Ergebnissen kommen kann.
+Deklarationen, bei denen ein Wert fehlt oder ein unerwartetes
+Syntaxzeichen auftritt, <em>müssen</em> vom Browser ignoriert werden.</p>
+<p>Jede Deklaration wird durch ein Semikolon von der nachfolgenden
+getrennt, d. h. theoretisch ist das Semikolon nach der letzten
+Deklaration überflüssig. Dennoch ist es besser, auch dieses Semikolon
+stets zu notieren. Man vermeidet dadurch potentielle Probleme, falls
+die Regeln zu einem späteren Zeitpunkt noch einmal umgestellt werden
+sollen.</p>
+<p>Leerzeichen oder Zeilenumbrüche nach dem Semikolon einer Deklaration
+werden ignoriert. Es spielt also für die Funktion der Stylesheets
+keine Rolle, ob alle Deklarationen eines Deklarationsblocks
+hintereinander in einer Reihe stehen oder ob sie untereinander
+notiert sind.</p>
+</div></blockquote>
+<p>Deklarationsblock (declaration block)</p>
+<blockquote>
+<div><p>Der Deklarationsblock umfasst den gesamten Teil einer Regel, der
+hinter den Selektoren liegt: die geschweiften Klammern und alle darin
+notierten Deklarationen. Leere Deklarationsblöcke, die nur aus zwei
+Klammern bestehen, sind zulässig. Das hat den Effekt, dass keine
+Formatierungen an die korrespondierenden HTML-Elemente angebracht
+werden.</p>
+</div></blockquote>
+<p>Dokumententyp (document type)</p>
+<blockquote>
+<div><p>Die Angabe eines Dokumententyps am beginn eines Webdokuments ist seit
+HTML 4.01 grundsätzlich notwendig, wenn es standardgerecht durch die
+Browser dargestellt werden soll. Im Artikel <a class="reference external" href="http://www.thestyleworks.de/basics/doctypes.shtml">Der
+Dokumententyp</a>
+werden mehr Informationen zur DOCTYPE- Deklaration und zum DOCTYPE-
+Switching gegeben.</p>
+</div></blockquote>
+<p>Dokumentstammbaum (document tree)</p>
+<blockquote>
+<div><p>Alle Elemente einer Website können in einer Baumstruktur ähnlich der
+eines Familienstammbaums aufgezeichnet werden. Daraus lassen sich
+dann schnell die Verhältnisse der Elemente zueinander ablesen. Dem
+Dokumentstammbaum ist auf dieser Website ein <a class="reference external" href="http://www.thestyleworks.de/basics/doctree.shtml">spezieller
+Artikel</a>
+gewidmet.</p>
+</div></blockquote>
+<p>Durchschuss / Halb-Durchschuss (leading / half-leading)</p>
+<blockquote>
+<div><p>Der Durchschuss ist die Differenz zwischen dem <a class="reference external" href="http://www.thestyleworks.de/basics/definitions.shtml#actualvalue">aktuellen
+Wert</a>
+der Eigenschaft line-height und der Höhe der Textzeichen in einer
+Zeile. Die Hälfte dieser Differenz ist der Halb-Durchschuss. Der
+Browser bringt einen vertikalen Abstand von der Höhe eines
+Halb-Durchschuss oben und unten an jedem Textzeichen an, bevor er es
+entsprechend dem Wert der Eigenschaft vertical-allign vertikal
+ausrichtet. Die Regeln der Inline- Formatierung in CSS werden im
+<a class="reference external" href="http://www.thestyleworks.de/basics/lineboxmodel.shtml">Artikel über das Line- Box-
+Modell</a>
+ausführlich dargestellt.</p>
+</div></blockquote>
+<p>Eigenschaft (property)</p>
+<blockquote>
+<div><p>Eine nach der CSS-Spezifikation zugelassene Eigenschaft, wird bei der
+Notierung im Stylesheet gefolgt von einem Doppelpunkt (:). Alle in
+CSS 2.1 möglichen Eigenschaften werden in der
+<a class="reference external" href="http://www.thestyleworks.de/ref/index.shtml">Referenz</a>
+besprochen.</p>
+</div></blockquote>
+<p>Einfach- Selektor (simple selector)</p>
+<blockquote>
+<div><p>Ein Einfach- Selektor ist ein Typselektor oder ein Universalselektor,
+der entweder alleine steht oder an den Attributselektoren,
+ID-Selektoren oder Pseudoklassen in beliebiger Reihenfolge angehängt
+sind. Der Einfach- Selektor korrespondiert mit den Elementen des
+Dokuments, auf die jede seiner Komponenten zutrifft. Mehrere Einfach-
+Selektoren können durch Kombinatoren zu einem Selektor vekettet
+werden. Mehr über die Syntax der CSS-Regeln ist im Artikel
+<a class="reference external" href="http://www.thestyleworks.de/basics/rulesyntax.shtml">Regelaufbau</a>
+erklärt.</p>
+</div></blockquote>
+<p>Eltern-Element (parent element)</p>
+<blockquote>
+<div><p>Das Elternelement eines Elementes A ist das Element, von dem A direkt
+abstammt. Es gibt keine Selektoren, die auf das Elternelement zeigen.
+Diese und weitere Erläuterungen zum Konzept der Abstammung in CSS
+finden sich im Grundlagenartikel <a class="reference external" href="http://www.thestyleworks.de/basics/doctree.shtml">Der
+Dokumentstammbaum</a>.</p>
+</div></blockquote>
+<p>Element (element)</p>
+<blockquote>
+<div><p>Elemente sind die syntaktischen Primärkonstrukte in HTML und XHTML.
+Die Namen der Elemente, DIV, P, EM usw., werden in CSS als Einfach-
+Selektoren benutzt.</p>
+</div></blockquote>
+<p>Farbwerte (color values)</p>
+<blockquote>
+<div><p>Farben werden auf Websites als Vorder- und Hintergrundfarben
+verwendet. Sie können als Zahlenwerte oder Schlüsselworte auftreten.
+Dies wird ausführlicher im <a class="reference external" href="http://www.thestyleworks.de/basics/colors.shtml">Artikel über
+Farbwerte</a>
+erläutert.</p>
+</div></blockquote>
+<p>float-Positionierung (float positioning)</p>
+<blockquote>
+<div><p>Mit Hilfe der Eigenschaft float lassen sich Block- Boxes auf eine
+Seite (links oder rechts) der Website schieben, sodass die restlichen
+Inhalte auf der Innenseite der Box vorbeifließen. Mehr dazu kann man
+im Artikel über <a class="reference external" href="http://www.thestyleworks.de/tut-art/layout_div_2.shtml">CSS-Layouts mit float und
+clear</a> und
+im Referenzartikel der <a class="reference external" href="http://www.thestyleworks.de/ref/float.shtml">Eigenschaft
+float</a> nachlesen.</p>
+</div></blockquote>
+<p>Font-Eigenschaften (font properties)</p>
+<blockquote>
+<div><p>Steht zusammenfassend für alle Eigenschaften, mit denen man Schrift
+formatieren kann. Die Kurzschrift- Eigenschaft
+<a class="reference external" href="http://www.thestyleworks.de/ref/font.shtml">font</a> beeinflusst die
+Einzeleigenschaften für
+<a class="reference external" href="http://www.thestyleworks.de/ref/font-style.shtml">Textneigung</a>,
+<a class="reference external" href="http://www.thestyleworks.de/ref/font-variant.shtml">Kapitälchen</a>,
+<a class="reference external" href="http://www.thestyleworks.de/ref/font-weight.shtml">Schriftstärke</a>,
+<a class="reference external" href="http://www.thestyleworks.de/ref/font-size.shtml">Schriftgröße</a>,
+<a class="reference external" href="http://www.thestyleworks.de/ref/line-height.shtml">Zeilenhöhe</a>
+und
+<a class="reference external" href="http://www.thestyleworks.de/ref/font-family.shtml">Schriftfamilie</a>.
+Auch die Verwendung von
+<a class="reference external" href="http://www.thestyleworks.de/ref/font.shtml#werte2">Systemfonts</a>
+kann damit deklariert werden.</p>
+</div></blockquote>
+<p>Frequenzwerte (frequency values)</p>
+<blockquote>
+<div><p>Frequenzangaben bestehen stets aus einer numerischen Angabe, an die
+ohne Zwischenraum der Identifizierer einer Frequenzeinheit angehängt
+ist. Die Zahlenangabe darf nicht negativ sein, wenn sie 0 ist, kann
+die Angabe zur Einheit weggelassen werden. Frequenzen treten unter
+CSS 2 nur nur im Zusammenhang mit auralen Eigenschaften auf. Da aber
+bis heute kein Browser diese Eigenschaften unterstützt, ist auch die
+Unterstützung von Frequenzangaben praktisch nicht vorhanden.</p>
+</div></blockquote>
+<p>Generierte Inhalte (generated contents)</p>
+<blockquote>
+<div><p>Dies sind Inhalte einer Website, die zwar ausgegeben werden, die aber
+nicht im Dokumentstammbaum stehen. Sie werden mit Hilfe von CSS
+generiert. Es gibt zwei Arten von generierten Inhalten: Zum einen
+lassen sich durch die Eigenschaft content und die Pseudoelemente
+:before und :after Inhalte vor oder nach Elementen einfügen. Aber
+Listenbullets und -nummern sind generierter Content.</p>
+</div></blockquote>
+<p>Geschwisterselektor / Geschwisterelement (adjacent sibling selector)</p>
+<blockquote>
+<div><p>Zwei Elemente A und B werden dann als Geschwisterelemente bezeichnet,
+wenn beide vom selben Elternelement abstammen. Wenn außerdem das
+Element B im Code direkt auf A folgt, dann ist die Bedingung für den
+Geschwister- Selektor
+(<a class="reference external" href="http://www.thestyleworks.de/ref/se_adjacent.shtml">E1+E2</a>)
+erfüllt.</p>
+<p>CSS 2.1 grenzt zusätzlich noch ab, was vorhergehende und nachfolgende
+Geschwister- Elemente sind: Wenn Element A vor Element B im
+Dokumentstammbaum auftritt, wird es als vorhergehender Geschwister
+bezeichnet. Erscheint es später im Dokumentstammbaum, heißt es auch
+nachfolgender Geschwister. Diese und weitere Erläuterungen zum
+Konzept der Abstammung in CSS finden sich im Grundlagenartikel <a class="reference external" href="http://www.thestyleworks.de/basics/doctree.shtml">Der
+Dokumentstammbaum</a>.</p>
+</div></blockquote>
+<p>Groß- / Kleinschrift (case sensitivity)</p>
+<blockquote>
+<div><p>In Stylesheets selbst, wie auch in HTML- Dokumenten, spielt die
+Groß-/Kleinschrift keine Rolle. In XML, und deshalb auch in XHTML,
+spielt die Groß-/Kleinschrift dagegen schon eine Rolle. Zusätzlich
+ist die Kleinschrift in XHTML, mit Ausnahme der Attributwerte, eine
+Bedingung zur Einhaltung der Wohlgeformtheit.</p>
+<p>Eine besondere Stellung nehmen hier die ID-Selektoren ein. Sie ist im
+Artikel
+<a class="reference external" href="http://www.thestyleworks.de/ref/se_id.shtml#meaning">ID-Selektor</a>
+genauer erläutert.</p>
+</div></blockquote>
+<p>Hintergrundeigenschaften (background properties)</p>
+<blockquote>
+<div><p>Diese Bezeichnung steht für alle Eigenschaften, die den Hintergrund
+eines Webdokuments beschreiben: die <a class="reference external" href="http://www.thestyleworks.de/ref/background.shtml">Kurzschrift-
+Eigenschaft</a>,
+die
+<a class="reference external" href="http://www.thestyleworks.de/ref/background-color.shtml">Hintergrundfarbe</a>,
+die
+<a class="reference external" href="http://www.thestyleworks.de/ref/background-image.shtml">Hintergrundgrafik</a>
+mit
+<a class="reference external" href="http://www.thestyleworks.de/ref/background-attachment.shtml">Positionierung/Scrolling</a>,
+<a class="reference external" href="http://www.thestyleworks.de/ref/background-position.shtml">Ursprung</a>
+und
+<a class="reference external" href="http://www.thestyleworks.de/ref/background-repeat.shtml">Wiederholungsrichtung</a>.</p>
+</div></blockquote>
+<p>Identifizierer (identifier)</p>
+<blockquote>
+<div><p>Als Identifizierer werden in CSS 2.1 alle Elementnamen, Klassen und
+IDs bezeichnet, die innerhalb von Selektoren auftreten. Sie dürfen
+alle Zeichen 0-9, A-Z, a-z und die Sonderzeichen von Nummer 161 an
+aufwärts nach ISO 10646 enthalten, dazu den Minusstrich und den
+Unterstrich. Sie dürfen außerdem Escape- Sequenzen und beliebige
+Zeichen nach ISO 10646 enthalten, wenn sie als numerischer Code
+auftreten.</p>
+<p>Sie dürfen nicht mit einem Minusstrich oder einem Sonderzeichen
+beginnen.</p>
+</div></blockquote>
+<p>Inhalte (content)</p>
+<blockquote>
+<div><p>Die Inhalte eines Webdokuments, die im Quelltext stehen. Hier sind
+keine generierten Inhalte gemeint.</p>
+</div></blockquote>
+<p>Inline- Box (inline box)</p>
+<blockquote>
+<div><p>Die Inline- Boxes werden durch Inline- Level- Elemente generiert. Ihr
+Inhalt erscheint im Dokumentstammbaum und ist durch CSS-Deklarationen
+ansprechbar. Die Regeln der Inline- Formatierung in CSS werden im
+<a class="reference external" href="http://www.thestyleworks.de/basics/lineboxmodel.shtml">Artikel über das Line- Box-
+Modell</a>
+ausführlich dargestellt.</p>
+</div></blockquote>
+<p>Inline- Level- Element (inline level element)</p>
+<blockquote>
+<div><p>Alle Elemente, die keine Block- Level- Elemente sind, d. h. die nicht
+einen <a class="reference external" href="http://www.thestyleworks.de/basics/boxmodel.shtml#blockcontext">Kontext zur
+Blockformatierung</a>
+etablieren, sind Teil des Kontexts zur Inline- Formatierung und
+werden als Inline- Level- Elemente bezeichnet. Dies sind Elemente wie
+span, code oder em, deren Inhalt als Textzeilen oder Teile davon
+abgebildet wird. Die Regeln der Inline- Formatierung in CSS werden im
+<a class="reference external" href="http://www.thestyleworks.de/basics/lineboxmodel.shtml">Artikel über das Line- Box-
+Modell</a>
+ausführlich dargestellt.</p>
+</div></blockquote>
+<p>Innere (innewohnende) Dimensionen (intrinsic dimensions)</p>
+<blockquote>
+<div><p>Diese Bezeichnung wird für alle <a class="reference external" href="http://www.thestyleworks.de/basics/definitions.shtml#replacedelement">replazierten
+Elemente</a>,
+und nur für diese, angewendet. Sie bedeutet, dass die Breite und Höhe
+des Elements durch die Inhalte, die das Element replazieren,
+festgelegt ist, nicht aber unter Berücksichtigung des Umfeldes
+ausgerechnet wird.</p>
+</div></blockquote>
+<p>Innere Kante (inner edge)</p>
+<blockquote>
+<div><p>Die Darstellung von padding, border und margin ist genaugenommen
+nicht linienförmig, sondern deckt eine bestimmte Fläche ab. Die
+Begriffe <em>äußere Kante</em> und <em>innere Kante</em> dienen dazu, die
+Begrenzungen dieser Flächen wie auch der Contentflächen im Box-
+Modell exakter zu beschreiben.</p>
+</div></blockquote>
+<p>ISO 10646</p>
+<blockquote>
+<div><p>Der internationale Standard, nach dem alle Unicode- Schriftzeichen
+und Sonderzeichen definiert sind. Eine sehr gute und ausführliche
+Erklärung zum Unicode- System findet man bei
+<a class="reference external" href="http://de.selfhtml.org/inter/unicode.htm">SelfHTML</a>.</p>
+</div></blockquote>
+<p>Kaskade (cascade)</p>
+<blockquote>
+<div><p>Es kann passieren, dass für dieselbe Element/ Eigenschaft-
+Kombination unterschiedliche Deklarationen auftreten. Die Kaskade ist
+das Instrument in CSS, das solche Konfliktfälle löst. Seine genaue
+Arbeitsweise ist ausführlich im Artikel <a class="reference external" href="http://www.thestyleworks.de/basics/cascade.shtml">Die
+Kaskade</a>
+erklärt.</p>
+</div></blockquote>
+<p>Kindselektor / Kindelement (child selector)</p>
+<blockquote>
+<div><p>Ein Element A ist dann das Kindelement des Elementes B, wenn A direkt
+von B abstammt. Kindelemente lassen sich mit dem Kindselektor
+(<a class="reference external" href="http://www.thestyleworks.de/ref/se_child.shtml">B&gt;A</a>) und der
+Pseudoklasse
+<a class="reference external" href="http://www.thestyleworks.de/ref/pc_structural.shtml#first-child">:first-child</a>
+ansprechen. Diese und weitere Erläuterungen zum Konzept der
+Abstammung in CSS finden sich im Grundlagenartikel <a class="reference external" href="http://www.thestyleworks.de/basics/doctree.shtml">Der
+Dokumentstammbaum</a>.</p>
+</div></blockquote>
+<p>Kombinator (combinator)</p>
+<blockquote>
+<div><p>Kombinatoren sind die Zeichen: ‘ ’ (whitespace), ‘&gt;’ und ‘+’. Sie
+dienen zur Verkettung der verschiedenen Einfach- Selektoren eines
+Selektors. Mehr über Kombinatoren ist im Artikel
+<a class="reference external" href="http://www.thestyleworks.de/basics/rulesyntax.shtml">Regelaufbau</a>
+erklärt.</p>
+</div></blockquote>
+<p>Konditioneller Import (conditional import)</p>
+<blockquote>
+<div><p>Dies ist eine andere Bezeichnung für den medienabhägigen Import von
+Stylesheets. Im folgenden Beispiel wird ein Stylesheet importiert,
+das ausschließlich zur Verwendung an TV-Bildschirmen vorgesehen ist.</p>
+<p>&#64;import url(“tvscreen.css”) tv;</p>
+<p>Der Vorteil ist hier, dass das Anwenderprogramm keine Ressourcen
+herunterzuladen braucht, die es nicht unterstützt.</p>
+</div></blockquote>
+<p>Kontext zur Blockformatierung (block formatting context)</p>
+<blockquote>
+<div><p>Siehe <a class="reference external" href="http://www.thestyleworks.de/basics/boxmodel.shtml#blockcontext">Kontext zur
+Blockformatierung</a>
+im Grundlagenartikel ‘Das Box- Modell’.</p>
+</div></blockquote>
+<p>Kontext zur Inline- Formatierung (inline formatting context)</p>
+<blockquote>
+<div><p>Das Prinzip des Kontexts zur Inline- Formatierung definiert, wie die
+Inline- Level- Elemente nebeneinander bzw. untereinander gestellt
+werden. Die Regeln der Inline- Formatierung in CSS werden im <a class="reference external" href="http://www.thestyleworks.de/basics/lineboxmodel.shtml">Artikel
+über das Line- Box-
+Modell</a>
+ausführlich dargestellt.</p>
+</div></blockquote>
+<p>Längenwert (length value)</p>
+<blockquote>
+<div><p>Längenwerte werden in einem <a class="reference external" href="http://www.thestyleworks.de/basics/lengthvalues.shtml">besonderen
+Artikel</a>
+ausführlich behandelt.</p>
+</div></blockquote>
+<p>Leeres Element (empty element)</p>
+<blockquote>
+<div><p>Ein Element, dem im Dokumentstammbaum keine Inhalte zugeordnet sind,
+wird ‘leeres Element’ genannt. Dennoch werden generierte Inhalte,
+ebenso wie padding, border und margin, an diesem Element angebracht.</p>
+</div></blockquote>
+<p>Line- Box (line box)</p>
+<blockquote>
+<div><p>Vereinfacht ausgedrückt, entspricht eine Line- Box einfach einer
+Zeile Text. Etwas genauer genommen, ist eine Line- Box das Viereck,
+das eine Zeile Text umgibt. Sie ist in eine oder mehrere Inline-
+Boxes oder Anonyme Inline- Boxes aufgeteilt. Die Regeln der Inline-
+Formatierung in CSS werden im <a class="reference external" href="http://www.thestyleworks.de/basics/lineboxmodel.shtml">Artikel über das Line- Box-
+Modell</a>
+ausführlich behandelt.</p>
+</div></blockquote>
+<p>Line- Box- Modell (line box model)</p>
+<blockquote>
+<div><p>Mit Hilfe des Line- Box- Modells ist die Darstellung der Textzeilen
+und anderen Inhalten des Kontext zur Inline- Formatierung in
+Webdokumenten definiert. Die Regeln der Inline- Formatierung in CSS
+werden im <a class="reference external" href="http://www.thestyleworks.de/basics/lineboxmodel.shtml">Artikel über das Line- Box-
+Modell</a>
+ausführlich dargestellt.</p>
+</div></blockquote>
+<p>Listen-Eigenschaften (list properties)</p>
+<blockquote>
+<div><p>Diese Bezeichnung steht für alle Eigenschaften, die die benannten und
+unbenannten Listen eines Webdokuments beschreiben: die <a class="reference external" href="http://www.thestyleworks.de/ref/list-style.shtml">Kurzschrift-
+Eigenschaft</a>,
+die <a class="reference external" href="http://www.thestyleworks.de/ref/list-style-type.shtml">Art</a>
+und
+<a class="reference external" href="http://www.thestyleworks.de/ref/list-style-position.shtml">Einrückung</a>
+des Zählers und die
+<a class="reference external" href="http://www.thestyleworks.de/ref/list-style-image.shtml">Grafik</a>,
+die ein Markierungszeichen ersetzt.</p>
+</div></blockquote>
+<p>margin</p>
+<blockquote>
+<div><p>Randabstand an Block- Boxes. Dieser Abstand liegt außerhalb des
+Rahmens einer Block- Box. Er wird innerhalb des Box- Modells
+definiert. Durch margins werden die Abstände zwischen den Rahmen
+zweier benachbarter Block- Boxes festgelegt. Weitere Informationen
+dazu finden sich im Referenzartikel über
+<a class="reference external" href="http://www.thestyleworks.de/ref/margin.shtml">margins</a> und im
+Grundlagenartikel <a class="reference external" href="http://www.thestyleworks.de/basics/boxmodel.shtml">Das Box-
+Modell</a>.</p>
+</div></blockquote>
+<p>Medien (media)</p>
+<blockquote>
+<div><p>Eins der wichtigsten Merkmale von Stylesheets ist die Fähigkeit,
+zwischen verschiedenen Medien zu unterscheiden. Einige
+CSS-Eigenschaften sind nur für bestimmte Medien geeignet. Viele
+Eigenschaften lassen sich aber auch für mehrere Ausgabemedien
+verwenden. Um die Zuordnung von Medien zu den Eigenschaften zu
+erleichtern, hat das W3C 10 Medientypen definiert: <em>all</em>, <em>braille</em>,
+<em>embossed</em>, <em>handheld</em>, <em>print</em>, <em>projection</em>, <em>screen</em>, <em>speech</em>,
+<em>tty</em> und <em>tv</em>. Medientypen können als Schlüsselworte für
+medienabhängige Stylesheets angegeben werden. Medientypen werden im
+Artikel <a class="reference external" href="http://www.thestyleworks.de/basics/media.shtml">Medien</a>
+ausführlich erläutert.</p>
+</div></blockquote>
+<p>Mediengruppen (media groups)</p>
+<blockquote>
+<div><p>Um die Zuordnung der Eigenschaften zu den Medientypen zu ermöglichen,
+hat das W3C Mediengruppen eingeführt. In jeder Mediengruppe erfolgt
+die Unterscheidung der Medientypen nach unterschiedlichen Kriterien.
+Mediengruppen werden im Artikel
+<a class="reference external" href="http://www.thestyleworks.de/basics/media.shtml">Medien</a>
+ausführlich erläutert.</p>
+</div></blockquote>
+<p>Musterabgleich (pattern matching)</p>
+<blockquote>
+<div><p>Der Musterabgleich hat den Zweck, die durch einen Selektor
+definierten Bedingungen daraufhin zu prüfen, ob sie mit einem Element
+des Webdokuments zusammenpassen. Diese Bedingungen bestehen aus
+Einfach- Selektoren und Kombinatoren des Selektors und deren
+Zusammensetzung. So bedingt z. B. das Pseudoelement :first-child eine
+Einschränkung auf das erste Kindelement und eine Kombination ‘DIV P’
+gilt nur für Absätze P, die Nachkommenelement eines DIV-Containers
+sind. Nur auf Elemente des Webdokuments, die diese Bedingungen
+erfüllen, werden die dazu gehörigen Deklarationen angebracht.</p>
+</div></blockquote>
+<p>Nächstfolgendes Element (following element)</p>
+<blockquote>
+<div><p>Es gibt zwei Fälle, in denen ein Element A als dem Element B
+nachfolgend bezeichnet wird: wenn A ein Nachkommenelement von B ist
+oder wenn A ein nachfolgender Geschwister von B ist. Diese und
+weitere Erläuterungen zum Konzept der Abstammung in CSS finden sich
+im Grundlagenartikel <a class="reference external" href="http://www.thestyleworks.de/basics/doctree.shtml">Der
+Dokumentstammbaum</a>.</p>
+</div></blockquote>
+<p>Nachkommenselektor / Nachkommenelement (descendant element)</p>
+<blockquote>
+<div><p>Alle Elemente B, die direkt, aber in beliebiger Generation, von einem
+Element A abstammen, bezeichnet man als Nachkommenelemente von A.
+Dies ist die Umkehrung des Ahnenelementes. Diese und weitere
+Erläuterungen zum Konzept der Abstammung in CSS finden sich im
+Grundlagenartikel <a class="reference external" href="http://www.thestyleworks.de/basics/doctree.shtml">Der
+Dokumentstammbaum</a>.</p>
+</div></blockquote>
+<p>Normaler Elementfluss (normal flow)</p>
+<blockquote>
+<div><p>Dies ist eins der drei Positionierungsschemata in CSS. Die Elemente
+eines Webdokuments sind dann im normalen Elementfluss dargestellt,
+wenn sie nicht
+<a class="reference external" href="http://www.thestyleworks.de/ref/position.shtml#absolute">absolute</a>
+oder
+<a class="reference external" href="http://www.thestyleworks.de/ref/float.shtml">float-positioniert</a>
+werden. Hierzu gehören auch Elemente, die
+<a class="reference external" href="http://www.thestyleworks.de/ref/position.shtml#relative">relative</a>
+positioniert sind.</p>
+</div></blockquote>
+<p>padding</p>
+<blockquote>
+<div><p>Innenliegender Abstand an Block- Boxes. Dieser Abstand liegt zwischen
+dem Rahmen und den Inhalten einer Block- Box. Er wird innerhalb des
+Box- Modells definiert. Weitere Informationen dazu finden sich im
+Referenzartikel über
+<a class="reference external" href="http://www.thestyleworks.de/ref/padding.shtml">padding</a> und im
+Grundlagenartikel <a class="reference external" href="http://www.thestyleworks.de/basics/boxmodel.shtml">Das Box-
+Modell</a>.</p>
+</div></blockquote>
+<p>Seiten-Box (page box)</p>
+<blockquote>
+<div><p>Die CSS-Seitenbox ist eine Erweiterung des Box- Modells. Mit ihrer
+Hilfe ist es möglich, die Seitenvierecke und Seitenränder für
+Druckausgaben zu definieren. Weitere Erläuterungen zur Druckausgabe
+finden Sie auf der Seite über die
+<a class="reference external" href="http://www.thestyleworks.de/ref/at_page.shtml">&#64;page-Regel</a>.</p>
+</div></blockquote>
+<p>Seiten-Modell (page model)</p>
+<blockquote>
+<div><p>Das CSS-Seitenmodell ist eine Erweiterung des Modells zur visuellen
+Formatierung. Hier sind alle Eigenschaften zur Seitenformatierung,
+für Seitenumbrüche usw. bei der Druckausgabe zusammengefasst. Weitere
+Erläuterungen zur Druckausgabe finden Sie auf der Seite über die
+<a class="reference external" href="http://www.thestyleworks.de/ref/at_page.shtml">&#64;page-Regel</a>.</p>
+</div></blockquote>
+<p>Positionierungsschema (positioning schema)</p>
+<blockquote>
+<div><p>Es gibt drei Positionierungsschemata in CSS: absolute Positionierung,
+float-Positionierung und den normalen Elementfluss.</p>
+</div></blockquote>
+<p>Prozent (percentage)</p>
+<blockquote>
+<div><p>Prozentwerte sind immer in Relation zu anderen Werten definiert,
+wobei die Art dieser Relation genau definiert ist. Auch können
+Prozentwerte nur für bestimmte Eigenschaften deklariert werden.
+Welche Eigenschaften dies sind und was sonst noch beim Einsatz von
+Prozentwerten beachtet werden muss, ist im Artikel
+<a class="reference external" href="http://www.thestyleworks.de/basics/percentage.shtml">Prozentwerte</a>
+erläutert.</p>
+</div></blockquote>
+<p>Rahmeneigenschaften (border properties)</p>
+<blockquote>
+<div><p>Die Rahmeneigenschaften dienen dazu, Breite
+(<a class="reference external" href="http://www.thestyleworks.de/ref/border-trbl-width.shtml">border-width</a>),
+Farbe
+(<a class="reference external" href="http://www.thestyleworks.de/ref/border-trbl-color.shtml">border-color</a>)
+und Muster
+(<a class="reference external" href="http://www.thestyleworks.de/ref/border-trbl-style.shtml">border-style</a>)
+der Rahmenfläche einer Box zu spezifizieren. Von Rahmen<em>fläche</em>
+spricht man deshalb, weil der Rahmen einer Box nicht eine
+eindimensionale Linie ist, sondern auf jeder Seite der Box eine
+zweidimensionale Fläche darstellt. Diese Rahmeneigenschaften sind auf
+alle Elemente anwendbar, für das Element HTML dürfen sie aber durch
+das Anwenderprogramm ignoriert werden.</p>
+</div></blockquote>
+<p>Referenzpixel (reference pixel)</p>
+<blockquote>
+<div><p>Der Referenzpixel dient der Definition der Einheit ‘Pixel’ in
+unterschiedlichen Ausgabemedien.</p>
+<p>Pixel sind abhängig von der Auflösung des Anzeigegerätes. In den
+meisten Fällen ist dies ein normaler Bildschirm oder eine
+Druckausgabe, CSS 2.1 ist aber bereits auf andere Geräte wie
+Handhelds oder Mobiltelefone abgestimmt.</p>
+<p>Damit Pixelmaße auch für andere Medien als den Bildschirm verwendet
+werden können, definiert CSS 2.1 den ‘Referenzpixel’ praktisch mit
+Hilfe eines Winkels. Dabei wird davon ausgegangen, dass ein Pixel am
+Computerbildschirm etwa die Größe von 0.26 mm hat. Bei einer
+Bildschirmauflösung von 96 dpi und der ‘Leseentfernung’ von etwa
+70 cm Entfernung (=Armeslänge) wird ein Pixel unter einem bestimmten
+Winkel wahrgenommen.</p>
+<p>Für die etwas kürzere Leseentfernung eines Papierausdrucks wäre ein
+Pixel, der unter demselben Winkel erscheint, demnach etwa 0.2 mm
+groß.</p>
+<p>Dadurch soll bewirkt werden, dass die Ausgabe auch bei
+hochauflösenden Laserdruckern in einer annehmbaren Größe erfolgt und
+nicht etwa ein Pixel mit einem Dot des Printers von 1/300 Inch Größe
+oder weniger gleichgesetzt wird.</p>
+<p>Im umgekehrten Fall gilt dasselbe auch für größere Entfernungen, wie
+sie z. B. bei Projektionsgeräten auftreten: dort kann ein Pixel auf
+der Leinwand gut und gerne einige Millimeter groß sein — er wird
+trotzdem unter demselben Winkel wahrgenommen wie der Pixel von
+0.26 mm Größe am Bildschirm.</p>
+</div></blockquote>
+<p>Regel (rule)</p>
+<blockquote>
+<div><p>Eine CSS-Regel besteht aus dem Selektor und dem Deklarationsblock.
+Der Selektor wiederum setzt sich zusammen aus einem oder mehreren
+Einfach- Selektoren und/oder Kombinatoren. Der Deklarationsblock ist
+die Zusammenfassung aller Deklarationen der Regel und eine Regel
+besteht aus Eigenschaft und Wert. Mehr über die Syntax der CSS-Regeln
+ist im Artikel
+<a class="reference external" href="http://www.thestyleworks.de/basics/rulesyntax.shtml">Regelaufbau</a>
+erklärt.</p>
+</div></blockquote>
+<p>Relative Positionierung (relative positioning)</p>
+<blockquote>
+<div><p>Die Position eines Elementes wird zunächst wie im normalen
+Elementfluss berechnet. Die Verschiebung erfolgt dann von der so
+bestimmten Stelle aus und ist (anders als bei der Eigenschaft float)
+nicht von den Dimensionen des umschließenden Elements abhängig. Die
+Position der benachbarten Elemente wird nicht beeinflusst, sie
+bleiben in ihrer ursprünglichen Position. Die ursprüngliche Position
+des verschobenen Elements bleibt frei. Die benachbarten Elemente
+können allerdings, abhängig vom z-index, durch das verschobene
+Element überdeckt werden. Ein relativ positioniertes Element bildet
+den umschließenden Block für nachgeordnete Elemente.</p>
+</div></blockquote>
+<p>Relativer Längenwert (relative length value)</p>
+<blockquote>
+<div><p>Relative Längenwerte sind Ems, Exs und Pixel. Prozente werden in
+diesem Zusammenhang ebenfalls wie relative Werte angesehen.
+Längenwerte werden in einem <a class="reference external" href="http://www.thestyleworks.de/basics/lengthvalues.shtml">besonderen
+Artikel</a>
+ausführlich behandelt.</p>
+</div></blockquote>
+<p>Replaziertes Element (replaced element)</p>
+<blockquote>
+<div><p>Ein Element ist dann ‘replaziert’, wenn es durch andere Inhalte
+ersetzt wird und seine Breite und Höhe durch diese anderen Inhalte
+bestimmt werden. Die Dimensionen werden dann als <a class="reference external" href="http://www.thestyleworks.de/basics/definitions.shtml#intrinsic">innewohnende
+Dimensionen</a>
+bezeichnet. Beispielsweise können in HTML die Elemente IMG und OBJECT
+replazierte Elemente sein. Der Inhalt des Elementes IMG wird in der
+Regel durch das im Attribut src=”…” beschriebene Bild replaziert.</p>
+</div></blockquote>
+<p>Schriftart-Eigenschaften (font properties)</p>
+<blockquote>
+<div><p>Steht zusammenfassend für alle Eigenschaften, mit denen man Schrift
+formatieren kann. Die Kurzschrift- Eigenschaft
+<a class="reference external" href="http://www.thestyleworks.de/ref/font.shtml">font</a> beeinflusst die
+Einzeleigenschaften für
+<a class="reference external" href="http://www.thestyleworks.de/ref/font-style.shtml">Textneigung</a>,
+<a class="reference external" href="http://www.thestyleworks.de/ref/font-variant.shtml">Kapitälchen</a>,
+<a class="reference external" href="http://www.thestyleworks.de/ref/font-weight.shtml">Schriftstärke</a>,
+<a class="reference external" href="http://www.thestyleworks.de/ref/font-size.shtml">Schriftgröße</a>,
+<a class="reference external" href="http://www.thestyleworks.de/ref/line-height.shtml">Zeilenhöhe</a>
+und
+<a class="reference external" href="http://www.thestyleworks.de/ref/font-family.shtml">Schriftfamilie</a>.
+Auch die Verwendung von
+<a class="reference external" href="http://www.thestyleworks.de/ref/font.shtml#werte2">Systemfonts</a>
+kann damit deklariert werden.</p>
+</div></blockquote>
+<p>Selektor (selector)</p>
+<blockquote>
+<div><p>Der Begriff ‘Selektor’ umfasst in Bezug auf CSS-Regeln alles, was
+links der ersten geschweiften Klammer steht. So ein Selektor besteht
+aus einem oder mehreren Einfach- Selektoren, die in einer Reihe
+hintereinander gestellt und durch Kombinatoren miteinander verbunden
+sind.</p>
+<p>Die innerhalb der geschweiften Klammer festgelegten Deklarationen
+werden durch den Selektor an den korrespondierenden Elementen im
+HTML- Dokument, den Subjekten, angebracht. Der Selektor stellt also
+das Bindeglied zwischen dem HTML- Dokument und den innerhalb der
+geschweiften Klammer festgelegten Formatierungen dar.</p>
+<p>Jeder Selektor passt zunächst zu allen Elementen des Dokuments, zu
+denen der letzte seiner Einfach- Selektoren passt. Dann wird diese
+Zielmenge durch die vorangestellten anderen Einfach- Selektoren mehr
+oder weniger eingeschränkt. Mehr über die Syntax der CSS-Regeln ist
+im Artikel
+<a class="reference external" href="http://www.thestyleworks.de/basics/rulesyntax.shtml">Regelaufbau</a>
+erklärt.</p>
+</div></blockquote>
+<p>Spezifizierter Wert (specified value)</p>
+<blockquote>
+<div><p>Relative Werte werden als Verhältnismaße zu anderen Größen definiert.
+Deshalb muss aus dem in einer CSS-Regel deklarierten Wert ein am
+Bildschirm darstellbarer Wert bestimmt werden. Dazu sind die
+folgenden vier Berechnungsschritte erforderlich:</p>
+<p>Spezifizierter Wert → Berechneter Wert → Verwendeter Wert → Aktueller
+Wert.</p>
+<p>Der Ablauf dieser Berechnung ist im Abschnitt <a class="reference external" href="http://www.thestyleworks.de/basics/lengthvalues.shtml#relative">Relative
+Längenwerte</a>
+detailliert erläutert.</p>
+</div></blockquote>
+<p>Subjekte (subjects)</p>
+<blockquote>
+<div><p>Die Elemente des Webdokuments, die zu einem Selektor passen, werden
+<em>Subjekte</em> des Selektors genannt. Mehr über die Syntax der CSS-Regeln
+ist im Artikel
+<a class="reference external" href="http://www.thestyleworks.de/basics/rulesyntax.shtml">Regelaufbau</a>
+erklärt.</p>
+</div></blockquote>
+<p>Typselektor (type selector)</p>
+<blockquote>
+<div><p>Der Typselektor ist einer der beiden in CSS möglichen Einfach-
+Selektoren. Ausführlicheres über Typselektoren ist in den Artikeln
+<a class="reference external" href="http://www.thestyleworks.de/ref/se_type.shtml">Typselektor</a> und
+<a class="reference external" href="http://www.thestyleworks.de/basics/rulesyntax.shtml">CSS-Regeln</a>
+erläutert.</p>
+</div></blockquote>
+<p>Umschließender Block (containing block)</p>
+<blockquote>
+<div><p>Oftmals werden in CSS Positionen und Größen relativ zu den Kanten des
+umschließenden Blocks definiert. Was man sich unter diesem Block
+vorzustellen hat und wie er definiert wird, ist im Beitrag über das
+<a class="reference external" href="http://www.thestyleworks.de/basics/boxmodel.shtml#containing">Box-
+Modell</a>
+ausführlich erläutert.</p>
+</div></blockquote>
+<p>Unicode (unicode)</p>
+<blockquote>
+<div><p>Internationaler Standard, nach dem die Schriftzeichen aller Sprachen
+in einem Codesystem verschlüsselt sind. Die Codetabellen werden vom
+<a class="reference external" href="http://www.unicode.org/">Unicode- Konsortium</a> unterhalten. Die
+aktuelle Version 4.0 wurde von der International Standards
+Organisation zur Norm
+<a class="reference external" href="http://www.thestyleworks.de/basics/definitions.shtml#iso10646">ISO 10646</a>
+erhoben. Ausführlich deutschsprachige Informationen findet man bei
+<a class="reference external" href="http://de.selfhtml.org/inter/unicode.htm">SelfHTML</a></p>
+</div></blockquote>
+<p>Universalselektor (universal selector)</p>
+<blockquote>
+<div><p>Der Universalselektor, dargestellt als *, ist ein Einfach- Selektor,
+der auf alle Elemente zutrifft. Falls der Einfach- Selektor aus
+weiteren Komponenten als dem * besteht, dann kann der * auch
+weggelassen werden.</p>
+</div></blockquote>
+<p>URI, URL, URN (URI, URL, URN)</p>
+<blockquote>
+<div><p>Die URL (Uniform Resource Locator) bezeichnet die Addresse einer
+Internet-Resource, sie ist also praktisch nichts anderes als die
+Location einer Website. Die URN (Uniform Resource Name) hat eine
+etwas weiter gefasste Bedeutung, bezieht sich aber, solange es um
+HTML geht, auf die gleiche Art der Webaddressierung wie die URL.
+Beide werden unter der Bezeichnung URI (Uniform Resource Identifier)
+zusammen gefasst. Eine URI lässt sich auch in CSS als Wert
+verwenden — dies ist im Grundlagenartikel über
+<a class="reference external" href="http://www.thestyleworks.de/basics/values.shtml#uri">CSS-Werte</a>
+erläutert.</p>
+</div></blockquote>
+<p>Validität, Validierung (validity, validation)</p>
+<blockquote>
+<div><p>Ein Stylesheet ist dann validiert, wenn sein kompletter Inhalt den
+Vorgaben des CSS- Standards entspricht. Man kann ein Stylesheet nach
+CSS 1 validieren, in dem Fall braucht es nur den Forderungen in CSS 1
+zu genügen. Ein nach CSS 2 validiertes Stylesheet muss den
+Forderungen nach CSS 2 bzw. CSS 2.1 entsprechen. Da CSS 2 eine
+Erweiterung von CSS 1 ist, sind für CSS 1 validierte Stylesheets
+immer auch für CSS 2 valide.</p>
+<p>Das bedeutet, dass ein valides Stylesheet</p>
+</div></blockquote>
+<ol class="arabic simple">
+<li><p>entsprechend der CSS-Grammatik (Punktuation) geschrieben sein muss,</p></li>
+<li><dl class="simple">
+<dt>nur in der Norm definierte (keine proprietären) At-Regeln,</dt><dd><p>Eigenschaften und Werte enthalten darf,</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>nur zusammen gehörende und richtig geschriebene Eigenschaften und</dt><dd><p>Werte beinhalten kann.</p>
+</dd>
+</dl>
+</li>
+</ol>
+<p>Verwendeter Wert (used value)</p>
+<blockquote>
+<div><p>Relative Werte werden als Verhältnismaße zu anderen Größen definiert.
+Deshalb muss aus dem in einer CSS-Regel deklarierten Wert ein am
+Bildschirm darstellbarer Wert bestimmt werden. Dazu sind die
+folgenden vier Berechnungsschritte erforderlich:</p>
+<p>Spezifizierter Wert → Berechneter Wert → Verwendeter Wert → Aktueller
+Wert.</p>
+<p>Der Ablauf dieser Berechnung ist im Abschnitt <a class="reference external" href="http://www.thestyleworks.de/basics/lengthvalues.shtml#relative">Relative
+Längenwerte</a>
+detailliert erläutert.</p>
+</div></blockquote>
+<p>Vorfahrenselektor / Vorfahrenelement (ancestor)</p>
+<blockquote>
+<div><p>Wenn sich die Abstammungslinie von einem Element A nach unten direkt
+zu einem Element B verfolgen lässt, dann wird A als Vorfahrenelement
+von B bezeichnet. Dabei kann B das direkte Kindelement von A sein, es
+können aber auch beliebig viele Generationen dazwischen liegen. Diese
+und weitere Erläuterungen zum Konzept der Abstammung in CSS finden
+sich im Grundlagenartikel <a class="reference external" href="http://www.thestyleworks.de/basics/doctree.shtml">Der
+Dokumentstammbaum</a>.</p>
+</div></blockquote>
+<p>Vorhergehendes Element (preceding element)</p>
+<blockquote>
+<div><p>Es gibt zwei Fälle, in denen ein Element A als dem Element B
+vorhergehend bezeichnet wird: wenn A ein Vorfahrenelement von B ist
+oder wenn A ein vorhergehender Geschwister von B ist. Diese und
+weitere Erläuterungen zum Konzept der Abstammung in CSS finden sich
+im Grundlagenartikel <a class="reference external" href="http://www.thestyleworks.de/basics/doctree.shtml">Der
+Dokumentstammbaum</a>.</p>
+</div></blockquote>
+<p>Wert (value)</p>
+<blockquote>
+<div><p>Ein oder mehrere Werte, wie sie nach CSS 2.1 für die entsprechende
+Eigenschaft zulässig sind. Hinter dem letzten Wert für eine
+Eigenschaft steht ein Semikolon (;) zur Trennung von der nächsten
+Deklaration. Mehr über die Werte innerhalb der CSS-Regeln ist im
+Artikel
+<a class="reference external" href="http://www.thestyleworks.de/basics/rulesyntax.shtml">Regelaufbau</a>
+erklärt.</p>
+</div></blockquote>
+<p>Winkelwert (angle value)</p>
+<blockquote>
+<div><p>Winkelangaben bestehen stets aus einer numerischen Angabe, an die
+ohne Zwischenraum der Identifizierer einer Winkelmaßeinheit angehängt
+ist. Eine negative Zahlenangabe wird in ihr positives Äquivalent
+umgeformt, z. B. wird der Wert -45deg nach 315deg umgerechnet. Wenn
+sie 0 ist, kann die Angabe zur Einheit weggelassen werden.
+Winkelangaben treten unter CSS 2 nur nur im Zusammenhang mit auralen
+Eigenschaften auf. Da aber bis heute kein Browser diese Eigenschaften
+unterstützt, ist auch die Unterstützung von Winkelmaßen praktisch
+gleich null.</p>
+</div></blockquote>
+<p>Zurückschrumpfung (shrink-to-fit)</p>
+<blockquote>
+<div><p>Anders als bei Block- Level- Elementen oder Inline- Level- Elementen
+richtet sich die Breite von z. B. Tabellenzellen oder floatierten
+Elementen nicht nach den äußeren Gegebenheiten, sondern nach der
+Breite des Inhalts, genau genommen nach vorgegebenen und möglichen
+Zeilenumbrüchen, den Werten der Eigenschaften des Boxmodells und der
+Breite evtl. vorhandener Scrollbalken.</p>
+</div></blockquote>
+<p>Zusammenfallende Außenabstände (collapsing margins)</p>
+<blockquote>
+<div><p>Unter bestimmten Umständen können die oberen bzw. unteren margins
+zweier untereinander liegender Elemente zusammenfallen. Im
+Referenzartikel ‘margin’ sind die exakten Abläufe dieses
+Zusammenfallens im Unterthema ‘<a class="reference external" href="http://www.thestyleworks.de/ref/margin.shtml#collaps">Zusammenfallende
+Abstände</a>’
+erläutert, darüber hinaus gibt es auch ein <a class="reference external" href="http://www.thestyleworks.de/basics/margins.shtml">praktisches
+Beispiel</a>.</p>
+</div></blockquote>
+<div class="system-message">
+<p class="system-message-title">System Message: ERROR/3 (<span class="docutils literal">C:\schule\unterricht\web\runestone_html\_sources\html_css.rst</span>, line 2588)</p>
+<p>Duplicate substitution definition name: “Baum der Elemente”.</p>
+</div>
+<div class="system-message">
+<p class="system-message-title">System Message: ERROR/3 (<span class="docutils literal">C:\schule\unterricht\web\runestone_html\_sources\html_css.rst</span>, line 2591)</p>
+<p>Duplicate substitution definition name: “Baum der Elemente”.</p>
+</div>
+<div class="system-message">
+<p class="system-message-title">System Message: ERROR/3 (<span class="docutils literal">C:\schule\unterricht\web\runestone_html\_sources\html_css.rst</span>, line 2594)</p>
+<p>Duplicate substitution definition name: “Baum der Elemente”.</p>
+</div>
+<div class="system-message">
+<p class="system-message-title">System Message: ERROR/3 (<span class="docutils literal">C:\schule\unterricht\web\runestone_html\_sources\html_css.rst</span>, line 2639)</p>
+<p>Duplicate substitution definition name: “Baum der Elemente”.</p>
+</div>
+<div class="system-message">
+<p class="system-message-title">System Message: ERROR/3 (<span class="docutils literal">C:\schule\unterricht\web\runestone_html\_sources\html_css.rst</span>, line 2645)</p>
+<p>Duplicate substitution definition name: “Veranschaulichung des Selektors am Strukturbaum”.</p>
+</div>
+<div class="system-message">
+<p class="system-message-title">System Message: ERROR/3 (<span class="docutils literal">C:\schule\unterricht\web\runestone_html\_sources\html_css.rst</span>, line 2648)</p>
+<p>Duplicate substitution definition name: “Veranschaulichung des Selektors am Strukturbaum”.</p>
+</div>
+<div class="system-message">
+<p class="system-message-title">System Message: ERROR/3 (<span class="docutils literal">C:\schule\unterricht\web\runestone_html\_sources\html_css.rst</span>, line 2651)</p>
+<p>Duplicate substitution definition name: “Veranschaulichung des Selektors am Strukturbaum”.</p>
+</div>
+<div class="system-message">
+<p class="system-message-title">System Message: ERROR/3 (<span class="docutils literal">C:\schule\unterricht\web\runestone_html\_sources\html_css.rst</span>, line 2654)</p>
+<p>Duplicate substitution definition name: “Veranschaulichung des Selektors am Strukturbaum”.</p>
+</div>
+</div>
+
+
+  
+      
+
+<script type="text/javascript">
+
+  $('#relations-prev').tooltip({'placement':'right', 'selector': '', 'delay': { show: 100, hide: 50}});
+  $('#relations-next').tooltip({'placement':'left', 'selector': '', 'delay': { show: 100, hide: 50}});
+  
+</script>
+  
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      
+      | <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2017 kstei.
+      Created using <a href="http://runestoneinteractive.org/">Runestone</a> 3.4.5.
+    </p>
+  </div>
+</footer>
+
+
+
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-32029811-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+
+
+  </body>
+</html>

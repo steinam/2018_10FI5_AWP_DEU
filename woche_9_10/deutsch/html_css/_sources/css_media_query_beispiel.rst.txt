@@ -1,0 +1,1113 @@
+Beispiele zu Media Queries
+==========================
+
+.. Die folgenden Beispiele sind von `W3 Schools <https://www.w3schools.com/css/css3_mediaqueries.asp>`_ entnommen.
+
+.. sidebar:: Ausgangssituation
+
+
+    :download:`HTML Code <media/media_queries/ausgangssituation.zip>`
+
+
+
+A1
+--
+
+
+.. tabbed:: MQuery_Aufgabe_1
+
+    .. tab:: Ausgangssitation
+
+        Ändere die Hintergrundfarbe auf Hellgrün, wenn der Viewport größer als 480 Pixel ist. Wenn der Viewport kleiner als 480 Pixel ist, ist er pinkfarben
+
+        .. activecode:: mquery_ex_1
+            :language: html
+
+            <!DOCTYPE html>
+            <html>
+            <head>
+            <style>
+            /* you code goes here */
+
+
+            </style>
+            </head>
+            <body>
+
+            <h1>Resize the browser window to see the effect!</h1>
+            <p>The media query will only apply if the media type is screen and the viewport is 480px wide or wider.</p>
+
+            </body>
+            </html>
+
+
+    .. tab:: Lösung
+
+        .. reveal:: reveal_html_default
+            :showtitle: Show
+            :hidetitle: Hide
+
+
+            .. activecode:: mquery_ex_1_solution
+                    :language: html
+
+                    <!DOCTYPE html>
+                    <html>
+                    <head>
+                    <style>
+                    body {
+                    background-color: pink;
+                    }
+
+                    @media screen and (min-width: 480px) {
+                    body {
+                        background-color: lightgreen;
+                    }
+                    }
+                    </style>
+                    </head>
+                    <body>
+
+                    <h1>Resize the browser window to see the effect!</h1>
+                    <p>The media query will only apply if the media type is screen and the viewport is 480px wide or wider.</p>
+
+                    </body>
+                    </html>
+
+
+
+
+A2
+--
+
+
+.. tabbed:: MQuery_Aufgabe_2
+
+    .. tab:: Ausgangssitation
+
+        Wenn der Viewport 480 Pixel oder größer ist, soll das Menü links erscheinen, ansonsten oberhalb des Contents
+
+        .. activecode:: mquery_ex_2
+            :language: html
+
+            <!DOCTYPE html>
+                <html>
+                <head>
+                <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                <style>
+                .wrapper {overflow: auto;}
+
+                #main {margin-left: 4px;}
+
+                #leftsidebar {
+                float: none;
+                width: auto;
+                }
+
+                #menulist {
+                margin: 0;
+                padding: 0;
+                }
+
+                .menuitem {
+                background: #CDF0F6;
+                border: 1px solid #d4d4d4;
+                border-radius: 4px;
+                list-style-type: none;
+                margin: 4px;
+                padding: 2px;
+                }
+
+
+                </style>
+                </head>
+                <body>
+
+                <div class="wrapper">
+                <div id="leftsidebar">
+                    <ul id="menulist">
+                    <li class="menuitem">Menu-item 1</li>
+                    <li class="menuitem">Menu-item 2</li>
+                    <li class="menuitem">Menu-item 3</li>
+                    <li class="menuitem">Menu-item 4</li>
+                    <li class="menuitem">Menu-item 5</li>
+                    </ul>
+                </div>
+
+                <div id="main">
+                    <h1>Resize the browser window to see the effect!</h1>
+                    <p>This example shows a menu that will float to the left of the page if the viewport is 480 pixels wide or wider. If the viewport is less than 480 pixels, the menu will be on top of the content.</p>
+                </div>
+                </div>
+
+                </body>
+                </html>
+
+
+    .. tab:: Lösung
+
+        .. reveal:: reveal_html_mqA2
+            :showtitle: Show
+            :hidetitle: Hide
+
+
+            .. activecode:: mquery_ex_2_solution
+                    :language: html
+
+                    <!DOCTYPE html>
+                    <html>
+                    <head>
+                    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                    <style>
+                    .wrapper {overflow: auto;}
+
+                    #main {margin-left: 4px;}
+
+                    #leftsidebar {
+                    float: none;
+                    width: auto;
+                    }
+
+                    #menulist {
+                    margin: 0;
+                    padding: 0;
+                    }
+
+                    .menuitem {
+                    background: #CDF0F6;
+                    border: 1px solid #d4d4d4;
+                    border-radius: 4px;
+                    list-style-type: none;
+                    margin: 4px;
+                    padding: 2px;
+                    }
+
+                    @media screen and (min-width: 480px) {
+                    #leftsidebar {width: 200px; float: left;}
+                    #main {margin-left: 216px;}
+                    }
+                    </style>
+                    </head>
+                    <body>
+
+                    <div class="wrapper">
+                    <div id="leftsidebar">
+                        <ul id="menulist">
+                        <li class="menuitem">Menu-item 1</li>
+                        <li class="menuitem">Menu-item 2</li>
+                        <li class="menuitem">Menu-item 3</li>
+                        <li class="menuitem">Menu-item 4</li>
+                        <li class="menuitem">Menu-item 5</li>
+                        </ul>
+                    </div>
+
+                    <div id="main">
+                        <h1>Resize the browser window to see the effect!</h1>
+                        <p>This example shows a menu that will float to the left of the page if the viewport is 480 pixels wide or wider. If the viewport is less than 480 pixels, the menu will be on top of the content.</p>
+                    </div>
+                    </div>
+
+                    </body>
+                    </html>
+
+
+
+A3
+--
+
+
+.. tabbed:: MQuery_Aufgabe_3
+
+    .. tab:: Darstellung
+
+        Wenn der Bildschirm 600 Pixel oder kleiner ist, soll das Menü übereinander stehen, ansonsten nebeneinander
+
+        .. image:: media/media_queries/navbar_small_large.png
+
+    .. tab:: Ausgangssitation
+
+        .. activecode:: mquery_ex_3
+            :language: html
+
+            <!DOCTYPE html>
+            <html lang="en">
+            <head>
+            <meta charset="utf-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1">
+            <style>
+            * {
+            box-sizing: border-box;
+            }
+
+            /* Style the top navigation bar */
+            .topnav {
+            overflow: hidden;
+            background-color: #333;
+            }
+
+            /* Style the topnav links */
+            .topnav a {
+            float: left;
+            display: block;
+            color: #f2f2f2;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            }
+
+            /* Change color on hover */
+            .topnav a:hover {
+            background-color: #ddd;
+            color: black;
+            }
+
+
+            </style>
+
+            </head>
+            <body>
+
+                <h2>Responsive navigation menu</h2>
+                <p>Resize the browser window to see the effect: When the screen is less than 600px, the navigation menu will be displayed vertically instead of horizontally.</p>
+
+                <div class="topnav">
+                <a href="#">Link</a>
+                <a href="#">Link</a>
+                <a href="#">Link</a>
+                </div>
+
+            </body>
+            <html>
+
+    .. tab:: Lösung
+
+        .. reveal:: reveal_html_mq_A3
+            :showtitle: Show
+            :hidetitle: Hide
+
+
+            .. activecode:: mquery_ex_3_sol
+                :language: html
+
+                <!DOCTYPE html>
+                <html lang="en">
+                <head>
+                <meta charset="utf-8">
+                <meta name="viewport" content="width=device-width, initial-scale=1">
+                <style>
+                * {
+                box-sizing: border-box;
+                }
+
+                /* Style the top navigation bar */
+                .topnav {
+                overflow: hidden;
+                background-color: #333;
+                }
+
+                /* Style the topnav links */
+                .topnav a {
+                float: left;
+                display: block;
+                color: #f2f2f2;
+                text-align: center;
+                padding: 14px 16px;
+                text-decoration: none;
+                }
+
+                /* Change color on hover */
+                .topnav a:hover {
+                background-color: #ddd;
+                color: black;
+                }
+
+                /* On screens that are 600px wide or less, make the menu links stack on top of each other instead of next to each other */
+                @media screen and (max-width: 600px) {
+                .topnav a {
+                    float: none;
+                    width: 100%;
+                    }
+                }
+
+                </style>
+                </head>
+                <body>
+
+                    <h2>Responsive navigation menu</h2>
+                    <p>Resize the browser window to see the effect: When the screen is less than 600px, the navigation menu will be displayed vertically instead of horizontally.</p>
+
+                    <div class="topnav">
+                    <a href="#">Link</a>
+                    <a href="#">Link</a>
+                    <a href="#">Link</a>
+                    </div>
+
+                </body>
+                <html>
+
+
+A4
+--
+
+
+
+.. tabbed:: MQuery_Aufgabe_4
+
+    .. tab:: Darstellung
+
+        Die Spalten solle bei großen Bildschirmen nebeneinander, bei kleineren in 2-Spalten und bei ganz kleinen Auflösungen untereinander dargestellt werden.
+
+        .. image:: media/media_queries/mqueries_columns.png
+
+    .. tab:: Ausgangssitation
+
+        .. activecode:: mquery_ex_4
+            :language: html
+
+            <!DOCTYPE html>
+            <html>
+            <head>
+            <meta name="viewport" content="width=device-width, initial-scale=1">
+            <style>
+            * {
+            box-sizing: border-box;
+            }
+
+            /* Create four equal columns that floats next to each other */
+            .column {
+                float: left;
+                width: 25%;
+                padding: 20px;
+            }
+
+            /* Clear floats after the columns */
+            .row:after {
+                content: "";
+                display: table;
+                clear: both;
+            }
+
+            </style>
+            </head>
+            <body>
+
+            <h2>Responsive Four Column Layout</h2>
+            <p><strong>Resize the browser window to see the responsive effect.</strong> On screens that are 992px wide or less, the columns will resize from four columns to two columns. On screens that are 600px wide or less, the columns will stack on top of each other instead of next to eachother.</p>
+
+            <div class="row">
+            <div class="column" style="background-color:#aaa;">
+                <h2>Column 1</h2>
+                <p>Some text..</p>
+            </div>
+
+            <div class="column" style="background-color:#bbb;">
+                <h2>Column 2</h2>
+                <p>Some text..</p>
+            </div>
+
+            <div class="column" style="background-color:#ccc;">
+                <h2>Column 3</h2>
+                <p>Some text..</p>
+            </div>
+
+            <div class="column" style="background-color:#ddd;">
+                <h2>Column 4</h2>
+                <p>Some text..</p>
+            </div>
+            </div>
+
+            </body>
+            </html>
+
+
+
+    .. tab:: Lösung
+
+        .. reveal:: reveal_html_mq_A4
+            :showtitle: Show
+            :hidetitle: Hide
+
+
+            .. activecode:: mquery_ex_4_sol
+                :language: html
+
+                <!DOCTYPE html>
+                <html>
+                <head>
+                <meta name="viewport" content="width=device-width, initial-scale=1">
+                <style>
+                    * {
+                    box-sizing: border-box;
+                    }
+
+                    /* Create four equal columns that floats next to each other */
+                    .column {
+                        float: left;
+                        width: 25%;
+                        padding: 20px;
+                    }
+
+                    /* Clear floats after the columns */
+                    .row:after {
+                        content: "";
+                        display: table;
+                        clear: both;
+                    }
+
+                    /* On screens that are 992px wide or less, go from four columns to two columns */
+                    @media screen and (max-width: 992px) {
+                        .column {
+                            width: 50%;
+                        }
+                    }
+
+                    /* On screens that are 600px wide or less, make the columns stack on top of each other instead of next to each other */
+                    @media screen and (max-width: 600px) {
+                        .column {
+                            width: 100%;
+                        }
+                    }
+                </style>
+                </head>
+                <body>
+
+                    <h2>Responsive Four Column Layout</h2>
+                    <p><strong>Resize the browser window to see the responsive effect.</strong> On screens that are 992px wide or less, the columns will resize from four columns to two columns. On screens that are 600px wide or less, the columns will stack on top of each other instead of next to eachother.</p>
+
+                    <div class="row">
+                    <div class="column" style="background-color:#aaa;">
+                        <h2>Column 1</h2>
+                        <p>Some text..</p>
+                    </div>
+
+                    <div class="column" style="background-color:#bbb;">
+                        <h2>Column 2</h2>
+                        <p>Some text..</p>
+                    </div>
+
+                    <div class="column" style="background-color:#ccc;">
+                        <h2>Column 3</h2>
+                        <p>Some text..</p>
+                    </div>
+
+                    <div class="column" style="background-color:#ddd;">
+                        <h2>Column 4</h2>
+                        <p>Some text..</p>
+                    </div>
+                    </div>
+                </body>
+                </html>
+
+    .. tab:: Flexbox
+
+        .. activecode:: mquery_ex_4_flex_sol
+            :language: html
+
+            <!DOCTYPE html>
+            <html>
+            <head>
+            <meta name="viewport" content="width=device-width, initial-scale=1">
+            <style>
+            * {
+            box-sizing: border-box;
+            }
+
+            /* Container for flexboxes */
+            .row {
+            display: flex;
+            flex-wrap: wrap;
+            }
+
+            /* Create four equal columns */
+            .column {
+            flex: 25%;
+            padding: 20px;
+            }
+
+            /* On screens that are 992px wide or less, go from four columns to two columns */
+            @media screen and (max-width: 992px) {
+            .column {
+                flex: 50%;
+            }
+            }
+
+            /* On screens that are 600px wide or less, make the columns stack on top of each other instead of next to each other */
+            @media screen and (max-width: 600px) {
+            .row {
+                flex-direction: column;
+            }
+            }
+            </style>
+            </head>
+            <body>
+
+            <h2>Responsive Four Column Layout with Flex</h2>
+            <p><strong>Resize the browser window to see the responsive effect.</strong> On screens that are 992px wide or less, the columns will resize from four columns to two columns. On screens that are 600px wide or less, the columns will stack on top of each other instead of next to eachother.</p>
+
+            <div class="row">
+            <div class="column" style="background-color:#aaa;">
+                <h2>Column 1</h2>
+                <p>Some text..</p>
+            </div>
+
+            <div class="column" style="background-color:#bbb;">
+                <h2>Column 2</h2>
+                <p>Some text..</p>
+            </div>
+
+            <div class="column" style="background-color:#ccc;">
+                <h2>Column 3</h2>
+                <p>Some text..</p>
+            </div>
+
+            <div class="column" style="background-color:#ddd;">
+                <h2>Column 4</h2>
+                <p>Some text..</p>
+            </div>
+            </div>
+
+            </body>
+            </html>
+
+
+A5
+--
+
+
+.. tabbed:: MQuery_Aufgabe_5
+
+    .. tab:: Darstellung
+
+        Wenn der Bildschirm 600 Pixel oder kleiner ist, soll das gelbe DIV nicht angezeigt werden
+
+        .. image:: media/media_queries/mquery_hide_elements.png
+
+    .. tab:: Ausgangssitation
+
+        .. activecode:: mquery_ex_5
+            :language: html
+
+            <!DOCTYPE html>
+            <html>
+            <head>
+            <meta name="viewport" content="width=device-width, initial-scale=1">
+            <style>
+                div.example {
+                background-color: yellow;
+                padding: 20px;
+            }
+
+            </style>
+            </head>
+            <body>
+
+            <h2>Verstecke Elemente bei unterschiedlichen Viewports</h2>
+
+            <div class="example">Example DIV.</div>
+
+            <p>When the browser's width is 600px wide or less, hide the div element. Resize the browser window to see the effect.</p>
+
+            </body>
+            </html>
+
+    .. tab:: Lösung
+
+        .. reveal:: reveal_html_mq_A5
+            :showtitle: Show
+            :hidetitle: Hide
+
+
+            .. activecode:: mquery_ex_5_sol
+                :language: html
+
+                <!DOCTYPE html>
+                <html>
+                <head>
+                <meta name="viewport" content="width=device-width, initial-scale=1">
+                <style>
+                    div.example {
+                        background-color: yellow;
+                    padding: 20px;
+                    }
+
+                    @media screen and (max-width: 600px) {
+                        div.example {
+                            display: none;
+                        }
+                    }
+                </style>
+                </head>
+                <body>
+
+                <h2>Verstecke Elemente bei unterschiedlichen Viewports</h2>
+
+                <div class="example">Example DIV.</div>
+
+                <p>When the browser's width is 600px wide or less, hide the div element. Resize the browser window to see the effect.</p>
+
+                </body>
+                </html>
+
+
+A6
+--
+
+
+.. tabbed:: MQuery_Aufgabe_6
+
+    .. tab:: Darstellung
+
+        Unterschiedliche Spaltenanzahl bei verschiedenen Viewportgrößen
+
+        .. image:: media/media_queries/mqery_responsive_flexbox.png
+
+    .. tab:: Ausgangssitation
+
+        .. activecode:: mquery_ex_6
+            :language: html
+
+            <!DOCTYPE html>
+                <html>
+                <style>
+                    * {
+                    box-sizing: border-box;
+                    }
+
+                    body {
+                    margin: 0;
+                    font-family: Arial;
+                    }
+
+                    .header {
+                    text-align: center;
+                    padding: 32px;
+                    }
+
+                    .row {
+                        display: flex;
+                        flex-wrap: wrap;
+                        padding: 0 4px;
+                    }
+
+                    /* Create four equal columns that sits next to each other */
+                        .column {
+                        flex: 25%;
+                        max-width: 25%;
+                        padding: 0 4px;
+                    }
+
+                    .column img {
+                        margin-top: 8px;
+                        vertical-align: middle;
+                    }
+                </style>
+                <body>
+
+                <!-- Header -->
+                <div class="header">
+                <h1>Responsive Image Grid</h1>
+                <p>Resize the browser window to see the responsive effect.</p>
+                </div>
+
+                <!-- Photo Grid -->
+                <div class="row">
+                <div class="column">
+                    <img src="https://www.w3schools.com/w3images/wedding.jpg" style="width:100%">
+                    <img src="https://www.w3schools.com/w3images/rocks.jpg" style="width:100%">
+                    <img src="https://www.w3schools.com/w3images/falls2.jpg" style="width:100%">
+                    <img src="https://www.w3schools.com/w3images/paris.jpg" style="width:100%">
+                    <img src="https://www.w3schools.com/w3images/nature.jpg" style="width:100%">
+                    <img src="https://www.w3schools.com/w3images/mist.jpg" style="width:100%">
+                    <img src="https://www.w3schools.com/w3images/paris.jpg" style="width:100%">
+                </div>
+
+                <div class="column">
+                    <img src="https://www.w3schools.com/w3images/underwater.jpg" style="width:100%">
+                    <img src="https://www.w3schools.com/w3images/ocean.jpg" style="width:100%">
+                    <img src="https://www.w3schools.com/w3images/wedding.jpg" style="width:100%">
+                    <img src="https://www.w3schools.com/w3images/mountainskies.jpg" style="width:100%">
+                    <img src="https://www.w3schools.com/w3images/rocks.jpg" style="width:100%">
+                    <img src="https://www.w3schools.com/w3images/underwater.jpg" style="width:100%">
+                </div>
+
+                <div class="column">
+                    <img src="https://www.w3schools.com/w3images/wedding.jpg" style="width:100%">
+                    <img src="https://www.w3schools.com/w3images/rocks.jpg" style="width:100%">
+                    <img src="https://www.w3schools.com/w3images/falls2.jpg" style="width:100%">
+                    <img src="https://www.w3schools.com/w3images/paris.jpg" style="width:100%">
+                    <img src="https://www.w3schools.com/w3images/nature.jpg" style="width:100%">
+                    <img src="https://www.w3schools.com/w3images/mist.jpg" style="width:100%">
+                    <img src="https://www.w3schools.com/w3images/paris.jpg" style="width:100%">
+                </div>
+
+                <div class="column">
+                    <img src="https://www.w3schools.com/w3images/underwater.jpg" style="width:100%">
+                    <img src="https://www.w3schools.com/w3images/ocean.jpg" style="width:100%">
+                    <img src="https://www.w3schools.com/w3images/wedding.jpg" style="width:100%">
+                    <img src="https://www.w3schools.com/w3images/mountainskies.jpg" style="width:100%">
+                    <img src="https://www.w3schools.com/w3images/rocks.jpg" style="width:100%">
+                    <img src="https://www.w3schools.com/w3images/underwater.jpg" style="width:100%">
+                </div>
+                </div>
+
+                </body>
+                </html>
+
+    .. tab:: Lösung
+
+        .. reveal:: reveal_html_mq_A6
+            :showtitle: Show
+            :hidetitle: Hide
+
+
+            .. activecode:: mquery_ex_6_sol
+                :language: html
+
+                <!DOCTYPE html>
+                <html>
+                <style>
+                    * {
+                    box-sizing: border-box;
+                    }
+
+                    body {
+                    margin: 0;
+                    font-family: Arial;
+                    }
+
+                    .header {
+                    text-align: center;
+                    padding: 32px;
+                    }
+
+                    .row {
+                        display: flex;
+                        flex-wrap: wrap;
+                        padding: 0 4px;
+                    }
+
+                    /* Create four equal columns that sits next to each other */
+                        .column {
+                        flex: 25%;
+                        max-width: 25%;
+                        padding: 0 4px;
+                    }
+
+                    .column img {
+                    margin-top: 8px;
+                    vertical-align: middle;
+                    }
+
+                    /* Responsive layout - makes a two column-layout instead of four columns */
+                    @media screen and (max-width: 800px) {
+                        .column {
+                            flex: 50%;
+                            max-width: 50%;
+                        }
+                    }
+
+                    /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+                    @media screen and (max-width: 600px) {
+                        .column {
+                            flex: 100%;
+                            max-width: 100%;
+                        }
+                    }
+                </style>
+                <body>
+
+                <!-- Header -->
+                <div class="header">
+                <h1>Responsive Image Grid</h1>
+                <p>Resize the browser window to see the responsive effect.</p>
+                </div>
+
+                <!-- Photo Grid -->
+                <div class="row">
+                <div class="column">
+                    <img src="https://www.w3schools.com/w3images/wedding.jpg" style="width:100%">
+                    <img src="https://www.w3schools.com/w3images/rocks.jpg" style="width:100%">
+                    <img src="https://www.w3schools.com/w3images/falls2.jpg" style="width:100%">
+                    <img src="https://www.w3schools.com/w3images/paris.jpg" style="width:100%">
+                    <img src="https://www.w3schools.com/w3images/nature.jpg" style="width:100%">
+                    <img src="https://www.w3schools.com/w3images/mist.jpg" style="width:100%">
+                    <img src="https://www.w3schools.com/w3images/paris.jpg" style="width:100%">
+                </div>
+
+                <div class="column">
+                    <img src="https://www.w3schools.com/w3images/underwater.jpg" style="width:100%">
+                    <img src="https://www.w3schools.com/w3images/ocean.jpg" style="width:100%">
+                    <img src="https://www.w3schools.com/w3images/wedding.jpg" style="width:100%">
+                    <img src="https://www.w3schools.com/w3images/mountainskies.jpg" style="width:100%">
+                    <img src="https://www.w3schools.com/w3images/rocks.jpg" style="width:100%">
+                    <img src="https://www.w3schools.com/w3images/underwater.jpg" style="width:100%">
+                </div>
+
+                <div class="column">
+                    <img src="https://www.w3schools.com/w3images/wedding.jpg" style="width:100%">
+                    <img src="https://www.w3schools.com/w3images/rocks.jpg" style="width:100%">
+                    <img src="https://www.w3schools.com/w3images/falls2.jpg" style="width:100%">
+                    <img src="https://www.w3schools.com/w3images/paris.jpg" style="width:100%">
+                    <img src="https://www.w3schools.com/w3images/nature.jpg" style="width:100%">
+                    <img src="https://www.w3schools.com/w3images/mist.jpg" style="width:100%">
+                    <img src="https://www.w3schools.com/w3images/paris.jpg" style="width:100%">
+                </div>
+
+                <div class="column">
+                    <img src="https://www.w3schools.com/w3images/underwater.jpg" style="width:100%">
+                    <img src="https://www.w3schools.com/w3images/ocean.jpg" style="width:100%">
+                    <img src="https://www.w3schools.com/w3images/wedding.jpg" style="width:100%">
+                    <img src="https://www.w3schools.com/w3images/mountainskies.jpg" style="width:100%">
+                    <img src="https://www.w3schools.com/w3images/rocks.jpg" style="width:100%">
+                    <img src="https://www.w3schools.com/w3images/underwater.jpg" style="width:100%">
+                </div>
+                </div>
+
+                </body>
+                </html>
+
+
+
+A7
+--
+
+
+.. tabbed:: MQuery_Aufgabe_7
+
+    .. tab:: Darstellung
+
+        Hochkant vs Quer
+
+        In Abhängigkeit soll sich die Farbe des Hintergrundes ändern
+
+        .. image:: media/media_queries/mquery_hide_elements.png
+
+    .. tab:: Ausgangssitation
+
+        .. activecode:: mquery_ex_7
+            :language: html
+
+            <!DOCTYPE html>
+            <html>
+            <head>
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <style>
+            body {
+                background-color: lightgreen;
+            }
+            </style>
+            </head>
+            <body>
+
+            <p>Resize the browser window. When the width of this document is larger than the height, the background color is "lightblue", otherwise it is "lightgreen".</p>
+
+            </body>
+            </html>
+
+    .. tab:: Lösung
+
+        .. reveal:: reveal_html_mq_A7
+            :showtitle: Show
+            :hidetitle: Hide
+
+
+            .. activecode:: mquery_ex_7_sol
+                :language: html
+
+                <!DOCTYPE html>
+                <html>
+                <head>
+                <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                <style>
+                body {
+                background-color: lightgreen;
+                }
+
+                @media only screen and (orientation: landscape) {
+                body {
+                    background-color: lightblue;
+                }
+                }
+                </style>
+                </head>
+                <body>
+
+                <p>Resize the browser window. When the width of this document is larger than the height, the background color is "lightblue", otherwise it is "lightgreen".</p>
+
+                </body>
+                </html>
+
+
+
+A8
+--
+
+
+.. tabbed:: MQuery_Aufgabe_8
+
+    .. tab:: Darstellung
+
+        Erstellen Sie eine Website gemäß folgender Abbildung
+
+        .. image:: media/media_queries/mquery_resp_flex.png
+
+    .. tab:: Lösung
+
+        .. reveal:: reveal_html_mq_A8
+            :showtitle: Show
+            :hidetitle: Hide
+
+
+            .. activecode:: mquery_ex_8
+                :language: html
+
+                <!DOCTYPE html>
+                <html>
+                <head>
+                <title>Page Title</title>
+                <meta charset="UTF-8">
+                <meta name="viewport" content="width=device-width, initial-scale=1">
+                <style>
+                * {
+                box-sizing: border-box;
+                }
+
+                /* Style the body */
+                body {
+                    font-family: Arial;
+                    margin: 0;
+                }
+
+                /* Header/logo Title */
+                .header {
+                    padding: 60px;
+                    text-align: center;
+                    background: #1abc9c;
+                    color: white;
+                }
+
+                /* Style the top navigation bar */
+                .navbar {
+                    display: flex;
+                    background-color: #333;
+                }
+
+                /* Style the navigation bar links */
+                .navbar a {
+                    color: white;
+                    padding: 14px 20px;
+                    text-decoration: none;
+                    text-align: center;
+                }
+
+                /* Change color on hover */
+                .navbar a:hover {
+                    background-color: #ddd;
+                    color: black;
+                }
+
+                /* Column container */
+                .row {
+                    display: flex;
+                    flex-wrap: wrap;
+                }
+
+                /* Create two unequal columns that sits next to each other */
+                /* Sidebar/left column */
+                .side {
+                    flex: 30%;
+                    background-color: #f1f1f1;
+                    padding: 20px;
+                }
+
+                /* Main column */
+                .main {
+                    flex: 70%;
+                    background-color: white;
+                    padding: 20px;
+                }
+
+                /* Fake image, just for this example */
+                .fakeimg {
+                background-color: #aaa;
+                width: 100%;
+                padding: 20px;
+                }
+
+                /* Footer */
+                .footer {
+                padding: 20px;
+                text-align: center;
+                background: #ddd;
+                }
+
+                /* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
+                @media screen and (max-width: 700px) {
+                .row, .navbar {
+                    flex-direction: column;
+                }
+                }
+                </style>
+                </head>
+                <body>
+
+                <!-- Note -->
+                <div style="background:yellow;padding:5px">
+                <h4 style="text-align:center">Resize the browser window to see the responsive effect.</h4>
+                </div>
+
+                <!-- Header -->
+                <div class="header">
+                <h1>My Website</h1>
+                <p>With a <b>flexible</b> layout.</p>
+                </div>
+
+                <!-- Navigation Bar -->
+                <div class="navbar">
+                <a href="#">Link</a>
+                <a href="#">Link</a>
+                <a href="#">Link</a>
+                <a href="#">Link</a>
+                </div>
+
+                <!-- The flexible grid (content) -->
+                <div class="row">
+                <div class="side">
+                    <h2>About Me</h2>
+                    <h5>Photo of me:</h5>
+                    <div class="fakeimg" style="height:200px;">Image</div>
+                    <p>Some text about me in culpa qui officia deserunt mollit anim..</p>
+                    <h3>More Text</h3>
+                    <p>Lorem ipsum dolor sit ame.</p>
+                    <div class="fakeimg" style="height:60px;">Image</div><br>
+                    <div class="fakeimg" style="height:60px;">Image</div><br>
+                    <div class="fakeimg" style="height:60px;">Image</div>
+                </div>
+                <div class="main">
+                    <h2>TITLE HEADING</h2>
+                    <h5>Title description, Dec 7, 2017</h5>
+                    <div class="fakeimg" style="height:200px;">Image</div>
+                    <p>Some text..</p>
+                    <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+                    <br>
+                    <h2>TITLE HEADING</h2>
+                    <h5>Title description, Sep 2, 2017</h5>
+                    <div class="fakeimg" style="height:200px;">Image</div>
+                    <p>Some text..</p>
+                    <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+                </div>
+                </div>
+
+                <!-- Footer -->
+                <div class="footer">
+                <h2>Footer</h2>
+                </div>
+
+                </body>
+                </html>
+
+
+
+
+
+

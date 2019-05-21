@@ -1,0 +1,265 @@
+CSS Layouts
+===========
+
+.. toctree::
+   :maxdepth: 1
+
+
+   css_gestaltungsraster.rst
+   css_flex_layout.rst
+   css_grid_layout.rst
+   css_grid_aufgabe.rst
+   css_gestaltungsraster.rst
+   css_flex_layout.rst
+   css_grid_layout.rst
+   css_grid_aufgabe.rst
+   css_media_queries.rst
+   css_breakpoints.rst
+   css_media_query_beispiel.rst
+
+
+
+
+Im 2. Teil geht es um Layout-Systeme
+
+https://blog.kulturbanause.de/2014/11/gestaltungsraster-css-grids-web-design/
+
+https://blog.kulturbanause.de/2012/10/die-layout-typen-einer-website-fixed-fluid-elastic/
+
+Bei der Konzeption einer Website müsst ihr entscheiden, wie sich das Layout im Browser verhalten soll. Soll die Website immer gleich breit sein? Sollen sich die Elemente der Breite des Browserfensters anpassen? Soll sich das Layout gar proportional verkleinern? In diesem Artikel erfahrt ihr welche Vor- und Nachteile die verschiedenen Layout-Typen haben und welche Auswirkungen eure Entscheidung auf die mobile Variante einer Website hat.
+
+
+
+
+Fixed Layout (starres Layout)
+-----------------------------
+
+.. image:: media/fixed_layout.png
+    :align: right
+
+Layouts mit einem starren Gestaltungsraster, also einem Raster das auf festen Pixelwerten basiert, nennt man „fixed“. Die Website arbeitet dabei mit festgelegten Abmessungen, die sich auch dann nicht verändern, wenn das Browserfenster größer oder kleiner wird. Die Website nimmt einen festgelegten Bereich im Browser ein. Ist das Browserfenster kleiner, wird die Seite nicht vollständig angezeigt und es werden Scrollbalken angezeigt. Im ungünstigsten Fall entstehen sogar Darstellungsfehler. Ist das Browserfenster größer als die Website, entsteht ein Freiraum um die Seite herum. Dieser Freiraum sollte vom Webdesigner ebenfalls möglichst ansprechend gefüllt werden.
+
+Der Layouttyp „fixed“ ist (immer noch) anzutreffen. Das liegt unter anderem daran, dass sich ein Design mit festen Abmessungen am einfachsten gestalten und technisch umsetzen lässt. Auch der Gestaltungsfreiraum ist am größten, da die verschiedenen Elemente starr sind und daher nicht flexibel gestaltet werden müssen.
+
+**Vorteile eines starren Layouts**
+
+- Unkomplizierte Planung des Gestaltungsrasters
+- Viel gestalterische Freiheit
+- Unkomplizierte technische Umsetzung
+- Für den Kunden leicht verständlich
+
+**Nachteile eines starren Layouts**
+
+- Es wird nur für einen bestimmten Viewport gestaltet. Ist der Viewport größer, wird Platz verschenkt, ist der Viewport zu klein, wird die Seite abgeschnitten.
+- Auf Basis eines starren Rasters kann kein „echtes“ responsive Design erstellt werden, sondern nur ein sog. adaptive Layout (die Begrifflichkeiten sind kontrovers diskutiert).
+
+**Beispiel**
+
+
+
+.. activecode:: layout_fixed_demo
+    :language: html
+
+    <!doctype html>
+    <html>
+    <head>
+    <meta charset="UTF-8">
+    <title>Beispiel für ein fixed Layout</title>
+    <style type="text/css">
+    #container {
+        margin: 0 auto;
+        width: 960px
+    }
+
+    header {
+        width: 960px;
+        height: 100px;
+        margin: 0 0 20px 0;
+        float: left;
+        background: #666;
+    }
+
+    #content {
+        width: 700px;
+        height: 500px;
+        margin: 0 20px 0 0;
+        float: left;
+        background: #CCC;
+    }
+
+    aside {
+        width: 240px;
+        height: 500px;
+        float: left;
+        background: #666;
+    }
+    </style>
+    </head>
+
+    <body>
+    <div id="container">
+    <header>Header</header>
+    <div id="content">Content</div>
+    <aside>Sidebar</aside>
+    </div>
+    </body>
+    </html>
+
+
+Fluid Layout (flüssiges Layout)
+-------------------------------
+
+.. image:: media/css_layout_fluid.png
+    :align: right
+
+Bei einem fluid Layout passt sich die Website der Breite des Browserfensters an, und nutzt so den zur Verfügung stehenden Platz optimal aus. Auf großen Monitoren können also mehr Inhalte abgebildet werden als auf kleinen Monitoren. Um die notwendige Flexibilität zu erreichen, müssen einige (oder alle) Spalten des Gestaltungsrasters variabel sein. Diese Spalten basieren auf Prozentwerten und nicht auf Pixelwerten. Die Website ist normalerweise nur in der horizontalen Ausrichtung flexibel, die vertikale Ausrichtung bleibt starr. Häufig wird auch eine Obergrenze für die maximale Ausbreitung des Designs festgelegt.
+
+Ein fluid Design lässt sich nicht so einfach gestalten wie ein fixed Design und auch die technische Umsetzung ist komplizierter. Alle Gestaltungselemente die in einer flexiblen Spalte untergebracht sind, müssen in der Breite skalierbar sein. Prozentwerte sind in Layoutprogrammen jedoch üblicherweise nicht möglich. Der Desiger muss daher im Hinterkopf haben welche Bereiche flexibel sind, und die Grafiken entsprechend vorbereiten.
+
+Ein fluid Layout wird bei inhaltsschweren Seiten wie Online-Shops, Magazin-Seiten oder Foren verwendet. Es ist auch die Grundlage eines "echten" responsive Designs.
+
+**Vorteile**
+
+- Optimale Platznutzung
+- Es können häufig mehr Inhalte dargestellt werden
+- Mit einem flüssigen Raster ist ein „echtes“ responsive Design realisierbar, so wie Ethan Marcotte den Begriff „responsive“ einst definiert hat.
+
+**Nachteile**
+
+- Komplexere Planung des Gestaltungsrasters
+- Der Designer wird gestalterisch eingeschränkt, da Bereiche flexibel gestaltet werden müssen
+- Die technische Umsetzung ist etwas komplexer als bei einem starren Layout
+- Aufwändige Anpassung der Seiteninhalte
+
+
+.. activecode:: fluid_layout_demo
+    :language: html
+
+    <!doctype html>
+    <html>
+    <head>
+    <meta charset="UTF-8">
+    <title>Beispiel für ein fluid Layout</title>
+    <style type="text/css">
+    #container {
+        margin: 0 auto;
+        width: 100%;
+    }
+
+    header {
+        width: 100%;
+        height: 100px;
+        margin: 0 0 20px 0;
+        float: left;
+        background: #666;
+    }
+
+    #content {
+        width: 75%;
+        height: 500px;
+        margin: 0 2% 0 0;
+        float: left;
+        background: #CCC;
+    }
+
+    aside {
+        width: 23%;
+        height: 500px;
+        float: left;
+        background: #666;
+    }
+    </style>
+    </head>
+
+    <body>
+    <div id="container">
+    <header>Header</header>
+    <div id="content">Content</div>
+    <aside>Sidebar</aside>
+    </div>
+    </body>
+    </html>
+
+
+Elastic Layout (elastisches Layout)
+-----------------------------------
+
+.. image:: media/layout_elastic.png
+    :align: right
+
+Bei einem elastic Layout sind die Seitenelemente sowohl in der Breite, als auch in der Höhe variabel. Das Design skaliert sich proportional zur Größe des Browserfensters; das Gestaltungsraster wird so aufgebaut, dass Spalten und Zeilen auf Prozentwerten, auf em oder neuerdings rem basieren. Technisch und gestalterisch ist dieser Layouttyp am komplexesten und daher wohl auch am seltensten. Grafiken und Seiteninhalte müssen extrem flexibel sein. Das Layout lässt sich nicht 1:1 in einem Layoutprogramm umsetzen, der Webdesigner muss also genau wissen wie sich die Elemente verhalten, wenn das Browserfenster sich verändert. Auch der Einsatz von Pixelgrafiken kann evtl. zu Problemen führen.
+
+Ein elastic Design bietet sich besonders dann an, wenn ein Layout den Bildschirm immer vollständig ausfüllen soll, ohne dass die Seite gescrolled werden muss. Dieser Layouttyp wird häufig bei Websites mit großen Foto- oder Videoelementen verwendet. Architektur-Websites, Microsites für Kinofilme oder Videospiele sind einige typische Beispiele. Häufig werden nur wenige Inhalte abgebildet.
+
+
+**Vorteile**
+
+- Perfekte Platznutzung
+- Inhalte werden proportional und so groß wie möglich abgebildet
+- Auf Basis eines elastic Layouts lässt sich ein "echtes" responsive Design entwickeln.
+
+**Nachteile**
+
+- Komplex in der Planung des Rasters
+- Komplex in der Gestaltung des Layouts
+- Komplex in der technischen Umsetzung
+- Komplex in der Anpassung der Seiteninhalte. Diese sind häufig nicht flexibel genug.
+
+
+.. activecode:: layout_elastic_demo
+    :language: html
+
+    <!doctype html>
+    <html>
+    <head>
+    <meta charset="UTF-8">
+    <title>Beispiel für ein elastic Layout</title>
+    <style type="text/css">
+    html, body {
+        height: 98%;
+        margin: 1%;
+    }
+
+    #container {
+        margin: 0 auto;
+        width: 100%;
+        height: 100%;
+    }
+
+    header {
+        width: 100%;
+        height: 10%;
+        margin: 0 0 2% 0;
+        background: #666;
+    }
+
+    #content {
+        width: 75%;
+        height: 80%;
+        margin: 0 2% 0 0;
+        float: left;
+        background: #CCC;
+    }
+
+    aside {
+        width: 23%;
+        height: 80%;
+        float: left;
+        background: #666;
+    }
+    </style>
+    </head>
+
+    <body>
+    <div id="container">
+    <header>Header</header>
+    <div id="content">Content</div>
+    <aside>Sidebar</aside>
+    </div>
+    </body>
+    </html>
+
+
+Für weitere Unterscheidungen siehe auch https://blog.kulturbanause.de/2012/11/adaptive-website-vs-responsive-website/
+
+

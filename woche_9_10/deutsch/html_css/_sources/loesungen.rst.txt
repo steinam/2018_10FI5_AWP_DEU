@@ -1,0 +1,155 @@
+Lösungen
+=========
+
+Lösung zu Seite 47:
+
++---------------------------------------------------------------+--+
+| <style>                                                       |  |
++===============================================================+==+
+| /*basic style*/                                               |  |
++---------------------------------------------------------------+--+
+| #container{ font-size: 12px; font-family: arial, sans-serif;} |  |
++---------------------------------------------------------------+--+
+| p{ margin: 0 10px 10px}                                       |  |
++---------------------------------------------------------------+--+
+|                                                               |  |
++---------------------------------------------------------------+--+
+
++-----------------------------------------------------------------------+
+| #header{                                                              |
+| height: 80px;                                                         |
+| background-color: rgb(238,238,238);                                   |
+| color: rgb(122,177,36);                                               |
+| padding-left: 10px;                                                   |
+| line-height: 80px; }                                                  |
++=======================================================================+
+| #header h1{ margin: 0;}                                               |
++-----------------------------------------------------------------------+
+| #navigation{ background-color: rgb(186,203,253);}                     |
++-----------------------------------------------------------------------+
+| #extra{ background-color: rgb(253,133,67);}                           |
++-----------------------------------------------------------------------+
+| #footer{ height: 14px; padding:5px 10px 5px 10px; color: #FFF;        |
+| background-color: #333;}                                              |
++-----------------------------------------------------------------------+
+| #footer p{line-height: 14px; margin: 0px;}                            |
++-----------------------------------------------------------------------+
+
++-------------------------------------------------------------+
+| /*layout*/                                                  |
++=============================================================+
+| #wrapper{ float: left; width: 100%;}                        |
++-------------------------------------------------------------+
+| #content{ margin: 0 25%;}                                   |
++-------------------------------------------------------------+
+| #navigation{ float: left; width: 25%; margin-left: -100%; } |
++-------------------------------------------------------------+
+| #extra{ float: left; width: 25%; margin-left: -25%;}        |
++-------------------------------------------------------------+
+
+#footer{ clear: left;}
+
+</style>
+
+Lösung zu Images SideBYSide
+
+|image0|\ <!DOCTYPE html>
+
+| <html>
+| <head>
+| <style>
+| \* {
+| box-sizing: border-box;
+| }
+
+| .img-container {
+| float: left;
+| width: 33.33%;
+| padding: 5px;
+| }
+
+| .clearfix::after {
+| content: "";
+| clear: both;
+| display: table;
+| }
+| </style>
+
+| </head>
+| <body>
+
+| <h2>Images Side by Side</h2>
+| <p>Float images side by side:</p>
+
+| <div class="clearfix">
+| <div class="img-container">
+| <img src="img_5terre.jpg" alt="Italy" style="width:100%">
+| </div>
+
+| <div class="img-container">
+| <img src="img_forest.jpg" alt="Forest" style="width:100%">
+| </div>
+| <div class="img-container">
+| <img src="img_mountains.jpg" alt="Mountains" style="width:100%">
+| </div>
+| </div>
+
+<p>Note that we also use the clearfix hack to take care of the layout
+flow, and that we add the box-sizing property to make sure that the
+image container doesn't break due to extra padding. Try to remove this
+code to see the effect.</p>
+
+| </body>
+| </html>
+
+Lösung zu Position-Fiex (jsfiddle)
+
+Lösung:
+
+| .container {
+| /\* Container specific rules here \*/
+| padding: 30px 50px;
+| width: 500px;
+| border: 1px solid;
+| position: relative;
+| overflow: auto;
+| box-sizing: border-box;
+| }
+
+| .left,.middle,.right {
+| /\* Common rules here \*/
+| border: 1px solid lightgray;
+| width: 100px;
+| height: 50px;
+| text-align: center;
+| }
+
+| .left {
+| background-color: lightblue;
+| float: left;
+| }
+
+| .middle {
+| background-color: lightpink;
+| position: absolute;
+| left: 200px;
+| }
+
+| .right {
+| background-color: lightgreen;
+| float: right;
+| }
+
+| .fixed {
+| position: absolute;
+| top: 0;
+| left: 0;
+| background-color: yellow;
+| color: red;
+| font-style: oblique;
+| text-decoration: underline;
+| }
+
+.. |image0| image:: media/image1.jpeg
+   :width: 4.675in
+   :height: 1.83125in

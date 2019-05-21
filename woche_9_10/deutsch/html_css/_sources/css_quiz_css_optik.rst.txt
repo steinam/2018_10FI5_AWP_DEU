@@ -1,0 +1,1265 @@
+Stylen durch CSS
+================
+
+In diesem Abschnitt werden wir die Quiz App optisch anpassen.
+
+
+
+.. .. toctree::
+..   :maxdepth: 1
+
+..   css_quiz_css_defaultstyle.rst
+
+
+
+Im folgenden Teil werden wir das Gelernte durch eine kleine Anwendung vertiefen.
+
+
+
+Default Styling Optionen
+------------------------
+
+Die Standardeinstellungen der Browser führen dazu, dass einige optische Änderungen am HTML-Code vorgenommen werden, ohne dass der Designer dies ausdrücklich benennen muss. Dies betrifft vor allem die Abstände sowie das generelle Verhalten von Boxen (box-sizing). In einem ersten Schritt werden diese browserspezifischen Eigenschaften gesetzt.
+
+
+.. tabbed:: Generelle_Eigenschaften
+
+   .. tab:: Optik
+
+      .. image:: media/html_css_js_quiz/default/default.PNG
+        :width: 5cm
+
+
+   .. tab:: Try It
+
+        .. reveal:: reveal_default_12222
+            :showtitle: Show
+            :hidetitle: Hide
+
+            .. code-block:: css
+
+                * {
+                    margin: 0;
+                    padding: 0;
+                    -ms-box-sizing: border-box;
+                    -moz-box-sizing: border-box;
+                    -webkit-box-sizing: border-box;
+
+                    box-sizing: border-box;
+                    -ms-user-select: none;
+                    -moz-user-select: none;
+                    -webkit-user-select: none;
+                    user-select: none;
+                }
+
+
+
+
+
+
+
+Hintergrundfarbe und weitere Farben
+-----------------------------------
+
+Die Betrachtung des Endresultats gibt Hinweise, dass die Hintergrundfarbe des Dokumentes einen leichten Grauton aufweist.
+
+.. tabbed:: Background-Color
+
+   .. tab:: Optik
+
+      .. image:: media/html_css_js_quiz/background_color/html_background.png
+        :width: 5cm
+
+
+   .. tab:: Try It
+
+        .. reveal:: reveal_html_backgroundcolor
+            :showtitle: Show
+            :hidetitle: Hide
+
+            .. code-block:: css
+
+                * {
+                    margin: 0;
+                    padding: 0;
+                    -ms-box-sizing: border-box;
+                    -moz-box-sizing: border-box;
+                    -webkit-box-sizing: border-box;
+                    box-sizing: border-box;
+                    -ms-user-select: none;
+                    -moz-user-select: none;
+                    -webkit-user-select: none;
+                    user-select: none;
+                }
+
+                html {
+                    background-color: #e5e6e6;
+                }
+
+
+
+Design the quiz box
+-------------------
+
+.. design_1
+
+Das gesamte Quiz-Element hat eine dunkelblaue Hintergrundfarbe und soll 900px breit sein. Die Höhe ist abhängig von dem Platz, den die Fragen einnehmen und sollte deshalb nicht ausdrücklich gesetzt werden. Dazu kommt noch ein wenig Abstand zum äußeren HTML-Dokument.
+
+.. tabbed:: Design_1
+
+    .. tab:: Optik
+
+        .. image:: media/html_css_js_quiz/01_design_1/design_1.png
+            :width: 6cm
+
+
+    .. tab:: Try It
+
+        .. reveal:: reveal_html_design_1
+            :showtitle: Show
+            :hidetitle: Hide
+
+            .. code-block:: css
+
+                * {
+                    margin: 0;
+                    padding: 0;
+                    -ms-box-sizing: border-box;
+                    -moz-box-sizing: border-box;
+                    -webkit-box-sizing: border-box;
+                    box-sizing: border-box;
+                    -ms-user-select: none;
+                    -moz-user-select: none;
+                    -webkit-user-select: none;
+                    user-select: none;
+                }
+
+                html {
+                    background-color: #e5e6e6;
+                }
+
+                #quiz {
+                    background-color: #001a33;
+                    position: relative;
+                    height: auto;
+                    width:900px;
+                    margin: 30px auto;
+                }
+
+
+
+
+Design the quiz box - part 2
+----------------------------
+
+.. design_2
+
+Die abgerundeten Ecken erreicht man durch die Eigenschaft ``border-radius``, die Schattierung durch ``box-shadow``.
+Durch ein padding erhalten wir einen gewissen Außenabstand zum HTML-Dokument..
+
+.. tabbed:: Design_2
+
+    .. tab:: Optik
+
+        .. image:: media/html_css_js_quiz/02_design_2/design_2.png
+            :width: 6cm
+
+
+    .. tab:: Try It
+
+        .. reveal:: reveal_html_design_2
+            :showtitle: Show
+            :hidetitle: Hide
+
+            .. code-block:: css
+
+                #quiz {
+                    background-color: 001a33;
+                    position: relative;
+                    height: auto;
+                    width:900px;
+                    margin: 30px auto;
+                    border-radius: 40px;
+                    box-shadow: 5px 7px 5px 5px rgba(0,26,51,  0.5);
+                    padding: 2px 50px 50px 50px;
+                }
+
+
+                * {
+                    margin: 0;
+                    padding: 0;
+                    -ms-box-sizing: border-box;
+                    -moz-box-sizing: border-box;
+                    -webkit-box-sizing: border-box;
+                    box-sizing: vorder-box;
+                    -ms-user-select: none;
+                    -moz-user-select: none;
+                    -webkit-user-select: none;
+                    user-select: none;
+                }
+
+                html {
+                    background-color: e5e6e6;
+                }
+
+
+
+
+
+Design des Kopfbereichs
+-----------------------
+
+.. design_head
+
+Die Optik der Überschrift erhalten wir durch eine Zentrierung sowie eine Font-Größe von 60 px. Der h1-Tag hat eine Text- sowie eine Hintergrundfarbe.
+
+
+.. tabbed:: Design_2
+
+    .. tab:: Optik
+
+        .. image:: media/html_css_js_quiz/03_design_head/design_head.png
+            :width: 6cm
+
+
+    .. tab:: Try It
+
+        .. reveal:: reveal_html_design_22222
+            :showtitle: Show
+            :hidetitle: Hide
+
+            .. code-block:: css
+
+                    #h1{
+                        position: relative;
+                        text-align: center;
+                        font-size: 60px;
+                        background-color: #e6e6e6;
+                        color: #001a33;
+                        border-radius: 40px;
+                        margin: 30px 10px 30py 10px;
+                        padding: 2px 0px;
+                    }
+
+
+                    * {
+                        margin: 0;
+                        padding: 0;
+                        -ms-box-sizing: border-box;
+                        -moz-box-sizing: border-box;
+                        -webkit-box-sizing: border-box;
+                        box-sizing: vorder-box;
+                        -ms-user-select: none;
+                        -moz-user-select: none;
+                        -webkit-user-select: none;
+                        user-select: none;
+                    }
+
+                    html {
+                        background-color: e5e6e6;
+                    }
+
+                    #quiz {
+                        background-color: 001a33;
+                        position: relative;
+                        height: auto;
+                        width:900px;
+                        margin: 30px auto;
+                        border-radius: 40 px;
+                        box-shadow: 5px 7px 5px 5px rgba(0,26,51,  0.5);
+                        padding: 2px 50px 50px 50px;
+                    }
+
+
+
+
+Basis Design der Tracker
+-------------------------------------
+
+.. design_tracker_1
+
+Das ``tracker``-DIV erhält einen kleinen Abstand zum umgebenden Quiz-Bereich mit Hilfe der margin- und padding-Eigenschaft:
+Seine Position ist relativ.
+
+
+
+
+.. tabbed:: Design_Tracker_1
+
+    .. tab:: Optik
+
+        .. image:: media/html_css_js_quiz/04_design_tracker_1/tracker_1.png
+
+
+
+    .. tab:: Try It
+
+        .. reveal:: reveal_tracker_1
+            :showtitle: Show
+            :hidetitle: Hide
+
+            .. code-block:: css
+
+                    #tracker {
+                        position: relative;
+                        margin: 20px 10px 10px 10px;
+                        padding: 0 10px 0 10px;
+                    }
+
+                    * {
+                        margin: 0;
+                        padding: 0;
+                        -ms-box-sizing: border-box;
+                        -moz-box-sizing: border-box;
+                        -webkit-box-sizing: border-box;
+                        box-sizing: vorder-box;
+                        -ms-user-select: none;
+                        -moz-user-select: none;
+                        -webkit-user-select: none;
+                        user-select: none;
+                    }
+
+                    html {
+                        background-color: e5e6e6;
+                    }
+
+                    #quiz {
+                        background-color: 001a33;
+                        position: relative;
+                        height: auto;
+                        width:900px;
+                        margin: 30px auto;
+                        border-radius: 40 px;
+                        box-shadow: 5px 7px 5px 5px rgba(0,26,51,  0.5);
+                        padding: 2px 50px 50px 50px;
+                    }
+
+                    #h1{
+                        position: relative;
+                        text-align: center;
+                        font-size: 60px;
+                        background-color: #e6e6e6;
+                        color: #001a33;
+                        border-radius: 40px;
+                        margin: 30px 10px 30py 10px;
+                        padding: 2px 0px;
+                    }
+
+
+
+
+
+
+Design Frage -- Tracker 2
+------------------------------
+
+
+.. design_tracker_2
+
+Die Darstellung der bewerteten Fragen  ``nos`` sind Listen, die per DISPLAY: Inline-Block umgewandlt wurden.
+Die Höhe und Breite sind 50px. Ein border-radius von 50% gibt ein rundes Aussehen. Dazu kommen weitere Eigenschaften wie font-size, color etc.
+
+
+
+.. tabbed:: Design_Tracker_2
+
+    .. tab:: Optik
+
+        .. image:: media/html_css_js_quiz/05_design_tracker_2/tracker.png
+            :width: 6cm
+
+
+    .. tab:: Try It
+
+        .. reveal:: reveal_html_tracker_2
+            :showtitle: Show
+            :hidetitle: Hide
+
+            .. code-block:: css
+
+
+
+        .. code-block:: css
+
+
+                #tracker {
+                    position: relative;
+                    margin: 20px 10px 10px 10px;
+                    padding: 0 10px 0 10px;
+                }
+
+                .nos{
+                    position: relative;
+                    display: inline-block;
+                    width: 50px;
+                    height: 50px;
+                    background-color: #8c8c8c;
+                    border-radius: 50%;
+                    text-align: center;
+                    color: white;
+                    padding: 11px;
+                    margin: 0px 10px 10px 10px;
+                    font-weight: bolder;
+                    font-size: 22px;
+                    border: 1.5px solid white;
+                }
+
+
+
+
+                * {
+                    margin: 0;
+                    padding: 0;
+                    -ms-box-sizing: border-box;
+                    -moz-box-sizing: border-box;
+                    -webkit-box-sizing: border-box;
+                    box-sizing: vorder-box;
+                    -ms-user-select: none;
+                    -moz-user-select: none;
+                    -webkit-user-select: none;
+                    user-select: none;
+                }
+
+                html {
+                    background-color: e5e6e6;
+                }
+
+                #quiz {
+                    background-color: 001a33;
+                    position: relative;
+                    height: auto;
+                    width:900px;
+                    margin: 30px auto;
+                    border-radius: 40 px;
+                    box-shadow: 5px 7px 5px 5px rgba(0,26,51,  0.5);
+                    padding: 2px 50px 50px 50px;
+                }
+
+                #h1{
+                    psoition: relative;
+                    text-align: center;
+                    font-size: 60px;
+                    background-color: #e6e6e6;
+                    color: #001a33;
+                    border-radius: 40px;
+                    margin: 30px 10px 30py 10px;
+                    padding: 2px 0px;
+                }
+
+
+                hr {
+                    border: 2px solid #8c8c8c;
+                }
+
+
+
+
+Fragen und Antworten, Teil 1
+-----------------------------
+
+.. quest_answer_1
+
+Die Frage erhält eine Farbe, font-size und zentriert angeordnet. Die dazugehörigen Buttons haben eine Hintergrundfarbe, einen Rahmen sowie einen Radius. Dazu kommen noch weitere Eigenschaften, wie beispielsweise Abstände.
+
+
+.. tabbed:: Design_QA_1
+
+    .. tab:: Optik
+
+        .. image:: media/html_css_js_quiz/06_design_qa_1/q_a_1.png
+            :width: 6cm
+
+
+    .. tab:: Try It
+
+        .. reveal:: reveal_html_qa_1
+            :showtitle: Show
+            :hidetitle: Hide
+
+            .. code-block:: css
+
+                    #question {
+                        position: relative;
+                        color: black;
+                        font-size: 35px;
+                        font-weight: bold;
+                        text-align: left;
+                        margin-left: 10px;
+                    }
+
+
+                    .options {
+                        position: relative;
+                        width: 550px;
+                        margin-top: 15px;
+                    }
+
+
+                    .button {
+                        position: relative;
+                        background-color: #ef36ff;
+                        width: 250px;
+                        height: auto;
+                        border: 1.5px solid #339cff;
+                        border-radius: 75px;
+                        margin: 10px;
+                    }
+
+
+
+                    * {
+                        margin: 0;
+                        padding: 0;
+                        -ms-box-sizing: border-box;
+                        -moz-box-sizing: border-box;
+                        -webkit-box-sizing: border-box;
+                        box-sizing: vorder-box;
+                        -ms-user-select: none;
+                        -moz-user-select: none;
+                        -webkit-user-select: none;
+                        user-select: none;
+                    }
+
+                    html {
+                        background-color: e5e6e6;
+                    }
+
+                    #quiz {
+                        background-color: 001a33;
+                        position: relative;
+                        height: auto;
+                        width:900px;
+                        margin: 30px auto;
+                        border-radius: 40 px;
+                        box-shadow: 5px 7px 5px 5px rgba(0,26,51,  0.5);
+                        padding: 2px 50px 50px 50px;
+                    }
+
+                    #h1{
+                        position: relative;
+                        text-align: center;
+                        font-size: 60px;
+                        background-color: #e6e6e6;
+                        color: #001a33;
+                        border-radius: 40px;
+                        margin: 30px 10px 30py 10px;
+                        padding: 2px 0px;
+                    }
+
+
+                    #tracker {
+                        position: relative;
+                        margin: 20px 10px 10px 10px;
+                        padding: 0 10px 0 10px;
+
+                    }
+
+                    .nos{
+                        position: relative;
+                        display: inline.blockM
+                        width: 50px;
+                        height: 50px;
+                        background-color: #8c8c8c;
+                        border-radius: 50%;
+                        text-align: center;
+                        color: white;
+                        padding: 11px;
+                        margin: 0px 10px 10px 10px;
+                        font-weight: bolder;
+                        font-size: 22px;
+                        border: 1.5px solid white;
+
+                    }
+
+                    hr {
+                        border: 2px solid #8c8c8c;
+                    }
+
+
+
+Fragen und Antworten, Teil 2
+-----------------------------
+
+.. quest_answer_2
+
+
+Die Fraen der Antworten sind zentriert und erhalten ebenfalls eine Antwort. Wenn ich die Maus über der Frage befindet, soll sich der Mauszeiger zu einem Pointer ändern und die Hintergrundfarbe des Buttons wechseln.
+
+
+.. tabbed:: Design_QA_2
+
+    .. tab:: Optik
+
+        .. image:: media/html_css_js_quiz/07_design_qa_2/qa_2.png
+            :width: 6cm
+
+
+    .. tab:: Try It
+
+        .. reveal:: reveal_html_qa_2
+            :showtitle: Show
+            :hidetitle: Hide
+
+            .. code-block:: css
+
+                    #question {
+                        position: relative;
+                        color: black;
+                        font-size: 35px;
+                        font-weight: bold;
+                        text-align: left;
+                        margin-left: 10px;
+                    }
+
+
+                    .options {
+                        position: relative;
+                        width: 550px;
+                        margin-top: 15px;
+                    }
+
+
+                    .button {
+                        position: relative;
+                        background-color: #ef36ff;
+                        width: 250px;
+                        height: auto;
+                        borde: 1.5px solid #339cff;
+                        border-radius: 75px;
+                        margin: 10px;
+                    }
+
+                    .button span {
+                        text-align: center;
+                        font-size: 20px;
+                        padding: 10px;
+                        font-weight: bold;
+                        color: #001a33;
+                    }
+
+                    .button: hover {
+                        background-color: #99c3ff;
+                        cursor: pointer;
+                    }
+
+
+
+Design des Next Question Button
+-------------------------------
+
+
+Beachte: Im Video wird hier die beiden hr noch inline gestylt
+sowie hr position relative  und clear: both im css
+
+Der Submit-Button wird rechtsbündig angeordnet und ist 230px breit. Die runden Ecken erreicht man über den border-radius von 50 %. Ansonsten gibt es weitere font- und text-Eigenschaften.
+
+Die Anzeige der ``resultBox`` wird mit Hilfe von ``display: none`` ausgeschaltet.
+
+``hr`` erhält zusätzlich noch eine clear: both - Eigenschaft, um die Linie unterhalb des Submit-Buttons zu setzen.
+
+.. tabbed:: Submit
+
+    .. tab:: Optik
+
+        .. image:: media/html_css_js_quiz/08_design_next_question/submit.png
+            :width: 6cm
+
+
+    .. tab:: Try It
+
+        .. reveal:: reveal_submit
+            :showtitle: Show
+            :hidetitle: Hide
+
+            .. code-block:: css
+
+                    #submit {
+                        position: relative;
+                        float: right;
+                        background-color: #595959;
+                        color: black;
+                        width: 230px;
+                        padding: 7px;
+                        border-radius: 50px;
+                        font-size: 28px;
+                        font-weight: 900;
+                        font-familly: serif;
+                        margin: 5px 0px 25px 10px;
+                        border: 1px solid grey;
+                        text-align: center;
+                        box-shadow: 2px 2px 0px 0px rgb(191, 191, 191,  0.5);
+
+                    }
+
+
+                    #resultBox {
+                        display: none;
+                    }
+
+
+
+                    * {
+                        margin: 0;
+                        padding: 0;
+                        -ms-box-sizing: border-box;
+                        -moz-box-sizing: border-box;
+                        -webkit-box-sizing: border-box;
+                        box-sizing: vorder-box;
+                        -ms-user-select: none;
+                        -moz-user-select: none;
+                        -webkit-user-select: none;
+                        user-select: none;
+                    }
+
+                    html {
+                        background-color: e5e6e6;
+                    }
+
+                    #quiz {
+                        background-color: 001a33;
+                        position: relative;
+                        height: auto;
+                        width:900px;
+                        margin: 30px auto;
+                        border-radius: 40 px;
+                        box-shadow: 5px 7px 5px 5px rgba(0,26,51,  0.5);
+                        padding: 2px 50px 50px 50px;
+                    }
+
+                    #h1{
+                        psoition: relative;
+                        text-align: center;
+                        font-size: 60px;
+                        background-color: #e6e6e6;
+                        color: #001a33;
+                        border-radius: 40px;
+                        margin: 30px 10px 30py 10px;
+                        padding: 2px 0px;
+                    }
+
+
+                    #tracker {
+                        position: relative;
+                        margin: 20px 10px 10px 10px;
+                        padding: 0 10px 0 10px;
+
+
+
+                    }
+
+                    .nos{
+                        position: relative;
+                        display: inline.blockM
+                        width: 50px;
+                        height: 50px;
+                        background-color: #8c8c8c;
+                        border-radius: 50%;
+                        text-align: center;
+                        color: white;
+                        padding: 11px;
+                        margin: 0px 10px 10px 10px;
+                        font-weight: bolder;
+                        font-size: 22px;
+                        border: 1.5px solid white;
+
+                    }
+
+                    hr {
+                        border: 2px solid #8c8c8c;
+                        position: relative;
+                        clear: both;
+                    }
+
+                    #question {
+                        position: relative;
+                        color: black;
+                        font-size: 35px;
+                        font-weight: bold;
+                        text-align: left;
+                        margin-left: 10px;
+
+
+                    }
+
+
+                    .options {
+                        position: relative;
+                        width: 550px;
+                        margin-top: 15px;
+                    }
+
+
+                    .button {
+                        position: relative;
+                        background-color: #ef36ff;
+                        width: 250px;
+                        height: auto;
+                        borde: 1.5px solid #339cff;
+                        border-radius: 75px;
+                        margin: 10px;
+                    }
+
+                    .button span {
+                        text-align: center;
+                        font-size: 20px;
+                        padding: 10px;
+                        font-weight: bold;
+                        color: #001a33;
+
+                    }
+
+
+                    .button: hover {
+
+                        background-color: #99c3ff;
+                        cursor: pointer;
+                    }
+
+
+
+
+
+
+Design the footer - progress area and timer
+-------------------------------------------
+
+Beachte: Bei  #resultBox { wurde  display: none; rausgenommen
+
+Das #quizSet muss per ``DISPLAY:none`` ausgeschaltet, bei ``#resultSet`` muss es entsprechend kommentiert werden.
+Diese Aufgabe muss später von javascript dynamisch erfolgen.
+
+Der footer-bereich bekommt einen Abstand von 30py nach unten.
+Der progress-bereich wird links angeordnet, die Textausrichtung allerdings rechtsbündig.
+Der timer-Bereich wird rechtsbündig angeordnet.
+
+
+.. tabbed:: Footer
+
+    .. tab:: Optik
+
+        .. image:: media/html_css_js_quiz/09_footer_progress_timer/footer_progress_timer.png
+            :width: 6cm
+
+
+    .. tab:: Try It
+
+        .. reveal:: reveal_footer
+            :showtitle: Show
+            :hidetitle: Hide
+
+
+            .. code-block:: css
+
+                footer {
+                    position: relative;
+                    margin-bottom: 30px;
+                }
+
+
+                #progress {
+                    position: relative;
+                    float: left;
+                    text-align: right;
+                    margin-top: 20px;
+                    font-size: 30px;
+                    color: black;
+                }
+
+
+                #timer {
+                    position: relative;
+                    float: right;
+                    text-align: right;
+                    margin-top: 20px;
+                    font-size: 30px;
+                    color: black;
+                }
+
+
+                #resultBox {
+                /* display: none; */
+
+                }
+
+                #quizSet {
+                    display: none;
+                }
+
+
+                * {
+                    margin: 0;
+                    padding: 0;
+                    -ms-box-sizing: border-box;
+                    -moz-box-sizing: border-box;
+                    -webkit-box-sizing: border-box;
+                    box-sizing: vorder-box;
+                    -ms-user-select: none;
+                    -moz-user-select: none;
+                    -webkit-user-select: none;
+                    user-select: none;
+                }
+
+                html {
+                    background-color: e5e6e6;
+                }
+
+                #quiz {
+                    background-color: 001a33;
+                    position: relative;
+                    height: auto;
+                    width:900px;
+                    margin: 30px auto;
+                    border-radius: 40 px;
+                    box-shadow: 5px 7px 5px 5px rgba(0,26,51,  0.5);
+                    padding: 2px 50px 50px 50px;
+                }
+
+                #h1{
+                    position: relative;
+                    text-align: center;
+                    font-size: 60px;
+                    background-color: #e6e6e6;
+                    color: #001a33;
+                    border-radius: 40px;
+                    margin: 30px 10px 30py 10px;
+                    padding: 2px 0px;
+                }
+
+
+                #tracker {
+                    position: relative;
+                    margin: 20px 10px 10px 10px;
+                    padding: 0 10px 0 10px;
+                }
+
+                .nos{
+                    position: relative;
+                    display: inline.blockM
+                    width: 50px;
+                    height: 50px;
+                    background-color: #8c8c8c;
+                    border-radius: 50%;
+                    text-align: center;
+                    color: white;
+                    padding: 11px;
+                    margin: 0px 10px 10px 10px;
+                    font-weight: bolder;
+                    font-size: 22px;
+                    border: 1.5px solid white;
+                }
+
+                hr {
+                    border: 2px solid #8c8c8c;
+                    position: relative;
+                    clear: both;
+                }
+
+                #question {
+                    position: relative;
+                    color: white;
+                    font-size: 35px;
+                    font-weight: bold;
+                    text-align: left;
+                    margin-left: 10px;
+                }
+
+
+                .options {
+                    position: relative;
+                    width: 550px;
+                    margin-top: 15px;
+                }
+
+
+                .button {
+                    position: relative;
+                    background-color: #ef36ff;
+                    width: 250px;
+                    height: auto;
+                    borde: 1.5px solid #339cff;
+                    border-radius: 75px;
+                    margin: 10px;
+                }
+
+                .button span {
+                    text-align: center;
+                    font-size: 20px;
+                    padding: 10px;
+                    font-weight: bold;
+                    color: #001a33;
+
+                }
+
+                .button: hover {
+                    background-color: #99c3ff;
+                    cursor: pointer;
+                }
+
+                #submit {
+                    position: relative;
+                    float: right;
+                    background-color: #595959;
+                    color: white;
+                    width: 230px;
+                    padding: 7px;
+                    border-radius: 50px;
+                    font-size: 28px;
+                    font-weight: 900;
+                    font-familly: serif;
+                    margin: 5px 0px 25px 10px;
+                    border: 1px solid grey;
+                    text-align: center;
+                    box-shadow: 2px 2px 0px 0px rgb(191, 191, 191,  0.5);
+                }
+
+
+
+                #submit: hover {
+                    cursor: pointer;
+                    background-color: #808080;
+                }
+
+
+
+
+
+
+
+
+
+Design des Result Area - Score und Retake button
+------------------------------------------------
+
+resultbox und quizset schalten ``display: none;`` jeweils ein oder aus
+
+Das Ergebnis wird zentriert angezeigt mit einer entsprechendf hohen Font-Größe.
+Der retake-Button erhält wie übrigen Buttons entsprechende Eigenschaften.
+
+
+.. tabbed:: score_retake
+
+    .. tab:: Optik
+
+        .. image:: media/html_css_js_quiz/10_score_retake/score_retake.png
+            :width: 6cm
+
+
+    .. tab:: Try It
+
+        .. reveal:: score_retake
+            :showtitle: Show
+            :hidetitle: Hide
+
+            .. code-block:: css
+
+
+                #result {
+                    text-align: center;
+                    font-size: 40px;
+                    color: black;
+                }
+
+
+                #retake {
+                    position: relative;
+                    display: block;
+                    margin: 10px auto 25px auto;
+                    background-color: #595959;
+                    color: black;
+                    width: 230px;
+                    padding: 7px;
+                    border-radius: 50px;
+                    font-size: 28px;
+                    font-weight: 900;
+                    font-family: serif;
+                    border: 1px solid grey;
+                    text-align: center;
+                    box-shadow: 2px 2px 0px 0px rgba(191,191,191, 0.5);
+                }
+
+                #retake:hover {
+                    cursor: pointer;
+                    background-color: #808080
+                }
+
+
+
+                .button:focus, #submit:focus, retake:focus {
+                    outline:none;
+                }
+
+
+                * {
+                    margin: 0;
+                    padding: 0;
+                    -ms-box-sizing: border-box;
+                    -moz-box-sizing: border-box;
+                    -webkit-box-sizing: border-box;
+                    box-sizing: vorder-box;
+                    -ms-user-select: none;
+                    -moz-user-select: none;
+                    -webkit-user-select: none;
+                    user-select: none;
+                }
+
+                html {
+                    background-color: e5e6e6;
+                }
+
+                #quiz {
+                    background-color: 001a33;
+                    position: relative;
+                    height: auto;
+                    width:900px;
+                    margin: 30px auto;
+                    border-radius: 40 px;
+                    box-shadow: 5px 7px 5px 5px rgba(0,26,51,  0.5);
+                    padding: 2px 50px 50px 50px;
+                }
+
+                #h1{
+                    psoition: relative;
+                    text-align: center;
+                    font-size: 60px;
+                    background-color: #e6e6e6;
+                    color: #001a33;
+                    border-radius: 40px;
+                    margin: 30px 10px 30py 10px;
+                    padding: 2px 0px;
+                }
+
+
+                #tracker {
+                    position: relative;
+                    margin: 20px 10px 10px 10px;
+                    padding: 0 10px 0 10px;
+                }
+
+                .nos{
+                    position: relative;
+                    display: inline.blockM
+                    width: 50px;
+                    height: 50px;
+                    background-color: #8c8c8c;
+                    border-radius: 50%;
+                    text-align: center;
+                    color: white;
+                    padding: 11px;
+                    margin: 0px 10px 10px 10px;
+                    font-weight: bolder;
+                    font-size: 22px;
+                    border: 1.5px solid white;
+                }
+
+                hr {
+                    border: 2px solid #8c8c8c;
+                    position: relative;
+                    clear: both;
+                }
+
+                #question {
+                    position: relative;
+                    color: white;
+                    font-size: 35px;
+                    font-weight: bold;
+                    text-align: left;
+                    margin-left: 10px;
+                }
+
+
+                .options {
+                    position: relative;
+                    width: 550px;
+                    margin-top: 15px;
+                }
+
+
+                .button {
+                    position: relative;
+                    background-color: #ef36ff;
+                    width: 250px;
+                    height: auto;
+                    borde: 1.5px solid #339cff;
+                    border-radius: 75px;
+                    margin: 10px;
+                }
+
+                .button span {
+                    text-align: center;
+                    font-size: 20px;
+                    padding: 10px;
+                    font-weight: bold;
+                    color: #001a33;
+                }
+
+
+                .button: hover {
+
+                    background-color: #99c3ff;
+                    cursor: pointer;
+                }
+
+                #submit {
+                    position: relative;
+                    float: right;
+                    background-color: #595959;
+                    color: white;
+                    width: 230px;
+                    padding: 7px;
+                    border-radius: 50px;
+                    font-size: 28px;
+                    font-weight: 900;
+                    font-familly: serif;
+                    margin: 5px 0px 25px 10px;
+                    border: 1px solid grey;
+                    text-align: center;
+                    box-shadow: 2px 2px 0px 0px rgb(191, 191, 191,  0.5);
+                }
+
+
+                #resultBox {
+                display: none;
+                }
+
+                #submit: hover {
+                    cursor: pointer;
+                    background-color: #808080;
+                }
+
+
+                footer {
+                    position: relative;
+                    margin-bottom: 30px;
+                }
+
+
+
+                #progress {
+                    position: relative;
+                    float: left;
+                    text-align: right;
+                    margin-top: 20px;
+                    font-size: 30px;
+                    color: white;
+
+                }
+
+
+                #timer {
+                    position: relative;
+                    float: right;
+                    text-align: right;
+                    margin-top: 20px;
+                    font-size: 30px;
+                    color: white;
+
+                }
+
+
+
+                #quizSet {
+
+
+                }
+
+

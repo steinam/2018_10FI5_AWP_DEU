@@ -1,0 +1,206 @@
+CSS und Selektoren
+==================
+
+Damit Formateigenschaften auf ein Element angewendet werden können, muss
+definiert werden, welche Elemente angesprochen werden. Dies geschieht
+über Selektoren. Als Selektoren bezeichnet man die Teile einer
+CSS-Regel, die vor dem Abschnitt aus geschweiften Klammern stehen.
+Voneinander unabhängige Selektoren, denen dieselben Eigenschaften
+zugewiesen werden, können mit Kommata getrennt werden. Es gibt
+verschiedene Arten von Selektoren.
+
+TypSelektoren
+-------------
+
+Der Element- bzw. Typselektor besteht aus dem Namen des Elements, das angesprochen werden soll.  Mit diesem Selektor werden alle Elemente eines Typs angesprochen.  Typselektoren geben manche Eigenschaften(z.B. Schriftgestaltung) an ihre Kinder weiter und manche nicht (z.B. background-color, border). Dies kann erwünscht bzw. unerwünscht sein. Man kann dies innerhalb von CSS durch den Attributwert inherit verändern.
+
+.. activecode:: TypSelektor
+   :language: html
+
+    <!doctype html>
+    <html>
+        <head>
+        <meta charset="utf-8">
+        <title>CSS-Beispiel: Typselektor</title>
+        <style> p {border: 3px solid green;} </style>
+        </head>
+        <body>
+            <p>Dieses Beispiel demonstriert die Wirkung des 
+            Typselektors auf <abbr>HTML</abbr>-Dokumente.</p>
+        </body>
+    </html>
+
+
+Klassenselektor
+---------------
+
+-  spricht Elemente an, die einer bestimmten Klasse zugehörend sind
+-  mehrere HTML-Elemente können die gleichen Klasse zugeordnet bekommen
+-  Klassenselektoren können mit anderen Selektoren verbunden werden
+-  Klassenselektor kann auch mit dem Typselektor verbunden sein
+-  Ein Klassenselektor wird gebildet, wenn vor dem Klassennamen ein Punkt notiert wird
+   
+
+   .. code-block:: css
+
+        .wichtig {background-color: red}
+
+
+Übung:
+~~~~~~
+
+Erzeugen Sie aus dem folgenden HTML das nebenstehende Aussehen mit Hilfe von Klassenselektoren
+
+
+.. image:: media/image22.png
+   :width: 1.88958in
+   :height: 2.20347in
+   :align: center
+
+
+
+
+
+.. activecode:: KlassenSelektor_Ueb
+   :language: html
+
+    <!doctype html>
+    <html>
+        <head>
+        <meta charset="utf-8">
+        <title>CSS-Beispiel: Typselektor</title>
+        <style> 
+        /* Your CSS-Code */
+        </style>
+        </head>
+        <body>
+            <p>Dies ist ein wenig Text</p>
+            <p>Dies ist ein wenig Text</p>
+            <p>Dies ist ein wenig Text</p>
+            <p>Dies ist ein wenig Text</p>
+            <p>Dies ist ein wenig Text</p>
+            <p>Dies ist ein wenig Text</p>
+
+        </body>
+    </html>
+
+
+
+4. Using CSS and HTML Make a webpage that has two columns.  
+Each column should use half of the width of the page.  
+The left half should have a light gray background and the right 
+half should have a light green background.  
+The left half should have a list of the 5 best selling  books in 
+Amazon's kindle store, and the right should have a list of your 
+five favorite celebrities or athletes.
+
+.. actex:: ex_css_4
+   :language: html
+   :nocodelens:
+
+
+
+
+ID-Selektor
+-----------
+
+-  Spricht ein Element an, dem eine ID zugeordnet wurde
+-  Gebildet durch Voranstellen des Gatterzeichens vor den ID-Namen
+-  ID-Selektoren können mit anderen Selektoren verbunden werden
+
+   -  Mit Elementselektoren: ```elementname#id```
+   -  Mit Klassenselektoren: ```.klassenname#id``` bzw. ```#id.klassenname```
+
+Beispiel: Zeichnen Sie einen grünen Rahmen um das unten dargestellte p-Tag.
+
+.. image:: media/image23.png
+   :width: 2.99236in
+   :height: 0.91111in
+   :align: right
+
+
+.. activecode:: IDSelektor_Example
+   :language: html
+
+    <!doctype html>
+    <html>
+        <head>
+            <meta charset="utf-8">
+            <title>CSS-Beispiel: IDSelektor</title>
+            <style>
+            
+                your code here.......
+                
+            </style>
+        </head>
+        <body>
+            <div id="beispiel">
+                <h1>ID-Selektoren</h1>
+                <p>Dieses Beispiel demonstriert die Wirkung des ID-Selektors.</p>
+                </div>
+        </body>
+    </html>
+
+
+
+
+Kontextselektor
+---------------
+
+Ein Nachfahren-Selektor oder Nachbar-Selektor wählt Elemente aus ihrer Position innerhalb von anderen Elementen aus – aus dem **Kontext** der
+HTML-Struktur. Sie sind also abhängig von der Struktur, in der sie auftreten: von ihren Nachbarn, Vorfahren und Nachfahren.
+
+-  Ein **Nachfahren-Selektor (Descendant Selector)** filtert Elemente unterhalb bestimmter Elemente.
+-  Ein **Nachbar-Selektor (Adjacent Selector)** filtert aufeinanderfolgende Elemente der gleichen Ebene,
+
+Kindselektor
+~~~~~~~~~~~~
+
+.. image:: media/image24.png
+   :width: 2.14653in
+   :height: 1.35417in
+   :align: right
+
+- ">" zwischen den beiden Selektoren
+- Trifft nur auf Elemente zu, die direkt innerhalb des div-Elementes liegen
+
+   ```div > p { color: black; background-color: red; }```
+
+Nachfahrenselektor
+~~~~~~~~~~~~~~~~~~
+
+.. image:: media/image25.png
+   :width: 2.09514in
+   :height: 1.15278in
+   :align: right
+
+- Leerzeichen " " zwischen den Selektoren
+- Alle p-Elemente, die innerhalb von div-Elementen liegen, werden durch die Regel angesprochen
+
+   ```div p { color: black; background-color: red; }```
+
+Direkte Nachbar-Selektoren (Adjacent)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. image:: media/image26.png
+   :width: 2.35833in
+   :height: 1.3125in
+   :align: right
+
+- Absteigender Selektor, angewendet auf ein p-Element, das dem h2-Element direkt folgt.
+- h2 und p haben dabei immer dieselben Eltern
+
+    ```h2 + p { color: black; background-color: red; }```
+
+Indirekte Nachbar-Selektoren
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. image:: media/image27.png
+   :width: 2.60069in
+   :height: 1.5in
+   :align: right
+
+- Angewendet auf alle p-Elemente, die dem h2-Element folgen.
+- h2 und p haben dabei immer dieselben Eltern – liegen also in derselben Ebene.
+
+   ```h2 ~ p { color: white; background-color: red; }```

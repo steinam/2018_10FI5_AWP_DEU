@@ -1,0 +1,130 @@
+DISPLAY-Eigenschaft
+===================
+
+https://wiki.selfhtml.org/wiki/CSS/Eigenschaften/Anzeige/display
+
+Mit der Eigenschaft display wird festgelegt, welche Art von Box ein
+Element erzeugt. Jedes Element kann Null oder mehr Boxen erzeugen. Somit
+könne aus Block-Elementen inline-Elemente und aus Inline-Elementen
+Blockelemente geschaffen werden. Ein Mittelweg (InlineBlock) ist
+ebenfalls möglich.
+
+Mit der Eigenschaft display wird festgelegt, welche Art von Box von
+einem Element erzeugt wird. Jedes Element kann null oder mehr Boxen
+erzeugen.
+
+Die Werte, die die display-Eigenschaft besitzen kann, werden nachfolgend
+mit den typischen Verhaltensweisen der Elemente im normalen Elementfluss
+beschrieben.
+
+inline: Inline-Box(en)
+----------------------
+
+Elemente mit display: inline; erzeugen eine oder mehrere Inline-Boxen.
+Inline-Boxen verlaufen auf einer Zeile horizontal in der Schreibrichtung
+der verwendeten Sprache. Im Deutschen also von links nach rechts, in
+hebräischen oder arabischen Texten von rechts nach links. Eine
+Inline-Box wird in mehrere Teile zerlegt, wenn sie nicht in einer Zeile
+Platz hat oder Zeilenumbrüche enthält.
+
+block: Block-Box
+----------------
+
+Block-Boxen nehmen die gesamte Breite des Elternelementes ein. Sie sind
+so hoch wie ihr Inhalt. Dadurch entsteht ein zusammenhängendes Rechteck,
+das aussieht wie eine Box und dieser Darstellungsart ihren Namen gibt.
+
+Mehrere Block-Boxen werden untereinander angeordnet (normaler
+Elementfluss).
+
+inline-block: Außen Inline-Box, innen Block-Box
+-----------------------------------------------
+
+Elemente mit display: inline-block; erzeugen eine Box, die Eigenschaften
+von Inline- und Block-Boxen kombiniert.
+
+Eine Inline-Block-Box verläuft wie eine Inline-Box auf einer Textzeile,
+kann aber nicht auf mehrere Zeilen aufgeteilt werden. Besitzt ein
+Inline-Block vertikale Innen- und Außenabstände oder Rahmen, so
+beeinflussen diese die Höhe der Zeile. Die horizontale und vertikale
+Ausrichtung von Inline-Block-Elementen erfolgt wie bei Inline-Boxen.
+
+Die Breite einer Inline-Block-Box wird mit dem *shrink-to-fit*-Verfahren
+berechnet, d.h. die Box ist so breit wie nötig und so schmal wie
+möglich. Die Breite eines Inline-Blocks kann mithilfe der
+width-Eigenschaft festgelegt werden.
+
+Die Höhe einer Inline-Block-Box ist wie bei Block-Boxen vom Inhalt
+abhängig, kann aber auch durch die height-Eigenschaft festgelegt werden.
+
+Inline-Blöcke erzeugen eine Block-Formatierungs-Umgebung, daher können
+sie – im Gegensatz zu Inline-Boxen – Block-Boxen enthalten.
+
+Beispiel:
+
+.. activecode:: inline_example
+   :language: html
+
+
+    <!DOCTYPE html>
+    <html lang="de">
+      <head>
+      <meta charset="utf-8">
+      <title>display-Eigenschaft</title>
+      <link rel="stylesheet" type="text/css" href ="displayEigenschaft.css">
+      <style>
+        .test1 {
+          display: block;
+          background-color: #F00;
+          width: 300px;
+          height: 300px;
+          margin-bottom: 20px;
+        }
+
+        .test2 {
+          width: 300px;
+          height: 300px;
+          background-color: #0F0;
+          margin-bottom: 20px;
+          display: inline;
+        }
+
+        .test3 {
+          width: 300px;
+          height: 300px;
+          background-color: #000;
+          margin-bottom: 20px;
+          color: #FFF;
+          display: inline-block;
+        }
+      </style>
+      </head>
+
+      <body>
+        <span class ="test1">Wir stellen jetzt dieses Span </span>
+        <span class ="test1">statt Inline-Element als Block-Element dar.</span>
+        <div *class*\ ="test2">Text!</div>
+        <div *class*\ ="test2">Text!</div>
+        <div *class*\ ="test3">Text!</div>
+        <div *class*\ ="test3">Text!</div>
+      </body>
+
+    </html>
+
+
+Aufgabe
+-------
+
+Erstellen Sie folgendes Aussehen für eine Webseite. Die entsprechenden
+Ausgangsdateien finden Sie im Ordner Exercise 3. Folgen Sie den
+Anweisungen in der Datei exercise_students.css und binden Sie diese in
+ihr HTML-Dokument mit ein.
+
+.. image:: media/image46.png
+   :width: 2.86111in
+   :height: 1.43333in
+   :align: center
+
+
+Lösung: exercise3.css
+

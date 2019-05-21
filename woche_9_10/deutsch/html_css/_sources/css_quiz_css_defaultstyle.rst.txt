@@ -1,0 +1,38 @@
+Default Styling Optionen
+------------------------
+
+Die Standardeinstellungen der Browser führen dazu, dass einige optische Änderungen am HTML-Code vorgenommen werden, ohne dass der Designer dies ausdrücklich benennen muss. Dies betrifft vor allem die Abstände sowie das generelle Verhalten von Boxen (box-sizing). In einem ersten Schritt werden diese browserspezifischen Eigenschaften gesetzt.
+
+
+.. tabbed:: Generelle_Eigenschaften
+
+   .. tab:: Optik
+
+      .. image:: media/html_css_js_quiz/default/default.PNG
+        :width: 5cm
+
+
+   .. tab:: Try It
+
+        .. reveal:: reveal_default_1
+            :showtitle: Show
+            :hidetitle: Hide
+
+            .. code-block:: css
+
+                * {
+                    margin: 0;
+                    padding: 0;
+                    -ms-box-sizing: border-box;
+                    -moz-box-sizing: border-box;
+                    -webkit-box-sizing: border-box;
+
+                    box-sizing: border-box;
+                    -ms-user-select: none;
+                    -moz-user-select: none;
+                    -webkit-user-select: none;
+                    user-select: none;
+                }
+
+
+

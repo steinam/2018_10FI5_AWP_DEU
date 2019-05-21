@@ -1,0 +1,21 @@
+Arbeitsauftrag Layout-Systeme
+-----------------------------
+
+Bei der Konzeption einer Website muss man entscheiden, wie sich das Layout im Browser verhalten soll. Soll die Website immer gleich breit sein? Sollen sich die Elemente der Breite des Browserfensters anpassen? Soll sich das Layout gar proportional verkleinern? 
+ 
+ 
+Informieren Sie sich über die folgenden Begriffe
+ 
+- Fixed Layout
+- Fluid Layout
+- Elastic Layout
+- Adaptive Layout
+- Responsive Layout
+ 
+Stellen Sie ihre jeweiligen Eigenschaften, ihre Vorteile/Nachteile sowie ein kleines HTML/CSS-Beispiel dar.
+ 
+Fassen Sie die Ergebnisse Ihrer Recherche zusammen und stellen Sie sich darauf ein, diese in einem Kurzvortrag von max. 10 Minuten Ihren Mitschülern darzustellen.
+
+Siehr auch: https://css-tricks.com/the-difference-between-responsive-and-adaptive-design/
+ 
+

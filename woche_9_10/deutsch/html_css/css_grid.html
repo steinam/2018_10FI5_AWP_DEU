@@ -1,0 +1,1038 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Layout mit Grid &#8212; Runestone Interactive Overview</title>
+    <link rel="stylesheet" href="_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-3.0.0/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="_static/presenter_mode.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/accessibility.css?v=808B982A" />
+    <link rel="stylesheet" type="text/css" href="_static/activecode.css?v=D0B347A5" />
+    <link rel="stylesheet" type="text/css" href="_static/codemirror.css?v=1CE53237" />
+    <link rel="stylesheet" type="text/css" href="_static/clickable.css?v=58C4E18A" />
+    <link rel="stylesheet" type="text/css" href="_static/pytutor.css?v=239FC54E" />
+    <link rel="stylesheet" type="text/css" href="_static/modal-basic.css?v=8A1A42E4" />
+    <link rel="stylesheet" type="text/css" href="_static/datafile.css?v=C184EB8A" />
+    <link rel="stylesheet" type="text/css" href="_static/dragndrop.css?v=B9BAA0D1" />
+    <link rel="stylesheet" type="text/css" href="_static/fitb.css?v=3BA0E63E" />
+    <link rel="stylesheet" type="text/css" href="_static/matrixeq.css?v=58BC228F" />
+    <link rel="stylesheet" type="text/css" href="_static/parsons.css?v=B035A1D9" />
+    <link rel="stylesheet" type="text/css" href="_static/js_lib/prettify.css?v=2A364B6B" />
+    <link rel="stylesheet" type="text/css" href="_static/poll.css?v=E220AC33" />
+    <link rel="stylesheet" type="text/css" href="_static/reveal.css?v=4A81D381" />
+    <link rel="stylesheet" type="text/css" href="_static/showEval.css?v=C6382F3" />
+    <link rel="stylesheet" type="text/css" href="_static/tabbedstuff.css?v=424F1CC9" />
+    <link rel="stylesheet" type="text/css" href="_static/video.css?v=E5385B3B" />
+    <link rel="stylesheet" type="text/css" href="_static/webgldemo.css?v=B36B48D" />
+    <link rel="stylesheet" type="text/css" href="_static/webglinteractive.css?v=910DF1E1" />
+    <link rel="stylesheet" href="_static/jquery-ui-1.10.3.custom.min.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-sphinx.css" type="text/css" />
+    <link rel="stylesheet" href="_static/user-highlights.css" type="text/css" />
+    <link rel="stylesheet" href="_static/runestone-custom-sphinx-bootstrap.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/runestonebase.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/language_data.js"></script>
+    <script type="text/javascript" src="_static/jquery.highlight.js?v=F1C496C8"></script>
+    <script type="text/javascript" src="_static/bookfuncs.js?v=ED84393D"></script>
+    <script type="text/javascript" src="_static/codemirror.js?v=94F552C9"></script>
+    <script type="text/javascript" src="_static/xml.js?v=236EDFF7"></script>
+    <script type="text/javascript" src="_static/css.js?v=623153CE"></script>
+    <script type="text/javascript" src="_static/python.js?v=14A28F1F"></script>
+    <script type="text/javascript" src="_static/htmlmixed.js?v=33B91944"></script>
+    <script type="text/javascript" src="_static/javascript.js?v=6F38CA04"></script>
+    <script type="text/javascript" src="_static/jquery_i18n/CLDRPluralRuleParser.js?v=599B42B0"></script>
+    <script type="text/javascript" src="_static/jquery_i18n/jquery.i18n.js?v=88A1430F"></script>
+    <script type="text/javascript" src="_static/jquery_i18n/jquery.i18n.messagestore.js?v=AE15A4A1"></script>
+    <script type="text/javascript" src="_static/jquery_i18n/jquery.i18n.fallbacks.js?v=8ABDFE7F"></script>
+    <script type="text/javascript" src="_static/jquery_i18n/jquery.i18n.language.js?v=747279FF"></script>
+    <script type="text/javascript" src="_static/jquery_i18n/jquery.i18n.parser.js?v=7B020E13"></script>
+    <script type="text/javascript" src="_static/jquery_i18n/jquery.i18n.emitter.js?v=660E85C3"></script>
+    <script type="text/javascript" src="_static/jquery_i18n/jquery.i18n.emitter.bidi.js?v=54B21948"></script>
+    <script type="text/javascript" src="_static/activecode-i18n.en.js?v=3FBAE230"></script>
+    <script type="text/javascript" src="_static/skulpt.min.js?v=CB855D57"></script>
+    <script type="text/javascript" src="_static/skulpt-stdlib.js?v=3C6652E0"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega@4.0.0-rc.2/build/vega.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega-lite@2.5.0/build/vega-lite.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega-embed@3.14.0/build/vega-embed.js"></script>
+    <script type="text/javascript" src="_static/activecode.js?v=A048601A"></script>
+    <script type="text/javascript" src="_static/clike.js?v=2DCE0756"></script>
+    <script type="text/javascript" src="_static/timed_activecode.js?v=5150FA78"></script>
+    <script type="text/javascript" src="_static/animationbase.js?v=A043C3A7"></script>
+    <script type="text/javascript" src="_static/mchoice.js?v=8329CA55"></script>
+    <script type="text/javascript" src="_static/timedmc.js?v=B010A457"></script>
+    <script type="text/javascript" src="_static/timed.js?v=6789FE30"></script>
+    <script type="text/javascript" src="_static/clickable.js?v=9560E65E"></script>
+    <script type="text/javascript" src="_static/timedclickable.js?v=93989C23"></script>
+    <script type="text/javascript" src="_static/d3.v2.min.js?v=836E01C"></script>
+    <script type="text/javascript" src="_static/jquery.ba-bbq.min.js?v=B64CF0A8"></script>
+    <script type="text/javascript" src="_static/jquery.jsPlumb-1.3.10-all-min.js?v=42F9EBEA"></script>
+    <script type="text/javascript" src="_static/pytutor.js?v=82B022B9"></script>
+    <script type="text/javascript" src="_static/codelens.js?v=CABECD49"></script>
+    <script type="text/javascript" src="_static/datafile.js?v=3ED1A80C"></script>
+    <script type="text/javascript" src="_static/dragndrop.js?v=2B6403E8"></script>
+    <script type="text/javascript" src="_static/timeddnd.js?v=378F237E"></script>
+    <script type="text/javascript" src="_static/fitb.js?v=8E40E713"></script>
+    <script type="text/javascript" src="_static/timedfitb.js?v=2AA17071"></script>
+    <script type="text/javascript" src="_static/matrixeq.js?v=D64CFA5A"></script>
+    <script type="text/javascript" src="_static/js_lib/prettify.js?v=CA7E8928"></script>
+    <script type="text/javascript" src="_static/js_lib/hammer.min.js?v=73056367"></script>
+    <script type="text/javascript" src="_static/parsons.js?v=8D873C0A"></script>
+    <script type="text/javascript" src="_static/timedparsons.js?v=2EEA9E5A"></script>
+    <script type="text/javascript" src="_static/poll.js?v=6C59AE9F"></script>
+    <script type="text/javascript" src="_static/reveal.js?v=7C095993"></script>
+    <script type="text/javascript" src="_static/shortanswer.js?v=5EB6170D"></script>
+    <script type="text/javascript" src="_static/timed_shortanswer.js?v=B3A117D7"></script>
+    <script type="text/javascript" src="_static/showEval.js?v=C5CE0C81"></script>
+    <script type="text/javascript" src="_static/tabbedstuff.js?v=5BE6106"></script>
+    <script type="text/javascript" src="_static/runestonevideo.js?v=53E888DE"></script>
+    <script type="text/javascript" src="_static/webglinteractive.js?v=2B768384"></script>
+    <script type="text/javascript" src="_static/FileSaver.min.js?v=8408C997"></script>
+    <script type="text/javascript" src="_static/Blob.js?v=AEC2447"></script>
+    <script type="text/javascript" src="_static/jquery-ui-1.10.3.custom.min.js"></script>
+    <script type="text/javascript" src="_static/jquery-fix.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-3.0.0/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-sphinx.js"></script>
+    <script type="text/javascript" src="_static/waypoints.min.js"></script>
+    <script type="text/javascript" src="_static/user-highlights.js"></script>
+    <script type="text/javascript" src="_static/jquery.idle-timer.js"></script>
+    <script type="text/javascript" src="_static/processing-1.4.1.min.js"></script>
+    <script type="text/javascript" src="_static/jquery.hotkey.js"></script>
+    <script type="text/javascript" src="_static/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="_static/presenter_mode.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Aufgabe zu GRID-System" href="css_grid_aufgabe.html" />
+    <link rel="prev" title="CSS Advanced" href="css_teil_2.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta content='width=device-width, initial-scale=1.0' name='viewport' />
+<link rel="shortcut icon" href="/runestone/static/favicon.ico" type="image/ico" />
+
+<script type="text/javascript">
+  eBookConfig = {};
+  eBookConfig.host = 'http://127.0.0.1:8000' ? 'http://127.0.0.1:8000' : 'http://127.0.0.1:8000';
+  eBookConfig.app = eBookConfig.host+'/runestone';
+  eBookConfig.ajaxURL = eBookConfig.app+'/ajax/';
+  eBookConfig.course = 'html_css';
+  eBookConfig.logLevel = 0;
+  eBookConfig.loginRequired = false;
+  eBookConfig.build_info = "unknown";
+  eBookConfig.isLoggedIn = false;
+  eBookConfig.useRunestoneServices = false;
+  eBookConfig.python3 = false;
+  eBookConfig.basecourse = 'html_css';
+  eBookConfig.acDefaultLanguage = 'html' ? 'html' : 'python'
+  eBookConfig.runestone_version = '3.3.2';
+  eBookConfig.jobehost = 'http://jobe2.cosc.canterbury.ac.nz';
+  eBookConfig.proxyuri_runs = '/jobe/index.php/restapi/runs/';
+  eBookConfig.proxyuri_files = '/jobe/index.php/restapi/files/';
+  eBookConfig.downloadsEnabled = true;
+  eBookConfig.enable_chatcodes = false ? false : false;
+  eBookConfig.allow_pairs = false ? false : false;
+</script>
+
+<div id="fb-root"></div>
+<script>
+  (function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&status=0";
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));
+</script>
+
+
+  </head><body>
+
+
+<!-- Begin navbar -->
+<div id="navbar" class="navbar navbar-default navbar-fixed-top" role="navigation">
+
+  <div class="container">
+
+    <div class="navbar-header">
+      <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+      <button type='button' class='navbar-toggle' data-toggle="collapse" data-target=".navbar-ex1-collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+
+      <div>
+        <a class="brand-logo" style='background: transparent url("_static/img/logo_small.png") no-repeat 0px 0px;' href="/runestone/default/user/login">&nbsp; </a>
+        <a class="navbar-brand" href="index.html" aria-label="index-page">HTML und CSS</a>
+      </div>
+    </div>
+
+
+
+    <div class="navbar-collapse collapse navbar-ex1-collapse">
+      <ul class="nav navbar-nav navbar-right" >
+
+        <li class="divider-vertical"></li>
+
+        <!-- social media dropdown -->
+        <li class="dropdown">
+          <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+            <i class="glyphicon glyphicon-globe" style="opacity: 0.9"></i>
+          </a>
+          <ul class="dropdown-menu social-menu">
+              <li>
+                <div>
+                  <b>Runestone in social media:</b>
+                </div>
+                <a href="https://twitter.com/iRunestone" class="twitter-follow-button" data-show-count="true">Follow @iRunestone</a><script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+                <div class="fb-like" data-href="https://www.facebook.com/RunestoneInteractive" data-send="false" data-layout="button_count" data-width="300" data-show-faces="false" data-font="arial"></div>
+              </li>
+
+              <li class="divider"></li>
+              <li>
+                <div>
+                  <b>Help support us:</b>
+                </div>
+                <div>
+                    <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+                  <input type="hidden" name="cmd" value="_s-xclick">
+                  <input type="hidden" name="encrypted" value="-----BEGIN PKCS7-----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-----END PKCS7-----
+                  ">
+                  <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_SM.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+                  <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+                  </form>
+
+                </div>
+              </li>
+          </ul>
+        </li>
+        <!-- end social media dropdown -->
+
+        <li class="divider-vertical"></li>
+
+        <!-- search dropdown -->
+        <li class="dropdown">
+          <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+            <i class="glyphicon glyphicon-search" style='opacity:0.9;'></i>
+          </a>
+          <ul class='dropdown-menu'>
+            
+                <li><a href='index.html' aria-label="index-page">Table of Contents</a></li>
+            
+            <li><a href='/runestone/static/html_css/genindex.html'>Book Index</a></li>
+            <li class="divider"></li>
+            <li style="width: 240px;">
+              <form class="navbar-search" style="margin:10px;" action="search.html" method="get">
+                <div class="input-group">
+                  <input type="text" class="form-control" name="q" placeholder="Search this book" />
+                  <span class="input-group-btn">
+                    <button class="btn btn-primary" style="margin:0;" type="submit">
+                      <i class="glyphicon glyphicon-search"></i>
+                    </button>
+                  </span>
+                </div><!-- /input-group -->
+                <input type="hidden" name="check_keywords" value="yes" />
+                <input type="hidden" name="area" value="default" />
+              </form>
+            </li>
+          </ul>
+        </li>
+        <!-- end search dropdown -->
+
+        <li class="divider-vertical"></li>
+
+        
+        <li class="divider-vertical"></li>
+        <!-- <li id="scratch_ac_link"><a href="javascript:ACFactory.toggleScratchActivecode()">Scratch ActiveCode</a></li> -->
+
+        <!-- <li class="dropdown">             -->
+          <li id="scratch_ac_link" class="dropdown"><a href="javascript:ACFactory.toggleScratchActivecode()">
+              <i class="glyphicon glyphicon-pencil" style="opacity:0.9;"></i></a></li>
+        <!-- </li> -->
+
+        <li class="divider-vertical"></li>
+
+        <!-- help menu dropdown -->
+        <li class="dropdown">
+          <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+            <i class="glyphicon glyphicon-question-sign" style="opacity:0.9;"></i>
+          </a>
+          <ul class="dropdown-menu user-menu">
+            <li><a href='/runestone/static/html_css/navhelp.html'>Navigation Help</a></li>
+            <li><a href='/runestone/static/overview/instructor.html'>Help for Instructors</a></li>
+            <li class="divider"></li>
+            <li><a href='http://runestoneinteractive.org'>About Runestone</a></li>
+            <li><a href='/runestone/default/reportabug?course=html_css&page=css_grid'>Report A Problem</a></li>
+          </ul>
+        </li>
+        <!-- end help menu dropdown -->
+
+        <li class="divider-vertical"></li>
+
+      </ul>
+      </div>
+
+
+
+
+
+
+      <ul class="nav navbar-nav">
+        <li class="divider-vertical"></li>
+        <!--
+          <li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Page <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"><ul>
+<li><a class="reference internal" href="#">Layout mit Grid</a><ul>
+<li><a class="reference internal" href="#grundlegende-funktionsweise-von-css-grid">Grundlegende Funktionsweise von CSS Grid</a></li>
+<li><a class="reference internal" href="#elemente-im-raster-positionieren">Elemente im Raster positionieren</a></li>
+<li><a class="reference internal" href="#benannte-rasterlinien">Benannte Rasterlinien</a></li>
+<li><a class="reference internal" href="#benannte-raster-bereiche-rasterzellen">Benannte Raster-Bereiche (Rasterzellen)</a></li>
+<li><a class="reference internal" href="#abstande-zwischen-rasterzellen">Abstände zwischen Rasterzellen</a></li>
+<li><a class="reference internal" href="#ausrichting-innerhalb-des-rasters">Ausrichting innerhalb des Rasters</a></li>
+<li><a class="reference internal" href="#responsive-css-grids">Responsive CSS Grids</a></li>
+<li><a class="reference internal" href="#die-repeat-funktion">Die repeat()-Funktion</a></li>
+<li><a class="reference internal" href="#die-minmax-funktion">Die minmax()-Funktion</a></li>
+<li><a class="reference internal" href="#tools">Tools</a></li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+          <li class="divider-vertical"></li>
+        
+        
+          
+  <li id="relations-prev" title="Previous Chapter - CSS Advanced" data-toggle="tooltip">
+    <a href="css_teil_2.html" >
+      <i class='glyphicon glyphicon-backward' style='opacity:0.9;'></i>
+    </a>
+  </li>
+  
+  <li id="relations-next" title='Next Chapter - Aufgabe zu GRID-System' data-toggle="tooltip" >              
+    <a href="css_grid_aufgabe.html" >
+        <i class='glyphicon glyphicon-forward' style='opacity:0.9;'></i>
+    </a>
+  </li>
+  <li class="divider-vertical"></li>
+
+<script type="text/javascript">
+  opts = {'placement':'bottom',
+          'selector': '',
+          'delay': { show: 100, hide: 50}
+         };
+
+  $('#relations-prev').tooltip(opts);
+  $('#relations-next').tooltip(opts);
+</script>
+        -->
+        
+          <li></li>
+        
+      </ul>
+
+    </div>
+  </div>
+</div>
+
+
+<div class="container" id="continue-reading"></div>
+
+<div class="container" id="main-content">
+  
+  <div class="section" id="layout-mit-grid">
+<h1>Layout mit Grid<a class="headerlink" href="#layout-mit-grid" title="Permalink to this headline">¶</a></h1>
+<p><a class="reference external" href="https://blog.kulturbanause.de/2013/12/css-grid-layout-module/">https://blog.kulturbanause.de/2013/12/css-grid-layout-module/</a></p>
+<p><a class="reference external" href="https://tympanus.net/codrops/css_reference/grid/">https://tympanus.net/codrops/css_reference/grid/</a></p>
+<p><a class="reference external" href="https://gridbyexample.com/">https://gridbyexample.com/</a></p>
+<img alt="_images/css-grids.png" class="align-right" src="_images/css-grids.png" />
+<p>Komplexe Weblayouts lassen sich weder mit float-basierten Gestaltungsrastern noch mit Flexbox perfekt umsetzen. Die Floating-Technik wurde nicht zur Konstruktion komplexer Layouts entwickelt, was wir u.a. daran merken, dass wir Elemente nicht nach oben und unten verschieben können. Flexbox ermöglicht es zwar die Gestaltung vollständig vom HTML-Code zu trennen, bietet sich aber eher für lineare Strukturen an als für verschachtelte. CSS Grid ermöglicht »echte« Gestaltungsraster auf Basis von CSS. In diesem Beitrag beschreiben wir, wie Layouts mit Hilfe von CSS Grids konstruiert werden können.</p>
+<div class="section" id="grundlegende-funktionsweise-von-css-grid">
+<h2>Grundlegende Funktionsweise von CSS Grid<a class="headerlink" href="#grundlegende-funktionsweise-von-css-grid" title="Permalink to this headline">¶</a></h2>
+<p>CSS Grids arbeiten mit einem Elternelement, in dem das Raster definiert wird und mit darin enthaltenen Kind-Elementen, die im Raster positioniert werden. Dem Elternelement wird mit Hilfe der Angabe <code class="docutils literal notranslate"><span class="pre">display:grid;</span></code> mitgeteilt, dass CSS Grids genutzt werden sollen. Mit Hilfe der Eigenschaften <code class="docutils literal notranslate"><span class="pre">grid-template-columns</span></code> und <code class="docutils literal notranslate"><span class="pre">grid-template-rows</span></code> werden Rasterlinien gezeichnet.</p>
+<p>Das folgende Beispiel erzeugt ein CSS Grid mit drei Zeilen und vier Spalten. Die erste Zeile ist 200 Pixel hoch, die letzte 100 Pixel. Die mittlere Zeile hat die Angabe 1fr (1 Fraction) erhalten. Damit erstreckt Sie sich über den noch freien Platz. Wie viel Platz zur Verfügung steht wird durch die Gesamthöhe des <code class="docutils literal notranslate"><span class="pre">.container</span></code> bestimmt. Beachtet, dass die Angabe 1fr auch 0 Pixel bedeuten kann, wenn der Container eine zu niedrige bzw. keine Höhe erhalten hat.</p>
+<p>Die vier Spalten sind jeweils 25% breit.</p>
+
+<div data-childcomponent="GridExample_1" class="runestone explainer ac_section alert alert-warning">
+
+<textarea data-component="activecode" id=GridExample_1 data-lang="htmlmixed" 
+      data-timelimit=25000    
+    data-audio=''     
+          >
+&lt;html&gt;
+&lt;head&gt;
+    &lt;style&gt;
+        .container {
+            display: grid;
+            grid-template-rows:200px 1fr 100px;
+            grid-template-columns:25% 25% 25% 25%;
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+    &lt;div class=&quot;container&quot;&gt;
+        &lt;div&gt;Element 1&lt;/div&gt;
+        &lt;div&gt;Element 2&lt;/div&gt;
+        &lt;div&gt;Element 3&lt;/div&gt;
+        &lt;div&gt;Element 4&lt;/div&gt;
+        &lt;div&gt;Element 5&lt;/div&gt;
+        &lt;div&gt;Element 6&lt;/div&gt;
+        &lt;div&gt;Element 7&lt;/div&gt;
+        &lt;div&gt;Element 8&lt;/div&gt;
+        &lt;div&gt;Element 9&lt;/div&gt;
+        &lt;div&gt;Element 10&lt;/div&gt;
+        &lt;div&gt;Element 11&lt;/div&gt;
+        &lt;div&gt;Element 12&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</textarea>
+</div>
+<p>Wenn innerhalb des Elternelements nun Kind-Elemente liegen, fügen sich die Inhalte automatisch von oben links oben nach rechts unten in die Rasterzellen ein. Standardmäßig ordnen sich die Elemente zeilenbasiert an</p>
+<img alt="_images/css-grid-kindelemente-reihenfolge-1.png" src="_images/css-grid-kindelemente-reihenfolge-1.png" />
+<div class="highlight-css notranslate"><div class="highlight"><pre><span></span><span class="p">.</span><span class="nc">container</span> <span class="p">{</span>
+    <span class="k">display</span><span class="p">:</span> <span class="k">grid</span><span class="p">;</span>
+    <span class="k">grid-template-rows</span><span class="p">:</span> <span class="mi">200</span><span class="kt">px</span> <span class="mi">1</span><span class="n">fr</span> <span class="mi">100</span><span class="kt">px</span><span class="p">;</span>
+    <span class="k">grid-template-columns</span><span class="p">:</span> <span class="mi">25</span><span class="kt">%</span> <span class="mi">25</span><span class="kt">%</span> <span class="mi">25</span><span class="kt">%</span> <span class="mi">25</span><span class="kt">%</span><span class="p">;</span>
+    <span class="k">grid-auto-flow</span><span class="p">:</span> <span class="kc">column</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>Mit der CSS-Eigenschaft grid-auto-flow kann beeinflusst werden, nach welcher Regel die Kind-Elemente im Raster einsortiert werden. Der Wert column führt beispielsweise zu folgender Anordnung:</p>
+<img alt="_images/css-grid-kindelemente-reihenfolge-2.png" src="_images/css-grid-kindelemente-reihenfolge-2.png" />
+</div>
+<div class="section" id="elemente-im-raster-positionieren">
+<h2>Elemente im Raster positionieren<a class="headerlink" href="#elemente-im-raster-positionieren" title="Permalink to this headline">¶</a></h2>
+<p>Mit CSS Grids ist es möglich, Elemente völlig frei im Raster zu positionieren. Dazu wird den Kind-Elementen mit Hilfe der CSS-Eigenschaften
+<code class="docutils literal notranslate"><span class="pre">grid-row-start</span></code> und <code class="docutils literal notranslate"><span class="pre">grid-row-end</span></code> bzw. <code class="docutils literal notranslate"><span class="pre">grid-column-start</span></code> und <code class="docutils literal notranslate"><span class="pre">grid-column-end</span></code> mitgeteilt, wo sie sich im Raster befinden sollen. Bitte beachtet, dass die Positionierung nicht über Rasterspalten, sondern über Rasterlinien erfolgt. Das zuletzt gezeigte Layout besitzt beispielsweise vier Spalten und somit fünf Rasterlinien (bei 0%, 25%, 50%, 75% und 100%). Wenn nun ein Element über die volle Breite des Layouts gestreckt werden soll, dann streckt es sich von Rasterlinie 1 (bei 0%) bis 5 (bei 100%).</p>
+<img alt="_images/css-grid-kindelemente-zuweisen.png" src="_images/css-grid-kindelemente-zuweisen.png" />
+<p>Das folgende Code-Beispiel verdeutlicht die Positionierung von Elementen im Raster.</p>
+
+<div data-childcomponent="GridExample_2" class="runestone explainer ac_section alert alert-warning">
+
+<textarea data-component="activecode" id=GridExample_2 data-lang="htmlmixed" 
+      data-timelimit=25000    
+    data-audio=''     
+          >
+    &lt;!doctype html&gt;
+    &lt;html&gt;
+    &lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta name=description content=&quot;&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot;&gt;
+    &lt;title&gt;CSS Grids&lt;/title&gt;
+    &lt;style&gt;
+
+    body {
+        margin:0;
+    }
+
+    .container {
+        height:100vh;
+        display: grid;
+        grid-template-rows: 200px 1fr 100px;
+        grid-template-columns: 25% 25% 25% 25%;
+    }
+
+    header {
+        background:tomato;
+        grid-column-start:1;
+        grid-column-end:5;
+        grid-row-start:1;
+        grid-row-end:2;
+    }
+
+    article {
+        background:gold;
+        grid-column-start:1;
+        grid-column-end:4;
+        grid-row-start:2;
+        grid-row-end:3;
+    }
+
+    aside {
+        background:lightgreen;
+        grid-column-start:4;
+        grid-column-end:5;
+        grid-row-start:2;
+        grid-row-end:3;
+    }
+
+    footer {
+        background:lightblue;
+        grid-column-start:1;
+        grid-column-end:5;
+        grid-row-start:3;
+        grid-row-end:4;
+    }
+
+    &lt;/style&gt;
+    &lt;/head&gt;
+
+    &lt;body&gt;
+
+    &lt;div class=&quot;container&quot;&gt;
+        &lt;header&gt;header&lt;/header&gt;
+        &lt;article&gt;article&lt;/article&gt;
+        &lt;aside&gt;aside&lt;/aside&gt;
+        &lt;footer&gt;footer&lt;/footer&gt;
+    &lt;/div&gt;
+
+    &lt;/body&gt;
+    &lt;/html&gt;
+</textarea>
+</div>
+<p><strong>Kurzschreibweise</strong></p>
+<dl class="docutils">
+<dt>Es existieren auch die Kurzschreibweisen</dt>
+<dd><p class="first"><code class="docutils literal notranslate"><span class="pre">grid-column</span></code> bzw. <code class="docutils literal notranslate"><span class="pre">grid-row</span></code>. Hierbei werden Start- und End-Rasterlinie mit Slash voneinander getrennt.</p>
+<p>Beispiel:</p>
+<div class="last highlight-css notranslate"><div class="highlight"><pre><span></span><span class="nt">header</span> <span class="p">{</span>
+    <span class="k">grid-column</span><span class="p">:</span><span class="mi">1</span> <span class="o">/</span> <span class="mi">5</span><span class="p">;</span>
+    <span class="k">grid-row</span><span class="p">:</span><span class="mi">1</span> <span class="o">/</span> <span class="mi">2</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</dd>
+</dl>
+</div>
+<div class="section" id="benannte-rasterlinien">
+<h2>Benannte Rasterlinien<a class="headerlink" href="#benannte-rasterlinien" title="Permalink to this headline">¶</a></h2>
+<p>Die einzelnen Rasterlinien können auch benannt werden. Dazu wird bei der Definition des Rasters mittels <code class="docutils literal notranslate"><span class="pre">grid-template-rows</span></code> bzw. <code class="docutils literal notranslate"><span class="pre">grid-template-columns</span></code> der gewünschte Name in eckigen Klammern zwischen die Breitenangaben der Spalten geschrieben. Es ist auch mehr als eine Bezeichnung pro Position erlaubt.</p>
+<div class="highlight-css notranslate"><div class="highlight"><pre><span></span><span class="p">.</span><span class="nc">container</span> <span class="p">{</span>
+<span class="k">height</span><span class="p">:</span><span class="mi">100</span><span class="kt">vh</span><span class="p">;</span>
+<span class="k">display</span><span class="p">:</span> <span class="k">grid</span><span class="p">;</span>
+<span class="k">grid-template-rows</span><span class="p">:</span> <span class="p">[</span><span class="n">line-h-1</span><span class="p">]</span> <span class="mi">200</span><span class="kt">px</span> <span class="p">[</span><span class="n">line-h-2</span><span class="p">]</span> <span class="mi">1</span><span class="n">fr</span> <span class="p">[</span><span class="n">line-h-3</span><span class="p">]</span> <span class="mi">100</span><span class="kt">px</span> <span class="p">[</span><span class="n">line-h-4</span><span class="p">];</span>
+<span class="k">grid-template-columns</span><span class="p">:</span> <span class="p">[</span><span class="n">line-v-1</span><span class="p">]</span> <span class="mi">25</span><span class="kt">%</span> <span class="p">[</span><span class="n">line-v-2</span><span class="p">]</span> <span class="mi">25</span><span class="kt">%</span> <span class="p">[</span><span class="n">line-v-3</span><span class="p">]</span> <span class="mi">25</span><span class="kt">%</span> <span class="p">[</span><span class="n">line-v-4</span><span class="p">]</span> <span class="mi">25</span><span class="kt">%</span> <span class="p">[</span><span class="n">line-v-5</span><span class="p">];</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>Bei der Zuweisung der Kind-Elemente wird dann anstelle der Nummer der Spalte bzw. Zeile der jeweilige Name angegeben.</p>
+<div class="highlight-css notranslate"><div class="highlight"><pre><span></span><span class="nt">header</span> <span class="p">{</span>
+<span class="k">grid-column</span><span class="p">:</span> <span class="n">line-v-1</span> <span class="o">/</span> <span class="n">line-v-5</span><span class="p">;</span>
+<span class="k">grid-row</span><span class="p">:</span> <span class="n">line-h-1</span> <span class="o">/</span> <span class="n">line-h-2</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="benannte-raster-bereiche-rasterzellen">
+<h2>Benannte Raster-Bereiche (Rasterzellen)<a class="headerlink" href="#benannte-raster-bereiche-rasterzellen" title="Permalink to this headline">¶</a></h2>
+<p>Die einzelnen Bereiche des CSS-Grids können mit Hilfe des Befehls grid-template-areas bei der Definition des Rasters im Elternelement benannt werden. Dazu werden die einzelnen Zellen innerhalb einer Zeile mit Namen versehen. Die einzelnen Namen werden mit Leerzeichen von einander getrennt. Einzelne Zeilen stehen in Anführungsstrichen. Durch eine sinnvollste Strukturierung im Code, kann so der Layoutaufbau im Stylesheets »sichtbar« gemacht werden.</p>
+<div class="highlight-css notranslate"><div class="highlight"><pre><span></span><span class="p">.</span><span class="nc">container</span> <span class="p">{</span>
+    <span class="k">height</span><span class="p">:</span><span class="mi">100</span><span class="kt">vh</span><span class="p">;</span>
+    <span class="k">display</span><span class="p">:</span> <span class="k">grid</span><span class="p">;</span>
+    <span class="k">grid-template-rows</span><span class="p">:</span> <span class="mi">200</span><span class="kt">px</span> <span class="mi">1</span><span class="n">fr</span> <span class="mi">100</span><span class="kt">px</span><span class="p">;</span>
+    <span class="k">grid-template-columns</span><span class="p">:</span> <span class="mi">25</span><span class="kt">%</span> <span class="mi">25</span><span class="kt">%</span> <span class="mi">25</span><span class="kt">%</span> <span class="mi">25</span><span class="kt">%</span><span class="p">;</span>
+    <span class="k">grid-template-areas</span><span class="p">:</span>
+        <span class="s2">&quot;header header header header&quot;</span>
+        <span class="s2">&quot;content content content sidebar&quot;</span>
+        <span class="s2">&quot;footer footer footer footer&quot;</span>
+    <span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>Um Kind-Elemente einem benannten Bereich im Raster zuzuweisen, wird der Befehl grid-area verwendet.</p>
+<div class="highlight-css notranslate"><div class="highlight"><pre><span></span><span class="nt">header</span> <span class="p">{</span>
+    <span class="k">grid-area</span><span class="p">:</span> <span class="n">header</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="nt">article</span> <span class="p">{</span>
+    <span class="k">grid-area</span><span class="p">:</span> <span class="k">content</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="nt">aside</span> <span class="p">{</span>
+    <span class="k">grid-area</span><span class="p">:</span> <span class="n">sidebar</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="nt">footer</span> <span class="p">{</span>
+    <span class="k">grid-area</span><span class="p">:</span> <span class="n">footer</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p><strong>Leere und undefinierte Bereiche im Raster kennzeichnen</strong></p>
+<p>Wenn Bereiche im Raster leer bleiben sollen, dann wird dafür ein Punkt als Platzhalter verwendet. Wenn der Bereich nicht definiert werden soll, kommt das Schlüsselwort none zum Einsatz.</p>
+<div class="highlight-css notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="nt">style</span><span class="o">&gt;</span>
+
+    <span class="nt">body</span> <span class="p">{</span>
+        <span class="k">margin</span><span class="p">:</span><span class="mi">0</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="p">.</span><span class="nc">container</span> <span class="p">{</span>
+        <span class="k">height</span><span class="p">:</span><span class="mi">100</span><span class="kt">vh</span><span class="p">;</span>
+        <span class="k">display</span><span class="p">:</span> <span class="k">grid</span><span class="p">;</span>
+        <span class="k">grid-template-rows</span><span class="p">:</span> <span class="mi">200</span><span class="kt">px</span> <span class="mi">1</span><span class="n">fr</span> <span class="mi">100</span><span class="kt">px</span><span class="p">;</span>
+        <span class="k">grid-template-columns</span><span class="p">:</span> <span class="mi">25</span><span class="kt">%</span> <span class="mi">25</span><span class="kt">%</span> <span class="mi">25</span><span class="kt">%</span> <span class="mi">25</span><span class="kt">%</span><span class="p">;</span>
+        <span class="k">grid-template-areas</span><span class="p">:</span>
+            <span class="s2">&quot;header header header header&quot;</span>
+            <span class="s2">&quot;content content . sidebar&quot;</span>
+            <span class="s2">&quot;footer footer footer footer&quot;</span>
+        <span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="nt">header</span> <span class="p">{</span>
+        <span class="k">background</span><span class="p">:</span><span class="kc">tomato</span><span class="p">;</span>
+        <span class="k">grid-area</span><span class="p">:</span> <span class="n">header</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="nt">article</span> <span class="p">{</span>
+        <span class="k">background</span><span class="p">:</span><span class="kc">gold</span><span class="p">;</span>
+        <span class="k">grid-area</span><span class="p">:</span> <span class="k">content</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="nt">aside</span> <span class="p">{</span>
+        <span class="k">background</span><span class="p">:</span><span class="kc">lightgreen</span><span class="p">;</span>
+        <span class="k">grid-area</span><span class="p">:</span> <span class="n">sidebar</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="nt">footer</span> <span class="p">{</span>
+        <span class="k">background</span><span class="p">:</span><span class="kc">lightblue</span><span class="p">;</span>
+        <span class="k">grid-area</span><span class="p">:</span> <span class="n">footer</span><span class="p">;</span>
+    <span class="p">}</span>
+
+<span class="o">&lt;/</span><span class="nt">style</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="abstande-zwischen-rasterzellen">
+<h2>Abstände zwischen Rasterzellen<a class="headerlink" href="#abstande-zwischen-rasterzellen" title="Permalink to this headline">¶</a></h2>
+<p>Wenn Abstände zwischen den Spalten bzw. Zeilen des Rasters entstehen sollen, kann mit Hilfe der Befehle grid-column-gap bzw. grid-row-gap im Elternelement eine Breite für die Rasterlinien festgelegt werden. Bitte beachtet, dass die Abstände nur zwischen Spalten erzeugt werden. Die erste und letzte Rasterlinie bleibt also unverändert.</p>
+<div class="highlight-css notranslate"><div class="highlight"><pre><span></span><span class="p">.</span><span class="nc">container</span> <span class="p">{</span>
+    <span class="k">grid-row-gap</span><span class="p">:</span> <span class="mi">20</span><span class="kt">px</span><span class="p">;</span>
+    <span class="k">grid-column-gap</span><span class="p">:</span> <span class="mi">10</span><span class="kt">px</span><span class="p">;</span>
+    <span class="c">/* weitere eigenschaften */</span>
+    <span class="p">}</span>
+
+    <span class="c">/*Die Kurzschreibweise grid-gap existiert ebenfalls:*/</span>
+
+<span class="p">.</span><span class="nc">container</span> <span class="p">{</span>
+    <span class="k">grid-gap</span><span class="p">:</span> <span class="mi">20</span><span class="kt">px</span> <span class="mi">10</span><span class="kt">px</span><span class="p">;</span>
+    <span class="c">/* weitere eigenschaften */</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<img alt="_images/css-grids-gap.png" src="_images/css-grids-gap.png" />
+</div>
+<div class="section" id="ausrichting-innerhalb-des-rasters">
+<h2>Ausrichting innerhalb des Rasters<a class="headerlink" href="#ausrichting-innerhalb-des-rasters" title="Permalink to this headline">¶</a></h2>
+<p>In den bisherigen Beispielen strecken sich die Kind-Elemente immer über die volle Fläche einer Rasterzelle, obwohl eigtl. weniger Inhalt enthalten ist. Sowohl für das Elternelement als auch für die einzelnen Kind-Elemente kann dieses Verhalten verändert werden.</p>
+<p><strong>Globale Ausrichtung im Eltern-Element festlegen</strong></p>
+<p>Die Befehle für das Eltern-Element lauten justify-items für das horizontale Verhalten, und align-items für das vertikale Verhalten. Es stehen jeweils die Werte start, end, center und stretch zur Wahl. stretch ist der Standardwert und selbstverständlich können justify-items und align-items kombiniert werden.</p>
+<img alt="_images/css-grids-align-justify.png" src="_images/css-grids-align-justify.png" />
+
+<div data-childcomponent="ausrichtung1" class="runestone explainer ac_section alert alert-warning">
+
+<textarea data-component="activecode" id=ausrichtung1 data-lang="htmlmixed" 
+      data-timelimit=25000    
+    data-audio=''     
+          >
+&lt;!doctype html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;meta charset=&quot;UTF-8&quot;&gt;
+&lt;meta name=description content=&quot;&quot;&gt;
+&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot;&gt;
+&lt;title&gt;CSS Grids&lt;/title&gt;
+&lt;style&gt;
+
+body {
+    margin:0;
+}
+
+.container {
+    height:100vh;
+    display: grid;
+    grid-template-rows: 200px 1fr 100px;
+    grid-template-columns: 25% 25% 25% 25%;
+    justify-items: center;
+    align-items: center;
+    grid-template-areas:
+        &quot;header header header header&quot;
+        &quot;content content content sidebar&quot;
+        &quot;footer footer footer footer&quot;
+    ;
+}
+
+header {
+    background:tomato;
+    grid-area: header;
+}
+
+article {
+    background:gold;
+    grid-area: content;
+}
+
+aside {
+    background:lightgreen;
+    grid-area: sidebar;
+}
+
+footer {
+    background:lightblue;
+    grid-area: footer;
+}
+
+&lt;/style&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+
+&lt;div class=&quot;container&quot;&gt;
+    &lt;header&gt;header&lt;/header&gt;
+    &lt;article&gt;article&lt;/article&gt;
+    &lt;aside&gt;aside&lt;/aside&gt;
+    &lt;footer&gt;footer&lt;/footer&gt;
+&lt;/div&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+</textarea>
+</div>
+<p><strong>Individuelle Ausrichtung im Kind-Element festlegen</strong></p>
+<p>Wenn lediglich die Ausrichtung einer einzelnen Rasterzelle verändert werden soll, stehen dafür die Befehle align-self und justify-self zur Verfügung. Auch für diese Eigenschaften existieren die Werte start, end, center und stretch.</p>
+<div class="highlight-css notranslate"><div class="highlight"><pre><span></span><span class="nt">article</span> <span class="p">{</span>
+    <span class="k">align-self</span><span class="p">:</span> <span class="kc">start</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+
+<div data-childcomponent="ausrichtung2" class="runestone explainer ac_section alert alert-warning">
+
+<textarea data-component="activecode" id=ausrichtung2 data-lang="htmlmixed" 
+      data-timelimit=25000    
+    data-audio=''     
+          >
+&lt;!doctype html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;meta charset=&quot;UTF-8&quot;&gt;
+&lt;meta name=description content=&quot;&quot;&gt;
+&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot;&gt;
+&lt;title&gt;CSS Grids&lt;/title&gt;
+&lt;style&gt;
+
+body {
+    margin:0;
+}
+
+.container {
+    height:100vh;
+    display: grid;
+    grid-template-rows: 200px 1fr 100px;
+    grid-template-columns: 25% 25% 25% 25%;
+    grid-template-areas:
+        &quot;header header header header&quot;
+        &quot;content content content sidebar&quot;
+        &quot;footer footer footer footer&quot;
+    ;
+}
+
+header {
+    background:tomato;
+    grid-area: header;
+}
+
+article {
+    background:gold;
+    grid-area: content;
+    align-self: start;
+}
+
+aside {
+    background:lightgreen;
+    grid-area: sidebar;
+}
+
+footer {
+    background:lightblue;
+    grid-area: footer;
+}
+
+&lt;/style&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+
+&lt;div class=&quot;container&quot;&gt;
+    &lt;header&gt;header&lt;/header&gt;
+    &lt;article&gt;article&lt;/article&gt;
+    &lt;aside&gt;aside&lt;/aside&gt;
+    &lt;footer&gt;footer&lt;/footer&gt;
+&lt;/div&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+</textarea>
+</div>
+</div>
+<div class="section" id="responsive-css-grids">
+<h2>Responsive CSS Grids<a class="headerlink" href="#responsive-css-grids" title="Permalink to this headline">¶</a></h2>
+<p>Wenn es um die Anpassung des Layouts für verschiedene Displaygrößen geht, bieten sich CSS Grids ebenfalls sehr gut an. Mit Hilfe von Media Queries kann das Raster neu definiert und die Kind-Elemente neu zugewiesen werden.</p>
+<div class="highlight-css notranslate"><div class="highlight"><pre><span></span><span class="p">.</span><span class="nc">container</span> <span class="p">{</span>
+    <span class="k">height</span><span class="p">:</span><span class="mi">100</span><span class="kt">vh</span><span class="p">;</span>
+    <span class="k">display</span><span class="p">:</span> <span class="k">grid</span><span class="p">;</span>
+    <span class="k">grid-template-rows</span><span class="p">:</span> <span class="mi">80</span><span class="kt">px</span> <span class="mi">4</span><span class="n">fr</span> <span class="mi">1</span><span class="n">fr</span> <span class="mi">40</span><span class="kt">px</span><span class="p">;</span>
+    <span class="k">grid-template-columns</span><span class="p">:</span> <span class="mi">100</span><span class="kt">%</span><span class="p">;</span>
+    <span class="k">grid-template-areas</span><span class="p">:</span>
+        <span class="s2">&quot;header&quot;</span>
+        <span class="s2">&quot;content&quot;</span>
+        <span class="s2">&quot;sidebar&quot;</span>
+        <span class="s2">&quot;footer&quot;</span>
+    <span class="p">;</span>
+<span class="p">}</span>
+<span class="p">@</span><span class="k">media</span> <span class="nt">screen</span> <span class="nt">and</span> <span class="o">(</span><span class="nt">min-width</span><span class="o">:</span> <span class="nt">44</span><span class="p">.</span><span class="nc">001em</span><span class="o">)</span> <span class="p">{</span>
+    <span class="p">.</span><span class="nc">container</span> <span class="p">{</span>
+        <span class="k">grid-template-rows</span><span class="p">:</span> <span class="mi">200</span><span class="kt">px</span> <span class="mi">1</span><span class="n">fr</span> <span class="mi">100</span><span class="kt">px</span><span class="p">;</span>
+        <span class="k">grid-template-columns</span><span class="p">:</span> <span class="mi">25</span><span class="kt">%</span> <span class="mi">25</span><span class="kt">%</span> <span class="mi">25</span><span class="kt">%</span> <span class="mi">25</span><span class="kt">%</span><span class="p">;</span>
+        <span class="k">grid-template-areas</span><span class="p">:</span>
+        <span class="s2">&quot;header header header header&quot;</span>
+        <span class="s2">&quot;content content content sidebar&quot;</span>
+        <span class="s2">&quot;footer footer footer footer&quot;</span>
+        <span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+
+<div data-childcomponent="grid_responsive_media_queries" class="runestone explainer ac_section alert alert-warning">
+
+<textarea data-component="activecode" id=grid_responsive_media_queries data-lang="htmlmixed" 
+      data-timelimit=25000    
+    data-audio=''     
+          >
+&lt;!doctype html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;meta charset=&quot;UTF-8&quot;&gt;
+&lt;meta name=description content=&quot;&quot;&gt;
+&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot;&gt;
+&lt;title&gt;CSS Grids&lt;/title&gt;
+&lt;style&gt;
+
+body {
+    margin:0;
+}
+
+.container {
+    height:100vh;
+    display: grid;
+    grid-template-rows: 80px 4fr 1fr 40px;
+    grid-template-columns: 100%;
+    grid-template-areas:
+        &quot;header&quot;
+        &quot;content&quot;
+        &quot;sidebar&quot;
+        &quot;footer&quot;
+    ;
+}
+
+@media screen and (min-width: 44.001em) {
+
+    .container {
+        grid-template-rows: 200px 1fr 100px;
+        grid-template-columns: 25% 25% 25% 25%;
+        grid-template-areas:
+            &quot;header header header header&quot;
+            &quot;content content content sidebar&quot;
+            &quot;footer footer footer footer&quot;
+        ;
+    }
+
+}
+
+header {
+    background:tomato;
+    grid-area: header;
+}
+
+article {
+    background:gold;
+    grid-area: content;
+}
+
+aside {
+    background:lightgreen;
+    grid-area: sidebar;
+}
+
+footer {
+    background:lightblue;
+    grid-area: footer;
+}
+
+&lt;/style&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+
+&lt;div class=&quot;container&quot;&gt;
+    &lt;header&gt;header&lt;/header&gt;
+    &lt;article&gt;article&lt;/article&gt;
+    &lt;aside&gt;aside&lt;/aside&gt;
+    &lt;footer&gt;footer&lt;/footer&gt;
+&lt;/div&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+</textarea>
+</div>
+</div>
+<div class="section" id="die-repeat-funktion">
+<h2>Die repeat()-Funktion<a class="headerlink" href="#die-repeat-funktion" title="Permalink to this headline">¶</a></h2>
+<p>Wenn innerhalb des Grids Bereiche wiederholt werden sollen, so kann dafür die repeat()-Funktion genutzt werden. Der 1. Wert in repeat() steht für die Anzahl der Wiederholungen. Anschließend folgenden die gewünschten Grid-Eigenschaften.</p>
+<p>Der folgende Code wiederholt das Grid für Zeilen zwei Mal, und das für Spalten drei Mal.</p>
+<div class="highlight-css notranslate"><div class="highlight"><pre><span></span><span class="p">.</span><span class="nc">container</span> <span class="p">{</span>
+<span class="k">display</span><span class="p">:</span><span class="k">grid</span><span class="p">;</span>
+<span class="k">grid-template-rows</span><span class="p">:</span> <span class="nf">repeat</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">100</span><span class="kt">px</span> <span class="mi">50</span><span class="kt">px</span><span class="p">);</span>
+<span class="k">grid-template-columns</span><span class="p">:</span> <span class="nf">repeat</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">200</span><span class="kt">px</span> <span class="mi">1</span><span class="n">fr</span> <span class="mi">200</span><span class="kt">px</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>Anstelle der repeat()-Funktion könnte auch manuell folgender Code geschrieben werden.</p>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span>.container {
+display:grid;
+grid-template-rows: 100px 50px 100px 50px;
+grid-template-columns: 200px 1fr 200px 200px 1fr 200px 200px 1fr 200px;
+}
+</pre></div>
+</div>
+</div>
+<div class="section" id="die-minmax-funktion">
+<h2>Die minmax()-Funktion<a class="headerlink" href="#die-minmax-funktion" title="Permalink to this headline">¶</a></h2>
+<p>Mit Hilfe der CSS minmax()-Funktion können Rasterzellen mit einer Mindest- und Maximalbreite versehen werden. Wie der Name der Funktion bereits andeutet, wird innerhalb der runden Klammern zuerst der Wert für die Mindestbreite des Elementes vergeben, anschließend mit Komma getrennt die Maximalausdehnung.</p>
+<p>Erwähnenswert sind zwei Schlüsselwörter im Zusammenhang mit der minmax()-Funktion.</p>
+<ul class="simple">
+<li>min-content steht für die Mindestbreite des Inhalts der Rasterzelle</li>
+<li>max-content steht für die Maximalausdehnung des Inhalts der Rasterzelle</li>
+</ul>
+<p>Der folgende Code erzeugt ein CSS Grid mit einer Zeile und zwei Spalten. Die erste Spalte ist mindestens so breit wie die geringste Breite des Inhalts und maximal 300 Pixel breit. Die zweite Spalte ist mindestens so breit wie die maximale Ausdehnung des Inhalts und maximal 1fr breit.</p>
+<div class="highlight-css notranslate"><div class="highlight"><pre><span></span><span class="p">.</span><span class="nc">container</span> <span class="p">{</span>
+    <span class="k">display</span><span class="p">:</span> <span class="k">grid</span><span class="p">;</span>
+    <span class="k">grid-template-columns</span><span class="p">:</span> <span class="nf">minmax</span><span class="p">(</span><span class="n">min</span><span class="o">-</span><span class="n">content</span><span class="p">,</span> <span class="mi">300</span><span class="kt">px</span><span class="p">)</span> <span class="nf">minmax</span><span class="p">(</span><span class="n">max</span><span class="o">-</span><span class="n">content</span><span class="p">,</span> <span class="mi">1</span><span class="n">fr</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+
+<div data-childcomponent="minmax" class="runestone explainer ac_section alert alert-warning">
+
+<textarea data-component="activecode" id=minmax data-lang="htmlmixed" 
+      data-timelimit=25000    
+    data-audio=''     
+          >
+&lt;!doctype html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;meta charset=&quot;UTF-8&quot;&gt;
+&lt;meta name=description content=&quot;&quot;&gt;
+&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot;&gt;
+&lt;title&gt;CSS Grids minmax-Funktion&lt;/title&gt;
+&lt;style&gt;
+
+.container {
+display: grid;
+grid-template-columns: minmax(min-content, 300px) minmax(max-content, 1fr);
+grid-gap: 1em;
+background-color: silver;
+padding: 1em;
+}
+
+.container &gt; div {
+background-color: white;
+padding: 5px;
+}
+&lt;/style&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+
+&lt;div class=&quot;container&quot;&gt;
+&lt;div&gt;
+    &lt;strong&gt;minmax(min-content, 300px)&lt;/strong&gt;&lt;br&gt;
+    Diese Spalte ist mindestens so breit wie minimale Breite des Inhalts und maximal 300 Pixel breit. Da der Text umbricht, bestimmt das längte Wort die minimale Breite des Inhalts. Das längste Wort ist dieses_hier_am_Ende.
+&lt;/div&gt;
+&lt;div&gt;
+    &lt;strong&gt;minmax(max-content, 1fr)&lt;/strong&gt;&lt;br&gt;
+    Diese Spalte ist mindestens so breit wie die maximale Ausdehnung des Inhalts und maximal 1fr breit. &lt;br&gt;Der Text in dieser Spalte wird  nie in eine zweite Zeile umbrechen, es sei denn er wurde wie hier mit einem &amp;lt;br&amp;gt; dazu gezwungen.
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+</textarea>
+</div>
+</div>
+<div class="section" id="tools">
+<h2>Tools<a class="headerlink" href="#tools" title="Permalink to this headline">¶</a></h2>
+<p>Es existieren einige Online-Tools, die das Erlernen von CSS Grids, sowie den Umgang damit erleichtern. Wir haben unter folgendem Link einige Tools zusammengestellt: CSS Grid Tools
+Browsersupport</p>
+<p>Den Browsersupport für CSS Grids entnehmt ihr bitte der Website caniuse.com. Ein Polyfill zur Implementierung in inkompatiblen Browsern findet ihr hier.</p>
+<ul class="simple">
+<li><a class="reference external" href="http://cssgridgarden.com/#de">http://cssgridgarden.com/#de</a></li>
+<li><a class="reference external" href="http://griddy.io/">http://griddy.io/</a></li>
+</ul>
+</div>
+</div>
+
+
+  
+      
+  <li id="relations-prev" class="navLink" title='Previous Section - CSS Advanced' data-toggle="tooltip">
+    <a href="css_teil_2.html" >
+        <div style="background-color: white; border-style:solid; border-color:lightgrey; border-width:2px; width:100px; height:50px">            
+            <i class='prevNav glyphicon glyphicon-chevron-left' style="top:50%; transform:translateY(-50%)translateX(-50%); left: 50%;"></i>
+        </div>
+    </a>
+  </li>
+  <a class="navLinkBg" id="navLinkBgLeft"  href="css_teil_2.html" ></a>
+  
+  <li id="relations-next" class="navLink" title='Next Section - Aufgabe zu GRID-System' data-toggle="tooltip" >
+    <a href="css_grid_aufgabe.html" >
+      <div style="background-color: white; border-style:solid; border-color:lightgrey; border-width:2px; width:100px; height:50px">            
+          <i id="relationsNextIcon" class='nextNav glyphicon glyphicon-chevron-right' style="top:50%; transform:translateY(-50%)translateX(-50%); left: 50%;"></i>
+      </div>
+    </a>
+  </li>
+  <a class="navLinkBg navLink" id="navLinkBgRight" href="css_grid_aufgabe.html" >Next Section - Aufgabe zu GRID-System</a>
+
+<script type="text/javascript">
+
+  $('#relations-prev').tooltip({'placement':'right', 'selector': '', 'delay': { show: 100, hide: 50}});
+  $('#relations-next').tooltip({'placement':'left', 'selector': '', 'delay': { show: 100, hide: 50}});
+  
+</script>
+  
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      
+      | <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2017 kstei.
+      Created using <a href="http://runestoneinteractive.org/">Runestone</a> 3.3.2.
+    </p>
+  </div>
+</footer>
+
+
+
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-32029811-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+
+
+  </body>
+</html>

@@ -1,0 +1,334 @@
+Aufgaben zu Selektoren
+======================
+
+A1:
+---
+
+Folgende HTML-Datei ist vorhanden:
+
+.. activecode:: a1_aufgabe_selektor
+   :language: html
+
+    <!DOCTYPE html>
+    <html lang="de">
+    <head>
+        <meta charset="utf-8">
+        <title>Typselektoren</title>
+        <link rel="stylesheet" type="text/css" href="typselektoren.css">
+    </head>
+    <body>
+        <h1>Leggings kickstarter</h1>
+        <p>
+        Coloring book vaporware heirloom cloud bread man braid, ramps organic
+        umami distillery. <span>Kale chips retro literally locavore migas raw denim.
+        <b>Live-edge austin taiyaki four dollar toast, cray shoreditch.</b>
+        DIY meh wayfarers retro banh mi selfies food truck.
+        </span>Craft beer chicharrones gluten-free, intelligentsia humblebrag.
+        </p>
+    </body>
+    </html>
+
+Erstellen Sie untenstehende HTML-Datei mit Hilfe von Typselektoren
+Arbeiten Sie die Aufzählungspunkte hintereinander ab.
+
+.. image:: media/image28.png
+   :width: 5.10465in
+   :height: 1.33356in
+   :align: right
+
+- Die Farbe des body-Tags soll einheitlich rot sein
+- Die Farbe des span-tags soll grau sein
+- Die Farbe des h1-Tags soll ausnahmsweise blau sein
+- Der body-Tag soll einen roten Rahmen erhalten
+  Warum erhalten die Kindelemente des body-Tags keinen Rahmen ?
+- Geben Sie dem h1-Tag ebenfalls einen Rahmen, indem Sie von body den Rahmen erben.
+
+
+
+A 2:
+----
+
+Erstellen Sie eine HTML-Datei, welche den untenstehenden Anforderungen genügt.
+
+.. image:: media/image29.png
+   :width: 3.62576in
+   :height: 3.86116in
+   :align: right
+
+
+
+A 3:
+----
+
+Erstelle eine HTML Datei, welche folgenden Bedingungen erfüllt:
+
+-  Grundstruktur einer HTML Datei
+-  Verwendet einen Tag Selektor (z.B. p Tag) der die Farbe auf
+   Dunkelgrau setzt
+-  Verwendet einen ID Selektor "viereck" welcher ein div 300px breit und
+   300px hoch macht und ihm einen #b2d3e6 Hintergrund gibt.
+-  Verwende einen Class Selektor "monogross" der mindestens von zwei
+   Elementen genutzt wird und die Schriftart zu monospace ändert und die
+   Schriftgröße auf 150% setzt.
+-  Besitzt einen Link, der den Nutzer auf Google weiterleitet und beim
+   Hovern die Farbe Rot annimmt.
+
+.. activecode:: a3_aufgabe_selektor
+   :language: html
+
+
+A 4:
+----
+
+Formatieren Sie die untenstehende HTML-Datei mit Hilfe von CSS.
+
+.. image:: media/image30.png
+   :width: 3.04257in
+   :height: 3.38064in
+   :align: center
+
+
+https://www.inf-schule.de/information/informationsdarstellunginternet/formatierungcss/exkurs_css/selektoren
+
+
+A 5:
+----
+
+Gegeben ist folgende DOM-Struktur
+
+
+.. image:: media/image16.png
+   :width: 5.46492in
+   :height: 1.58328in
+   :align: right
+
+Markieren Sie sich die Stellen, die durch den jeweiligen CSS-Selektor
+ausgewählt werden.
+
+.. code-block:: css
+
+    h1, em
+    {
+        font-weight: bold;
+        font-style: normal;
+    }
+
+    Em
+    {
+        color: blue;
+        font-weight: bold;
+    }
+
+    ul em
+    {
+        color: red;
+    }
+
+
+    Body
+    {
+        background-color: orange; 
+        color: black;
+        font-size: small;
+        font-family: Georgia, "Trebuchet MS", Verdana, sans-serif;
+    }
+
+
+
+
+
+
+Wie wird sich folgende CSS-Anweisung auf den DOM auswirken
+
+.. code-block:: html
+
+    body
+    {
+        background-color: orange; 
+        color: black;
+        font-size: small;
+        font-family: Georgia, "Trebuchet MS", Verdana, sans-serif;
+    }
+
+    em
+    {
+        color: blue;
+    }
+
+
+Was müssen Sie im HTML-Dokument ändern, damit folgende Regel wirken kann.
+
+.. code-block:: html
+
+    p.wichtig
+    {
+        background-color: white; 
+    }
+
+
+
+A 6:
+----
+
+Lösen Sie das CSS-Rätsel unter
+
+https://steinam.rigel.uberspace.de/css-diner/
+
+
+
+Lösungen
+========
+
+A 7:
+----
+
+Verdeutlichung am Strukturbaum
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. image:: media/image31.png
+   :width: 5.75in
+   :height: 1.45833in
+   :align: right
+
+.. code-block:: html
+
+    em
+    {
+        color: blue;
+        font-weight: bold;
+    }
+
+Dieser Selektor wählt im Strukturbaum die farbig markierten Elemente
+aus. Für diese Elemente legt die Regel dann die Eigenschaften fest.
+
+.. image:: media/image32.png
+   :width: 5.75in
+   :height: 1.45833in
+   :align: right
+
+Das zweite Beispiel betrifft den Selektor h1, em in der folgenden Regel, der zwei Elemente betrifft.
+
+.. code-block:: html
+
+    h1, em
+    {
+        font-weight: bold;
+    font-style: normal;
+    }
+
+Dieser mit einem Komma zusammengesetzte Selektor wählt folgende Elemente
+aus:
+
+.. image:: media/image33.png
+   :width: 5.75in
+   :height: 1.45833in
+   :align: right
+   
+
+Im Style-Sheet stil.css kommt die folgende Regel mit einem zusamengesetzten Selektor ul em vor (Achtung: hier ohne ein Komma).
+
+.. code-block:: html
+
+    ul em
+    {
+        color: red;
+    }
+
+Hiermit werden alle <em></em>-Elemente ausgewählt, die Nachkommen eines
+<ul></ul>-Elementes sind.
+
+
+Eigenschaften vererben sich im Strukturbaum auf die Nachkommen - das sind die Elemente unterhalb des Ausgangselements. Die folgende Regel für das <body></body>-Element legt implizit fest, dass auch alle Nachfahren über dieselben Eigenschaften verfügen.
+
+.. image:: media/image34.png
+   :width: 5.75in
+   :height: 1.45833in
+   :align: right
+
+
+.. code-block:: css
+
+    body
+    {
+        background-color: orange;
+        color: black;
+        font-size: small;
+        font-family: Georgia, "Trebuchet MS", Verdana, sans-serif;
+    }
+
+Im Strukturbaum sind das ausgewählte Element (gelb) und alle seine Nachkommen (rot) jetzt farbig markiert.
+
+   
+Im vorliegenden Fall bewirkt diese Regel, dass u. a. die Schriftfarbe für alle Elemente schwarz ist.
+
+Kommt jetzt aber unterhalb einer allgemeinen Regel eine speziellere, so überschreibt diese die allgemeine, wie das folgende Beispiel zeigt.
+
+
+.. code-block:: css
+
+    body
+    {
+        background-color: orange;
+        color: black;
+        font-size: small;
+        font-family: Georgia, "Trebuchet MS", Verdana, sans-serif;
+    }
+
+    em
+    {
+        color: blue;
+    }
+
+Durch diese beiden Regeln wird festgelegt, dass zunächst einmal alle Elemente die Schriftfarbe schwarz haben. Für die <em></em>-Elemente wird durch die zweite Regel eine Ausnahme gesetzt. Diese Elemente sollen die Schriftfarbe blau erhalten.
+
+Es gibt auch die Möglichkeit, nur ganz bestimmte Elemente auszuwählen. Im folgenden Strukturbaum sind nur einige der <p></p>-Elemente markiert. Nur diese sollen z.B. die Hintergrundfarbe weiß erhalten.
+
+
+
+Damit das möglich wird, müssen zunächst die betreffenden <p></p>-Elemente im HTML-Quelltext markiert werden. Hierzu dient das Attribut class, dem man einen selbst gewählten Wert (hier: "wichtig") zuweisen kann.
+
+.. image:: media/image35.png
+   :width: 5.75in
+   :height: 1.45833in
+   :align: center
+
+
+.. code-block:: html
+
+    <!doctype html>
+    <html lang="de">
+        <head>
+            <meta charset="utf-8">
+            <link href='styles/style.css' rel='stylesheet' type='text/css'>
+            <title>Steckbrief von Bailey</title>
+        </head>
+        <body>
+            <h1>Steckbrief</h1>
+            <p><img src="img/bailey.jpg" alt="Foto von Bailey"></p>
+            <p class="wichtig">
+            Ich heiße <em>Bailey</em>. Ich lebe in der Nähe von Kaiserslautern.
+            </p>
+            <p>
+                Ich interessiere mich für <em>Agility-Sport</em>.
+                Meine Lieblingsdisziplinen sind:
+            </p>
+            <ul>
+                <li><em>Sprung</em> durch einen Reifen</li>
+                <li><em>Lauf</em> über eine Wippe</li>
+                <li><em>Slalomlauf</em> zwischen Stangen</li>
+            </ul>
+
+            <p class="wichtig">
+                Ich gehe jedes Wochenende zur <a href="http://www.welpenschule-kl.de/index.html">Welpenschule</a>.
+            </p>
+        </body>
+    </html>
+
+Jetzt kann für die Klasse der wichtigen Absätze eine neue Regel definiert werden.
+
+.. code-block:: css
+
+    p.wichtig
+    {
+        background-color: white;
+    }

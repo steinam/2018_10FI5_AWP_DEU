@@ -1,0 +1,210 @@
+Das BOX-Modell von CSS
+======================
+
+https://codepen.io/carolineartz/full/ogVXZj
+
+https://de.wikibooks.org/wiki/Websiteentwicklung:_CSS:_Box-Modell
+
+Das Box-Model gilt für alle HTML-Tags, die **Block-Elemente** sind, sowie für alle Inline-Elemente, auf die die CSS-Anweisung display:
+block; angewendet wurde. Natürlich trifft das nicht auf Block-Elemente mit der CSS-Eigenschaft display: inline; zu.
+
+Im visuellen Anzeigemodell erfolgt die Darstellung von Elementen durch das Zeichnen von Rechtecken. Die Bestandteile dieser Rechtecke
+beschreibt das **Box-Modell**. Eine Box kann bestehen aus:
+
+.. image:: media/image37.png
+   :width: 2.70417in
+   :height: 1.75069in
+   :align: right
+
+- Dem Inhaltsbereich, also der Fläche, die durch Texte und Bilder oder Eigenschaften wie `width <https://wiki.selfhtml.org/wiki/CSS/Eigenschaften/Gr%C3%B6%C3%9Fenangaben/width>`__ und `height <https://wiki.selfhtml.org/wiki/CSS/Eigenschaften/Gr%C3%B6%C3%9Fenangaben/height>`__ vorgegeben wird,
+
+- einem Innenabstand (padding),
+- einem Rahmen (border) und
+- einem Außenabstand (margin).
+
+Bei `Block-Elementen <https://wiki.selfhtml.org/wiki/Block-Element>`__ können Höhe und Breite beliebig festgelegt werden, bei Inlineelementen werden die Maße durch den Inhalt vorgegeben. Innen- und Außenabstände sowie Rahmen können für jede der vier Seiten einer Box einzeln festgelegt werden.
+
+Wird eine Box `positioniert <https://wiki.selfhtml.org/wiki/CSS/Eigenschaften/Positionierung/position>`__, beginnt die linke Außenkante bei left, die obere Außenkante bei top, die rechte Außenkante bei right und die untere Außenkante bei bottom.
+
+Als Referenz-Box wird derjenige Teil einer Box bezeichnet, für den bestimmte Eigenschaften gelten sollen.
+
+Die einzelnen Rechtecke werden von innen nach außen bezeichnet als
+
+- content-box: (Inhaltsbox) Bereich, der durch den Inhalt oder die Eigenschaften width und height festgelegt wurde.
+
+- padding-box: (Polsterungsbox) Bereich, der content-box und padding
+  (Innenabstand) umfasst. Besitzt eine Seite keinen Innenabstand, so
+  ist die Polsterungskante mit der Innenkante identisch.
+
+
+.. image:: media/image38.png
+   :width: 2.70417in
+   :height: 1.75069in
+   :align: right
+
+- border-box: (Rahmenbox) Box, die content-box, einen
+   möglichen Innenabstand und die durch border festgelegten Rahmen
+   umfasst. Besitzt eine Box keinen Rahmen, so ist die Rahmenbox mit der
+   Polsterungsbox identisch.
+
+- margin-box: Box mitsamt durch margin festgelegten Außenabständen.
+   Sind für eine Box keine Außenabstände definiert, so ist die
+   Außenkante mit der Rahmenkante identisch.
+
+
+Gesamthöhe und Gesamtbreite
+---------------------------
+
+Für Anfänger irritierend ist, dass mehrere Boxen nicht nebeneinander dargestellt werden, obwohl deren Gesamtbreite genau der Breite des
+Eltern-Elements entspricht. Dies liegt daran, dass alle Bestandteile einer Box addiert werden.
+
+Die Gesamtbreite errechnet sich aus:
+
+.. code-block:: html
+
+    margin-left + border-left + padding-left + width + padding-right + border-right + margin-right
+
+Die Gesamthöhe einer Box wird ebenso errechnet aus:
+
+.. code-block:: html
+
+    margin-top + border-top + padding-top + height + padding-bottom + border-bottom + margin-bottom
+
+Aufgabe
+-------
+
+Erzeugen Sie folgendes Aussehen einer HTML-Seite. Benutzen Sie dazu mehrere DIVS
+
+
+.. image:: media/image39.png
+   :width: 2.69384in
+   :height: 5.40318in
+   :align: center
+
+
+box-sizing: border-box
+----------------------
+
+Die ursprüngliche Definition, die Angaben von width und height als
+Abmessungen lediglich des Inhaltes festzulegen ist wenig intuitiv.
+Eigentlich erwartet man, dass eine Breiten- bzw. Höhenangabe den
+gesamten Platzbedarf des Elementes widerspiegelt.
+
+Zudem interpretierten alte Internetexplorer das Box-Modell falsch,
+sodass Webentwickler auf diese besondere Rücksicht nehmen mussten.
+Ebenso war es schwierig bis unmöglich, ein responsives Layout zu
+erstellen, welches etwa prozentuale Breitenangaben mit pixelgenauen
+Angaben für die Rahmenbreite kombinierte.
+
+Mit der Eigenschaft box-sizing können Sie bestimmen, worauf sich Angaben
+zu den Abmessungen eines Elementes beziehen.
+
+Erlaubt sind dabei eine der folgenden Angaben.
+
+- content-box: Standardwert, Angabe gilt nur für den Inhalt
+- border-box: Angabe gilt für Inhalt, Innenabstand und Rahmen, Standard
+   für IE im Quirksmodus
+- inherit: box-sizing des Elternelements
+
+
+Aufgabe
+-------
+
+
+.. image:: media/image40.png
+   :width: 6.49722in
+   :height: 6.02014in
+   :align: center
+
+.. image:: media/image41.png
+   :width: 6.49722in
+   :height: 1.26667in
+   :align: center
+
+.. image:: media/image42.png
+   :width: 6.49722in
+   :height: 1.02431in
+   :align: center
+
+.. image:: media/image43.png
+   :width: 6.49722in
+   :height: 4.97917in
+   :align: center
+
+.. image:: media/image44.png
+   :width: 6.49722in
+   :height: 2.09583in
+   :align: center
+
+.. image:: media/image45.png
+   :width: 6.49722in
+   :height: 1.01667in
+   :align: center
+   
+
+Inline- vs- Block-Elemente
+--------------------------
+
+Die Breite von **Inline-Boxen** wird allein durch den Inhalt bestimmt.
+Die width-Eigenschaft ist wirkungslos. Die Teile einer aufgeteilten
+Inline-Box nehmen nur die Breite ein, die der Inhalt auch tatsächlich
+benötigt.
+
+**Block-Boxen** nehmen die gesamte Breite des Elternelementes ein. Sie
+sind so hoch wie ihr Inhalt. Dadurch entsteht ein zusammenhängendes
+Rechteck, das aussieht wie eine Box und dieser Darstellungsart ihren
+Namen gibt.
+
+Mehrere Block-Boxen werden untereinander angeordnet (normaler
+Elementfluss).
+
+Beispiele für Blockelemente sind Absätze(p). Die Absätze dieses Artikels
+stehen alle untereinander und nehmen jeder für sich die gesamte Breite
+des Inhaltsbereiches ein.
+
+Die Höhe eines Blockelementes wird von der Höhe des Inhaltes bestimmt:
+hat ein Absatz viele Worte, wird das Element groß (hoch), enthält es gar
+nichts, ist die Höhe des Inhaltes gleich null.
+
+Beispiel
+
+.. code-block:: html
+
+    <!DOCTYPE html>
+    <html lang="de">
+    <head>
+        <meta charset="utf-8">
+        <title>Inline- und Block-Elemente</title>
+        <link rel="stylesheet" type="text/css" href="`inlineBlock.css <view-source:file:///C:/schule/unterricht/web/10_html_css/uebungen/Grundlagen/049_inlineBlock/inlineBlock.css>`__">
+    </head>
+    <body>
+        <span>Die Span ist ein Inline-Element</span><u> also fängt das nächste
+        Inline-Element nicht in der nächsten Zeile an</u>
+        <strong> sondern die aktuelle Zeile wird einfach fortgesetzt.</strong>
+        <p>Dies ist ein Paragraph mit ganz viel tollem Text zu rumprobieren!</p>
+        <div></div>
+        <h1>Dies ist ein Block-Element</h1>
+    </body>
+    </html>
+
+    inlineBlock.css
+    
+    span, u, strong {
+        width: 300px;
+        height: 300px;
+    }
+
+    div {
+        width: 300px;
+        height: 300px;
+    }
+
+    p, div, h1 {
+        background-color: #00F;
+    }
+
+
+
+.. |image47| image:: media/image46.png
+   :width: 4.39535in
+   :height: 4.39535in

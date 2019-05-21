@@ -1,0 +1,888 @@
+Aufgabe zu GRID-System
+======================
+
+Quelle:
+
+https://medium.com/sketch-app-sources/css-grid-einf%C3%BChrung-in-5-minuten-verstehen-und-in-sketch-umsetzen-9e9e8a16b07e
+
+https://scrimba.com/g/gR8PTE
+
+http://maddesigns.de/css-grid-layout-2764.html
+
+
+Aufgabe 1:
+----------
+
+Wandeln Sie untenstehenden Code in ein Grid-System um, sodass folgendes Lauyout entsteht.
+
+.. image:: media/grid_aufgabe_1.png
+
+.. tabbed:: grid_example_1
+
+    .. tab:: Ausgabe
+
+        .. activecode:: grid_aufgabe_1
+            :language: html
+
+            <html>
+            <head>
+                <style>
+                    .item-1 {
+                        background-color: #2C3043;
+                    }
+                    .item-2 {
+                        background-color: #FC6057;
+                    }
+                    .item-3 {
+                        background-color: #FDA061;
+                    }
+                    .item-4 {
+                        background-color: #01A787;
+                    }
+                    .item-5 {
+                        background-color: #1BC1A1;
+                    }
+
+                    body {
+                        color: white;
+                        font-family: 'Open Sans', sans-serif;
+                        font-size: 20px;
+                        text-align: center;
+                        line-height: 5;
+                    }
+
+                </style>
+            <body>
+                <div class="container">
+                    <div class="item item-1"> item-1 </div>
+                    <div class="item item-2"> item-2 </div>
+                    <div class="item item-3"> item-3 </div>
+                    <div class="item item-4"> item-4 </div>
+                    <div class="item item-5"> item-5 </div>
+                    <div class="item footer"> footer </div>
+                </div>
+            </body>
+            </html>
+
+    .. tab:: Lösung
+
+        .. activecode:: grid_aufgabe_1_loesung
+            :language: html
+
+            <html>
+            <head>
+                <style>
+
+                    .container{
+                        display: grid;
+                        grid-template-columns: 50px 50px 50px 50px 50px;
+                        grid-template-rows: 150px;
+                    }
+
+                    /* in Kurzform übrigens:  
+                    grid-template-columns: repeat(5, 50px);
+                    */
+                    .item-1 {
+                        background-color: #2C3043;
+                    }
+                    .item-2 {
+                        background-color: #FC6057;
+                    }
+                    .item-3 {
+                        background-color: #FDA061;
+                    }
+                    .item-4 {
+                        background-color: #01A787;
+                    }
+                    .item-5 {
+                        background-color: #1BC1A1;
+                    }
+
+                    body {
+                        color: white;
+                        font-family: 'Open Sans', sans-serif;
+                        font-size: 20px;
+                        text-align: center;
+                        line-height: 5;
+                    }
+
+                </style>
+            <body>
+                <div class="container">
+                    <div class="item item-1"> item-1 </div>
+                    <div class="item item-2"> item-2 </div>
+                    <div class="item item-3"> item-3 </div>
+                    <div class="item item-4"> item-4 </div>
+                    <div class="item item-5"> item-5 </div>
+                    <div class="item footer"> footer </div>
+                </div>
+            </body>
+            </html>
+
+
+
+
+
+
+Aufgabe 2:
+----------
+
+Fügen sie Rasterabstände von jeweils 30 px  hinzu
+
+.. image:: media/grid_aufgabe_2_rasterabstaende.png
+
+.. tabbed:: grid_example_2
+
+    .. tab:: Ausgangslage
+
+        .. activecode:: grid_aufgabe_2
+            :language: html
+
+            <html>
+            <head>
+                <style>
+
+                    .container{
+                        display: grid;
+                        grid-template-columns: 50px 50px 50px 50px 50px;
+                        grid-template-rows: 150px;
+                    }
+
+                    /* in Kurzform übrigens:  
+                    grid-template-columns: repeat(5, 50px);
+                    */
+                    .item-1 {
+                        background-color: #2C3043;
+                    }
+                    .item-2 {
+                        background-color: #FC6057;
+                    }
+                    .item-3 {
+                        background-color: #FDA061;
+                    }
+                    .item-4 {
+                        background-color: #01A787;
+                    }
+                    .item-5 {
+                        background-color: #1BC1A1;
+                    }
+
+                    body {
+                        color: white;
+                        font-family: 'Open Sans', sans-serif;
+                        font-size: 20px;
+                        text-align: center;
+                        line-height: 5;
+                    }
+
+                </style>
+            <body>
+                <div class="container">
+                    <div class="item item-1"> item-1 </div>
+                    <div class="item item-2"> item-2 </div>
+                    <div class="item item-3"> item-3 </div>
+                    <div class="item item-4"> item-4 </div>
+                    <div class="item item-5"> item-5 </div>
+                    <div class="item footer"> footer </div>
+                </div>
+            </body>
+            </html>
+
+    .. tab:: Lösung
+
+        .. activecode:: grid_aufgabe_2_loesung
+            :language: html
+
+            <html>
+            <head>
+                <style>
+
+                    .container{
+                        display: grid;
+                        grid-template-columns: 50px 50px 50px 50px 50px;
+                        grid-template-rows: 150px;
+                        grid-gap: 30px;
+                    }
+
+                    /* in Kurzform übrigens:  
+                    grid-template-columns: repeat(5, 50px);
+                    */
+                    .item-1 {
+                        background-color: #2C3043;
+                    }
+                    .item-2 {
+                        background-color: #FC6057;
+                    }
+                    .item-3 {
+                        background-color: #FDA061;
+                    }
+                    .item-4 {
+                        background-color: #01A787;
+                    }
+                    .item-5 {
+                        background-color: #1BC1A1;
+                    }
+
+                    body {
+                        color: white;
+                        font-family: 'Open Sans', sans-serif;
+                        font-size: 20px;
+                        text-align: center;
+                        line-height: 5;
+                    }
+
+                </style>
+            <body>
+                <div class="container">
+                    <div class="item item-1"> item-1 </div>
+                    <div class="item item-2"> item-2 </div>
+                    <div class="item item-3"> item-3 </div>
+                    <div class="item item-4"> item-4 </div>
+                    <div class="item item-5"> item-5 </div>
+                    <div class="item footer"> footer </div>
+                </div>
+            </body>
+            </html>
+
+
+
+Aufgabe 3:
+----------
+
+Teilen Sie den zur Verfügung stehenden horizontalen Raum so auf, dass
+- die erste Spalte 1/6 
+- die zweite Spalte 3/3
+- die dritte Spalte 2/6
+
+des Raumes einnimmt.
+
+.. image:: media/grid_aufgabe_2_fraction.png
+
+
+.. tabbed:: grid_example_3
+
+    .. tab:: Ausgangslage
+
+        .. activecode:: grid_aufgabe_3
+            :language: html
+
+            <html>
+            <head>
+                <style>
+
+                    .container{
+                        display: grid;
+                        grid-template-columns: 50px 50px 50px 50px 50px;
+                        grid-template-rows: 150px;
+                    }
+
+                    /* in Kurzform übrigens:  
+                    grid-template-columns: repeat(5, 50px);
+                    */
+                    .item-1 {
+                        background-color: #2C3043;
+                    }
+                    .item-2 {
+                        background-color: #FC6057;
+                    }
+                    .item-3 {
+                        background-color: #FDA061;
+                    }
+                    .item-4 {
+                        background-color: #01A787;
+                    }
+                    .item-5 {
+                        background-color: #1BC1A1;
+                    }
+
+                    body {
+                        color: white;
+                        font-family: 'Open Sans', sans-serif;
+                        font-size: 20px;
+                        text-align: center;
+                        line-height: 5;
+                    }
+
+                </style>
+            <body>
+                <div class="container">
+                    <div class="item item-1"> item-1 </div>
+                    <div class="item item-2"> item-2 </div>
+                    <div class="item item-3"> item-3 </div>
+                    <div class="item item-4"> item-4 </div>
+                    <div class="item item-5"> item-5 </div>
+                    <div class="item footer"> footer </div>
+                </div>
+            </body>
+            </html>
+
+    .. tab:: Lösung
+
+        .. activecode:: grid_aufgabe_3_loesung
+            :language: html
+
+            <html>
+            <head>
+                <style>
+
+                    .container{
+                        display: grid;
+                        grid-template-columns: 1fr 3fr 2fr;
+                    }
+
+                    /* in Kurzform übrigens:  
+                    grid-template-columns: repeat(5, 50px);
+                    */
+                    .item-1 {
+                        background-color: #2C3043;
+                    }
+                    .item-2 {
+                        background-color: #FC6057;
+                    }
+                    .item-3 {
+                        background-color: #FDA061;
+                    }
+                    .item-4 {
+                        background-color: #01A787;
+                    }
+                    .item-5 {
+                        background-color: #1BC1A1;
+                    }
+
+                    body {
+                        color: white;
+                        font-family: 'Open Sans', sans-serif;
+                        font-size: 20px;
+                        text-align: center;
+                        line-height: 5;
+                    }
+
+                </style>
+            <body>
+                <div class="container">
+                    <div class="item item-1"> item-1 </div>
+                    <div class="item item-2"> item-2 </div>
+                    <div class="item item-3"> item-3 </div>
+                    <div class="item item-4"> item-4 </div>
+                    <div class="item item-5"> item-5 </div>
+                    <div class="item footer"> footer </div>
+                </div>
+            </body>
+            </html>
+
+
+
+Aufgabe 4:
+----------
+
+Geben Sie der ersten Spalte eine feste Breite von 300px. Der Rest passt sich dem verfügbaren Platz an.
+
+.. image:: media/grid_aufgabe_4_fest_flexible.gif
+
+.. tabbed:: grid_example_4
+
+    .. tab:: Ausgangslage
+
+        .. activecode:: grid_aufgabe_4
+            :language: html
+
+            <html>
+            <head>
+                <style>
+
+                    .container{
+                        display: grid;
+                        grid-template-columns: 50px 50px 50px 50px 50px;
+                        grid-template-rows: 150px;
+                    }
+
+                    /* in Kurzform übrigens:  
+                    grid-template-columns: repeat(5, 50px);
+                    */
+                    .item-1 {
+                        background-color: #2C3043;
+                    }
+                    .item-2 {
+                        background-color: #FC6057;
+                    }
+                    .item-3 {
+                        background-color: #FDA061;
+                    }
+                    .item-4 {
+                        background-color: #01A787;
+                    }
+                    .item-5 {
+                        background-color: #1BC1A1;
+                    }
+
+                    body {
+                        color: white;
+                        font-family: 'Open Sans', sans-serif;
+                        font-size: 20px;
+                        text-align: center;
+                        line-height: 5;
+                    }
+
+                </style>
+            <body>
+                <div class="container">
+                    <div class="item item-1"> item-1 </div>
+                    <div class="item item-2"> item-2 </div>
+                    <div class="item item-3"> item-3 </div>
+                    <div class="item item-4"> item-4 </div>
+                    <div class="item item-5"> item-5 </div>
+                    <div class="item footer"> footer </div>
+                </div>
+            </body>
+            </html>
+
+    .. tab:: Lösung
+
+        .. activecode:: grid_aufgabe_4_loesung
+            :language: html
+
+            <html>
+            <head>
+                <style>
+
+                    .container{
+                        display: grid;
+                        grid-template-columns: 300px 3fr 2fr;
+                    }
+
+                    /* in Kurzform übrigens:  
+                    grid-template-columns: repeat(5, 50px);
+                    */
+                    .item-1 {
+                        background-color: #2C3043;
+                    }
+                    .item-2 {
+                        background-color: #FC6057;
+                    }
+                    .item-3 {
+                        background-color: #FDA061;
+                    }
+                    .item-4 {
+                        background-color: #01A787;
+                    }
+                    .item-5 {
+                        background-color: #1BC1A1;
+                    }
+
+                    body {
+                        color: white;
+                        font-family: 'Open Sans', sans-serif;
+                        font-size: 20px;
+                        text-align: center;
+                        line-height: 5;
+                    }
+
+                </style>
+            <body>
+                <div class="container">
+                    <div class="item item-1"> item-1 </div>
+                    <div class="item item-2"> item-2 </div>
+                    <div class="item item-3"> item-3 </div>
+                    <div class="item item-4"> item-4 </div>
+                    <div class="item item-5"> item-5 </div>
+                    <div class="item footer"> footer </div>
+                </div>
+            </body>
+            </html>
+
+
+Aufgabe 5:
+----------
+
+Erstellen Sie folgende grafische Anordnung.
+
+Arbeiten Sie mit ``grid-column-start`` , ``grid-column-end`` bzw ``grid-column``
+
+.. image:: media/grid_aufgabe_5.png
+
+
+.. tabbed:: grid_example_5
+
+    .. tab:: Ausgangslage
+
+        .. activecode:: grid_aufgabe_5
+            :language: html
+
+            <html>
+            <head>
+                <style>
+
+                    .container{
+                        display: grid;
+                        grid-template-columns: 50px 50px 50px 50px 50px;
+                        grid-template-rows: 150px;
+                    }
+
+                    /* in Kurzform übrigens:  
+                    grid-template-columns: repeat(5, 50px);
+                    */
+                    .item-1 {
+                        background-color: #2C3043;
+                    }
+                    .item-2 {
+                        background-color: #FC6057;
+                    }
+                    .item-3 {
+                        background-color: #FDA061;
+                    }
+                    .item-4 {
+                        background-color: #01A787;
+                    }
+                    .item-5 {
+                        background-color: #1BC1A1;
+                    }
+
+                    body {
+                        color: white;
+                        font-family: 'Open Sans', sans-serif;
+                        font-size: 20px;
+                        text-align: center;
+                        line-height: 5;
+                    }
+
+                </style>
+            <body>
+                <div class="container">
+                    <div class="item item-1"> item-1 </div>
+                    <div class="item item-2"> item-2 </div>
+                    <div class="item item-3"> item-3 </div>
+                    <div class="item item-4"> item-4 </div>
+                    <div class="item item-5"> item-5 </div>
+                    <div class="item footer"> footer </div>
+                </div>
+            </body>
+            </html>
+
+    .. tab:: Lösung
+
+        .. activecode:: grid_aufgabe_5_loesung
+            :language: html
+
+            <html>
+            <head>
+                <style>
+
+                    .container{
+                        display: grid;
+                        grid-template-columns: 1fr 3fr 2fr;
+                    }
+
+                    /* in Kurzform übrigens:  
+                    grid-template-columns: repeat(5, 50px);
+                    */
+                    .item-1 {
+                        background-color: #2C3043;
+                        grid-column: 1 / 4;
+                    }
+                    .item-2 {
+                        background-color: #FC6057;
+                    }
+                    .item-3 {
+                        background-color: #FDA061;
+                    }
+                    .item-4 {
+                        background-color: #01A787;
+                    }
+                    .item-5 {
+                        background-color: #1BC1A1;
+                        grid-column: 3/4;
+                    }
+
+                    body {
+                        color: white;
+                        font-family: 'Open Sans', sans-serif;
+                        font-size: 20px;
+                        text-align: center;
+                        line-height: 5;
+                    }
+
+                </style>
+            <body>
+                <div class="container">
+                    <div class="item item-1"> item-1 </div>
+                    <div class="item item-2"> item-2 </div>
+                    <div class="item item-3"> item-3 </div>
+                    <div class="item item-4"> item-4 </div>
+                    <div class="item item-5"> item-5 </div>
+                    <div class="item footer"> footer </div>
+                </div>
+            </body>
+            </html>
+
+
+
+Aufgabe 6:
+----------
+
+Elemente können nämlich mit Hilfe von ``grid-row`` auch alle vertikalen Größen und Positionen einnehmen.
+
+Erstellen Sie folgendes Layout:
+
+.. image:: media/grid_aufgabe_6_grid_row.png
+
+.. tabbed:: grid_example_6
+
+    .. tab:: Ausgangslage
+
+        .. activecode:: grid_aufgabe_6
+            :language: html
+
+            <html>
+            <head>
+                <style>
+
+                    .container{
+                        display: grid;
+                        grid-template-columns: 50px 50px 50px 50px 50px;
+                        grid-template-rows: 150px;
+                    }
+
+                    /* in Kurzform übrigens:  
+                    grid-template-columns: repeat(5, 50px);
+                    */
+                    .item-1 {
+                        background-color: #2C3043;
+                    }
+                    .item-2 {
+                        background-color: #FC6057;
+                    }
+                    .item-3 {
+                        background-color: #FDA061;
+                    }
+                    .item-4 {
+                        background-color: #01A787;
+                    }
+                    .item-5 {
+                        background-color: #1BC1A1;
+                    }
+
+                    body {
+                        color: white;
+                        font-family: 'Open Sans', sans-serif;
+                        font-size: 20px;
+                        text-align: center;
+                        line-height: 5;
+                    }
+
+                </style>
+            <body>
+                <div class="container">
+                    <div class="item item-1"> item-1 </div>
+                    <div class="item item-2"> item-2 </div>
+                    <div class="item item-3"> item-3 </div>
+                    <div class="item item-4"> item-4 </div>
+                    <div class="item item-5"> item-5 </div>
+                    <div class="item footer"> footer </div>
+                </div>
+            </body>
+            </html>
+
+    .. tab:: Lösung
+
+        .. activecode:: grid_aufgabe_6_loesung
+            :language: html
+
+            <html>
+            <head>
+                <style>
+
+                    .container{
+                        display: grid;
+                        grid-template-columns: 1fr 3fr 2fr;
+                    }
+
+                    /* in Kurzform übrigens:  
+                    grid-template-columns: repeat(5, 50px);
+                    */
+                    .item-1 {
+                        background-color: #2C3043;
+                        grid-column: 1 / 4;
+                        grid-row: 3 / 4;
+                    }
+                    .item-2 {
+                        background-color: #FC6057;
+                        grid-row: 1 / 3;
+                    }
+                    .item-3 {
+                        background-color: #FDA061;
+                    }
+                    .item-4 {
+                        background-color: #01A787;
+                    }
+                    .item-5 {
+                        background-color: #1BC1A1;
+                        grid-column: 3/4;
+                    }
+
+                    body {
+                        color: white;
+                        font-family: 'Open Sans', sans-serif;
+                        font-size: 20px;
+                        text-align: center;
+                        line-height: 5;
+                    }
+
+                </style>
+            <body>
+                <div class="container">
+                    <div class="item item-1"> item-1 </div>
+                    <div class="item item-2"> item-2 </div>
+                    <div class="item item-3"> item-3 </div>
+                    <div class="item item-4"> item-4 </div>
+                    <div class="item item-5"> item-5 </div>
+                    <div class="item footer"> footer </div>
+                </div>
+            </body>
+            </html>
+
+
+
+Aufgabe 7:
+----------
+
+Mit Media Queries kann nicht nur von flexiblen zu festen Elementen gewechselt, sondern auch die Position ganzer Elemente angepasst werden
+
+Erzeugen Sie folgende Ausgabe:
+
+.. image:: media/grid_aufgabe_7_media_queries.gif
+
+**Hinweis:**
+
+Bei einer Bildschirmfläche kleiner 720 px soll Item 1 in der Mitte angezeigt werden, ansonsten in der ersten Zeile.
+Item 2 soll unter 720px in der ersten Zelle dargestellt werden, ansonsten Spalte 1, Zeile 2-3.
+
+Informieren Sie sich dazu über das Konzept von **Media-Queries** in CSS.
+
+
+.. tabbed:: grid_example_7
+
+    .. tab:: Ausgangslage
+
+        .. activecode:: grid_aufgabe_7
+            :language: html
+
+            <html>
+            <head>
+                <style>
+
+                    .container{
+                        display: grid;
+                        grid-template-columns: 50px 50px 50px 50px 50px;
+                        grid-template-rows: 150px;
+                    }
+
+                    /* in Kurzform übrigens:  
+                    grid-template-columns: repeat(5, 50px);
+                    */
+                    .item-1 {
+                        background-color: #2C3043;
+                    }
+                    .item-2 {
+                        background-color: #FC6057;
+                    }
+                    .item-3 {
+                        background-color: #FDA061;
+                    }
+                    .item-4 {
+                        background-color: #01A787;
+                    }
+                    .item-5 {
+                        background-color: #1BC1A1;
+                    }
+
+                    body {
+                        color: white;
+                        font-family: 'Open Sans', sans-serif;
+                        font-size: 20px;
+                        text-align: center;
+                        line-height: 5;
+                    }
+
+                </style>
+            <body>
+                <div class="container">
+                    <div class="item item-1"> item-1 </div>
+                    <div class="item item-2"> item-2 </div>
+                    <div class="item item-3"> item-3 </div>
+                    <div class="item item-4"> item-4 </div>
+                    <div class="item item-5"> item-5 </div>
+                    <div class="item footer"> footer </div>
+                </div>
+            </body>
+            </html>
+
+    .. tab:: Lösung
+
+        .. activecode:: grid_aufgabe_7_loesung
+            :language: html
+
+            <html>
+            <head>
+                <style>
+
+                    .container{
+                        display: grid;
+                        grid-template-columns: 1fr 3fr 2fr;
+                    }
+
+                    /* in Kurzform übrigens:  
+                    grid-template-columns: repeat(5, 50px);
+                    */
+                    .item-1 {
+                        background-color: #2C3043;
+                        grid-column: 1 / 4;
+                    }
+                    .item-2 {
+                        background-color: #FC6057;
+                        grid-row: 2 / 4;
+                    }
+                    .item-3 {
+                        background-color: #FDA061;
+                    }
+                    .item-4 {
+                        background-color: #01A787;
+                    }
+                    .item-5 {
+                        background-color: #1BC1A1;
+                        grid-column: 3/4;
+                    }
+
+
+                    @media only screen and (max-width: 720px){
+                        .container{
+                            grid-template-columns: 1fr 1fr;
+                        } 
+                        .item-1 {
+                            grid-column: 1 / 3;
+                            grid-row: 2 / 3;
+                        } 
+                        .item-2 {
+                            grid-row: 1 / 1;
+                        }
+                    }
+
+                    body {
+                        color: white;
+                        font-family: 'Open Sans', sans-serif;
+                        font-size: 20px;
+                        text-align: center;
+                        line-height: 5;
+                    }
+
+                </style>
+            <body>
+                <div class="container">
+                    <div class="item item-1"> item-1 </div>
+                    <div class="item item-2"> item-2 </div>
+                    <div class="item item-3"> item-3 </div>
+                    <div class="item item-4"> item-4 </div>
+                    <div class="item item-5"> item-5 </div>
+                    <div class="item footer"> footer </div>
+                </div>
+            </body>
+            </html>

@@ -1,0 +1,40 @@
+.container {
+    /* Container specific rules here */
+      padding: 30px 50px;
+      width: 500px;
+      border: 1px solid;
+      position: relative;
+      overflow: auto;
+      box-sizing: border-box;
+    }
+    .left,.middle,.right {
+    /* Common rules here */
+      border: 1px solid lightgray;
+      width: 100px;
+      height: 50px;
+      text-align: center;
+    }
+    .left {
+      background-color: lightblue;
+      float: left;
+    }
+    .middle {
+      background-color: lightpink;
+      position: absolute;
+      left: 200px;
+    }
+    .right {
+      background-color: lightgreen;
+      float: right;
+    }
+    .fixed {
+      position: absolute;
+      top: 0;
+      left: 0;
+      background-color: yellow;
+      color: red;
+      font-style: oblique;
+      text-decoration: underline;
+    }
+    
+    

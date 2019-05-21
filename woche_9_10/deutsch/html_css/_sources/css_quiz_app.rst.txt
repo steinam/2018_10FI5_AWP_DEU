@@ -1,0 +1,17 @@
+HTML_CSS_JS-Quiz-App
+====================
+
+.. toctree::
+   :maxdepth: 1
+
+   css_quiz_html_frontend.rst
+   css_quiz_css_optik.rst
+   css_quiz_js.rst
+
+Im folgenden Teil werden wir das Gelernte durch eine kleine Anwendung vertiefen.
+
+
+.. image:: media/thumb_quiz.png
+    :align: center
+
+

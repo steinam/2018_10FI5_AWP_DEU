@@ -1,0 +1,31 @@
+Allgemein
+=========
+
+.. mchoice:: question1_2
+   :multiple_answers:
+   :answer_a: Die Kombination aus Eigenschaft und Werten
+   :answer_b: Alles,was zwischen den geschweiften Klammern {} steht.
+   :answer_c: Die Selektoren und die dahinter stehenden geschweiften Klammern.  
+   :correct: c
+   :feedback_a: Nein, eine Eigenschaft und der dazu gehörende Wert, bei Kurzschrift- Eigenschaften mehrere Werte, bilden eine Deklaration.
+   :feedback_b: Nein, alle Eigenschaft-Wert-Paare zusammengenommen bilden den Deklarationsblock.
+   :feedback_c: Stimmt genau..
+
+
+   Was ist eine Regel in CSS?
+
+
+
+   .. mchoice:: question1_2
+   :multiple_answers:
+   :answer_a: red
+   :answer_b: yellow
+   :answer_c: black
+   :answer_d: green
+   :correct: a,b,d
+   :feedback_a: Red is a definitely on of the colors.
+   :feedback_b: Yes, yellow is correct.
+   :feedback_c: Remember the acronym...ROY G BIV.  B stands for blue.
+   :feedback_d: Yes, green is one of the colors.
+
+   Which colors might be found in a rainbow? (choose all that are correct)

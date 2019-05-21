@@ -1,0 +1,119 @@
+Aufgabe zu float und clear
+==========================
+
+Aufgabe 1
+---------
+
+Quelle: https://github.com/char1eschen/40-Layout-Exercises
+
+Speichern sie folgendes Fragment als vollständige HTML-Datei und schreiben Sie dazu Fülltext in die jeweiligen divs navigation, extra und footer.
+
+
+.. code-block:: html
+
+    <div id="container">
+    <div id="header">Header</div>
+    <div id="wrapper">
+    <div id="content">Content</div>
+    </div>
+    <div id="navigation">Navigation</div>
+    <div id="extra">Extra stuff</div>
+    <div id="footer">Footer</div>
+    </div>
+
+Binden Sie dann folgende CSS-Datei ein
+
+.. code-block:: css
+
+    #container {
+        font-size: 12px;
+        font-family: arial, sans-serif;
+    }
+
+    p {
+    margin: 0 10px 10px;
+    }
+
+    #header {
+        height: 80px;
+        background-color: rgb(238,238,238);
+        color: rgb(122,177,36);
+        padding-left: 10px;
+        line-height: 80px; }
+    
+    #header h1 {
+        margin: 0;
+    }
+
+    #navigation {
+        background-color: rgb(186,203,253);
+    }
+
+    #extra {
+        background-color: rgb(253,133,67);
+    }
+
+    #footer {
+        height: 14px;
+        padding:5px 10px 5px 10px;
+        color: #FFF;
+        background-color: #333;
+    }
+
+    #footer p {
+        line-height: 14px;
+        margin: 0px;
+    }
+
+Formatieren Sie dann die bestehende CSS-Datei so um, dass folgendes Layout entsteht.
+
+Setzen Sie dazu die
+
+-  die width des wrapper-divs auf 50 % und zentrieren Sie das
+   wrapper-Element horizontal
+-  die width des navigation und extra – div auf jeweils 25 %
+-  navigation soll links vom wrapper, extra soll rechts vom wrapper
+   erscheinen,
+
+Informieren Sie sich dazu über die float und clear – Eigenschaft von css
+
+.. image:: media/image57.png
+   :width: 6.49722in
+   :height: 2.93403in
+   :align: center
+
+
+Aufgabe 2 
+---------
+
+.. image:: media/image58.jpeg
+   :width: 6.40347in
+   :height: 2.50833in
+   :align: center
+
+
+Nehmen Sie drei Bilddateien Ihrer Wahl und erzeugen sie mit Hilfe von float und clear folgendes Layout
+
+Von 
+
+https://www.w3schools.com/css/tryit.asp?filename=trycss_float5
+
+https://www.w3schools.com/css/css_float.asp
+
+https://www.w3schools.com/css/tryit.asp?filename=trycss_layout_cols
+
+
+Aufgabe 3
+---------
+
+Erzeugen Sie folgendes Aussehen untenstehender HTML-Datei.
+
+.. image:: media/image59.png
+   :width: 4.64632in
+   :height: 5.84167in
+   :align: center
+
+
+
+
+

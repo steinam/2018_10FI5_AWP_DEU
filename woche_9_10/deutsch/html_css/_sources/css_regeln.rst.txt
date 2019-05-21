@@ -1,0 +1,118 @@
+CSS-Regeln
+==========
+
+.. toctree::
+   :maxdepth: 1
+
+Aufbau
+------
+
+Eine CSS-Regel besteht aus
+
+-  der Bezeichnung für das Element, auf das die Regel zielt
+   (**CSS-Selektor**),
+
+-  aus Eigenschaften (Properties), die dem Element zugewiesen werden.
+
+-  CSS-Eigenschaften stehen in geschweiften Klammern und sind durch
+   Semikolons voneinander getrennt.
+
+-  Klassen- und ID-Namen sind case-sensitiv
+
+.. image:: media/image21.png
+   :width: 6.3in
+   :height: 1.51597in
+   :align: right
+
+
+.. code-block:: css
+
+    selector { Eigenschaft: Wert;
+        Eigenschaft: Wert;
+        Eigenschaft: Wert
+    }
+
+    h1 {
+        font-family: Helvetica;
+        font-size: 1.4em;
+        color: red
+    }
+
+Einbinden von CSS
+-----------------
+
+Styleinformationen können auf verschiedene Arten in ein HTML-Dokument
+eingebunden werden
+
+.. index:: inline
+
+**INLINE**
+
+Mit dem Universalattribut **style** können Sie Eigenschaften einem
+Element direkt zuweisen. Dabei sind nur Deklarationen, also
+Eigenschaft-Wert-Zuweisungen möglich.
+
+Beispiel:
+
+| <p style="text-align: center; color: green;">
+| Dieser Absatz wird über ein style-Attribut formatiert.
+| </p>
+
+**Bewertung:**
+
+-  Direktes Festlegen von Formaten pro Element
+
+-  Verlust vieler Vorteile
+
+-  Hoher Wartungsaufwand
+
+-  verringerte Flexibilität
+
+-  keine zentrale Bearbeitung
+
+
+.. index:: internal
+
+**INTERNAL**
+
+Das HTML-Element **style** legt Formate zentral im Head des HTML-Dokuments fest.
+
+.. activecode:: a1_style_internal
+   :language: html
+
+    <html lang="de">
+        <head>
+        <style>
+            h1 {
+                background-color: green;
+                color: blue;
+        }
+            p {
+                text-align: center;
+                color: red;
+        }
+        </style>
+        </head>
+        <body>
+            <h1>Überschrift</h1>
+            <p>Ein text halt</p>
+        </body>
+    </html>
+
+
+.. index:: external
+
+**EXTERNAL**
+
+Das CSS wird einem eigenen externen Stylesheet mit der Endung .css abgespeichert und mit dem HTML-Element link direkt im Head eingebunden.
+
+.. activecode:: a1_style_external
+   :language: html
+
+
+    <!--Einbinden eines externen Stylesheets -->
+
+    <!doctype html>
+    <html lang="de">
+    <head>
+    <link rel="stylesheet" href="stylesheet.css">

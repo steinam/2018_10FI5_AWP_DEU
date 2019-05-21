@@ -1,0 +1,71 @@
+Aufgaben zu ``position``
+========================
+
+Aufgabe 1:
+-----------
+
+Erzeugen Sie mit Hilfe von HTML und CSS folgende Optik.
+
+:download:`html <media/html_css_sources/position_absolute.html>`
+:download:`css<media/html_css_sources/position_absolute.css>`
+:download:`Lösung<media/html_css_sources/position_absolute_loesung.css>`
+
+
+.. image:: media/html_css_sources/position_absolute.png
+    :align: center
+
+
+
+
+Aufgabe 2:
+----------
+
+:download:`html <media/html_css_sources/position_absolute_menu.html>`
+:download:`css<media/html_css_sources/position_absolute_menu.css>`
+:download:`Lösung<media/html_css_sources/position_absolute_menu_loesung.css>`
+
+
+Erzeugen Sie folgende Menüstruktur
+
+.. image:: media/position_absolute_menu.png
+    :align: center
+
+
+
+Aufgabe 3:
+----------
+
+
+:download:`Lösung<media/html_css_sources/position_relative_loesung.css>`
+
+
+Erzeugen Sie folgendes Aussehen. Der Link ist dabei innerhalb des p-Tags und soll etwas oberhalb pistioniert werden.
+
+
+.. image:: media/position_relative.png
+    :align: center
+
+
+
+Aufgabe 4:
+----------
+
+:download:`html <media/html_css_sources/position_fixed.html>`
+:download:`css<media/html_css_sources/position_fixed.css>`
+:download:`Loesung<media/html_css_sources/position_fixed_loesung.css>`
+
+
+Untenstehender Link soll sich beim Browsen nicht in seiner Position verändern
+
+
+.. image:: media/position_fixed.png
+
+
+Aufgabe 5:
+----------
+
+:download:`css<media/html_css_sources/position_float_loesung.css>`
+
+
+.. image:: media/position_float_mixed.png
+

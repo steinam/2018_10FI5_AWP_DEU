@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>Die wichtigsten Definitionen in CSS &#8212; Runestone Interactive Overview</title>
+    <link rel="stylesheet" href="_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-3.0.0/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="_static/presenter_mode.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/accessibility.css?v=808B982A" />
+    <link rel="stylesheet" type="text/css" href="_static/activecode.css?v=F471F95B" />
+    <link rel="stylesheet" type="text/css" href="_static/codemirror.css?v=1CE53237" />
+    <link rel="stylesheet" type="text/css" href="_static/clickable.css?v=58C4E18A" />
+    <link rel="stylesheet" type="text/css" href="_static/pytutor.css?v=239FC54E" />
+    <link rel="stylesheet" type="text/css" href="_static/modal-basic.css?v=8A1A42E4" />
+    <link rel="stylesheet" type="text/css" href="_static/datafile.css?v=C184EB8A" />
+    <link rel="stylesheet" type="text/css" href="_static/dragndrop.css?v=B9BAA0D1" />
+    <link rel="stylesheet" type="text/css" href="_static/fitb.css?v=3BA0E63E" />
+    <link rel="stylesheet" type="text/css" href="_static/matrixeq.css?v=58BC228F" />
+    <link rel="stylesheet" type="text/css" href="_static/parsons.css?v=2F3E13EE" />
+    <link rel="stylesheet" type="text/css" href="_static/js_lib/prettify.css?v=2A364B6B" />
+    <link rel="stylesheet" type="text/css" href="_static/poll.css?v=E220AC33" />
+    <link rel="stylesheet" type="text/css" href="_static/reveal.css?v=4A81D381" />
+    <link rel="stylesheet" type="text/css" href="_static/showEval.css?v=C6382F3" />
+    <link rel="stylesheet" type="text/css" href="_static/tabbedstuff.css?v=424F1CC9" />
+    <link rel="stylesheet" type="text/css" href="_static/video.css?v=E5385B3B" />
+    <link rel="stylesheet" type="text/css" href="_static/webgldemo.css?v=B36B48D" />
+    <link rel="stylesheet" type="text/css" href="_static/webglinteractive.css?v=910DF1E1" />
+    <link rel="stylesheet" href="_static/jquery-ui-1.10.3.custom.min.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-sphinx.css" type="text/css" />
+    <link rel="stylesheet" href="_static/user-highlights.css" type="text/css" />
+    <link rel="stylesheet" href="_static/runestone-custom-sphinx-bootstrap.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/runestonebase.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/language_data.js"></script>
+    <script type="text/javascript" src="_static/jquery.highlight.js?v=F1C496C8"></script>
+    <script type="text/javascript" src="_static/bookfuncs.js?v=21EFC8E1"></script>
+    <script type="text/javascript" src="_static/codemirror.js?v=94F552C9"></script>
+    <script type="text/javascript" src="_static/xml.js?v=236EDFF7"></script>
+    <script type="text/javascript" src="_static/css.js?v=623153CE"></script>
+    <script type="text/javascript" src="_static/python.js?v=14A28F1F"></script>
+    <script type="text/javascript" src="_static/htmlmixed.js?v=33B91944"></script>
+    <script type="text/javascript" src="_static/javascript.js?v=6F38CA04"></script>
+    <script type="text/javascript" src="_static/jquery_i18n/CLDRPluralRuleParser.js?v=599B42B0"></script>
+    <script type="text/javascript" src="_static/jquery_i18n/jquery.i18n.js?v=88A1430F"></script>
+    <script type="text/javascript" src="_static/jquery_i18n/jquery.i18n.messagestore.js?v=AE15A4A1"></script>
+    <script type="text/javascript" src="_static/jquery_i18n/jquery.i18n.fallbacks.js?v=8ABDFE7F"></script>
+    <script type="text/javascript" src="_static/jquery_i18n/jquery.i18n.language.js?v=747279FF"></script>
+    <script type="text/javascript" src="_static/jquery_i18n/jquery.i18n.parser.js?v=7B020E13"></script>
+    <script type="text/javascript" src="_static/jquery_i18n/jquery.i18n.emitter.js?v=660E85C3"></script>
+    <script type="text/javascript" src="_static/jquery_i18n/jquery.i18n.emitter.bidi.js?v=54B21948"></script>
+    <script type="text/javascript" src="_static/activecode-i18n.en.js?v=3FBAE230"></script>
+    <script type="text/javascript" src="_static/skulpt.min.js?v=DC7AC815"></script>
+    <script type="text/javascript" src="_static/skulpt-stdlib.js?v=48A5D93E"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega@4.0.0-rc.2/build/vega.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega-lite@2.5.0/build/vega-lite.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega-embed@3.14.0/build/vega-embed.js"></script>
+    <script type="text/javascript" src="_static/activecode.js?v=9FA573E1"></script>
+    <script type="text/javascript" src="_static/clike.js?v=2DCE0756"></script>
+    <script type="text/javascript" src="_static/timed_activecode.js?v=5150FA78"></script>
+    <script type="text/javascript" src="_static/animationbase.js?v=A043C3A7"></script>
+    <script type="text/javascript" src="_static/mchoice.js?v=8329CA55"></script>
+    <script type="text/javascript" src="_static/timedmc.js?v=B010A457"></script>
+    <script type="text/javascript" src="_static/timed.js?v=6789FE30"></script>
+    <script type="text/javascript" src="_static/clickable.js?v=9560E65E"></script>
+    <script type="text/javascript" src="_static/timedclickable.js?v=93989C23"></script>
+    <script type="text/javascript" src="_static/d3.v2.min.js?v=836E01C"></script>
+    <script type="text/javascript" src="_static/jquery.ba-bbq.min.js?v=B64CF0A8"></script>
+    <script type="text/javascript" src="_static/jquery.jsPlumb-1.3.10-all-min.js?v=42F9EBEA"></script>
+    <script type="text/javascript" src="_static/pytutor.js?v=82B022B9"></script>
+    <script type="text/javascript" src="_static/codelens.js?v=CABECD49"></script>
+    <script type="text/javascript" src="_static/datafile.js?v=3ED1A80C"></script>
+    <script type="text/javascript" src="_static/dragndrop.js?v=2B6403E8"></script>
+    <script type="text/javascript" src="_static/timeddnd.js?v=378F237E"></script>
+    <script type="text/javascript" src="_static/fitb.js?v=8E40E713"></script>
+    <script type="text/javascript" src="_static/timedfitb.js?v=2AA17071"></script>
+    <script type="text/javascript" src="_static/matrixeq.js?v=D64CFA5A"></script>
+    <script type="text/javascript" src="_static/js_lib/prettify.js?v=CA7E8928"></script>
+    <script type="text/javascript" src="_static/js_lib/hammer.min.js?v=73056367"></script>
+    <script type="text/javascript" src="_static/parsons.js?v=93EFFF39"></script>
+    <script type="text/javascript" src="_static/timedparsons.js?v=2EEA9E5A"></script>
+    <script type="text/javascript" src="_static/poll.js?v=6C59AE9F"></script>
+    <script type="text/javascript" src="_static/reveal.js?v=112CBFA2"></script>
+    <script type="text/javascript" src="_static/shortanswer.js?v=5EB6170D"></script>
+    <script type="text/javascript" src="_static/timed_shortanswer.js?v=B3A117D7"></script>
+    <script type="text/javascript" src="_static/showEval.js?v=C5CE0C81"></script>
+    <script type="text/javascript" src="_static/tabbedstuff.js?v=5BE6106"></script>
+    <script type="text/javascript" src="_static/runestonevideo.js?v=53E888DE"></script>
+    <script type="text/javascript" src="_static/webglinteractive.js?v=2B768384"></script>
+    <script type="text/javascript" src="_static/FileSaver.min.js?v=8408C997"></script>
+    <script type="text/javascript" src="_static/Blob.js?v=AEC2447"></script>
+    <script type="text/javascript" src="_static/jquery-ui-1.10.3.custom.min.js"></script>
+    <script type="text/javascript" src="_static/jquery-fix.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-3.0.0/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-sphinx.js"></script>
+    <script type="text/javascript" src="_static/waypoints.min.js"></script>
+    <script type="text/javascript" src="_static/user-highlights.js"></script>
+    <script type="text/javascript" src="_static/jquery.idle-timer.js"></script>
+    <script type="text/javascript" src="_static/processing-1.4.1.min.js"></script>
+    <script type="text/javascript" src="_static/jquery.hotkey.js"></script>
+    <script type="text/javascript" src="_static/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="_static/presenter_mode.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="Sonstiges" href="sonstiges.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta content='width=device-width, initial-scale=1.0' name='viewport' />
+<link rel="shortcut icon" href="/runestone/static/favicon.ico" type="image/ico" />
+
+<script type="text/javascript">
+  eBookConfig = {};
+  eBookConfig.host = 'http://127.0.0.1:8000' ? 'http://127.0.0.1:8000' : 'http://127.0.0.1:8000';
+  eBookConfig.app = eBookConfig.host+'/runestone';
+  eBookConfig.ajaxURL = eBookConfig.app+'/ajax/';
+  eBookConfig.course = 'html_css';
+  eBookConfig.logLevel = 0;
+  eBookConfig.loginRequired = false;
+  eBookConfig.build_info = "unknown";
+  eBookConfig.isLoggedIn = false;
+  eBookConfig.useRunestoneServices = false;
+  eBookConfig.python3 = false;
+  eBookConfig.basecourse = 'html_css';
+  eBookConfig.acDefaultLanguage = 'html' ? 'html' : 'python'
+  eBookConfig.runestone_version = '3.4.5';
+  eBookConfig.jobehost = 'http://jobe2.cosc.canterbury.ac.nz';
+  eBookConfig.proxyuri_runs = '/jobe/index.php/restapi/runs/';
+  eBookConfig.proxyuri_files = '/jobe/index.php/restapi/files/';
+  eBookConfig.downloadsEnabled = true;
+  eBookConfig.enable_chatcodes = false ? false : false;
+  eBookConfig.allow_pairs = false ? false : false;
+</script>
+
+<div id="fb-root"></div>
+<script>
+  (function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&status=0";
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));
+</script>
+
+
+  </head><body>
+
+
+<!-- Begin navbar -->
+<div id="navbar" class="navbar navbar-default navbar-fixed-top" role="navigation">
+
+  <div class="container">
+
+    <div class="navbar-header">
+      <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+      <button type='button' class='navbar-toggle' data-toggle="collapse" data-target=".navbar-ex1-collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+
+      <div>
+        <a class="brand-logo" style='background: transparent url("_static/img/logo_small.png") no-repeat 0px 0px;' href="/runestone/default/user/login">&nbsp; </a>
+        <a class="navbar-brand" href="index.html" aria-label="index-page">HTML und CSS</a>
+      </div>
+    </div>
+
+
+
+    <div class="navbar-collapse collapse navbar-ex1-collapse">
+      <ul class="nav navbar-nav navbar-right" >
+
+        <li class="divider-vertical"></li>
+
+        <!-- social media dropdown -->
+        <li class="dropdown">
+          <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+            <i class="glyphicon glyphicon-globe" style="opacity: 0.9"></i>
+          </a>
+          <ul class="dropdown-menu social-menu">
+              <li>
+                <div>
+                  <b>Runestone in social media:</b>
+                </div>
+                <a href="https://twitter.com/iRunestone" class="twitter-follow-button" data-show-count="true">Follow @iRunestone</a><script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+                <div class="fb-like" data-href="https://www.facebook.com/RunestoneInteractive" data-send="false" data-layout="button_count" data-width="300" data-show-faces="false" data-font="arial"></div>
+              </li>
+
+              <li class="divider"></li>
+              <li>
+                <div>
+                  <b>Help support us:</b>
+                </div>
+                <div>
+                    <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+                  <input type="hidden" name="cmd" value="_s-xclick">
+                  <input type="hidden" name="encrypted" value="-----BEGIN PKCS7-----MIIHNwYJKoZIhvcNAQcEoIIHKDCCByQCAQExggEwMIIBLAIBADCBlDCBjjELMAkGA1UEBhMCVVMxCzAJBgNVBAgTAkNBMRYwFAYDVQQHEw1Nb3VudGFpbiBWaWV3MRQwEgYDVQQKEwtQYXlQYWwgSW5jLjETMBEGA1UECxQKbGl2ZV9jZXJ0czERMA8GA1UEAxQIbGl2ZV9hcGkxHDAaBgkqhkiG9w0BCQEWDXJlQHBheXBhbC5jb20CAQAwDQYJKoZIhvcNAQEBBQAEgYAcrkqh1hn3lYqIpfXxNqe1T82EhXzCJGy1yMAmklpyZshyMkfDGe1Bhx+iwyGeoYRTTyphFmP+9M3NyO0+Q5XdHxgZPx/zYjjBxlZHgEV6jhE8bN2fHkkPf0VHfz0a0QQylQOPlKiOTZV7B37Jpk6yM47oVZ1tG/KNm0NkfmB76DELMAkGBSsOAwIaBQAwgbQGCSqGSIb3DQEHATAUBggqhkiG9w0DBwQIi0GmFfOlcjuAgZBbYOo9UO+CpMQa+PYqwsUmUnJvXIImeMeNI3KVTUx5Cfk9gNMo3WzPeiB5IqZo9nRAQ0mf1qL2ecLeB5tidM+lgBUhOxfj3/FecpnVFa0263gp4g+PLw8jzhvVRdUon1K3SeO1Rzh23fIRKwnrD6btt73uwtj0sl3tGd8qz+6GIcwPDdRk9VcUffiBJT/ZagKgggOHMIIDgzCCAuygAwIBAgIBADANBgkqhkiG9w0BAQUFADCBjjELMAkGA1UEBhMCVVMxCzAJBgNVBAgTAkNBMRYwFAYDVQQHEw1Nb3VudGFpbiBWaWV3MRQwEgYDVQQKEwtQYXlQYWwgSW5jLjETMBEGA1UECxQKbGl2ZV9jZXJ0czERMA8GA1UEAxQIbGl2ZV9hcGkxHDAaBgkqhkiG9w0BCQEWDXJlQHBheXBhbC5jb20wHhcNMDQwMjEzMTAxMzE1WhcNMzUwMjEzMTAxMzE1WjCBjjELMAkGA1UEBhMCVVMxCzAJBgNVBAgTAkNBMRYwFAYDVQQHEw1Nb3VudGFpbiBWaWV3MRQwEgYDVQQKEwtQYXlQYWwgSW5jLjETMBEGA1UECxQKbGl2ZV9jZXJ0czERMA8GA1UEAxQIbGl2ZV9hcGkxHDAaBgkqhkiG9w0BCQEWDXJlQHBheXBhbC5jb20wgZ8wDQYJKoZIhvcNAQEBBQADgY0AMIGJAoGBAMFHTt38RMxLXJyO2SmS+Ndl72T7oKJ4u4uw+6awntALWh03PewmIJuzbALScsTS4sZoS1fKciBGoh11gIfHzylvkdNe/hJl66/RGqrj5rFb08sAABNTzDTiqqNpJeBsYs/c2aiGozptX2RlnBktH+SUNpAajW724Nv2Wvhif6sFAgMBAAGjge4wgeswHQYDVR0OBBYEFJaffLvGbxe9WT9S1wob7BDWZJRrMIG7BgNVHSMEgbMwgbCAFJaffLvGbxe9WT9S1wob7BDWZJRroYGUpIGRMIGOMQswCQYDVQQGEwJVUzELMAkGA1UECBMCQ0ExFjAUBgNVBAcTDU1vdW50YWluIFZpZXcxFDASBgNVBAoTC1BheVBhbCBJbmMuMRMwEQYDVQQLFApsaXZlX2NlcnRzMREwDwYDVQQDFAhsaXZlX2FwaTEcMBoGCSqGSIb3DQEJARYNcmVAcGF5cGFsLmNvbYIBADAMBgNVHRMEBTADAQH/MA0GCSqGSIb3DQEBBQUAA4GBAIFfOlaagFrl71+jq6OKidbWFSE+Q4FqROvdgIONth+8kSK//Y/4ihuE4Ymvzn5ceE3S/iBSQQMjyvb+s2TWbQYDwcp129OPIbD9epdr4tJOUNiSojw7BHwYRiPh58S1xGlFgHFXwrEBb3dgNbMUa+u4qectsMAXpVHnD9wIyfmHMYIBmjCCAZYCAQEwgZQwgY4xCzAJBgNVBAYTAlVTMQswCQYDVQQIEwJDQTEWMBQGA1UEBxMNTW91bnRhaW4gVmlldzEUMBIGA1UEChMLUGF5UGFsIEluYy4xEzARBgNVBAsUCmxpdmVfY2VydHMxETAPBgNVBAMUCGxpdmVfYXBpMRwwGgYJKoZIhvcNAQkBFg1yZUBwYXlwYWwuY29tAgEAMAkGBSsOAwIaBQCgXTAYBgkqhkiG9w0BCQMxCwYJKoZIhvcNAQcBMBwGCSqGSIb3DQEJBTEPFw0xMzExMDMxMzQxMzFaMCMGCSqGSIb3DQEJBDEWBBRDJF8w+zsMr7FSk+pwinB5f5D4rzANBgkqhkiG9w0BAQEFAASBgHw1LMHpkpaqHIvDGdFE0eG+2mZlmMnUeDCBhQlbc7QMzFQYKTV94NfaebBO4PmNdADe1rq4WidSRZZbE7CzkX9IGENYnBTWY0hb2l0lGdGrJdGeWyV3ekg9WVaFMMumrekds96h3Cx7dGz2kWDzIai2iEXE/qoE+xpkyXAYZNV3-----END PKCS7-----
+                  ">
+                  <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_SM.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+                  <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+                  </form>
+
+                </div>
+              </li>
+          </ul>
+        </li>
+        <!-- end social media dropdown -->
+
+        <li class="divider-vertical"></li>
+
+        <!-- search dropdown -->
+        <li class="dropdown">
+          <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+            <i class="glyphicon glyphicon-search" style='opacity:0.9;'></i>
+          </a>
+          <ul class='dropdown-menu'>
+            
+                <li><a href='index.html' aria-label="index-page">Table of Contents</a></li>
+            
+            <li><a href='/runestone/static/html_css/genindex.html'>Book Index</a></li>
+            <li class="divider"></li>
+            <li style="width: 240px;">
+              <form class="navbar-search" style="margin:10px;" action="search.html" method="get">
+                <div class="input-group">
+                  <input type="text" class="form-control" name="q" placeholder="Search this book" />
+                  <span class="input-group-btn">
+                    <button class="btn btn-primary" style="margin:0;" type="submit">
+                      <i class="glyphicon glyphicon-search"></i>
+                    </button>
+                  </span>
+                </div><!-- /input-group -->
+                <input type="hidden" name="check_keywords" value="yes" />
+                <input type="hidden" name="area" value="default" />
+              </form>
+            </li>
+          </ul>
+        </li>
+        <!-- end search dropdown -->
+
+        <li class="divider-vertical"></li>
+
+        
+        <li class="divider-vertical"></li>
+        <!-- <li id="scratch_ac_link"><a href="javascript:ACFactory.toggleScratchActivecode()">Scratch ActiveCode</a></li> -->
+
+        <!-- <li class="dropdown">             -->
+          <li id="scratch_ac_link" class="dropdown"><a href="javascript:ACFactory.toggleScratchActivecode()">
+              <i class="glyphicon glyphicon-pencil" style="opacity:0.9;"></i></a></li>
+        <!-- </li> -->
+
+        <li class="divider-vertical"></li>
+
+        <!-- help menu dropdown -->
+        <li class="dropdown">
+          <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+            <i class="glyphicon glyphicon-question-sign" style="opacity:0.9;"></i>
+          </a>
+          <ul class="dropdown-menu user-menu">
+            <li><a href='/runestone/static/html_css/navhelp.html'>Navigation Help</a></li>
+            <li><a href='/runestone/static/overview/instructor.html'>Help for Instructors</a></li>
+            <li class="divider"></li>
+            <li><a href='http://runestoneinteractive.org'>About Runestone</a></li>
+            <li><a href='/runestone/default/reportabug?course=html_css&page=glossar'>Report A Problem</a></li>
+          </ul>
+        </li>
+        <!-- end help menu dropdown -->
+
+        <li class="divider-vertical"></li>
+
+      </ul>
+      </div>
+
+
+
+
+
+
+      <ul class="nav navbar-nav">
+        <li class="divider-vertical"></li>
+        <!--
+          <li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Page <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"><ul>
+<li><a class="reference internal" href="#">Die wichtigsten Definitionen in CSS</a></li>
+</ul>
+</ul>
+</li>
+          <li class="divider-vertical"></li>
+        
+        
+          
+  <li id="relations-prev" title="Previous Chapter - Sonstiges" data-toggle="tooltip">
+    <a href="sonstiges.html" >
+      <i class='glyphicon glyphicon-backward' style='opacity:0.9;'></i>
+    </a>
+  </li>
+  
+    <li class="divider-vertical"></li>
+  
+
+<script type="text/javascript">
+  opts = {'placement':'bottom',
+          'selector': '',
+          'delay': { show: 100, hide: 50}
+         };
+
+  $('#relations-prev').tooltip(opts);
+  $('#relations-next').tooltip(opts);
+</script>
+        -->
+        
+          <li></li>
+        
+      </ul>
+
+    </div>
+  </div>
+</div>
+
+
+<div class="container" id="continue-reading"></div>
+
+<div class="container" id="main-content">
+  
+  <div class="section" id="die-wichtigsten-definitionen-in-css">
+<h1>Die wichtigsten Definitionen in CSS<a class="headerlink" href="#die-wichtigsten-definitionen-in-css" title="Permalink to this headline">¶</a></h1>
+<p>Quelle: <a class="reference external" href="http://www.thestyleworks.de/basics/definitions.shtml">http://www.thestyleworks.de/basics/definitions.shtml</a></p>
+<dl class="glossary">
+<dt id="term-sphinx">Sphinx</dt><dd><p>Sphinx is a tool that makes it easy to create intelligent and beautiful documentation. It was originally created for the Python documentation, and it has excellent facilities for the documentation of software projects in a range of languages.</p>
+</dd>
+<dt id="term-rst">RST</dt><dd><p><a href="#id1"><span class="problematic" id="id2">|RST|</span></a> is an easy-to-read, what-you-see-is-what-you-get plain text markup syntax and parser system. It is useful for in-line program documentation (such as Python docstrings), for quickly creating simple web pages, and for standalone documents. <a href="#id3"><span class="problematic" id="id4">|RST|</span></a> is designed for extensibility for specific application domains. The <a href="#id5"><span class="problematic" id="id6">|RST|</span></a> parser is a component of Docutils.</p>
+</dd>
+<dt id="term-sublime-text">Sublime Text</dt><dd><p>Sublime Text is a sophisticated text editor for code, markup and prose. You’ll love the slick user interface, extraordinary features and amazing performance.</p>
+</dd>
+<dt id="term-absolute-positionierung-absolute-positioning">Absolute Positionierung (absolute positioning)</dt><dd><p>Ein Element ist dann absolut positioniert, wenn seine Eigenschaft position mit <a class="reference external" href="http://www.thestyleworks.de/ref/position.shtml#absolute">absolute</a> oder <a class="reference external" href="http://www.thestyleworks.de/ref/position.shtml#fixed">fixed</a>  deklariert ist. Die Box eines absolut positionierten Elements ist vom normalen Elementfluß vollständig losgelöst und hat keinerlei Einfluss auf nachfolgende <a class="reference external" href="http://www.thestyleworks.de/basics/doctree.shtml#sibling">Geschwisterelemente</a>. Sie bildet den umschließenden Block für alle ihre <a class="reference external" href="http://www.thestyleworks.de/basics/doctree.shtml#descendant">Nachkommenelemente</a> mit Ausnahme der fixed positionierten Elemente. Ihre Inhalte fließen nicht um andere Boxes herum ebenso wie die Inhalte anderer Boxes nicht von absolut positionierten Boxes beeinflusst werden. Wie überlappende Boxes sich gegenseitig überdecken, hängt vom <a class="reference external" href="http://www.thestyleworks.de/ref/z-index.shtml">Z-Index</a> ab.</p>
+</dd>
+<dt id="term-absoluter-langenwert-absolute-length">Absoluter Längenwert (absolute length)</dt><dd><p>Absolute Längenwerte sind Zentimeter, Millimeter, Inch(Zoll), Points oder Picas. Längenwerte werden in einem <a class="reference external" href="http://www.thestyleworks.de/basics/lengthvalues.shtml">besonderen Artikel</a> ausführlich behandelt.</p>
+</dd>
+<dt id="term-aktueller-wert-actual-value">Aktueller Wert (actual value)</dt><dd><p>Relative Werte werden als Verhältnismaße zu anderen Größen definiert. Deshalb muss aus dem in einer CSS-Regel deklarierten Wert ein am Bildschirm darstellbarer Wert bestimmt werden. Dazu sind die folgenden vier Berechnungsschritte erforderlich:</p>
+<p>Spezifizierter Wert → Berechneter Wert → Verwendeter Wert → Aktueller Wert.</p>
+<p>Der Ablauf dieser Berechnung ist im Abschnitt <a class="reference external" href="http://www.thestyleworks.de/basics/lengthvalues.shtml#relative">Relative Längenwerte</a> detailliert erläutert.</p>
+</dd>
+<dt id="term-ancestor">Ancestor</dt><dd><p>Vorfahrenselektor / Vorfahrenelement. Wenn sich die Abstammungslinie von einem Element A nach unten direkt zu einem Element B verfolgen lässt, dann wird A als Vorfahrenelement von B bezeichnet. Dabei kann B das direkte Kindelement von A sein, es können aber auch beliebig viele Generationen dazwischen liegen. Diese und weitere Erläuterungen zum Konzept der Abstammung in CSS finden sich im Grundlagenartikel ‘<a class="reference external" href="http://www.thestyleworks.de/basics/doctree.shtml">Der Dokumentstammbaum</a>’.</p>
+</dd>
+<dt id="term-anonyme-boxes-anonyme-boxes">Anonyme Boxes (anonyme boxes)</dt><dd><p>Alle Elemente einer Website erzeugen Boxes: Block- Level- Elemente generieren Block- Boxes, Inline- Level- Elemente generieren Inline-Boxes und alle Inhalte, die zwischen den anderen Elementen liegen, erzeugen anonyme Boxes. Dadurch wird die Definition der Formatierung innerhalb des Box- Modells und des Line- Box- Modells vereinfacht. Der Inhalt von anonymen Boxes kann nicht durch CSS-Deklarationen angesprochen werden.</p>
+<p>Hat nun ein Block-Level-Element eine oder mehrere andere Block- Level- Elemente als Kindelement und dazwischen noch einige andere Inhalte, dann werden zunächst für die Kindelemente Block- Boxes gebildet. Die anderen Inhalte, die zwischen den generierten Block- Boxes liegen, werden dann in anonyme Block- Boxes eingefasst. Eine anonyme Block- Box kann Inline- Level- Elemente wie auch freistehenden Text oder anderes nebeneinander enthalten.</p>
+<p>Sind aber keine Block- Level- Elemente als Kindelemente vorhanden, sondern nur Inline- Level- Elemente und andere Inhalte, dann werden zunächst Inline- Boxes für die Kindelemente generiert, danach bilden die dazwischen liegenden Inhalte anonyme Inline- Boxes.</p>
+<p>Dasselbe gilt, wenn sich innerhalb einer anonymen Block- Box nur Inline-Elemente und weitere Inhalte befinden. Diese bilden dann Inline- Boxes und anonyme Inline- Boxes. Eine anonyme Block- Box kann keine weiteren Block- Boxes enthalten.</p>
+</dd>
+<dt id="term-anonyme-block-box-anonyme-block-box">Anonyme Block- Box (anonyme block box)</dt><dd><p>Eine Block- Box kann auch andere Block- Boxes beinhalten, die durch Kindelemente generiert werden. Sind zudem andere Inhalte vorhanden, werden diese von (gedachten) anonymen Block- Boxes umgeben. Das bewirkt, dass in diesem Fall die erste Block- Box nur Kindelemente auf Block- Level- Ebene enthält und dass die Definition der Formatierung vereinfacht wird. Ein Beispiel dazu wird im Artikel ‘<a class="reference external" href="http://www.thestyleworks.de/basics/boxmodel.shtml#anonym">Das Box-Modell</a>’ vorgestellt.</p>
+</dd>
+<dt id="term-anonyme-inline-box-anonyme-inline-box">Anonyme Inline- Box (anonyme inline box)</dt><dd><p>Alle Teile eines Textes oder einer Textzeile, die keinem Inline- Level- Element zugeordnet sind, werden Anonyme Inline- Boxes genannt. Der Inhalt von anonymen Inline- Boxes kann nicht durch CSS-Deklarationen angesprochen werden. Die Regeln der Inline- Formatierung in CSS werden im Artikel über das <a class="reference external" href="http://www.thestyleworks.de/basics/lineboxmodel.shtml#inline-example">Line- Box-Modell</a> ausführlich dargestellt.</p>
+</dd>
+<dt id="term-anwenderprogramm-user-application">Anwenderprogramm (user application)</dt><dd><p>Dieser Begriff wird auf dieser Website als übergreifender Ausdruck für alle Programme verwendet, die Websites darstellen können: normale Browser, Homepage-Reader, Brailleleser, Voice-Browser, PDA- oder Mobilephone-Browser (Smartphone) etc.</p>
+</dd>
+<dt id="term-attribut-attribute">Attribut (attribute)</dt><dd><p>HTML- und XHTML-Elemente können Eigenschaften zugeordnet haben, die Attribute genannt werden. Es ist für jedes Element genau definiert, welche Attribute sie haben können und welche Art von Werten diese Attribute annehmen können. Das folgende Beispiel zeigt den HTML- Code einer Überschrift 1. Ordnung, der ein Attribut ID mit einem Wert von kapitel-1 zugeordnet wurde.</p>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">h1</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;kapitel-1&quot;</span><span class="p">&gt;</span>...<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+</pre></div>
+</div>
+</dd>
+<dt id="term-auszere-kante-outer-edge">Äußere Kante (outer edge)</dt><dd><p>Die Darstellung von padding, border und margin ist genaugenommen nicht linienförmig, sondern deckt eine bestimmte Fläche ab. Die Begriffe <em>äußere Kante</em> und <em>innere Kante</em> dienen dazu, die Begrenzungen dieser Flächen wie auch der Contentflächen im Box-Modell exakter zu beschreiben.</p>
+</dd>
+<dt id="term-backslash-escapes">Backslash() Escapes</dt><dd><p>Ein Backslash kann in CSS verschiedene Bedeutungen haben:</p>
+<ul class="simple">
+<li><p>Er hebt die besondere Bedeutung spezieller CSS-Zeichen auf. Jedem Zeichen mit Ausnahme hexadezimaler Zeichen kann durch ein vorangestelltes ‘’ seine spezielle Bedeutung genommen werden.</p></li>
+<li><p>Mit Hilfe des Backslash lassen sich Sonderzeichen in ein Webdokument einfügen, die anders nur schwer zu erzeugen wären. Dazu müssen auf den Backslash bis zu sechs Hexadezimalziffern (0-9, a-f) folgen, die für ein Zeichen nach ISO 10464 stehen. Diese Sequenz wird von den nachfolgenden Zeichen abgetrennt, indem man einen Leerraum nach ihr einfügt oder genau sechs Hexadezimalziffern verwendet.</p></li>
+<li><p>Ein Backslash am Ende der Zeile muss vom Anwenderprogramm ignoriert werden.</p></li>
+</ul>
+</dd>
+<dt id="term-berechneter-wert-calculated-value">Berechneter Wert (calculated value)</dt><dd><p>Relative Werte werden als Verhältnismaße zu anderen Größen definiert. Deshalb muss aus dem in einer CSS-Regel deklarierten Wert ein am Bildschirm darstellbarer Wert bestimmt werden. Dazu sind die folgenden vier Berechnungsschritte erforderlich:</p>
+<p>Spezifizierter Wert → Berechneter Wert → Verwendeter Wert → Aktueller Wert.</p>
+<p>Der Ablauf dieser Berechnung ist im Abschnitt <a class="reference external" href="http://www.thestyleworks.de/basics/lengthvalues.shtml#relative">Relative Längenwerte</a> detailliert erläutert.</p>
+</dd>
+<dt id="term-bidirektionalitat-bidirectionality">Bidirektionalität (bidirectionality)</dt><dd><p>Normalerweise ist in allen Webdokumenten, die in westlichen Sprachen abgefasst sind, die Schreibrichtung von links nach rechts. In einigen Dokumenten, insbesondere in hebräischer oder arabischer Sprache, kann in einem Block- Element Text beider Schreibrichtungen (Direktionalitäten) auftreten. Dies nennt man Bidirektionalität oder kurz ‘bidi’. Genauere Erklärungen über die Behandlung verschiedener Schreibrichtungen in CSS 2.1 werden bei den Eigenschaften <a class="reference external" href="http://www.thestyleworks.de/ref/direction.shtml">direction</a> und  <a class="reference external" href="http://www.thestyleworks.de/ref/unicode-bidi.shtml">unicode-bidi</a> gegeben.</p>
+</dd>
+<dt id="term-block-box-block-box">Block- Box (block box)</dt><dd><p>Eine Block- Box ist die Box, die durch ein Block- Level- Element erzeugt wird. Der exakte Aufbau einer Block- Box wird durch das Box-Modell definiert. Das Box- Modell wird ausführlich im Artikel ‘<a class="reference external" href="http://www.thestyleworks.de/basics/boxmodel.shtml">Das Box- Modell</a>’ erläutert.</p>
+</dd>
+<dt id="term-block-level-element-block-level-element">Block- Level- Element (block level element)</dt><dd><p>Ein Block- Level- Element ist ein Element, das einen Kontext zur Blockformatierung etabliert. Siehe dazu <a class="reference external" href="http://www.thestyleworks.de/basics/boxmodel.shtml#blockcontext">Kontext zur Blockformatierung</a> im Grundlagenartikel ‘Das Box- Modell’.</p>
+</dd>
+<dt id="term-box-modell-box-model">Box- Modell (box model)</dt><dd><p>Das Box- Modell mit seinen Regeln ist einer der wichtigsten Teile von CSS 2.1. Es dient als Grundlage der Darstellung und Positionierung aller Elemente des sogenannten Kontexts zur Blockformatierung, ebenso zur Wiedergabe anderer visueller Eigenschaften und für dynamische Effekte mit Hilfe von Scripten. Eine umfassende Erläuterung des Box-Modells ist im Artikel ‘<a class="reference external" href="http://www.thestyleworks.de/basics/boxmodel.shtml">Das Box-Modell</a>’ zu finden.</p>
+</dd>
+<dt id="term-collapsing-margins">Collapsing margins</dt><dd><p>Unter bestimmten Umständen kann die untere margin eines Block- Level- Elements mit der margin des darauf folgenden Elements zusammenfallen. Im Referenzartikel ‘margin’ sind die exakten Abläufe dieses Zusammenfallens im Unterthema ‘<a class="reference external" href="http://www.thestyleworks.de/ref/margin.shtml#collaps">Zusammenfallende Abstände</a>’ erläutert, darüber hinaus gibt es auch ein <a class="reference external" href="http://www.thestyleworks.de/basics/margins.shtml">praktisches Beispiel</a>.</p>
+</dd>
+<dt id="term-dargestellter-inhalt-rendered-content">Dargestellter Inhalt (rendered content)</dt><dd><p>Der Inhalt eines Elementes, wie er am Bildschirm dargestellt wird, entspricht nicht dem im Quellcode stehenden Inhalt. Der dargestellte Inhalt entsteht aus dem Quellcode, nachdem alle in Frage kommenden Stylesheets ausgewertet wurden, alle Tabellen vollständig geladen sind, usw. Dazu gehören auch Listenbullets, durch das Stylesheet generierte Inhalte und die Werte der Attribute alt und title. Der dargestellte Inhalt replazierter Elemente wird von Quellen außerhalb des aktuellen Dokuments bezogen, z B. aus Grafikdateien.</p>
+</dd>
+<dt id="term-deklaration-declaration">Deklaration (declaration)</dt><dd><p>Jede Deklaration besteht aus <em>einer</em> Eigenschaft mit den zugehörigen Werten. Es ist wichtig, dass immer beide Komponenten vorhanden sind, da es sonst zu unvorhersehbaren Ergebnissen kommen kann. Deklarationen, bei denen ein Wert fehlt oder ein unerwartetes Syntaxzeichen auftritt, <em>müssen</em> vom Browser ignoriert werden.</p>
+<p>Jede Deklaration wird durch ein Semikolon von der nachfolgenden getrennt, d. h. theoretisch ist das Semikolon nach der letzten Deklaration überflüssig. Dennoch ist es besser, auch dieses Semikolon stets zu notieren. Man vermeidet dadurch potentielle Probleme, falls die Regeln zu einem späteren Zeitpunkt noch einmal umgestellt werden sollen.</p>
+<p>Leerzeichen oder Zeilenumbrüche nach dem Semikolon einer Deklaration werden ignoriert. Es spielt also für die Funktion der Stylesheets keine Rolle, ob alle Deklarationen eines Deklarationsblocks hintereinander in einer Reihe stehen oder ob sie untereinander notiert sind.</p>
+</dd>
+<dt id="term-deklarationsblock-declaration-block">Deklarationsblock (declaration block)</dt><dd><p>Der Deklarationsblock umfasst den gesamten Teil einer Regel, der hinter den Selektoren liegt: die geschweiften Klammern und alle darin notierten Deklarationen. Leere Deklarationsblöcke, die nur aus zwei Klammern bestehen, sind zulässig. Das hat den Effekt, dass keine Formatierungen an die korrespondierenden HTML-Elemente angebracht werden.</p>
+</dd>
+<dt id="term-dokumententyp-document-type">Dokumententyp (document type)</dt><dd><p>Die Angabe eines Dokumententyps am beginn eines Webdokuments ist seit HTML 4.01 grundsätzlich notwendig, wenn es standardgerecht durch die Browser dargestellt werden soll. Im Artikel <a class="reference external" href="http://www.thestyleworks.de/basics/doctypes.shtml">Der Dokumententyp</a> werden mehr Informationen zur DOCTYPE- Deklaration und zum DOCTYPE-Switching gegeben.</p>
+</dd>
+<dt id="term-dokumentstammbaum-document-tree">Dokumentstammbaum (document tree)</dt><dd><p>Alle Elemente einer Website können in einer Baumstruktur ähnlich der eines Familienstammbaums aufgezeichnet werden. Daraus lassen sich dann schnell die Verhältnisse der Elemente zueinander ablesen. Dem Dokumentstammbaum ist auf dieser Website ein <a class="reference external" href="http://www.thestyleworks.de/basics/doctree.shtml">spezieller Artikel</a> gewidmet.</p>
+</dd>
+<dt id="term-durchschuss-halb-durchschuss-leading-half-leading">Durchschuss / Halb-Durchschuss (leading / half-leading)</dt><dd><p>Der Durchschuss ist die Differenz zwischen dem <a class="reference external" href="http://www.thestyleworks.de/basics/definitions.shtml#actualvalue">aktuellen Wert</a> der Eigenschaft line-height und der Höhe der Textzeichen in einer Zeile. Die Hälfte dieser Differenz ist der Halb-Durchschuss. Der Browser bringt einen vertikalen Abstand von der Höhe eines Halb-Durchschuss oben und unten an jedem Textzeichen an, bevor er es entsprechend dem Wert der Eigenschaft vertical-allign vertikal ausrichtet. Die Regeln der Inline- Formatierung in CSS werden im <a class="reference external" href="http://www.thestyleworks.de/basics/lineboxmodel.shtml">Artikel über das Line- Box-Modell</a> ausführlich dargestellt.</p>
+</dd>
+<dt id="term-eigenschaft-property">Eigenschaft (property)</dt><dd><p>Eine nach der CSS-Spezifikation zugelassene Eigenschaft, wird bei der Notierung im Stylesheet gefolgt von einem Doppelpunkt (:). Alle in CSS 2.1 möglichen Eigenschaften werden in der <a class="reference external" href="http://www.thestyleworks.de/ref/index.shtml">Referenz</a> besprochen.</p>
+</dd>
+<dt id="term-einfach-selektor-simple-selector">Einfach- Selektor (simple selector)</dt><dd><p>Ein Einfach- Selektor ist ein Typselektor oder ein Universalselektor, der entweder alleine steht oder an den Attributselektoren, ID-Selektoren oder Pseudoklassen in beliebiger Reihenfolge angehängt sind. Der Einfach- Selektor korrespondiert mit den Elementen des Dokuments, auf die jede seiner Komponenten zutrifft. Mehrere Einfach-Selektoren können durch Kombinatoren zu einem Selektor vekettet werden. Mehr über die Syntax der CSS-Regeln ist im Artikel <a class="reference external" href="http://www.thestyleworks.de/basics/rulesyntax.shtml">Regelaufbau</a> erklärt.</p>
+</dd>
+<dt id="term-eltern-element-parent-element">Eltern-Element (parent element)</dt><dd><p>Das Elternelement eines Elementes A ist das Element, von dem A direkt abstammt. Es gibt keine Selektoren, die auf das Elternelement zeigen. Diese und weitere Erläuterungen zum Konzept der Abstammung in CSS finden sich im Grundlagenartikel <a class="reference external" href="http://www.thestyleworks.de/basics/doctree.shtml">Der Dokumentstammbaum</a>.</p>
+</dd>
+<dt id="term-element-element">Element (element)</dt><dd><p>Elemente sind die syntaktischen Primärkonstrukte in HTML und XHTML. Die Namen der Elemente, DIV, P, EM usw., werden in CSS als Einfach- Selektoren benutzt.</p>
+</dd>
+<dt id="term-farbwerte-color-values">Farbwerte (color values)</dt><dd><p>Farben werden auf Websites als Vorder- und Hintergrundfarben verwendet. Sie können als Zahlenwerte oder Schlüsselworte auftreten. Dies wird ausführlicher im <a class="reference external" href="http://www.thestyleworks.de/basics/colors.shtml">Artikel über Farbwerte</a> erläutert.</p>
+</dd>
+<dt id="term-float-positionierung-float-positioning">float-Positionierung (float positioning)</dt><dd><p>Mit Hilfe der Eigenschaft float lassen sich Block- Boxes auf eine Seite (links oder rechts) der Website schieben, sodass die restlichen Inhalte auf der Innenseite der Box vorbeifließen. Mehr dazu kann man im Artikel über <a class="reference external" href="http://www.thestyleworks.de/tut-art/layout_div_2.shtml">CSS-Layouts mit float und clear</a> und im Referenzartikel der <a class="reference external" href="http://www.thestyleworks.de/ref/float.shtml">Eigenschaft float</a> nachlesen.</p>
+</dd>
+<dt id="term-font-eigenschaften-font-properties">Font-Eigenschaften (font properties)</dt><dd><p>Steht zusammenfassend für alle Eigenschaften, mit denen man Schrift formatieren kann. Die Kurzschrift- Eigenschaft <a class="reference external" href="http://www.thestyleworks.de/ref/font.shtml">font</a> beeinflusst die
+Einzeleigenschaften für <a class="reference external" href="http://www.thestyleworks.de/ref/font-style.shtml">Textneigung</a>,  <a class="reference external" href="http://www.thestyleworks.de/ref/font-variant.shtml">Kapitälchen</a>, <a class="reference external" href="http://www.thestyleworks.de/ref/font-weight.shtml">Schriftstärke</a>, <a class="reference external" href="http://www.thestyleworks.de/ref/font-size.shtml">Schriftgröße</a>, <a class="reference external" href="http://www.thestyleworks.de/ref/line-height.shtml">Zeilenhöhe</a> und <a class="reference external" href="http://www.thestyleworks.de/ref/font-family.shtml">Schriftfamilie</a>. Auch die Verwendung von <a class="reference external" href="http://www.thestyleworks.de/ref/font.shtml#werte2">Systemfonts</a> kann damit deklariert werden.</p>
+</dd>
+<dt id="term-frequenzwerte-frequency-values">Frequenzwerte (frequency values)</dt><dd><p>Frequenzangaben bestehen stets aus einer numerischen Angabe, an die ohne Zwischenraum der Identifizierer einer Frequenzeinheit angehängt ist. Die Zahlenangabe darf nicht negativ sein, wenn sie 0 ist, kann die Angabe zur Einheit weggelassen werden. Frequenzen treten unter CSS 2 nur nur im Zusammenhang mit auralen Eigenschaften auf. Da aber bis heute kein Browser diese Eigenschaften unterstützt, ist auch die Unterstützung von Frequenzangaben praktisch nicht vorhanden.</p>
+</dd>
+<dt id="term-generierte-inhalte-generated-contents">Generierte Inhalte (generated contents)</dt><dd><p>Dies sind Inhalte einer Website, die zwar ausgegeben werden, die aber nicht im Dokumentstammbaum stehen. Sie werden mit Hilfe von CSS generiert. Es gibt zwei Arten von generierten Inhalten: Zum einen lassen sich durch die Eigenschaft content und die Pseudoelemente :before und :after Inhalte vor oder nach Elementen einfügen. Aber Listenbullets und -nummern sind generierter Content.</p>
+</dd>
+<dt id="term-geschwisterselektor-geschwisterelement-adjacent-sibling-selector">Geschwisterselektor / Geschwisterelement (adjacent sibling selector)</dt><dd><p>Zwei Elemente A und B werden dann als Geschwisterelemente bezeichnet, wenn beide vom selben Elternelement abstammen. Wenn außerdem das Element B im Code direkt auf A folgt, dann ist die Bedingung für den Geschwister- Selektor (<a class="reference external" href="http://www.thestyleworks.de/ref/se_adjacent.shtml">E1+E2</a>) erfüllt.</p>
+<p>CSS 2.1 grenzt zusätzlich noch ab, was vorhergehende und nachfolgende Geschwister- Elemente sind: Wenn Element A vor Element B im Dokumentstammbaum auftritt, wird es als vorhergehender Geschwister bezeichnet. Erscheint es später im Dokumentstammbaum, heißt es auch nachfolgender Geschwister. Diese und weitere Erläuterungen zum Konzept der Abstammung in CSS finden sich im Grundlagenartikel <a class="reference external" href="http://www.thestyleworks.de/basics/doctree.shtml">Der Dokumentstammbaum</a>.</p>
+</dd>
+<dt id="term-grosz-kleinschrift-case-sensitivity">Groß- / Kleinschrift (case sensitivity)</dt><dd><p>In Stylesheets selbst, wie auch in HTML- Dokumenten, spielt die Groß-/Kleinschrift keine Rolle. In XML, und deshalb auch in XHTML, spielt die Groß-/Kleinschrift dagegen schon eine Rolle. Zusätzlich ist die Kleinschrift in XHTML, mit Ausnahme der Attributwerte, eine Bedingung zur Einhaltung der Wohlgeformtheit.</p>
+<p>Eine besondere Stellung nehmen hier die ID-Selektoren ein. Sie ist im Artikel <a class="reference external" href="http://www.thestyleworks.de/ref/se_id.shtml#meaning">ID-Selektor</a> genauer erläutert.</p>
+</dd>
+<dt id="term-hintergrundeigenschaften-background-properties">Hintergrundeigenschaften (background properties)</dt><dd><p>Diese Bezeichnung steht für alle Eigenschaften, die den Hintergrund eines Webdokuments beschreiben: die <a class="reference external" href="http://www.thestyleworks.de/ref/background.shtml">Kurzschrift-Eigenschaft</a>, die <a class="reference external" href="http://www.thestyleworks.de/ref/background-color.shtml">Hintergrundfarbe</a>, die <a class="reference external" href="http://www.thestyleworks.de/ref/background-image.shtml">Hintergrundgrafik</a> mit <a class="reference external" href="http://www.thestyleworks.de/ref/background-attachment.shtml">Positionierung/Scrolling</a>, <a class="reference external" href="http://www.thestyleworks.de/ref/background-position.shtml">Ursprung</a> und <a class="reference external" href="http://www.thestyleworks.de/ref/background-repeat.shtml">Wiederholungsrichtung</a>.</p>
+</dd>
+<dt id="term-identifizierer-identifier">Identifizierer (identifier)</dt><dd><p>Als Identifizierer werden in CSS 2.1 alle Elementnamen, Klassen und IDs bezeichnet, die innerhalb von Selektoren auftreten. Sie dürfen alle Zeichen 0-9, A-Z, a-z und die Sonderzeichen von Nummer 161 an aufwärts nach ISO 10646 enthalten, dazu den Minusstrich und den Unterstrich. Sie dürfen außerdem Escape- Sequenzen und beliebige Zeichen nach ISO 10646 enthalten, wenn sie als numerischer Code auftreten.</p>
+<p>Sie dürfen nicht mit einem Minusstrich oder einem Sonderzeichen beginnen.</p>
+</dd>
+<dt id="term-inhalte-content">Inhalte (content)</dt><dd><p>Die Inhalte eines Webdokuments, die im Quelltext stehen. Hier sind keine generierten Inhalte gemeint.</p>
+</dd>
+<dt id="term-inline-box-inline-box">Inline- Box (inline box)</dt><dd><p>Die Inline- Boxes werden durch Inline- Level- Elemente generiert. Ihr Inhalt erscheint im Dokumentstammbaum und ist durch CSS-Deklarationen ansprechbar. Die Regeln der Inline- Formatierung in CSS werden im <a class="reference external" href="http://www.thestyleworks.de/basics/lineboxmodel.shtml">Artikel über das Line- Box-Modell</a> ausführlich dargestellt.</p>
+</dd>
+<dt id="term-inline-level-element-inline-level-element">Inline- Level- Element (inline level element)</dt><dd><p>Alle Elemente, die keine Block- Level- Elemente sind, d. h. die nicht einen <a class="reference external" href="http://www.thestyleworks.de/basics/boxmodel.shtml#blockcontext">Kontext zur Blockformatierung</a> etablieren, sind Teil des Kontexts zur Inline- Formatierung und werden als Inline- Level- Elemente bezeichnet. Dies sind Elemente wie span, code oder em, deren Inhalt als Textzeilen oder Teile davon abgebildet wird. Die Regeln der Inline- Formatierung in CSS werden im <a class="reference external" href="http://www.thestyleworks.de/basics/lineboxmodel.shtml">Artikel über das Line-Box-Modell</a> ausführlich dargestellt.</p>
+</dd>
+<dt id="term-innere-innewohnende-dimensionen-intrinsic-dimensions">Innere (innewohnende) Dimensionen (intrinsic dimensions)</dt><dd><p>Diese Bezeichnung wird für alle <a class="reference external" href="http://www.thestyleworks.de/basics/definitions.shtml#replacedelement">replazierten Elemente</a>, und nur für diese, angewendet. Sie bedeutet, dass die Breite und Höhe des Elements durch die Inhalte, die das Element replazieren, festgelegt ist, nicht aber unter Berücksichtigung des Umfeldes ausgerechnet wird.</p>
+</dd>
+<dt id="term-innere-kante-inner-edge">Innere Kante (inner edge)</dt><dd><p>Die Darstellung von padding, border und margin ist genaugenommen nicht linienförmig, sondern deckt eine bestimmte Fläche ab. Die Begriffe <em>äußere Kante</em> und <em>innere Kante</em> dienen dazu, die Begrenzungen dieser Flächen wie auch der Contentflächen im Box- Modell exakter zu beschreiben.</p>
+</dd>
+<dt id="term-iso-10646">ISO 10646</dt><dd><p>Der internationale Standard, nach dem alle Unicode- Schriftzeichen und Sonderzeichen definiert sind. Eine sehr gute und ausführliche Erklärung zum Unicode- System findet man bei <a class="reference external" href="http://de.selfhtml.org/inter/unicode.htm">SelfHTML</a>.</p>
+</dd>
+<dt id="term-kaskade-cascade">Kaskade (cascade)</dt><dd><p>Es kann passieren, dass für dieselbe Element/ Eigenschaft- Kombination unterschiedliche Deklarationen auftreten. Die Kaskade ist das Instrument in CSS, das solche Konfliktfälle löst. Seine genaue Arbeitsweise ist ausführlich im Artikel <a class="reference external" href="http://www.thestyleworks.de/basics/cascade.shtml">Die Kaskade</a> erklärt.</p>
+</dd>
+<dt id="term-kindselektor-kindelement-child-selector">Kindselektor / Kindelement (child selector)</dt><dd><p>Ein Element A ist dann das Kindelement des Elementes B, wenn A direkt von B abstammt. Kindelemente lassen sich mit dem Kindselektor (<a class="reference external" href="http://www.thestyleworks.de/ref/se_child.shtml">B&gt;A</a>) und der Pseudoklasse <a class="reference external" href="http://www.thestyleworks.de/ref/pc_structural.shtml#first-child">:first-child</a> ansprechen. Diese und weitere Erläuterungen zum Konzept der Abstammung in CSS finden sich im Grundlagenartikel <a class="reference external" href="http://www.thestyleworks.de/basics/doctree.shtml">Der Dokumentstammbaum</a>.</p>
+</dd>
+<dt id="term-kombinator-combinator">Kombinator (combinator)</dt><dd><p>Kombinatoren sind die Zeichen: ‘ ’ (whitespace), ‘&gt;’ und ‘+’. Sie dienen zur Verkettung der verschiedenen Einfach- Selektoren eines Selektors. Mehr über Kombinatoren ist im Artikel <a class="reference external" href="http://www.thestyleworks.de/basics/rulesyntax.shtml">Regelaufbau</a> erklärt.</p>
+</dd>
+<dt id="term-konditioneller-import-conditional-import">Konditioneller Import (conditional import)</dt><dd><p>Dies ist eine andere Bezeichnung für den medienabhägigen Import von Stylesheets. Im folgenden Beispiel wird ein Stylesheet importiert, das ausschließlich zur Verwendung an TV-Bildschirmen vorgesehen ist.</p>
+<p>&#64;import url(“tvscreen.css”) tv;</p>
+<p>Der Vorteil ist hier, dass das Anwenderprogramm keine Ressourcen herunterzuladen braucht, die es nicht unterstützt.</p>
+</dd>
+<dt id="term-kontext-zur-blockformatierung-block-formatting-context">Kontext zur Blockformatierung (block formatting context)</dt><dd><p>Siehe <a class="reference external" href="http://www.thestyleworks.de/basics/boxmodel.shtml#blockcontext">Kontext zur Blockformatierung</a> im Grundlagenartikel ‘Das Box- Modell’.</p>
+</dd>
+<dt id="term-kontext-zur-inline-formatierung-inline-formatting-context">Kontext zur Inline- Formatierung (inline formatting context)</dt><dd><p>Das Prinzip des Kontexts zur Inline- Formatierung definiert, wie die Inline- Level- Elemente nebeneinander bzw. untereinander gestellt werden. Die Regeln der Inline- Formatierung in CSS werden im <a class="reference external" href="http://www.thestyleworks.de/basics/lineboxmodel.shtml">Artikel über das Line- Box- Modell</a> ausführlich dargestellt.</p>
+</dd>
+<dt id="term-langenwert-length-value">Längenwert (length value)</dt><dd><p>Längenwerte werden in einem <a class="reference external" href="http://www.thestyleworks.de/basics/lengthvalues.shtml">besonderen Artikel</a> ausführlich behandelt.</p>
+</dd>
+<dt id="term-leeres-element-empty-element">Leeres Element (empty element)</dt><dd><p>Ein Element, dem im Dokumentstammbaum keine Inhalte zugeordnet sind, wird ‘leeres Element’ genannt. Dennoch werden generierte Inhalte, ebenso wie padding, border und margin, an diesem Element angebracht.</p>
+</dd>
+<dt id="term-line-box-line-box">Line- Box (line box)</dt><dd><p>Vereinfacht ausgedrückt, entspricht eine Line- Box einfach einer Zeile Text. Etwas genauer genommen, ist eine Line- Box das Viereck, das eine Zeile Text umgibt. Sie ist in eine oder mehrere Inline-Boxes oder Anonyme Inline- Boxes aufgeteilt. Die Regeln der Inline-Formatierung in CSS werden im <a class="reference external" href="http://www.thestyleworks.de/basics/lineboxmodel.shtml">Artikel über das Line-Box-Modell</a> ausführlich behandelt.</p>
+</dd>
+<dt id="term-line-box-modell-line-box-model">Line- Box- Modell (line box model)</dt><dd><p>Mit Hilfe des Line- Box- Modells ist die Darstellung der Textzeilen und anderen Inhalten des Kontext zur Inline- Formatierung in Webdokumenten definiert. Die Regeln der Inline- Formatierung in CSS werden im <a class="reference external" href="http://www.thestyleworks.de/basics/lineboxmodel.shtml">Artikel über das Line-Box-Modell</a> ausführlich dargestellt.</p>
+</dd>
+<dt id="term-listen-eigenschaften-list-properties">Listen-Eigenschaften (list properties)</dt><dd><p>Diese Bezeichnung steht für alle Eigenschaften, die die benannten und unbenannten Listen eines Webdokuments beschreiben: die <a class="reference external" href="http://www.thestyleworks.de/ref/list-style.shtml">Kurzschrift-Eigenschaft</a>, die <a class="reference external" href="http://www.thestyleworks.de/ref/list-style-type.shtml">Art</a> und <a class="reference external" href="http://www.thestyleworks.de/ref/list-style-position.shtml">Einrückung</a> des Zählers und die <a class="reference external" href="http://www.thestyleworks.de/ref/list-style-image.shtml">Grafik</a>, die ein Markierungszeichen ersetzt.</p>
+</dd>
+<dt id="term-margin">margin</dt><dd><p>Randabstand an Block- Boxes. Dieser Abstand liegt außerhalb des Rahmens einer Block- Box. Er wird innerhalb des Box- Modells definiert. Durch margins werden die Abstände zwischen den Rahmen zweier benachbarter Block- Boxes festgelegt. Weitere Informationen dazu finden sich im Referenzartikel über <a class="reference external" href="http://www.thestyleworks.de/ref/margin.shtml">margins</a> und im Grundlagenartikel <a class="reference external" href="http://www.thestyleworks.de/basics/boxmodel.shtml">Das Box-Modell</a>.</p>
+</dd>
+<dt id="term-medien-media">Medien (media)</dt><dd><p>Eins der wichtigsten Merkmale von Stylesheets ist die Fähigkeit, zwischen verschiedenen Medien zu unterscheiden. Einige CSS-Eigenschaften sind nur für bestimmte Medien geeignet. Viele Eigenschaften lassen sich aber auch für mehrere Ausgabemedien verwenden. Um die Zuordnung von Medien zu den Eigenschaften zu erleichtern, hat das W3C 10 Medientypen definiert: <em>all</em>, <em>braille</em>, <em>embossed</em>, <em>handheld</em>, <em>print</em>, <em>projection</em>, <em>screen</em>, <em>speech</em>, <em>tty</em> und <em>tv</em>. Medientypen können als Schlüsselworte für medienabhängige Stylesheets angegeben werden. Medientypen werden im Artikel <a class="reference external" href="http://www.thestyleworks.de/basics/media.shtml">Medien</a> ausführlich erläutert.</p>
+</dd>
+<dt id="term-mediengruppen-media-groups">Mediengruppen (media groups)</dt><dd><p>Um die Zuordnung der Eigenschaften zu den Medientypen zu ermöglichen, hat das W3C Mediengruppen eingeführt. In jeder Mediengruppe erfolgt die Unterscheidung der Medientypen nach unterschiedlichen Kriterien. Mediengruppen werden im Artikel <a class="reference external" href="http://www.thestyleworks.de/basics/media.shtml">Medien</a> ausführlich erläutert.</p>
+</dd>
+<dt id="term-musterabgleich-pattern-matching">Musterabgleich (pattern matching)</dt><dd><p>Der Musterabgleich hat den Zweck, die durch einen Selektor definierten Bedingungen daraufhin zu prüfen, ob sie mit einem Element des Webdokuments zusammenpassen. Diese Bedingungen bestehen aus Einfach- Selektoren und Kombinatoren des Selektors und deren Zusammensetzung. So bedingt z. B. das Pseudoelement :first-child eine Einschränkung auf das erste Kindelement und eine Kombination ‘DIV P’ gilt nur für Absätze P, die Nachkommenelement eines DIV-Containers sind. Nur auf Elemente des Webdokuments, die diese Bedingungen erfüllen, werden die dazu gehörigen Deklarationen angebracht.</p>
+</dd>
+<dt id="term-nachstfolgendes-element-following-element">Nächstfolgendes Element (following element)</dt><dd><p>Es gibt zwei Fälle, in denen ein Element A als dem Element B nachfolgend bezeichnet wird: wenn A ein Nachkommenelement von B ist oder wenn A ein nachfolgender Geschwister von B ist. Diese und weitere Erläuterungen zum Konzept der Abstammung in CSS finden sich im Grundlagenartikel <a class="reference external" href="http://www.thestyleworks.de/basics/doctree.shtml">Der Dokumentstammbaum</a>.</p>
+</dd>
+<dt id="term-nachkommenselektor-nachkommenelement-descendant-element">Nachkommenselektor / Nachkommenelement (descendant element)</dt><dd><p>Alle Elemente B, die direkt, aber in beliebiger Generation, von einem Element A abstammen, bezeichnet man als Nachkommenelemente von A. Dies ist die Umkehrung des Ahnenelementes. Diese und weitere Erläuterungen zum Konzept der Abstammung in CSS finden sich im Grundlagenartikel <a class="reference external" href="http://www.thestyleworks.de/basics/doctree.shtml">Der Dokumentstammbaum</a>.</p>
+</dd>
+<dt id="term-normaler-elementfluss-normal-flow">Normaler Elementfluss (normal flow)</dt><dd><p>Dies ist eins der drei Positionierungsschemata in CSS. Die Elemente eines Webdokuments sind dann im normalen Elementfluss dargestellt, wenn sie nicht <a class="reference external" href="http://www.thestyleworks.de/ref/position.shtml#absolute">absolute</a> oder <a class="reference external" href="http://www.thestyleworks.de/ref/float.shtml">float-positioniert</a> werden. Hierzu gehören auch Elemente, die <a class="reference external" href="http://www.thestyleworks.de/ref/position.shtml#relative">relative</a> positioniert sind.</p>
+</dd>
+<dt id="term-padding">padding</dt><dd><p>Innenliegender Abstand an Block- Boxes. Dieser Abstand liegt zwischen dem Rahmen und den Inhalten einer Block- Box. Er wird innerhalb des Box-Modells definiert. Weitere Informationen dazu finden sich im Referenzartikel über <a class="reference external" href="http://www.thestyleworks.de/ref/padding.shtml">padding</a> und im Grundlagenartikel <a class="reference external" href="http://www.thestyleworks.de/basics/boxmodel.shtml">Das Box-Modell</a>.</p>
+</dd>
+<dt id="term-seiten-box-page-box">Seiten-Box (page box)</dt><dd><p>Die CSS-Seitenbox ist eine Erweiterung des Box- Modells. Mit ihrer Hilfe ist es möglich, die Seitenvierecke und Seitenränder für Druckausgaben zu definieren. Weitere Erläuterungen zur Druckausgabe finden Sie auf der Seite über die <a class="reference external" href="http://www.thestyleworks.de/ref/at_page.shtml">&#64;page-Regel</a>.</p>
+</dd>
+<dt id="term-seiten-modell-page-model">Seiten-Modell (page model)</dt><dd><p>Das CSS-Seitenmodell ist eine Erweiterung des Modells zur visuellen Formatierung. Hier sind alle Eigenschaften zur Seitenformatierung, für Seitenumbrüche usw. bei der Druckausgabe zusammengefasst. Weitere Erläuterungen zur Druckausgabe finden Sie auf der Seite über die <a class="reference external" href="http://www.thestyleworks.de/ref/at_page.shtml">&#64;page-Regel</a>.</p>
+</dd>
+<dt id="term-positionierungsschema-positioning-schema">Positionierungsschema (positioning schema)</dt><dd><p>Es gibt drei Positionierungsschemata in CSS: absolute Positionierung, float-Positionierung und den normalen Elementfluss.</p>
+</dd>
+<dt id="term-prozent-percentage">Prozent (percentage)</dt><dd><p>Prozentwerte sind immer in Relation zu anderen Werten definiert, wobei die Art dieser Relation genau definiert ist. Auch können Prozentwerte nur für bestimmte Eigenschaften deklariert werden. Welche Eigenschaften dies sind und was sonst noch beim Einsatz von Prozentwerten beachtet werden muss, ist im Artikel <a class="reference external" href="http://www.thestyleworks.de/basics/percentage.shtml">Prozentwerte</a> erläutert.</p>
+</dd>
+<dt id="term-rahmeneigenschaften-border-properties">Rahmeneigenschaften (border properties)</dt><dd><p>Die Rahmeneigenschaften dienen dazu, Breite (<a class="reference external" href="http://www.thestyleworks.de/ref/border-trbl-width.shtml">border-width</a>), Farbe (<a class="reference external" href="http://www.thestyleworks.de/ref/border-trbl-color.shtml">border-color</a>) und Muster (<a class="reference external" href="http://www.thestyleworks.de/ref/border-trbl-style.shtml">border-style</a>) der Rahmenfläche einer Box zu spezifizieren. Von <em>Rahmenfläche</em> spricht man deshalb, weil der Rahmen einer Box nicht eine eindimensionale Linie ist, sondern auf jeder Seite der Box eine zweidimensionale Fläche darstellt. Diese Rahmeneigenschaften sind auf alle Elemente anwendbar, für das Element HTML dürfen sie aber durch das Anwenderprogramm ignoriert werden.</p>
+</dd>
+<dt id="term-referenzpixel-reference-pixel">Referenzpixel (reference pixel)</dt><dd><p>Der Referenzpixel dient der Definition der Einheit ‘Pixel’ in unterschiedlichen Ausgabemedien.</p>
+<p>Pixel sind abhängig von der Auflösung des Anzeigegerätes. In den meisten Fällen ist dies ein normaler Bildschirm oder eine Druckausgabe, CSS 2.1 ist aber bereits auf andere Geräte wie Handhelds oder Mobiltelefone abgestimmt.</p>
+<p>Damit Pixelmaße auch für andere Medien als den Bildschirm verwendet werden können, definiert CSS 2.1 den ‘Referenzpixel’ praktisch mit Hilfe eines Winkels. Dabei wird davon ausgegangen, dass ein Pixel am Computerbildschirm etwa die Größe von 0.26 mm hat. Bei einer Bildschirmauflösung von 96 dpi und der ‘Leseentfernung’ von etwa 70 cm Entfernung (=Armeslänge) wird ein Pixel unter einem bestimmten Winkel wahrgenommen.</p>
+<p>Für die etwas kürzere Leseentfernung eines Papierausdrucks wäre ein Pixel, der unter demselben Winkel erscheint, demnach etwa 0.2 mm groß.</p>
+<p>Dadurch soll bewirkt werden, dass die Ausgabe auch bei hochauflösenden Laserdruckern in einer annehmbaren Größe erfolgt und nicht etwa ein Pixel mit einem Dot des Printers von 1/300 Inch Größe oder weniger gleichgesetzt wird.</p>
+<p>Im umgekehrten Fall gilt dasselbe auch für größere Entfernungen, wie sie z. B. bei Projektionsgeräten auftreten: dort kann ein Pixel auf der Leinwand gut und gerne einige Millimeter groß sein — er wird trotzdem unter demselben Winkel wahrgenommen wie der Pixel von 0.26 mm Größe am Bildschirm.</p>
+</dd>
+<dt id="term-regel-rule">Regel (rule)</dt><dd><p>Eine CSS-Regel besteht aus dem Selektor und dem Deklarationsblock. Der Selektor wiederum setzt sich zusammen aus einem oder mehreren Einfach- Selektoren und/oder Kombinatoren. Der Deklarationsblock ist die Zusammenfassung aller Deklarationen der Regel und eine Regel besteht aus Eigenschaft und Wert. Mehr über die Syntax der CSS-Regeln ist im Artikel <a class="reference external" href="http://www.thestyleworks.de/basics/rulesyntax.shtml">Regelaufbau</a> erklärt.</p>
+</dd>
+<dt id="term-relative-positionierung-relative-positioning">Relative Positionierung (relative positioning)</dt><dd><p>Die Position eines Elementes wird zunächst wie im normalen Elementfluss berechnet. Die Verschiebung erfolgt dann von der so bestimmten Stelle aus und ist (anders als bei der Eigenschaft float) nicht von den Dimensionen des umschließenden Elements abhängig. Die Position der benachbarten Elemente wird nicht beeinflusst, sie bleiben in ihrer ursprünglichen Position. Die ursprüngliche Position des verschobenen Elements bleibt frei. Die benachbarten Elemente können allerdings, abhängig vom z-index, durch das verschobene Element überdeckt werden. Ein relativ positioniertes Element bildet den umschließenden Block für nachgeordnete Elemente.</p>
+</dd>
+<dt id="term-relativer-langenwert-relative-length-value">Relativer Längenwert (relative length value)</dt><dd><p>Relative Längenwerte sind Ems, Exs und Pixel. Prozente werden in diesem Zusammenhang ebenfalls wie relative Werte angesehen. Längenwerte werden in einem <a class="reference external" href="http://www.thestyleworks.de/basics/lengthvalues.shtml">besonderen Artikel</a> ausführlich behandelt.</p>
+</dd>
+<dt id="term-replaziertes-element-replaced-element">Replaziertes Element (replaced element)</dt><dd><p>Ein Element ist dann ‘replaziert’, wenn es durch andere Inhalte ersetzt wird und seine Breite und Höhe durch diese anderen Inhalte bestimmt werden. Die Dimensionen werden dann als <a class="reference external" href="http://www.thestyleworks.de/basics/definitions.shtml#intrinsic">innewohnende Dimensionen</a> bezeichnet. Beispielsweise können in HTML die Elemente IMG und OBJECT replazierte Elemente sein. Der Inhalt des Elementes IMG wird in der Regel durch das im Attribut src=”…” beschriebene Bild replaziert.</p>
+</dd>
+<dt id="term-schriftart-eigenschaften-font-properties">Schriftart-Eigenschaften (font properties)</dt><dd><p>Steht zusammenfassend für alle Eigenschaften, mit denen man Schrift formatieren kann. Die Kurzschrift- Eigenschaft <a class="reference external" href="http://www.thestyleworks.de/ref/font.shtml">font</a> beeinflusst die Einzeleigenschaften für <a class="reference external" href="http://www.thestyleworks.de/ref/font-style.shtml">Textneigung</a>, <a class="reference external" href="http://www.thestyleworks.de/ref/font-variant.shtml">Kapitälchen</a>,`Schriftstärke &lt;<a class="reference external" href="http://www.thestyleworks.de/ref/font-weight.shtml">http://www.thestyleworks.de/ref/font-weight.shtml</a>&gt;`__, <a class="reference external" href="http://www.thestyleworks.de/ref/font-size.shtml">Schriftgröße</a>, <a class="reference external" href="http://www.thestyleworks.de/ref/line-height.shtml">Zeilenhöhe</a> und <a class="reference external" href="http://www.thestyleworks.de/ref/font-family.shtml">Schriftfamilie</a>. Auch die Verwendung von <a class="reference external" href="http://www.thestyleworks.de/ref/font.shtml#werte2">Systemfonts</a> kann damit deklariert werden.</p>
+</dd>
+<dt id="term-selektor-selector">Selektor (selector)</dt><dd><p>Der Begriff ‘Selektor’ umfasst in Bezug auf CSS-Regeln alles, was links der ersten geschweiften Klammer steht. So ein Selektor besteht aus einem oder mehreren Einfach- Selektoren, die in einer Reihe hintereinander gestellt und durch Kombinatoren miteinander verbunden sind.</p>
+<p>Die innerhalb der geschweiften Klammer festgelegten Deklarationen werden durch den Selektor an den korrespondierenden Elementen im HTML- Dokument, den Subjekten, angebracht. Der Selektor stellt also das Bindeglied zwischen dem HTML- Dokument und den innerhalb der geschweiften Klammer festgelegten Formatierungen dar.</p>
+<p>Jeder Selektor passt zunächst zu allen Elementen des Dokuments, zu denen der letzte seiner Einfach- Selektoren passt. Dann wird diese Zielmenge durch die vorangestellten anderen Einfach- Selektoren mehr oder weniger eingeschränkt. Mehr über die Syntax der CSS-Regeln ist im Artikel <a class="reference external" href="http://www.thestyleworks.de/basics/rulesyntax.shtml">Regelaufbau</a> erklärt.</p>
+</dd>
+<dt id="term-spezifizierter-wert-specified-value">Spezifizierter Wert (specified value)</dt><dd><p>Relative Werte werden als Verhältnismaße zu anderen Größen definiert. Deshalb muss aus dem in einer CSS-Regel deklarierten Wert ein am Bildschirm darstellbarer Wert bestimmt werden. Dazu sind die folgenden vier Berechnungsschritte erforderlich:</p>
+<p>Spezifizierter Wert → Berechneter Wert → Verwendeter Wert → Aktueller Wert.</p>
+<p>Der Ablauf dieser Berechnung ist im Abschnitt <a class="reference external" href="http://www.thestyleworks.de/basics/lengthvalues.shtml#relative">Relative Längenwerte</a> detailliert erläutert.</p>
+</dd>
+<dt id="term-subjekte-subjects">Subjekte (subjects)</dt><dd><p>Die Elemente des Webdokuments, die zu einem Selektor passen, werden <em>Subjekte</em> des Selektors genannt. Mehr über die Syntax der CSS-Regeln ist im Artikel <a class="reference external" href="http://www.thestyleworks.de/basics/rulesyntax.shtml">Regelaufbau</a> erklärt.</p>
+</dd>
+<dt id="term-typselektor-type-selector">Typselektor (type selector)</dt><dd><p>Der Typselektor ist einer der beiden in CSS möglichen Einfach- Selektoren. Ausführlicheres über Typselektoren ist in den Artikeln <a class="reference external" href="http://www.thestyleworks.de/ref/se_type.shtml">Typselektor</a> und <a class="reference external" href="http://www.thestyleworks.de/basics/rulesyntax.shtml">CSS-Regeln</a> erläutert.</p>
+</dd>
+<dt id="term-umschlieszender-block-containing-block">Umschließender Block (containing block)</dt><dd><p>Oftmals werden in CSS Positionen und Größen relativ zu den Kanten des umschließenden Blocks definiert. Was man sich unter diesem Block vorzustellen hat und wie er definiert wird, ist im Beitrag über das <a class="reference external" href="http://www.thestyleworks.de/basics/boxmodel.shtml#containing">Box-Modell</a> ausführlich erläutert.</p>
+</dd>
+<dt id="term-unicode-unicode">Unicode (unicode)</dt><dd><p>Internationaler Standard, nach dem die Schriftzeichen aller Sprachen in einem Codesystem verschlüsselt sind. Die Codetabellen werden vom <a class="reference external" href="http://www.unicode.org/">Unicode- Konsortium</a> unterhalten. Die aktuelle Version 4.0 wurde von der International Standards Organisation zur Norm <a class="reference external" href="http://www.thestyleworks.de/basics/definitions.shtml#iso10646">ISO 10646</a> erhoben. Ausführlich deutschsprachige Informationen findet man bei <a class="reference external" href="http://de.selfhtml.org/inter/unicode.htm">SelfHTML</a></p>
+</dd>
+<dt id="term-universalselektor-universal-selector">Universalselektor (universal selector)</dt><dd><p>Der Universalselektor, dargestellt als *, ist ein Einfach-Selektor, der auf alle Elemente zutrifft. Falls der Einfach- Selektor aus weiteren Komponenten als dem * besteht, dann kann der * auch weggelassen werden.</p>
+</dd>
+<dt id="term-uri-url-urn-uri-url-urn">URI, URL, URN (URI, URL, URN)</dt><dd><p>Die URL (Uniform Resource Locator) bezeichnet die Addresse einer Internet-Resource, sie ist also praktisch nichts anderes als die Location einer Website. Die URN (Uniform Resource Name) hat eine etwas weiter gefasste Bedeutung, bezieht sich aber, solange es um HTML geht, auf die gleiche Art der Webaddressierung wie die URL. Beide werden unter der Bezeichnung URI (Uniform Resource Identifier) zusammen gefasst. Eine URI lässt sich auch in CSS als Wert verwenden — dies ist im Grundlagenartikel über <a class="reference external" href="http://www.thestyleworks.de/basics/values.shtml#uri">CSS-Werte</a> erläutert.</p>
+</dd>
+<dt id="term-validitat-validierung-validity-validation">Validität, Validierung (validity, validation)</dt><dd><p>Ein Stylesheet ist dann validiert, wenn sein kompletter Inhalt den Vorgaben des CSS- Standards entspricht. Man kann ein Stylesheet nach CSS 1 validieren, in dem Fall braucht es nur den Forderungen in CSS 1 zu genügen. Ein nach CSS 2 validiertes Stylesheet muss den Forderungen nach CSS 2 bzw. CSS 2.1 entsprechen. Da CSS 2 eine Erweiterung von CSS 1 ist, sind für CSS 1 validierte Stylesheets immer auch für CSS 2 valide.</p>
+<p>Das bedeutet, dass ein valides Stylesheet</p>
+<ol class="arabic simple">
+<li><p>entsprechend der CSS-Grammatik (Punktuation) geschrieben sein muss,</p></li>
+<li><p>nur in der Norm definierte (keine proprietären) At-Regeln, Eigenschaften und Werte enthalten darf,</p></li>
+<li><p>nur zusammen gehörende und richtig geschriebene Eigenschaften und Werte beinhalten kann.</p></li>
+</ol>
+</dd>
+<dt id="term-verwendeter-wert-used-value">Verwendeter Wert (used value)</dt><dd><p>Relative Werte werden als Verhältnismaße zu anderen Größen definiert. Deshalb muss aus dem in einer CSS-Regel deklarierten Wert ein am Bildschirm darstellbarer Wert bestimmt werden. Dazu sind die folgenden vier Berechnungsschritte erforderlich:</p>
+<p>Spezifizierter Wert → Berechneter Wert → Verwendeter Wert → Aktueller Wert.</p>
+<p>Der Ablauf dieser Berechnung ist im Abschnitt <a class="reference external" href="http://www.thestyleworks.de/basics/lengthvalues.shtml#relative">Relative Längenwerte</a> detailliert erläutert.</p>
+</dd>
+<dt id="term-vorfahrenselektor-vorfahrenelement-ancestor">Vorfahrenselektor / Vorfahrenelement (ancestor)</dt><dd><p>Wenn sich die Abstammungslinie von einem Element A nach unten direkt zu einem Element B verfolgen lässt, dann wird A als Vorfahrenelement von B bezeichnet. Dabei kann B das direkte Kindelement von A sein, es können aber auch beliebig viele Generationen dazwischen liegen. Diese und weitere Erläuterungen zum Konzept der Abstammung in CSS finden sich im Grundlagenartikel <a class="reference external" href="http://www.thestyleworks.de/basics/doctree.shtml">Der Dokumentstammbaum</a>.</p>
+</dd>
+<dt id="term-vorhergehendes-element-preceding-element">Vorhergehendes Element (preceding element)</dt><dd><p>Es gibt zwei Fälle, in denen ein Element A als dem Element B vorhergehend bezeichnet wird: wenn A ein Vorfahrenelement von B ist oder wenn A ein vorhergehender Geschwister von B ist. Diese und weitere Erläuterungen zum Konzept der Abstammung in CSS finden sich im Grundlagenartikel <a class="reference external" href="http://www.thestyleworks.de/basics/doctree.shtml">Der Dokumentstammbaum</a>.</p>
+</dd>
+<dt id="term-wert-value">Wert (value)</dt><dd><p>Ein oder mehrere Werte, wie sie nach CSS 2.1 für die entsprechende Eigenschaft zulässig sind. Hinter dem letzten Wert für eine Eigenschaft steht ein Semikolon (;) zur Trennung von der nächsten Deklaration. Mehr über die Werte innerhalb der CSS-Regeln ist im Artikel <a class="reference external" href="http://www.thestyleworks.de/basics/rulesyntax.shtml">Regelaufbau</a> erklärt.</p>
+</dd>
+<dt id="term-winkelwert-angle-value">Winkelwert (angle value)</dt><dd><p>Winkelangaben bestehen stets aus einer numerischen Angabe, an die ohne Zwischenraum der Identifizierer einer Winkelmaßeinheit angehängt ist. Eine negative Zahlenangabe wird in ihr positives Äquivalent umgeformt, z. B. wird der Wert -45deg nach 315deg umgerechnet. Wenn sie 0 ist, kann die Angabe zur Einheit weggelassen werden. Winkelangaben treten unter CSS 2 nur nur im Zusammenhang mit auralen Eigenschaften auf. Da aber bis heute kein Browser diese Eigenschaften unterstützt, ist auch die Unterstützung von Winkelmaßen praktisch gleich null.</p>
+</dd>
+<dt id="term-zuruckschrumpfung-shrink-to-fit">Zurückschrumpfung (shrink-to-fit)</dt><dd><p>Anders als bei Block- Level- Elementen oder Inline- Level- Elementen richtet sich die Breite von z. B. Tabellenzellen oder floatierten Elementen nicht nach den äußeren Gegebenheiten, sondern nach der Breite des Inhalts, genau genommen nach vorgegebenen und möglichen Zeilenumbrüchen, den Werten der Eigenschaften des Boxmodells und der Breite evtl. vorhandener Scrollbalken.</p>
+</dd>
+<dt id="term-zusammenfallende-auszenabstande-collapsing-margins">Zusammenfallende Außenabstände (collapsing margins)</dt><dd><p>Unter bestimmten Umständen können die oberen bzw. unteren margins zweier untereinander liegender Elemente zusammenfallen. Im Referenzartikel ‘margin’ sind die exakten Abläufe dieses Zusammenfallens im Unterthema ‘<a class="reference external" href="http://www.thestyleworks.de/ref/margin.shtml#collaps">Zusammenfallende Abstände</a>’ erläutert, darüber hinaus gibt es auch ein <a class="reference external" href="http://www.thestyleworks.de/basics/margins.shtml">praktisches Beispiel</a>.</p>
+</dd>
+</dl>
+</div>
+
+
+  
+      
+  <li id="relations-prev" class="navLink" title='Previous Section - Sonstiges' data-toggle="tooltip">
+    <a href="sonstiges.html" >
+        <div style="background-color: white; border-style:solid; border-color:lightgrey; border-width:2px; width:100px; height:50px">            
+            <i class='prevNav glyphicon glyphicon-chevron-left' style="top:50%; transform:translateY(-50%)translateX(-50%); left: 50%;"></i>
+        </div>
+    </a>
+  </li>
+  <a class="navLinkBg" id="navLinkBgLeft"  href="sonstiges.html" ></a>
+  
+
+<script type="text/javascript">
+
+  $('#relations-prev').tooltip({'placement':'right', 'selector': '', 'delay': { show: 100, hide: 50}});
+  $('#relations-next').tooltip({'placement':'left', 'selector': '', 'delay': { show: 100, hide: 50}});
+  
+</script>
+  
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      
+      | <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2017 kstei.
+      Created using <a href="http://runestoneinteractive.org/">Runestone</a> 3.4.5.
+    </p>
+  </div>
+</footer>
+
+
+
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-32029811-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+
+
+  </body>
+</html>

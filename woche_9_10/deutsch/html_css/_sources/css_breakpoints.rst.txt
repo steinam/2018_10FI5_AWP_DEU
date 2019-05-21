@@ -1,0 +1,110 @@
+Breakpoints
+===========
+
+
+Breakpoints sind die Eckdaten, an denen sich das Layout ändert, um sich besser an eine Geräteklasse anzupassen. Sie werden durch Media Queries festgelegt.
+
+Die kniffelige Frage lautet, bei welcher Breite die Breakpoints das Layout schalten und anpassen sollen, denn es gibt keine Standard-Templates und auch die großen Frameworks wie Bootstrap und Foundation benutzen unterschiedliche Breakpoints.
+
+
+Auf jeden Fall aber lassen sich ViewPorts und Monitorgrößen in Gruppen aufteilen, dann haben wir Geräteklassen.
+
+
+
+
+**Breakpoint Bootstrap**
+
+.. image:: media/media_queries/geraeteklassen.png
+    :align: right
+    :width: 8cm
+
+
+.. code-block:: css
+
+    // Extra small devices (portrait phones, less than 576px)
+    // No media query for `xs` since this is the default in Bootstrap
+
+    // Small devices (landscape phones, 576px and up)
+    @media (min-width: 576px) { ... }
+
+    // Medium devices (tablets, 768px and up)
+    @media (min-width: 768px) { ... }
+
+    // Large devices (desktops, 992px and up)
+    @media (min-width: 992px) { ... }
+
+    // Extra large devices (large desktops, 1200px and up)
+    @media (min-width: 1200px) { ... }
+
+
+
+
+
+
+
+
+min-width
+---------
+
+Media Queries für Breakpoints können sowohl mit min-width oder max-width oder einer Kombination aus beiden Abfragen festgelegt werden.
+
+min-width basierte Breakpoints sind Mobile First. Alles was nicht innerhalb einer @media-Regel für den Start einer Monitorbreite festgelegt wird, sind universelle Stile für alle Monitorbreiten und zielen auf die kleinsten Geräte (zumeist auf Smartphones) ab. Hier liegen die Inhalte der Seiten sequentiell in einer Spalte. Von hier aus legen weitere Breakpoints die CSS-Eigenschaften für größere Viewports fest.
+
+Alle folgenden Media Queries überschreiben bei min-width nur die Eigenschaften, die sich bei einem Breakpoint ändern oder neu hinzukommen.
+
+
+.. code-block:: css
+
+    <style>
+    /* Universelle CSS-Regeln für alle Monitore */
+
+    body { font-family: Helvetica, sans-serif; }
+
+    @media screen and (min-width:450px) {
+    /* Bei jedem größeren Monitor kommen neue Regeln hinzu */
+    body { line-height: 1.5; }
+    }
+
+    @media screen and (min-width:720px) {
+    /* Noch größer, noch mehr Regeln */
+    body { color: firebrick; }
+    }
+    </style>
+
+
+max-width
+---------
+
+Breakpoints mit max-width beginnen mit dem Layout für den größten Monitor, also beim Design für den Desktop, und überschreiben nach und nach Stile, um die Seiten an immer kleinere Monitore anzupassen.
+
+Breakpoints auf max-width müssen vom größten zu kleinsten Viewport aufgeführt werden, wobei die universellen Stile zuerst aufgeführt werden.
+
+
+.. code-block:: css
+
+    <style>
+    /** Universelle Regeln, erste Ziel ist der Desktop-Monitor **/
+    body {
+    color: firebrick; line-height: 1.5;
+    font-family: Helvetica, sans-serif;
+    }
+
+    @media screen and (max-width:720px) {
+    /* Zusätzliche Regeln für kleinere Monitore  */
+    body { color: #000; }
+    }
+
+    @media screen and (max-width:450px) {
+    /* Zusätzliche Regeln noch kleinere Monitore  */
+    body { line-height: 1.2}
+    }
+    </style>
+
+
+
+Den goldenen Weg gibt es nicht. min-width ist intuitiver und besser lesbar, der max-width-Ansatz eignet sich besser, ein altes nicht-responsives Design zügig an verschiedene Monitorklassen anzupassen.
+
+
+max-width und min-width
+-----------------------
+

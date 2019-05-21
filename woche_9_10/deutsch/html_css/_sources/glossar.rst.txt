@@ -1,0 +1,524 @@
+Die wichtigsten Definitionen in CSS
+===================================
+
+Quelle: http://www.thestyleworks.de/basics/definitions.shtml
+
+
+
+.. glossary::
+
+   Sphinx
+
+      Sphinx is a tool that makes it easy to create intelligent and beautiful documentation. It was originally created for the Python documentation, and it has excellent facilities for the documentation of software projects in a range of languages.
+
+   RST
+
+      |RST| is an easy-to-read, what-you-see-is-what-you-get plain text markup syntax and parser system. It is useful for in-line program documentation (such as Python docstrings), for quickly creating simple web pages, and for standalone documents. |RST| is designed for extensibility for specific application domains. The |RST| parser is a component of Docutils.
+
+   Sublime Text
+
+      Sublime Text is a sophisticated text editor for code, markup and prose. You'll love the slick user interface, extraordinary features and amazing performance.
+
+
+   Absolute Positionierung (absolute positioning)
+
+      Ein Element ist dann absolut positioniert, wenn seine Eigenschaft position mit `absolute <http://www.thestyleworks.de/ref/position.shtml#absolute>`__ oder `fixed <http://www.thestyleworks.de/ref/position.shtml#fixed>`__  deklariert ist. Die Box eines absolut positionierten Elements ist vom normalen Elementfluß vollständig losgelöst und hat keinerlei Einfluss auf nachfolgende `Geschwisterelemente <http://www.thestyleworks.de/basics/doctree.shtml#sibling>`__. Sie bildet den umschließenden Block für alle ihre `Nachkommenelemente <http://www.thestyleworks.de/basics/doctree.shtml#descendant>`__ mit Ausnahme der fixed positionierten Elemente. Ihre Inhalte fließen nicht um andere Boxes herum ebenso wie die Inhalte anderer Boxes nicht von absolut positionierten Boxes beeinflusst werden. Wie überlappende Boxes sich gegenseitig überdecken, hängt vom `Z-Index <http://www.thestyleworks.de/ref/z-index.shtml>`__ ab.
+
+
+   Absoluter Längenwert (absolute length)
+
+      Absolute Längenwerte sind Zentimeter, Millimeter, Inch(Zoll), Points oder Picas. Längenwerte werden in einem `besonderen Artikel <http://www.thestyleworks.de/basics/lengthvalues.shtml>`__ ausführlich behandelt.
+
+   
+   Aktueller Wert (actual value)
+
+      Relative Werte werden als Verhältnismaße zu anderen Größen definiert. Deshalb muss aus dem in einer CSS-Regel deklarierten Wert ein am Bildschirm darstellbarer Wert bestimmt werden. Dazu sind die folgenden vier Berechnungsschritte erforderlich:
+
+      Spezifizierter Wert → Berechneter Wert → Verwendeter Wert → Aktueller Wert.
+
+      Der Ablauf dieser Berechnung ist im Abschnitt `Relative Längenwerte <http://www.thestyleworks.de/basics/lengthvalues.shtml#relative>`__ detailliert erläutert.
+
+
+   Ancestor
+
+      Vorfahrenselektor / Vorfahrenelement. Wenn sich die Abstammungslinie von einem Element A nach unten direkt zu einem Element B verfolgen lässt, dann wird A als Vorfahrenelement von B bezeichnet. Dabei kann B das direkte Kindelement von A sein, es können aber auch beliebig viele Generationen dazwischen liegen. Diese und weitere Erläuterungen zum Konzept der Abstammung in CSS finden sich im Grundlagenartikel '`Der Dokumentstammbaum <http://www.thestyleworks.de/basics/doctree.shtml>`__'.
+
+
+   Anonyme Boxes (anonyme boxes)
+
+      Alle Elemente einer Website erzeugen Boxes: Block- Level- Elemente generieren Block- Boxes, Inline- Level- Elemente generieren Inline-Boxes und alle Inhalte, die zwischen den anderen Elementen liegen, erzeugen anonyme Boxes. Dadurch wird die Definition der Formatierung innerhalb des Box- Modells und des Line- Box- Modells vereinfacht. Der Inhalt von anonymen Boxes kann nicht durch CSS-Deklarationen angesprochen werden.
+
+      Hat nun ein Block-Level-Element eine oder mehrere andere Block- Level- Elemente als Kindelement und dazwischen noch einige andere Inhalte, dann werden zunächst für die Kindelemente Block- Boxes gebildet. Die anderen Inhalte, die zwischen den generierten Block- Boxes liegen, werden dann in anonyme Block- Boxes eingefasst. Eine anonyme Block- Box kann Inline- Level- Elemente wie auch freistehenden Text oder anderes nebeneinander enthalten.
+
+      Sind aber keine Block- Level- Elemente als Kindelemente vorhanden, sondern nur Inline- Level- Elemente und andere Inhalte, dann werden zunächst Inline- Boxes für die Kindelemente generiert, danach bilden die dazwischen liegenden Inhalte anonyme Inline- Boxes.
+
+      Dasselbe gilt, wenn sich innerhalb einer anonymen Block- Box nur Inline-Elemente und weitere Inhalte befinden. Diese bilden dann Inline- Boxes und anonyme Inline- Boxes. Eine anonyme Block- Box kann keine weiteren Block- Boxes enthalten.
+
+
+   Anonyme Block- Box (anonyme block box)
+
+      Eine Block- Box kann auch andere Block- Boxes beinhalten, die durch Kindelemente generiert werden. Sind zudem andere Inhalte vorhanden, werden diese von (gedachten) anonymen Block- Boxes umgeben. Das bewirkt, dass in diesem Fall die erste Block- Box nur Kindelemente auf Block- Level- Ebene enthält und dass die Definition der Formatierung vereinfacht wird. Ein Beispiel dazu wird im Artikel '`Das Box-Modell <http://www.thestyleworks.de/basics/boxmodel.shtml#anonym>`__' vorgestellt.
+
+
+   Anonyme Inline- Box (anonyme inline box)
+
+      Alle Teile eines Textes oder einer Textzeile, die keinem Inline- Level- Element zugeordnet sind, werden Anonyme Inline- Boxes genannt. Der Inhalt von anonymen Inline- Boxes kann nicht durch CSS-Deklarationen angesprochen werden. Die Regeln der Inline- Formatierung in CSS werden im Artikel über das `Line- Box-Modell <http://www.thestyleworks.de/basics/lineboxmodel.shtml#inline-example>`__ ausführlich dargestellt.
+
+
+   Anwenderprogramm (user application)
+
+      Dieser Begriff wird auf dieser Website als übergreifender Ausdruck für alle Programme verwendet, die Websites darstellen können: normale Browser, Homepage-Reader, Brailleleser, Voice-Browser, PDA- oder Mobilephone-Browser (Smartphone) etc.
+
+
+   Attribut (attribute)
+
+      HTML- und XHTML-Elemente können Eigenschaften zugeordnet haben, die Attribute genannt werden. Es ist für jedes Element genau definiert, welche Attribute sie haben können und welche Art von Werten diese Attribute annehmen können. Das folgende Beispiel zeigt den HTML- Code einer Überschrift 1. Ordnung, der ein Attribut ID mit einem Wert von kapitel-1 zugeordnet wurde.
+
+      .. code-block:: html
+
+         <h1 id="kapitel-1">...</h1>
+
+
+   Äußere Kante (outer edge)
+
+      Die Darstellung von padding, border und margin ist genaugenommen nicht linienförmig, sondern deckt eine bestimmte Fläche ab. Die Begriffe *äußere Kante* und *innere Kante* dienen dazu, die Begrenzungen dieser Flächen wie auch der Contentflächen im Box-Modell exakter zu beschreiben.
+
+   Backslash(\) Escapes
+
+      Ein Backslash kann in CSS verschiedene Bedeutungen haben:
+
+      -  Er hebt die besondere Bedeutung spezieller CSS-Zeichen auf. Jedem Zeichen mit Ausnahme hexadezimaler Zeichen kann durch ein vorangestelltes '\' seine spezielle Bedeutung genommen werden.
+
+      -  Mit Hilfe des Backslash lassen sich Sonderzeichen in ein Webdokument einfügen, die anders nur schwer zu erzeugen wären. Dazu müssen auf den Backslash bis zu sechs Hexadezimalziffern (0-9, a-f) folgen, die für ein Zeichen nach ISO 10464 stehen. Diese Sequenz wird von den nachfolgenden Zeichen abgetrennt, indem man einen Leerraum nach ihr einfügt oder genau sechs Hexadezimalziffern verwendet.
+
+      -  Ein Backslash am Ende der Zeile muss vom Anwenderprogramm ignoriert werden.
+
+
+   Berechneter Wert (calculated value)
+
+      Relative Werte werden als Verhältnismaße zu anderen Größen definiert. Deshalb muss aus dem in einer CSS-Regel deklarierten Wert ein am Bildschirm darstellbarer Wert bestimmt werden. Dazu sind die folgenden vier Berechnungsschritte erforderlich:
+
+      Spezifizierter Wert → Berechneter Wert → Verwendeter Wert → Aktueller Wert.
+
+      Der Ablauf dieser Berechnung ist im Abschnitt `Relative Längenwerte <http://www.thestyleworks.de/basics/lengthvalues.shtml#relative>`__ detailliert erläutert.
+
+
+   Bidirektionalität (bidirectionality)
+
+      Normalerweise ist in allen Webdokumenten, die in westlichen Sprachen abgefasst sind, die Schreibrichtung von links nach rechts. In einigen Dokumenten, insbesondere in hebräischer oder arabischer Sprache, kann in einem Block- Element Text beider Schreibrichtungen (Direktionalitäten) auftreten. Dies nennt man Bidirektionalität oder kurz 'bidi'. Genauere Erklärungen über die Behandlung verschiedener Schreibrichtungen in CSS 2.1 werden bei den Eigenschaften `direction <http://www.thestyleworks.de/ref/direction.shtml>`__ und  `unicode-bidi <http://www.thestyleworks.de/ref/unicode-bidi.shtml>`__ gegeben.
+
+
+   Block- Box (block box)
+
+      Eine Block- Box ist die Box, die durch ein Block- Level- Element erzeugt wird. Der exakte Aufbau einer Block- Box wird durch das Box-Modell definiert. Das Box- Modell wird ausführlich im Artikel '`Das Box- Modell <http://www.thestyleworks.de/basics/boxmodel.shtml>`__' erläutert.
+
+
+   Block- Level- Element (block level element)
+
+      Ein Block- Level- Element ist ein Element, das einen Kontext zur Blockformatierung etabliert. Siehe dazu `Kontext zur Blockformatierung <http://www.thestyleworks.de/basics/boxmodel.shtml#blockcontext>`__ im Grundlagenartikel 'Das Box- Modell'.
+
+
+   Box- Modell (box model)
+
+      Das Box- Modell mit seinen Regeln ist einer der wichtigsten Teile von CSS 2.1. Es dient als Grundlage der Darstellung und Positionierung aller Elemente des sogenannten Kontexts zur Blockformatierung, ebenso zur Wiedergabe anderer visueller Eigenschaften und für dynamische Effekte mit Hilfe von Scripten. Eine umfassende Erläuterung des Box-Modells ist im Artikel '`Das Box-Modell <http://www.thestyleworks.de/basics/boxmodel.shtml>`__' zu finden.
+
+
+   Collapsing margins
+
+      Unter bestimmten Umständen kann die untere margin eines Block- Level- Elements mit der margin des darauf folgenden Elements zusammenfallen. Im Referenzartikel 'margin' sind die exakten Abläufe dieses Zusammenfallens im Unterthema '`Zusammenfallende Abstände <http://www.thestyleworks.de/ref/margin.shtml#collaps>`__' erläutert, darüber hinaus gibt es auch ein `praktisches Beispiel <http://www.thestyleworks.de/basics/margins.shtml>`__.
+
+
+   Dargestellter Inhalt (rendered content)
+
+      Der Inhalt eines Elementes, wie er am Bildschirm dargestellt wird, entspricht nicht dem im Quellcode stehenden Inhalt. Der dargestellte Inhalt entsteht aus dem Quellcode, nachdem alle in Frage kommenden Stylesheets ausgewertet wurden, alle Tabellen vollständig geladen sind, usw. Dazu gehören auch Listenbullets, durch das Stylesheet generierte Inhalte und die Werte der Attribute alt und title. Der dargestellte Inhalt replazierter Elemente wird von Quellen außerhalb des aktuellen Dokuments bezogen, z B. aus Grafikdateien.
+
+
+   Deklaration (declaration)
+
+      Jede Deklaration besteht aus *einer* Eigenschaft mit den zugehörigen Werten. Es ist wichtig, dass immer beide Komponenten vorhanden sind, da es sonst zu unvorhersehbaren Ergebnissen kommen kann. Deklarationen, bei denen ein Wert fehlt oder ein unerwartetes Syntaxzeichen auftritt, *müssen* vom Browser ignoriert werden.
+
+      Jede Deklaration wird durch ein Semikolon von der nachfolgenden getrennt, d. h. theoretisch ist das Semikolon nach der letzten Deklaration überflüssig. Dennoch ist es besser, auch dieses Semikolon stets zu notieren. Man vermeidet dadurch potentielle Probleme, falls die Regeln zu einem späteren Zeitpunkt noch einmal umgestellt werden sollen.
+
+      Leerzeichen oder Zeilenumbrüche nach dem Semikolon einer Deklaration werden ignoriert. Es spielt also für die Funktion der Stylesheets keine Rolle, ob alle Deklarationen eines Deklarationsblocks hintereinander in einer Reihe stehen oder ob sie untereinander notiert sind.
+
+
+   Deklarationsblock (declaration block)
+
+      Der Deklarationsblock umfasst den gesamten Teil einer Regel, der hinter den Selektoren liegt: die geschweiften Klammern und alle darin notierten Deklarationen. Leere Deklarationsblöcke, die nur aus zwei Klammern bestehen, sind zulässig. Das hat den Effekt, dass keine Formatierungen an die korrespondierenden HTML-Elemente angebracht werden.
+
+
+   Dokumententyp (document type)
+
+      Die Angabe eines Dokumententyps am beginn eines Webdokuments ist seit HTML 4.01 grundsätzlich notwendig, wenn es standardgerecht durch die Browser dargestellt werden soll. Im Artikel `Der Dokumententyp <http://www.thestyleworks.de/basics/doctypes.shtml>`__ werden mehr Informationen zur DOCTYPE- Deklaration und zum DOCTYPE-Switching gegeben.
+
+   Dokumentstammbaum (document tree)
+
+      Alle Elemente einer Website können in einer Baumstruktur ähnlich der eines Familienstammbaums aufgezeichnet werden. Daraus lassen sich dann schnell die Verhältnisse der Elemente zueinander ablesen. Dem Dokumentstammbaum ist auf dieser Website ein `spezieller Artikel <http://www.thestyleworks.de/basics/doctree.shtml>`__ gewidmet.
+
+
+   Durchschuss / Halb-Durchschuss (leading / half-leading)
+
+      Der Durchschuss ist die Differenz zwischen dem `aktuellen Wert <http://www.thestyleworks.de/basics/definitions.shtml#actualvalue>`__ der Eigenschaft line-height und der Höhe der Textzeichen in einer Zeile. Die Hälfte dieser Differenz ist der Halb-Durchschuss. Der Browser bringt einen vertikalen Abstand von der Höhe eines Halb-Durchschuss oben und unten an jedem Textzeichen an, bevor er es entsprechend dem Wert der Eigenschaft vertical-allign vertikal ausrichtet. Die Regeln der Inline- Formatierung in CSS werden im `Artikel über das Line- Box-Modell <http://www.thestyleworks.de/basics/lineboxmodel.shtml>`__ ausführlich dargestellt.
+
+
+   Eigenschaft (property)
+
+      Eine nach der CSS-Spezifikation zugelassene Eigenschaft, wird bei der Notierung im Stylesheet gefolgt von einem Doppelpunkt (:). Alle in CSS 2.1 möglichen Eigenschaften werden in der `Referenz <http://www.thestyleworks.de/ref/index.shtml>`__ besprochen.
+
+
+   Einfach- Selektor (simple selector)
+
+      Ein Einfach- Selektor ist ein Typselektor oder ein Universalselektor, der entweder alleine steht oder an den Attributselektoren, ID-Selektoren oder Pseudoklassen in beliebiger Reihenfolge angehängt sind. Der Einfach- Selektor korrespondiert mit den Elementen des Dokuments, auf die jede seiner Komponenten zutrifft. Mehrere Einfach-Selektoren können durch Kombinatoren zu einem Selektor vekettet werden. Mehr über die Syntax der CSS-Regeln ist im Artikel `Regelaufbau <http://www.thestyleworks.de/basics/rulesyntax.shtml>`__ erklärt.
+
+   Eltern-Element (parent element)
+
+      Das Elternelement eines Elementes A ist das Element, von dem A direkt abstammt. Es gibt keine Selektoren, die auf das Elternelement zeigen. Diese und weitere Erläuterungen zum Konzept der Abstammung in CSS finden sich im Grundlagenartikel `Der Dokumentstammbaum <http://www.thestyleworks.de/basics/doctree.shtml>`__.
+
+
+   Element (element)
+
+      Elemente sind die syntaktischen Primärkonstrukte in HTML und XHTML. Die Namen der Elemente, DIV, P, EM usw., werden in CSS als Einfach- Selektoren benutzt.
+
+
+   Farbwerte (color values)
+
+      Farben werden auf Websites als Vorder- und Hintergrundfarben verwendet. Sie können als Zahlenwerte oder Schlüsselworte auftreten. Dies wird ausführlicher im `Artikel über Farbwerte <http://www.thestyleworks.de/basics/colors.shtml>`__ erläutert.
+
+
+   float-Positionierung (float positioning)
+
+      Mit Hilfe der Eigenschaft float lassen sich Block- Boxes auf eine Seite (links oder rechts) der Website schieben, sodass die restlichen Inhalte auf der Innenseite der Box vorbeifließen. Mehr dazu kann man im Artikel über `CSS-Layouts mit float und clear <http://www.thestyleworks.de/tut-art/layout_div_2.shtml>`__ und im Referenzartikel der `Eigenschaft float <http://www.thestyleworks.de/ref/float.shtml>`__ nachlesen.
+
+
+   Font-Eigenschaften (font properties)
+
+      Steht zusammenfassend für alle Eigenschaften, mit denen man Schrift formatieren kann. Die Kurzschrift- Eigenschaft `font <http://www.thestyleworks.de/ref/font.shtml>`__ beeinflusst die
+      Einzeleigenschaften für `Textneigung <http://www.thestyleworks.de/ref/font-style.shtml>`__,  `Kapitälchen <http://www.thestyleworks.de/ref/font-variant.shtml>`__, `Schriftstärke <http://www.thestyleworks.de/ref/font-weight.shtml>`__, `Schriftgröße <http://www.thestyleworks.de/ref/font-size.shtml>`__, `Zeilenhöhe <http://www.thestyleworks.de/ref/line-height.shtml>`__ und `Schriftfamilie <http://www.thestyleworks.de/ref/font-family.shtml>`__. Auch die Verwendung von `Systemfonts <http://www.thestyleworks.de/ref/font.shtml#werte2>`__ kann damit deklariert werden.
+
+
+   Frequenzwerte (frequency values)
+
+      Frequenzangaben bestehen stets aus einer numerischen Angabe, an die ohne Zwischenraum der Identifizierer einer Frequenzeinheit angehängt ist. Die Zahlenangabe darf nicht negativ sein, wenn sie 0 ist, kann die Angabe zur Einheit weggelassen werden. Frequenzen treten unter CSS 2 nur nur im Zusammenhang mit auralen Eigenschaften auf. Da aber bis heute kein Browser diese Eigenschaften unterstützt, ist auch die Unterstützung von Frequenzangaben praktisch nicht vorhanden.
+
+
+
+   Generierte Inhalte (generated contents)
+
+      Dies sind Inhalte einer Website, die zwar ausgegeben werden, die aber nicht im Dokumentstammbaum stehen. Sie werden mit Hilfe von CSS generiert. Es gibt zwei Arten von generierten Inhalten: Zum einen lassen sich durch die Eigenschaft content und die Pseudoelemente :before und :after Inhalte vor oder nach Elementen einfügen. Aber Listenbullets und -nummern sind generierter Content.
+
+
+   Geschwisterselektor / Geschwisterelement (adjacent sibling selector)
+
+      Zwei Elemente A und B werden dann als Geschwisterelemente bezeichnet, wenn beide vom selben Elternelement abstammen. Wenn außerdem das Element B im Code direkt auf A folgt, dann ist die Bedingung für den Geschwister- Selektor (`E1+E2 <http://www.thestyleworks.de/ref/se_adjacent.shtml>`__) erfüllt.
+
+      CSS 2.1 grenzt zusätzlich noch ab, was vorhergehende und nachfolgende Geschwister- Elemente sind: Wenn Element A vor Element B im Dokumentstammbaum auftritt, wird es als vorhergehender Geschwister bezeichnet. Erscheint es später im Dokumentstammbaum, heißt es auch nachfolgender Geschwister. Diese und weitere Erläuterungen zum Konzept der Abstammung in CSS finden sich im Grundlagenartikel `Der Dokumentstammbaum <http://www.thestyleworks.de/basics/doctree.shtml>`__.
+
+   Groß- / Kleinschrift (case sensitivity)
+
+      In Stylesheets selbst, wie auch in HTML- Dokumenten, spielt die Groß-/Kleinschrift keine Rolle. In XML, und deshalb auch in XHTML, spielt die Groß-/Kleinschrift dagegen schon eine Rolle. Zusätzlich ist die Kleinschrift in XHTML, mit Ausnahme der Attributwerte, eine Bedingung zur Einhaltung der Wohlgeformtheit.
+
+      Eine besondere Stellung nehmen hier die ID-Selektoren ein. Sie ist im Artikel `ID-Selektor <http://www.thestyleworks.de/ref/se_id.shtml#meaning>`__ genauer erläutert.
+
+   
+   Hintergrundeigenschaften (background properties)
+
+      Diese Bezeichnung steht für alle Eigenschaften, die den Hintergrund eines Webdokuments beschreiben: die `Kurzschrift-Eigenschaft <http://www.thestyleworks.de/ref/background.shtml>`__, die `Hintergrundfarbe <http://www.thestyleworks.de/ref/background-color.shtml>`__, die `Hintergrundgrafik <http://www.thestyleworks.de/ref/background-image.shtml>`__ mit `Positionierung/Scrolling <http://www.thestyleworks.de/ref/background-attachment.shtml>`__, `Ursprung <http://www.thestyleworks.de/ref/background-position.shtml>`__ und `Wiederholungsrichtung <http://www.thestyleworks.de/ref/background-repeat.shtml>`__.
+
+
+   Identifizierer (identifier)
+
+      Als Identifizierer werden in CSS 2.1 alle Elementnamen, Klassen und IDs bezeichnet, die innerhalb von Selektoren auftreten. Sie dürfen alle Zeichen 0-9, A-Z, a-z und die Sonderzeichen von Nummer 161 an aufwärts nach ISO 10646 enthalten, dazu den Minusstrich und den Unterstrich. Sie dürfen außerdem Escape- Sequenzen und beliebige Zeichen nach ISO 10646 enthalten, wenn sie als numerischer Code auftreten.
+
+      Sie dürfen nicht mit einem Minusstrich oder einem Sonderzeichen beginnen.
+
+
+   Inhalte (content)
+
+      Die Inhalte eines Webdokuments, die im Quelltext stehen. Hier sind keine generierten Inhalte gemeint.
+
+
+   Inline- Box (inline box)
+
+      Die Inline- Boxes werden durch Inline- Level- Elemente generiert. Ihr Inhalt erscheint im Dokumentstammbaum und ist durch CSS-Deklarationen ansprechbar. Die Regeln der Inline- Formatierung in CSS werden im `Artikel über das Line- Box-Modell <http://www.thestyleworks.de/basics/lineboxmodel.shtml>`__ ausführlich dargestellt.
+
+
+   Inline- Level- Element (inline level element)
+
+      Alle Elemente, die keine Block- Level- Elemente sind, d. h. die nicht einen `Kontext zur Blockformatierung <http://www.thestyleworks.de/basics/boxmodel.shtml#blockcontext>`__ etablieren, sind Teil des Kontexts zur Inline- Formatierung und werden als Inline- Level- Elemente bezeichnet. Dies sind Elemente wie span, code oder em, deren Inhalt als Textzeilen oder Teile davon abgebildet wird. Die Regeln der Inline- Formatierung in CSS werden im `Artikel über das Line-Box-Modell <http://www.thestyleworks.de/basics/lineboxmodel.shtml>`__ ausführlich dargestellt.
+
+
+   Innere (innewohnende) Dimensionen (intrinsic dimensions)
+
+      Diese Bezeichnung wird für alle `replazierten Elemente <http://www.thestyleworks.de/basics/definitions.shtml#replacedelement>`__, und nur für diese, angewendet. Sie bedeutet, dass die Breite und Höhe des Elements durch die Inhalte, die das Element replazieren, festgelegt ist, nicht aber unter Berücksichtigung des Umfeldes ausgerechnet wird.
+
+
+   Innere Kante (inner edge)
+
+      Die Darstellung von padding, border und margin ist genaugenommen nicht linienförmig, sondern deckt eine bestimmte Fläche ab. Die Begriffe *äußere Kante* und *innere Kante* dienen dazu, die Begrenzungen dieser Flächen wie auch der Contentflächen im Box- Modell exakter zu beschreiben.
+
+   ISO 10646
+
+      Der internationale Standard, nach dem alle Unicode- Schriftzeichen und Sonderzeichen definiert sind. Eine sehr gute und ausführliche Erklärung zum Unicode- System findet man bei `SelfHTML <http://de.selfhtml.org/inter/unicode.htm>`__.
+
+
+   Kaskade (cascade)
+
+      Es kann passieren, dass für dieselbe Element/ Eigenschaft- Kombination unterschiedliche Deklarationen auftreten. Die Kaskade ist das Instrument in CSS, das solche Konfliktfälle löst. Seine genaue Arbeitsweise ist ausführlich im Artikel `Die Kaskade <http://www.thestyleworks.de/basics/cascade.shtml>`__ erklärt.
+
+
+   Kindselektor / Kindelement (child selector)
+
+      Ein Element A ist dann das Kindelement des Elementes B, wenn A direkt von B abstammt. Kindelemente lassen sich mit dem Kindselektor (`B>A <http://www.thestyleworks.de/ref/se_child.shtml>`__) und der Pseudoklasse `:first-child <http://www.thestyleworks.de/ref/pc_structural.shtml#first-child>`__ ansprechen. Diese und weitere Erläuterungen zum Konzept der Abstammung in CSS finden sich im Grundlagenartikel `Der Dokumentstammbaum <http://www.thestyleworks.de/basics/doctree.shtml>`__.
+
+
+   Kombinator (combinator)
+
+      Kombinatoren sind die Zeichen: ' ' (whitespace), '>' und '+'. Sie dienen zur Verkettung der verschiedenen Einfach- Selektoren eines Selektors. Mehr über Kombinatoren ist im Artikel `Regelaufbau <http://www.thestyleworks.de/basics/rulesyntax.shtml>`__ erklärt.
+
+
+   Konditioneller Import (conditional import)
+
+      Dies ist eine andere Bezeichnung für den medienabhägigen Import von Stylesheets. Im folgenden Beispiel wird ein Stylesheet importiert, das ausschließlich zur Verwendung an TV-Bildschirmen vorgesehen ist.
+
+      @import url("tvscreen.css") tv;
+
+      Der Vorteil ist hier, dass das Anwenderprogramm keine Ressourcen herunterzuladen braucht, die es nicht unterstützt.
+
+
+   Kontext zur Blockformatierung (block formatting context)
+
+      Siehe `Kontext zur Blockformatierung <http://www.thestyleworks.de/basics/boxmodel.shtml#blockcontext>`__ im Grundlagenartikel 'Das Box- Modell'.
+
+
+   Kontext zur Inline- Formatierung (inline formatting context)
+
+      Das Prinzip des Kontexts zur Inline- Formatierung definiert, wie die Inline- Level- Elemente nebeneinander bzw. untereinander gestellt werden. Die Regeln der Inline- Formatierung in CSS werden im `Artikel über das Line- Box- Modell <http://www.thestyleworks.de/basics/lineboxmodel.shtml>`__ ausführlich dargestellt.
+
+
+   Längenwert (length value)
+
+      Längenwerte werden in einem `besonderen Artikel <http://www.thestyleworks.de/basics/lengthvalues.shtml>`__ ausführlich behandelt.
+
+
+   Leeres Element (empty element)
+ 
+      Ein Element, dem im Dokumentstammbaum keine Inhalte zugeordnet sind, wird 'leeres Element' genannt. Dennoch werden generierte Inhalte, ebenso wie padding, border und margin, an diesem Element angebracht.
+
+
+   Line- Box (line box)
+
+      Vereinfacht ausgedrückt, entspricht eine Line- Box einfach einer Zeile Text. Etwas genauer genommen, ist eine Line- Box das Viereck, das eine Zeile Text umgibt. Sie ist in eine oder mehrere Inline-Boxes oder Anonyme Inline- Boxes aufgeteilt. Die Regeln der Inline-Formatierung in CSS werden im `Artikel über das Line-Box-Modell <http://www.thestyleworks.de/basics/lineboxmodel.shtml>`__ ausführlich behandelt.
+
+
+   Line- Box- Modell (line box model)
+
+      Mit Hilfe des Line- Box- Modells ist die Darstellung der Textzeilen und anderen Inhalten des Kontext zur Inline- Formatierung in Webdokumenten definiert. Die Regeln der Inline- Formatierung in CSS werden im `Artikel über das Line-Box-Modell <http://www.thestyleworks.de/basics/lineboxmodel.shtml>`__ ausführlich dargestellt.
+
+
+   Listen-Eigenschaften (list properties)
+
+      Diese Bezeichnung steht für alle Eigenschaften, die die benannten und unbenannten Listen eines Webdokuments beschreiben: die `Kurzschrift-Eigenschaft <http://www.thestyleworks.de/ref/list-style.shtml>`__, die `Art <http://www.thestyleworks.de/ref/list-style-type.shtml>`__ und `Einrückung <http://www.thestyleworks.de/ref/list-style-position.shtml>`__ des Zählers und die `Grafik <http://www.thestyleworks.de/ref/list-style-image.shtml>`__, die ein Markierungszeichen ersetzt.
+
+   margin
+
+      Randabstand an Block- Boxes. Dieser Abstand liegt außerhalb des Rahmens einer Block- Box. Er wird innerhalb des Box- Modells definiert. Durch margins werden die Abstände zwischen den Rahmen zweier benachbarter Block- Boxes festgelegt. Weitere Informationen dazu finden sich im Referenzartikel über `margins <http://www.thestyleworks.de/ref/margin.shtml>`__ und im Grundlagenartikel `Das Box-Modell <http://www.thestyleworks.de/basics/boxmodel.shtml>`__.
+
+   
+   Medien (media)
+
+      Eins der wichtigsten Merkmale von Stylesheets ist die Fähigkeit, zwischen verschiedenen Medien zu unterscheiden. Einige CSS-Eigenschaften sind nur für bestimmte Medien geeignet. Viele Eigenschaften lassen sich aber auch für mehrere Ausgabemedien verwenden. Um die Zuordnung von Medien zu den Eigenschaften zu erleichtern, hat das W3C 10 Medientypen definiert: *all*, *braille*, *embossed*, *handheld*, *print*, *projection*, *screen*, *speech*, *tty* und *tv*. Medientypen können als Schlüsselworte für medienabhängige Stylesheets angegeben werden. Medientypen werden im Artikel `Medien <http://www.thestyleworks.de/basics/media.shtml>`__ ausführlich erläutert.
+
+
+   Mediengruppen (media groups)
+
+      Um die Zuordnung der Eigenschaften zu den Medientypen zu ermöglichen, hat das W3C Mediengruppen eingeführt. In jeder Mediengruppe erfolgt die Unterscheidung der Medientypen nach unterschiedlichen Kriterien. Mediengruppen werden im Artikel `Medien <http://www.thestyleworks.de/basics/media.shtml>`__ ausführlich erläutert.
+
+
+   Musterabgleich (pattern matching)
+
+      Der Musterabgleich hat den Zweck, die durch einen Selektor definierten Bedingungen daraufhin zu prüfen, ob sie mit einem Element des Webdokuments zusammenpassen. Diese Bedingungen bestehen aus Einfach- Selektoren und Kombinatoren des Selektors und deren Zusammensetzung. So bedingt z. B. das Pseudoelement :first-child eine Einschränkung auf das erste Kindelement und eine Kombination 'DIV P' gilt nur für Absätze P, die Nachkommenelement eines DIV-Containers sind. Nur auf Elemente des Webdokuments, die diese Bedingungen erfüllen, werden die dazu gehörigen Deklarationen angebracht.
+
+
+   Nächstfolgendes Element (following element)
+
+      Es gibt zwei Fälle, in denen ein Element A als dem Element B nachfolgend bezeichnet wird: wenn A ein Nachkommenelement von B ist oder wenn A ein nachfolgender Geschwister von B ist. Diese und weitere Erläuterungen zum Konzept der Abstammung in CSS finden sich im Grundlagenartikel `Der Dokumentstammbaum <http://www.thestyleworks.de/basics/doctree.shtml>`__.
+
+
+   Nachkommenselektor / Nachkommenelement (descendant element)
+
+      Alle Elemente B, die direkt, aber in beliebiger Generation, von einem Element A abstammen, bezeichnet man als Nachkommenelemente von A. Dies ist die Umkehrung des Ahnenelementes. Diese und weitere Erläuterungen zum Konzept der Abstammung in CSS finden sich im Grundlagenartikel `Der Dokumentstammbaum <http://www.thestyleworks.de/basics/doctree.shtml>`__.
+
+
+   Normaler Elementfluss (normal flow)
+
+      Dies ist eins der drei Positionierungsschemata in CSS. Die Elemente eines Webdokuments sind dann im normalen Elementfluss dargestellt, wenn sie nicht `absolute <http://www.thestyleworks.de/ref/position.shtml#absolute>`__ oder `float-positioniert <http://www.thestyleworks.de/ref/float.shtml>`__ werden. Hierzu gehören auch Elemente, die `relative <http://www.thestyleworks.de/ref/position.shtml#relative>`__ positioniert sind.
+
+
+   padding
+
+      Innenliegender Abstand an Block- Boxes. Dieser Abstand liegt zwischen dem Rahmen und den Inhalten einer Block- Box. Er wird innerhalb des Box-Modells definiert. Weitere Informationen dazu finden sich im Referenzartikel über `padding <http://www.thestyleworks.de/ref/padding.shtml>`__ und im Grundlagenartikel `Das Box-Modell <http://www.thestyleworks.de/basics/boxmodel.shtml>`__.
+
+
+   Seiten-Box (page box)
+
+      Die CSS-Seitenbox ist eine Erweiterung des Box- Modells. Mit ihrer Hilfe ist es möglich, die Seitenvierecke und Seitenränder für Druckausgaben zu definieren. Weitere Erläuterungen zur Druckausgabe finden Sie auf der Seite über die `@page-Regel <http://www.thestyleworks.de/ref/at_page.shtml>`__.
+
+
+   Seiten-Modell (page model)
+
+      Das CSS-Seitenmodell ist eine Erweiterung des Modells zur visuellen Formatierung. Hier sind alle Eigenschaften zur Seitenformatierung, für Seitenumbrüche usw. bei der Druckausgabe zusammengefasst. Weitere Erläuterungen zur Druckausgabe finden Sie auf der Seite über die `@page-Regel <http://www.thestyleworks.de/ref/at_page.shtml>`__.
+
+
+   Positionierungsschema (positioning schema)
+
+      Es gibt drei Positionierungsschemata in CSS: absolute Positionierung, float-Positionierung und den normalen Elementfluss.
+
+   Prozent (percentage)
+
+      Prozentwerte sind immer in Relation zu anderen Werten definiert, wobei die Art dieser Relation genau definiert ist. Auch können Prozentwerte nur für bestimmte Eigenschaften deklariert werden. Welche Eigenschaften dies sind und was sonst noch beim Einsatz von Prozentwerten beachtet werden muss, ist im Artikel `Prozentwerte <http://www.thestyleworks.de/basics/percentage.shtml>`__ erläutert.
+
+
+   Rahmeneigenschaften (border properties)
+
+      Die Rahmeneigenschaften dienen dazu, Breite (`border-width <http://www.thestyleworks.de/ref/border-trbl-width.shtml>`__), Farbe (`border-color <http://www.thestyleworks.de/ref/border-trbl-color.shtml>`__) und Muster (`border-style <http://www.thestyleworks.de/ref/border-trbl-style.shtml>`__) der Rahmenfläche einer Box zu spezifizieren. Von *Rahmenfläche* spricht man deshalb, weil der Rahmen einer Box nicht eine eindimensionale Linie ist, sondern auf jeder Seite der Box eine zweidimensionale Fläche darstellt. Diese Rahmeneigenschaften sind auf alle Elemente anwendbar, für das Element HTML dürfen sie aber durch das Anwenderprogramm ignoriert werden.
+
+
+   Referenzpixel (reference pixel)
+
+      Der Referenzpixel dient der Definition der Einheit 'Pixel' in unterschiedlichen Ausgabemedien.
+
+      Pixel sind abhängig von der Auflösung des Anzeigegerätes. In den meisten Fällen ist dies ein normaler Bildschirm oder eine Druckausgabe, CSS 2.1 ist aber bereits auf andere Geräte wie Handhelds oder Mobiltelefone abgestimmt.
+
+      Damit Pixelmaße auch für andere Medien als den Bildschirm verwendet werden können, definiert CSS 2.1 den 'Referenzpixel' praktisch mit Hilfe eines Winkels. Dabei wird davon ausgegangen, dass ein Pixel am Computerbildschirm etwa die Größe von 0.26 mm hat. Bei einer Bildschirmauflösung von 96 dpi und der 'Leseentfernung' von etwa 70 cm Entfernung (=Armeslänge) wird ein Pixel unter einem bestimmten Winkel wahrgenommen.
+
+      Für die etwas kürzere Leseentfernung eines Papierausdrucks wäre ein Pixel, der unter demselben Winkel erscheint, demnach etwa 0.2 mm groß.
+
+      Dadurch soll bewirkt werden, dass die Ausgabe auch bei hochauflösenden Laserdruckern in einer annehmbaren Größe erfolgt und nicht etwa ein Pixel mit einem Dot des Printers von 1/300 Inch Größe oder weniger gleichgesetzt wird.
+
+      Im umgekehrten Fall gilt dasselbe auch für größere Entfernungen, wie sie z. B. bei Projektionsgeräten auftreten: dort kann ein Pixel auf der Leinwand gut und gerne einige Millimeter groß sein — er wird trotzdem unter demselben Winkel wahrgenommen wie der Pixel von 0.26 mm Größe am Bildschirm.
+
+   
+   Regel (rule)
+
+      Eine CSS-Regel besteht aus dem Selektor und dem Deklarationsblock. Der Selektor wiederum setzt sich zusammen aus einem oder mehreren Einfach- Selektoren und/oder Kombinatoren. Der Deklarationsblock ist die Zusammenfassung aller Deklarationen der Regel und eine Regel besteht aus Eigenschaft und Wert. Mehr über die Syntax der CSS-Regeln ist im Artikel `Regelaufbau <http://www.thestyleworks.de/basics/rulesyntax.shtml>`__ erklärt.
+
+
+   Relative Positionierung (relative positioning)
+
+      Die Position eines Elementes wird zunächst wie im normalen Elementfluss berechnet. Die Verschiebung erfolgt dann von der so bestimmten Stelle aus und ist (anders als bei der Eigenschaft float) nicht von den Dimensionen des umschließenden Elements abhängig. Die Position der benachbarten Elemente wird nicht beeinflusst, sie bleiben in ihrer ursprünglichen Position. Die ursprüngliche Position des verschobenen Elements bleibt frei. Die benachbarten Elemente können allerdings, abhängig vom z-index, durch das verschobene Element überdeckt werden. Ein relativ positioniertes Element bildet den umschließenden Block für nachgeordnete Elemente.
+
+
+   Relativer Längenwert (relative length value)
+
+      Relative Längenwerte sind Ems, Exs und Pixel. Prozente werden in diesem Zusammenhang ebenfalls wie relative Werte angesehen. Längenwerte werden in einem `besonderen Artikel <http://www.thestyleworks.de/basics/lengthvalues.shtml>`__ ausführlich behandelt.
+
+
+   Replaziertes Element (replaced element)
+
+      Ein Element ist dann 'replaziert', wenn es durch andere Inhalte ersetzt wird und seine Breite und Höhe durch diese anderen Inhalte bestimmt werden. Die Dimensionen werden dann als `innewohnende Dimensionen <http://www.thestyleworks.de/basics/definitions.shtml#intrinsic>`__ bezeichnet. Beispielsweise können in HTML die Elemente IMG und OBJECT replazierte Elemente sein. Der Inhalt des Elementes IMG wird in der Regel durch das im Attribut src="..." beschriebene Bild replaziert.
+
+
+   Schriftart-Eigenschaften (font properties)
+
+      Steht zusammenfassend für alle Eigenschaften, mit denen man Schrift formatieren kann. Die Kurzschrift- Eigenschaft `font <http://www.thestyleworks.de/ref/font.shtml>`__ beeinflusst die Einzeleigenschaften für `Textneigung <http://www.thestyleworks.de/ref/font-style.shtml>`__, `Kapitälchen <http://www.thestyleworks.de/ref/font-variant.shtml>`__,`Schriftstärke <http://www.thestyleworks.de/ref/font-weight.shtml>`__, `Schriftgröße <http://www.thestyleworks.de/ref/font-size.shtml>`__, `Zeilenhöhe <http://www.thestyleworks.de/ref/line-height.shtml>`__ und `Schriftfamilie <http://www.thestyleworks.de/ref/font-family.shtml>`__. Auch die Verwendung von `Systemfonts <http://www.thestyleworks.de/ref/font.shtml#werte2>`__ kann damit deklariert werden.
+
+
+   Selektor (selector)
+
+      Der Begriff 'Selektor' umfasst in Bezug auf CSS-Regeln alles, was links der ersten geschweiften Klammer steht. So ein Selektor besteht aus einem oder mehreren Einfach- Selektoren, die in einer Reihe hintereinander gestellt und durch Kombinatoren miteinander verbunden sind.
+
+      Die innerhalb der geschweiften Klammer festgelegten Deklarationen werden durch den Selektor an den korrespondierenden Elementen im HTML- Dokument, den Subjekten, angebracht. Der Selektor stellt also das Bindeglied zwischen dem HTML- Dokument und den innerhalb der geschweiften Klammer festgelegten Formatierungen dar.
+
+      Jeder Selektor passt zunächst zu allen Elementen des Dokuments, zu denen der letzte seiner Einfach- Selektoren passt. Dann wird diese Zielmenge durch die vorangestellten anderen Einfach- Selektoren mehr oder weniger eingeschränkt. Mehr über die Syntax der CSS-Regeln ist im Artikel `Regelaufbau <http://www.thestyleworks.de/basics/rulesyntax.shtml>`__ erklärt.
+
+
+   Spezifizierter Wert (specified value)
+
+      Relative Werte werden als Verhältnismaße zu anderen Größen definiert. Deshalb muss aus dem in einer CSS-Regel deklarierten Wert ein am Bildschirm darstellbarer Wert bestimmt werden. Dazu sind die folgenden vier Berechnungsschritte erforderlich:
+
+      Spezifizierter Wert → Berechneter Wert → Verwendeter Wert → Aktueller Wert.
+
+      Der Ablauf dieser Berechnung ist im Abschnitt `Relative Längenwerte <http://www.thestyleworks.de/basics/lengthvalues.shtml#relative>`__ detailliert erläutert.
+
+
+   Subjekte (subjects)
+
+      Die Elemente des Webdokuments, die zu einem Selektor passen, werden *Subjekte* des Selektors genannt. Mehr über die Syntax der CSS-Regeln ist im Artikel `Regelaufbau <http://www.thestyleworks.de/basics/rulesyntax.shtml>`__ erklärt.
+
+
+   Typselektor (type selector)
+
+      Der Typselektor ist einer der beiden in CSS möglichen Einfach- Selektoren. Ausführlicheres über Typselektoren ist in den Artikeln `Typselektor <http://www.thestyleworks.de/ref/se_type.shtml>`__ und `CSS-Regeln <http://www.thestyleworks.de/basics/rulesyntax.shtml>`__ erläutert.
+
+
+   Umschließender Block (containing block)
+
+      Oftmals werden in CSS Positionen und Größen relativ zu den Kanten des umschließenden Blocks definiert. Was man sich unter diesem Block vorzustellen hat und wie er definiert wird, ist im Beitrag über das `Box-Modell <http://www.thestyleworks.de/basics/boxmodel.shtml#containing>`__ ausführlich erläutert.
+
+
+   Unicode (unicode)
+
+      Internationaler Standard, nach dem die Schriftzeichen aller Sprachen in einem Codesystem verschlüsselt sind. Die Codetabellen werden vom `Unicode- Konsortium <http://www.unicode.org/>`__ unterhalten. Die aktuelle Version 4.0 wurde von der International Standards Organisation zur Norm `ISO 10646 <http://www.thestyleworks.de/basics/definitions.shtml#iso10646>`__ erhoben. Ausführlich deutschsprachige Informationen findet man bei `SelfHTML <http://de.selfhtml.org/inter/unicode.htm>`__
+
+   Universalselektor (universal selector)
+
+   
+      Der Universalselektor, dargestellt als \*, ist ein Einfach-Selektor, der auf alle Elemente zutrifft. Falls der Einfach- Selektor aus weiteren Komponenten als dem \* besteht, dann kann der \* auch weggelassen werden.
+
+
+   URI, URL, URN (URI, URL, URN)
+
+      Die URL (Uniform Resource Locator) bezeichnet die Addresse einer Internet-Resource, sie ist also praktisch nichts anderes als die Location einer Website. Die URN (Uniform Resource Name) hat eine etwas weiter gefasste Bedeutung, bezieht sich aber, solange es um HTML geht, auf die gleiche Art der Webaddressierung wie die URL. Beide werden unter der Bezeichnung URI (Uniform Resource Identifier) zusammen gefasst. Eine URI lässt sich auch in CSS als Wert verwenden — dies ist im Grundlagenartikel über `CSS-Werte <http://www.thestyleworks.de/basics/values.shtml#uri>`__ erläutert.
+
+
+   Validität, Validierung (validity, validation)
+
+      Ein Stylesheet ist dann validiert, wenn sein kompletter Inhalt den Vorgaben des CSS- Standards entspricht. Man kann ein Stylesheet nach CSS 1 validieren, in dem Fall braucht es nur den Forderungen in CSS 1 zu genügen. Ein nach CSS 2 validiertes Stylesheet muss den Forderungen nach CSS 2 bzw. CSS 2.1 entsprechen. Da CSS 2 eine Erweiterung von CSS 1 ist, sind für CSS 1 validierte Stylesheets immer auch für CSS 2 valide.
+
+      Das bedeutet, dass ein valides Stylesheet
+
+      1. entsprechend der CSS-Grammatik (Punktuation) geschrieben sein muss,
+
+      2. nur in der Norm definierte (keine proprietären) At-Regeln, Eigenschaften und Werte enthalten darf,
+
+      3. nur zusammen gehörende und richtig geschriebene Eigenschaften und Werte beinhalten kann.
+
+
+   Verwendeter Wert (used value)
+
+      Relative Werte werden als Verhältnismaße zu anderen Größen definiert. Deshalb muss aus dem in einer CSS-Regel deklarierten Wert ein am Bildschirm darstellbarer Wert bestimmt werden. Dazu sind die folgenden vier Berechnungsschritte erforderlich:
+
+
+      Spezifizierter Wert → Berechneter Wert → Verwendeter Wert → Aktueller Wert.
+
+      Der Ablauf dieser Berechnung ist im Abschnitt `Relative Längenwerte <http://www.thestyleworks.de/basics/lengthvalues.shtml#relative>`__ detailliert erläutert.
+
+
+   Vorfahrenselektor / Vorfahrenelement (ancestor)
+
+      Wenn sich die Abstammungslinie von einem Element A nach unten direkt zu einem Element B verfolgen lässt, dann wird A als Vorfahrenelement von B bezeichnet. Dabei kann B das direkte Kindelement von A sein, es können aber auch beliebig viele Generationen dazwischen liegen. Diese und weitere Erläuterungen zum Konzept der Abstammung in CSS finden sich im Grundlagenartikel `Der Dokumentstammbaum <http://www.thestyleworks.de/basics/doctree.shtml>`__.
+
+
+   Vorhergehendes Element (preceding element)
+
+      Es gibt zwei Fälle, in denen ein Element A als dem Element B vorhergehend bezeichnet wird: wenn A ein Vorfahrenelement von B ist oder wenn A ein vorhergehender Geschwister von B ist. Diese und weitere Erläuterungen zum Konzept der Abstammung in CSS finden sich im Grundlagenartikel `Der Dokumentstammbaum <http://www.thestyleworks.de/basics/doctree.shtml>`__.
+
+
+   Wert (value)
+
+      Ein oder mehrere Werte, wie sie nach CSS 2.1 für die entsprechende Eigenschaft zulässig sind. Hinter dem letzten Wert für eine Eigenschaft steht ein Semikolon (;) zur Trennung von der nächsten Deklaration. Mehr über die Werte innerhalb der CSS-Regeln ist im Artikel `Regelaufbau <http://www.thestyleworks.de/basics/rulesyntax.shtml>`__ erklärt.
+
+
+   Winkelwert (angle value)
+
+      Winkelangaben bestehen stets aus einer numerischen Angabe, an die ohne Zwischenraum der Identifizierer einer Winkelmaßeinheit angehängt ist. Eine negative Zahlenangabe wird in ihr positives Äquivalent umgeformt, z. B. wird der Wert -45deg nach 315deg umgerechnet. Wenn sie 0 ist, kann die Angabe zur Einheit weggelassen werden. Winkelangaben treten unter CSS 2 nur nur im Zusammenhang mit auralen Eigenschaften auf. Da aber bis heute kein Browser diese Eigenschaften unterstützt, ist auch die Unterstützung von Winkelmaßen praktisch gleich null.
+
+
+   Zurückschrumpfung (shrink-to-fit)
+
+      Anders als bei Block- Level- Elementen oder Inline- Level- Elementen richtet sich die Breite von z. B. Tabellenzellen oder floatierten Elementen nicht nach den äußeren Gegebenheiten, sondern nach der Breite des Inhalts, genau genommen nach vorgegebenen und möglichen Zeilenumbrüchen, den Werten der Eigenschaften des Boxmodells und der Breite evtl. vorhandener Scrollbalken.
+
+
+   Zusammenfallende Außenabstände (collapsing margins)
+
+      Unter bestimmten Umständen können die oberen bzw. unteren margins zweier untereinander liegender Elemente zusammenfallen. Im Referenzartikel 'margin' sind die exakten Abläufe dieses Zusammenfallens im Unterthema '`Zusammenfallende Abstände <http://www.thestyleworks.de/ref/margin.shtml#collaps>`__' erläutert, darüber hinaus gibt es auch ein `praktisches Beispiel <http://www.thestyleworks.de/basics/margins.shtml>`__.

@@ -1,0 +1,458 @@
+Historie von HTML und css
+=========================
+
+
+Diese Dokument wurd emit :term:`Sphinx` erstellt.
+
+(Quelle: Selfhtml, https://wiki.selfhtml.org/wiki/HTML/Entstehung_und_Entwicklung)
+
+https://wiki.selfhtml.org/wiki/Grundlagen/Einstieg/Entstehung_des_Internet#1993_-_Das_World_Wide_Web_.28WWW.29
+
+HTML (HyperText Markup Language) wurde 1990 vom Web-Gründer Tim Berners-Lee als Auszeichnungssprache (Markup Language) entwickelt, die auf SGML basierte.
+
+.. image:: media/history.png
+   :align: right
+   :width: 4cm
+
+Eine solche Auszeichnungssprache hat die Aufgabe, die logischen Bestandteile eines textorientierten Dokuments zu beschreiben. Als
+Auszeichnungssprache bietet HTML daher die Möglichkeit an, typische Elemente eines textorientierten Dokuments, wie Überschriften,
+Textabsätze, Listen, Tabellen oder Grafikreferenzen, als solche auszuzeichnen.
+
+Das Auszeichnungsschema von HTML geht von einer hierarchischen Gliederung aus. HTML zeichnet Inhalte von Dokumenten aus. Dokumente
+haben globale Eigenschaften wie zum Beispiel Kopfdaten. Der eigentliche Inhalt besteht aus Elementen, zum Beispiel einer Überschrift 1. Ordnung,
+Textabsätzen, Tabellen und Grafiken. Einige dieser Elemente haben wiederum Unterelemente. So enthält ein Textabsatz zum Beispiel eine als
+betont markierte Textstelle, eine Aufzählungsliste besteht aus einzelnen Listenpunkten, und eine Tabelle gliedert sich in einzelne Tabellenzellen.
+
+In der ursprünglichen Version von HTML gab es 18 Elemente, von denen TITLE und die Textstrukturierungselemente (H1-H6, P, A, ADDRESS, UL,OL
+und LI, sowie DL,DT und DD) immer noch verwendet werden, während Elemente wie PLAINTEXT, ISINDEX und LISTING heute nicht mehr gültig,
+sondern als obsolet angesehen werden. [1] [2]
+
+Eine der wichtigsten Eigenschaften von HTML ist die Möglichkeit, Verweise zu definieren. Verweise („Hyperlinks“) können zu anderen
+Stellen im eigenen Projekt führen, aber auch zu beliebigen anderen Adressen im World Wide Web und sogar zu Internet-Adressen, die nicht
+Teil des Webs sind.[3]. Durch diese einfache Grundeigenschaft eröffnet HTML völlig neue Welten. Das Bewegen zwischen räumlich weit entfernten
+Rechnern wird bei modernen grafischen Web-Browsern auf einen Mausklick reduziert. In Ihren eigenen HTML-Dateien können Sie Verweise notieren
+und dadurch inhaltliche Verknüpfungen zwischen Ihren eigenen Inhalten und denen anderer Anbieter herstellen. Auf dieser Grundidee beruht
+letztlich das gesamte World Wide Web, und dieser Grundidee verdankt es seinen Namen
+
+**Wichtigste Erkenntnis:**
+
+- **HTML soll Dokumente strukturieren, nicht formatieren!** Dafür setzte sich mit den Cascading Style Sheets (CSS) gegenüber angedachten Alternativen eine Erweiterung durch, die die Präsentation festlegen konnte**
+- Beschreibt die logischen Elemente eines Textdokumentes, z.B. Überschriften, Textabsätze, Listen, Tabellen, Bilder
+- Dokument ist hierarchisch gegliedert
+- Besteht aus Kopfdaten (Metadaten) und den eigentlichen Dokumenten
+
+Zusammenhang HTML / Webserver 
+=============================
+
+Die Kommunikation zwischen Browser und serverseitigen Komponenten kann wie folgt aussehen.
+
+|image1|
+--------
+
+Eigenschaften
+-------------
+
+Die Hypertext Markup Language (englisch für Hypertext-Auszeichnungssprache), abgekürzt HTML, ist eine textbasierte Auszeichnungssprache zur Strukturierung digitaler Dokumente wie Texte mit Hyperlinks, Bildern und anderen Inhalten. HTML-Dokumente sind die Grundlage des World Wide Web und werden von Webbrowsern dargestellt. Neben den vom Browser angezeigten Inhalten können HTML-Dateien zusätzliche Angaben in Form von Metainformationen enthalten, z. B. über die im Text verwendeten Sprachen, den Autor oder den zusammengefassten Inhalt des Textes.
+
+.. image:: media/image4.png
+   :width: 2.91079in
+   :height: 3.01667in
+   :align: right
+
+
+HTML5 ist die fünfte Fassung der Hypertext Markup Language (engl. für Hypertext-Auszeichnungssprache), einer Computersprache zur Auszeichnung und Vernetzung von Texten und anderen Inhalten elektronischer Dokumente, vorwiegend im World Wide Web.
+
+HTML dient als Auszeichnungssprache dazu, einen Text semantisch zu strukturieren, nicht aber zu formatieren. Die visuelle Darstellung ist nicht Teil der HTML-Spezifikationen und wird durch den Webbrowser und Gestaltungsvorlagen wie CSS bestimmt. Ausnahme sind die als veraltet
+(englisch deprecated) markierten präsentationsbezogenen Elemente.
+
+Das World Wide Web Consortium (W3C) hat am 28. Oktober 2014 die fertige HTML5-Spezifikation („W3C Recommendation“) vorgelegt. HTML5 wird damit als Nachfolger von HTML4 die Kernsprache („core language“) des Webs. Sie ersetzt die Standards HTML 4.01, XHTML 1.0 und DOM HTML Level 2. Sie bietet neue Funktionen wie Video, Audio, lokalen Speicher und dynamische 2D- und 3D-Grafiken, die von HTML4 nicht direkt unterstützt wurden und sich ohne HTML5 nur mit zusätzlichen Plugins (z. B. Adobe Flash umsetzen ließen. Zukunftsweisend sind weiterhin neue Elemente, die eine verbesserte semantische Struktur ermöglichen.
+
+
+
+
+
+Elemente
+--------
+
+.. image:: media/image5.png
+   :width: 4.50523in
+   :height: 2.30833in
+   :align: right
+
+
+HTML-Elemente können hinsichtlich des Inhalts, den sie enthalten dürfen, kategorisiert werden. Seit HTML5 existieren hierzu sieben grundsätzliche Kategorien:
+
+- Metadaten: Beeinflussen das gesamte Dokument, beispielsweise das Einbinden externer CSS-Dateien
+
+- Fluss-Elemente: Enthalten in der Regel Text oder Aussagen-Elemente
+
+- Überschriften: Beschreiben einen Abschnitt
+
+- Elemente zur Aufteilung: Teieln ein Dolkument in verschiedene logische Bereiche (article, aside, nav, section)
+
+- Stil-Elemente: differenzieren Formulierung und Darstellungsebene ihres Inhalts, s.B. sup, sub, em, b
+
+- Elemente zur Einbindung von Ressourcen und Interaktive Elemente, z.B. audio, canvas, iframe, img, svg und video
+
+
+
+
+HTML-Tags
+~~~~~~~~~
+
+Das grundlegende Element von HTML ist das sog. ``TAG``. Es definiert eine semantischr Aussage ohne die optische Presentation festzulegen. Alle Browser haben allerdings eine Standardinterpretation für jeden Tag.
+
+Die Struktur eines Tags ist wie folgt:
+
+|image4|
+
+
+Es gelten folgende Regeln:
+
+- Es gibt fest definierte Tags, die alle eine bestimmte Aufgabe haben, z.B. ``<b>Inhalt</b>`` für fettgedruckten Text.
+- Tags sind gekennzeichnet durch die ``<…>``-Zeichen.
+- Es gibt immer (zumindest fast) ein öffnendes und ein schließendes Tag, wobei das schließende Tag noch einen Schrägstrich vor dem Namen des Tags hat.
+- Tags können geschachtelt seien, wichtig ist jedoch die korrekte Schachtelung
+- Tags müssen in der umgekehrten Reihenfolge geschlossen werden
+- Das Tag, welches als letztes geöffnet wurde, muss erstes wieder geschlossen werden. Der folgende Code ist deshalb fehlerhaft: ``<b><u>Inhalt</b></u>``
+
+- Es gibt einige Tags, die kein schließendes Tag besitzen (z.B. ``<br>`` oder ``<hr>``) Das sind sogenannte selbstschließende Tags (engl. self-closing tags). Selbstschließende Tags sind inhaltsleer (was nicht bedeutet, dass sie keine Informationen besitzen)
+- ``<br>`` ist ein erzwungener Zeilenumbruch (markiert nur eine Stelle)
+- ``<hr>`` ist eine horizontale Linie (Linie hat keinen Inhalt)
+
+
+HTML-Attribute
+~~~~~~~~~~~~~~
+
+|image5|
+
+Attribute können die Tags eines HTML-Elementes erweitern. Unterschiedliche Tags können verschiedene Attribute haben. Das Konzept von Attributen ist auch in anderen Textverarbeitungen / Programmen vorhanden. Im konkreten Fall einer Farbe wäre es beispielsweise schwierig, für jedes Element verschiedene Versionen des Tags vorzuhalten.
+
+|image6|
+
+Die Lösung sind Attribute:
+
+|image7|
+
+Attribute haben folgenden Aufbau:
+
+|image8|
+
+Sie erweitern das öffnende Tag um ein ``Key=Value``-Paar. Der Wwert muss dabei in einfachen oder doppelten Anführungszeichen stehen.
+
+
+
+
+Das HTML-Grundgerüst
+--------------------
+
+Eine minimale HTML-Datei hat folgenden Aufbau
+
+.. activecode:: minimal_html
+   :language: html
+
+   <!DOCTYPE html>
+   <html lang="de"><!-- Root-Tag -->
+   <head><!-- Kopf mit Meta-Informationen -->
+      <meta charset="utf-8"><!-- Zeichensatz der HTML-Datei -->
+      <meta name="viewport" content="width=device-width, 
+        initial-scale=1.0"><!-- Nimm die gesamte Breite des Geräts -->
+      <title>Titel</title>
+   </head>
+   <body>
+   
+   </body>
+   </html>
+
+
+Übungsaufgabe:
+--------------
+
+A1.
+~~~
+
+Erzeugen Sie eine HTML-Datei, die folgende Struktur abbildet. Ignorieren Sie die unterschiedlichen Farben.
+
+|image9|
+
+**Erweiterung:**
+
+Welche Änderungen müssen Sie vornehmen, um die Überschriften in farbiger Schrift erscheinen zu lassen.
+
+
+A2:
+~~~
+
+Erzeugen sie eine HTML-Datei mit folgendem Aussehen. Hilfe gibt es unter https://wiki.selfhtml.org/wiki/HTML/Textauszeichnung
+
+|image10|
+
+
+A3:
+~~~
+Folgende HTML-Formular zeigt beispielhaft die Manipulation des DOM mit Javascript.
+
+*http://bioub.github.io/d3.DOMVisualizer/*
+
+|image11|
+
+A4:
+~~~
+
+Erstellen Sie ein DOM (Document Object Model) des folgenden HTML-Dokumentes
+
+.. activecode:: baum_elemente
+   :language: html
+
+   <!doctype html>
+   <html>
+   <head>
+   <meta charset="utf-8"/>
+   <title>Steckbrief von Charly</title>
+   <link rel="stylesheet" type="text/css" href="charly.css">
+   </head>
+
+   <body>
+   <h1>Mein Hund</h1>
+   <p><img alt="Foto von Charly" src="http://steinam.rigel.uberspace.de/pics/charly.jpg"/></p>
+   <p>
+   Ich heiße <em>Charly</em> und wohne mit meinem Frauchen in der Nähe von Würzburg
+   </p>
+
+   <p>
+   Ich mag ganz gerne <em>Agility-Sport</em>.
+   Meine Lieblingsdisziplinen sind:
+   </p>
+      <ul>
+         <li><em>Sprung</em> durch einen Reifen</li>
+         <li><em>Lauf</em> über eine Wippe</li>
+         <li><em>Slalomlauf</em> zwischen Stangen</li>
+      </ul>
+   <p>
+
+   Ich gehe jedes Wochenende zum  <a href="https://www.hundesportverein-giebelstadt.de/">Hundesportverein
+   Giebelstadt</a>.
+   </p>
+   </body>
+   </html>
+
+
+**Lösung:**
+
+https://www.inf-schule.de/content/1-information/1-informationsdarstellunginternet/2-strukturbeschreibunghtml/5-konzept_elemente/strukturbeschreibung_mit_elementen_3_v80.png
+
+|image14|
+
+
+.. |image0| image:: media/image2.png
+   :width: 6.1in
+   :height: 4.04932in
+.. |image1| image:: media/image3.png
+   :width: 7.79793in
+   :height: 4.79549in
+
+
+.. |image4| image:: media/image6.png
+   :width: 6.3in
+   :height: 1.77083in
+.. |image5| image:: media/image7.png
+   :width: 3.64375in
+   :height: 1.38125in
+.. |image6| image:: media/image8.png
+   :width: 6.3in
+   :height: 0.48194in
+.. |image7| image:: media/image9.png
+   :width: 3.74199in
+   :height: 0.46671in
+.. |image8| image:: media/image10.png
+   :width: 6.3in
+   :height: 1.675in
+.. |image9| image:: media/image11.png
+   :width: 2.80623in
+   :height: 3.40833in
+.. |image10| image:: media/image12.png
+   :width: 5.55208in
+   :height: 6.52083in
+.. |image11| image:: media/image13.png
+   :width: 3.82326in
+   :height: 2.03246in
+.. |image14| image:: media/image14.png
+   :width: 2.1557in
+   :height: 3.79421in
+.. |Baum der Elemente| image:: media/image15.png
+   :width: 1.93343in
+   :height: 3.8093in
+.. |Baum der Elemente| image:: media/image16.png
+   :width: 6.14875in
+   :height: 1.7814in
+.. |Baum der Elemente| image:: media/image15.png
+   :width: 1.93343in
+   :height: 3.8093in
+.. |Baum der Elemente| image:: media/image16.png
+   :width: 6.14875in
+   :height: 1.7814in
+.. |image17| image:: media/image17.png
+   :width: 2.75833in
+   :height: 2.64167in
+.. |\_images/1200_Html_ohne_css.png| image:: media/image18.png
+   :width: 2.925in
+   :height: 1.6068in
+.. |\_images/1200_Html_mit_css.png| image:: media/image19.png
+   :width: 3.21667in
+   :height: 2.21307in
+.. |image20| image:: media/image20.png
+   :width: 3.09167in
+   :height: 2.48333in
+.. |image21| image:: media/image21.png
+   :width: 6.3in
+   :height: 1.51597in
+.. |image22| image:: media/image22.png
+   :width: 1.88958in
+   :height: 2.20347in
+.. |image23| image:: media/image23.png
+   :width: 2.99236in
+   :height: 0.91111in
+.. |image24| image:: media/image24.png
+   :width: 2.14653in
+   :height: 1.35417in
+.. |image25| image:: media/image25.png
+   :width: 2.09514in
+   :height: 1.15278in
+.. |image26| image:: media/image26.png
+   :width: 2.35833in
+   :height: 1.3125in
+.. |image27| image:: media/image27.png
+   :width: 2.60069in
+   :height: 1.5in
+.. |image28| image:: media/image28.png
+   :width: 5.10465in
+   :height: 1.33356in
+.. |image29| image:: media/image29.png
+   :width: 3.62576in
+   :height: 3.86116in
+.. |image30| image:: media/image30.png
+   :width: 3.04257in
+   :height: 3.38064in
+.. |Baum der Elemente| image:: media/image16.png
+   :width: 5.46492in
+   :height: 1.58328in
+.. |Veranschaulichung des Selektors am Strukturbaum| image:: media/image31.png
+   :width: 5.75in
+   :height: 1.45833in
+.. |Veranschaulichung des Selektors am Strukturbaum| image:: media/image32.png
+   :width: 5.75in
+   :height: 1.45833in
+.. |Veranschaulichung des Selektors am Strukturbaum| image:: media/image33.png
+   :width: 5.75in
+   :height: 1.45833in
+.. |Veranschaulichung des Selektors am Strukturbaum| image:: media/image34.png
+   :width: 5.75in
+   :height: 1.45833in
+.. |Veranschaulichung des Selektors am Strukturbaum| image:: media/image35.png
+   :width: 5.75in
+   :height: 1.45833in
+.. |image37| image:: media/image36.png
+   :width: 3.77778in
+   :height: 2.74583in
+.. |image38| image:: media/image37.png
+   :width: 3.6625in
+   :height: 2.98333in
+.. |image39| image:: media/image38.png
+   :width: 2.70417in
+   :height: 1.75069in
+.. |image40| image:: media/image39.png
+   :width: 2.69384in
+   :height: 5.40318in
+.. |image41| image:: media/image40.png
+   :width: 6.49722in
+   :height: 6.02014in
+.. |image42| image:: media/image41.png
+   :width: 6.49722in
+   :height: 1.26667in
+.. |image43| image:: media/image42.png
+   :width: 6.49722in
+   :height: 1.02431in
+.. |image44| image:: media/image43.png
+   :width: 6.49722in
+   :height: 4.97917in
+.. |image45| image:: media/image44.png
+   :width: 6.49722in
+   :height: 2.09583in
+.. |image46| image:: media/image45.png
+   :width: 6.49722in
+   :height: 1.01667in
+.. |image47| image:: media/image46.png
+   :width: 4.39535in
+   :height: 4.39535in
+.. |image48| image:: media/image47.png
+   :width: 2.86111in
+   :height: 1.43333in
+.. |image49| image:: media/image48.png
+   :width: 3.01181in
+   :height: 1.50833in
+.. |image50| image:: media/image49.png
+   :width: 3.60833in
+   :height: 2.5in
+.. |https://css-tricks.com/wp-content/csstricks-uploads/reflow-example-1.png| image:: media/image50.png
+   :width: 4.81667in
+   :height: 1.57701in
+.. |https://css-tricks.com/wp-content/csstricks-uploads/reflow-example-2.png| image:: media/image51.png
+   :width: 4.85833in
+   :height: 1.59065in
+.. |https://css-tricks.com/wp-content/csstricks-uploads/unclearedfooter.png| image:: media/image52.png
+   :width: 5.625in
+   :height: 2.03333in
+.. |image54| image:: media/image53.png
+   :width: 4.975in
+   :height: 2.4in
+.. |https://css-tricks.com/wp-content/csstricks-uploads/directionalclearing.png| image:: media/image54.png
+   :width: 5.625in
+   :height: 2.35833in
+.. |https://css-tricks.com/wp-content/csstricks-uploads/collapse.png| image:: media/image55.png
+   :width: 5.625in
+   :height: 1.9in
+.. |https://css-tricks.com/wp-content/csstricks-uploads/whywecollapse.png| image:: media/image56.png
+   :width: 5.625in
+   :height: 2.5in
+.. |image58| image:: media/image57.png
+   :width: 6.49722in
+   :height: 2.93403in
+.. |image59| image:: media/image58.jpeg
+   :width: 6.40347in
+   :height: 2.50833in
+.. |image60| image:: media/image59.png
+   :width: 4.64632in
+   :height: 5.84167in
+.. |image61| image:: media/image60.png
+   :width: 3.32917in
+   :height: 1.10278in
+.. |image62| image:: media/image61.png
+   :width: 2.06181in
+   :height: 1.31667in
+.. |image63| image:: media/image62.png
+   :width: 2.51042in
+   :height: 1.39583in
+.. |image64| image:: media/image62.png
+   :width: 2.51042in
+   :height: 1.39583in
+.. |image65| image:: media/image63.png
+   :width: 1.71362in
+   :height: 1.07917in
+.. |image66| image:: media/image64.png
+   :width: 1.11458in
+   :height: 1.02083in
+.. |image67| image:: media/image65.png
+   :width: 2.84583in
+   :height: 1.00831in
+.. |image68| image:: media/image63.png
+   :width: 1.71362in
+   :height: 1.07917in
+.. |image69| image:: media/image64.png
+   :width: 1.11458in
+   :height: 1.02083in
+.. |image70| image:: media/image65.png
+   :width: 2.84583in
+   :height: 1.00831in
+.. |image71| image:: media/image66.png
+   :width: 2.24518in
+   :height: 0.7in

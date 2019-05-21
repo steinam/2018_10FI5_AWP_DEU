@@ -1,0 +1,146 @@
+Quiz-Frontend
+=============
+
+In diesem Teil geht es darum, ein Frontend für ein Quiz zu erstellen. Es baut auf die vorherigen Abschnitte auf.
+
+
+.. image:: media/thumb_quiz.png
+    :align: left
+
+.. image:: media/thumb_quiz_result.png
+    :align: right
+
+
+
+
+
+.. video:: video-ex2
+   :controls:
+   :thumb: media/thumb_quiz.png
+
+   http://localhost/runestone_html/Quiz_App.webm
+
+
+Analyse des Frontends
+---------------------
+
+.. sidebar:: **Aufgabe**
+
+    :download:`AB <media/AB_HTML_Struktur_Quiz_App.pdf>`
+
+Analysieren die Struktur des HTML-Dokumentes mit Hilfe der grafischen Darstellung und übertragen Sie Ihre Lösung in das Arbeitsblatt.
+
+**Lösungsvorschlag**
+
+.. sidebar:: Lösungsvorschlag
+
+    :download:`Lösungsvorschlag <media/Loesung_AB_HTML_Struktur_Quiz_App.pdf>`
+
+
+Unter folgendem Link erhalten Sie einen Lösungsvorschlag
+
+
+Aufbau der HTML-Datei
+---------------------
+
+Die Optik des Frontends lässt auf folgende Strukturen im HTML schließen:
+
+
+Die HTMl-Datei besteht aus den folgenden Abschnitten
+
+- HEAD:
+
+  Hier werden die Meta-Informationen definiert sowie das Stylesheet eingebunden
+
+- BODY:
+
+  Der Body ist eine Zusammensetzung von verschachtelten DIV-Elementen. Er besteht aus dem Kopf- und Fußbereich und dem dazwischen liegenden Inhalt.
+  Die 10 Fragen werden ebenfalls mit DIVs modelliert und später per CSS als Inline-Block definiert.
+  Die Antworten sind individuelle Buttons. Der darin enthaltene Text wird später per Javascript eingefügt.
+  Die Fortschritts- und Zeitanzeige im Fußbereich besteht aus p-Elementen und wird ebenfalls per Javascript gesteuert.
+
+  Im Ergebnis sieht die reine HTML-Datei dann wie folgt aus. Die Optik ist ziemlich unspektakulär.
+
+
+.. tabbed:: Generelle_Eigenschaften
+
+   .. tab:: Optik
+
+      .. image:: media/html_css_js_quiz/default/default.PNG
+        :width: 5cm
+
+
+   .. tab:: Try It
+
+        .. reveal:: reveal_html_default
+            :showtitle: Show
+            :hidetitle: Hide
+
+
+            .. activecode:: quiz_html_code_def
+                    :language: html
+
+                    <html lang="en">
+                        <head>
+                            <title>Quiz App with Timer</title>
+                            <meta charset="utf-8">
+                            <meta name="viewport" content="width=device-width; initial-scale=1.0">
+                            <link rel="stylesheet" type="text/css" href="style.css"/>
+                        </head>
+
+                        <body>
+                            <div id="quiz">
+                                <header>
+                                    <h1 id="h1">HTML &amp; CSS Quiz</h1>
+                                </header>
+                                <div id="tracker">
+                                    <div class="nos" id="no1">1</div>
+                                    <div class="nos" id="no2">2</div>
+                                    <div class="nos" id="no3">3</div>
+                                    <div class="nos" id="no4">4</div>
+                                    <div class="nos" id="no5">5</div>
+                                    <div class="nos" id="no6">6</div>
+                                    <div class="nos" id="no7">7</div>
+                                    <div class="nos" id="no8">8</div>
+                                    <div class="nos" id="no9">9</div>
+                                    <div class="nos" id="no10">10</div>
+                                </div>
+                                <hr style="margin-bottom: 20px;">
+                                <div id="quizSet">
+                                    <p id="question">Question 1 Text</p>
+                                    <div id="options" class="options">
+                                        <button id="btn1" class="button"><span id="option1">Option1</span></button>
+                                        <button id="btn2" class="button"><span id="option2">Option2</span></button>
+                                        <button id="btn3" class="button"><span id="option3">Option3</span></button>
+                                        <button id="btn4" class="button"><span id="option4">Option4</span></button>
+                                    </div>
+                                    <button id="submit">Next Question</button>
+                                </div>
+                                <div id="resultBox">
+                                    <p id="result">Congrats. You passed. <br/> Your score is 6. </p>
+                                    <button id="retake">Retake Test</button>
+                                </div>
+                                <hr style="margin-top: 30px;">
+
+                                <footer>
+                                    <p id="progress">Question 1 of 10</p>
+                                    <div id="timer">Timer</div>
+                                </footer>
+                            </div>
+                            <script src="questions.js"></script>
+                            <script src="script.js"></script>
+                        </body>
+                    </html>
+
+
+
+
+
+
+
+
+
+
+
+
+

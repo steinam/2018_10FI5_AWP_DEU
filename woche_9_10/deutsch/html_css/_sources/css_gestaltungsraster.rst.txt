@@ -1,0 +1,89 @@
+CSS - Grid-Systeme
+==================
+
+.. index:: Grid-System
+
+
+https://blog.kulturbanause.de/2014/11/gestaltungsraster-css-grids-web-design/
+
+Eine moderne Website basiert i.d.R. auf einem sog. CSS-Grid System - einem Gestaltungsraster. Das Raster hat dabei verschiedene Aufgaben: Einerseits trägt es zu einem strukturierten Layout bei und sorgt dafür, dass eine Website professionell wirkt, andererseits unterstützt das Raster auch den Web Designer bei der Entwicklung, indem es vordefinierte CSS-Klassen bereitstellt.
+
+
+Die Bedeutung des Gestaltungsrasters für das Layout
+---------------------------------------------------
+
+Ein Gestaltungsraster ist ein unsichtbares System aus Linien, an dem die verschiedenen Gestaltungselemente – meist die globalen Strukturelemente einer Website – ausgerichtet werden. Ein Web-Layout das auf einem Raster basiert, wirkt aufgeräumter und harmonischer. Eure Besucher empfinden ein rasterbasiertes Layout daher unterbewusst als professioneller.
+
+
+.. image:: media/funktionsweise-gestaltungsraster.gif
+
+Sobald ein Raster im Hintergrund arbeitet, habt ihr auch die Möglichkeit Elemente bewusst aus dem Raster ausbrechen zu lassen. Diese Objekte treten dann besonders stark in den Vordergrund.
+
+.. image:: media/elemente-mit-raster-element-bricht-aus.png
+
+Die Besonderheit von Rastern im Web Design
+------------------------------------------
+
+Gestaltungsraster existieren sowohl im Print- als auch im Grafik- und Web-Design. Raster im Print- und Grafik-Design leiten sich i.d.R. von gestalterischen Elementen oder Rahmenbedingungen ab. Der Satzspiegel einer Broschüre basiert beispielsweise auf dem Papierformat, oder Elemente werden zueinander im goldenen Schnitt positioniert.
+
+Im Web Design verhalten sich Raster etwas anders. Das Raster leitet sich nicht aus der Gestaltung ab, sondern es wird zuerst konstruiert. Das Layout der Website orientiert sich anschließend am Raster, was insbesondere Kollegen aus dem Print- und Grafik-Design als Einschränkung ihrer kreativen Freiheit empfinden.
+Die unterschiedlichen Herangehensweisen bei der Arbeit mit Gestaltungsraster hängen u.a. damit zusammen, dass im Web keine starre Fläche existiert, die nach gängigen Harmonieregeln unterteilt werden kann. Anders als beispielsweise im Print-Design, wo das Papierformat existiert. Der Viewport im Browser ist flexibel.
+
+
+
+Spaltenbasierte Layouts
+-----------------------
+
+Gestaltungsraster im Web haben bereits einige Entwicklungen durchgemacht. Anfangs waren die meisten Websites spaltenbasiert aufgebaut. Das Holy Grail-Layout ist ein typischer Vertreter dieser Epoche. Zu diesem Zeitpunkt entstanden die ersten sog. CSS-Grid-Systeme.
+
+.. image:: media/spaltenbasiertes-layout.png
+
+Statische CSS-Grid Systeme
+--------------------------
+
+Ein CSS-Grid-System hilft dem Web Designer in zweierlei Hinsicht. Einerseits bietet ein CSS-Grid ein spaltenbasiertes Raster mit einer je nach System unterschiedlichen Anzahl an Spalten (meist 12 und/oder 16). An diesem Raster können Web Designer dann ihr Layout ausrichten und erreichen so eine harmonische und aufgeräumte Gestaltung.
+
+Andererseits stellt das CSS-Grid eine Reihe von CSS-Klassen bereit, mit deren Hilfe die Elemente der Website im Raster positioniert werden können. Schauen wir uns die Funktionsweise am Beispiel des sehr populären 960gs an. Auch wenn das Grid System aus heutiger Sicht veraltet ist, sind die Grundlagen für das Verständnis komplexerer Raster entscheidend.
+
+
+Funktionsweise eines statischen CSS-Grids
+-----------------------------------------
+
+Das 960 Grid System ist eines der bekanntesten statischen Rastersysteme. Wie der Name bereits andeutet basiert es auf einer Gesamtbreite von 960 Pixeln. Mit der festen Breite wurde eine künstliche Arbeitsfläche geschaffen, die dann wiederum unterteilt werden konnte. Die 960 Pixel haben dabei den Vorteil, dass Sie sich sehr gut in Spalten aufteilen lassen. Sowohl 12- als auch 16-spaltige Raster stellen kein Problem dar und sind auch Bestandteil des 960-Downloadpakets. Neben statische Vorlagen für Grafikprogramme wie Photoshop und Co. bietet das Raster auch Web-Entwicklern eine Grundlage. Es stellt CSS-Klassen für die einzelnen Breiten innerhalb des Rasters zur Verfügung.
+
+.. code-block:: css
+
+    .grid_1 {
+    width: 60px;
+    }
+
+    .grid_2 {
+    width: 140px;
+    }
+
+    .grid_3 {
+    width: 220px;
+    }
+
+    .grid_4 {
+    width: 300px;
+    }
+    ..
+
+Ein Element das über eine Rasterspalte läuft, ist im oben gezeigten Beispiel 60 Pixel breit. Ein Element mit einer Breite von zwei Spalten inkl. Abstand ist 140 Pixel breit usw.
+Die Aufschlüsselung der Rasterspalten in einzelne CSS-Klassen ermöglichte es Elemente flexibel im Raster zu positionieren. Da das Grid System alle CSS-Klassen bereits mitbringt, nimmt es Web Designern natürlich viel Arbeit ab.
+
+Responsive CSS-Grids
+--------------------
+
+Im Responsive Web Design sind Raster ein wenig komplexer geworden. Normalerweise haben wir es hier mit mehreren Gestaltungsrastern zu tun, die an Breakpoints umbrechen und die Anzahl an Rasterspalten ändern. Es gibt beispielsweise eine 4-spaltige Ansicht auf kleinen Displays, eine 8-spaltige Ansicht in mittleren Displaygrößen und eine 12-spaltige Desktop-Darstellung. Darüber hinaus sind in einem responsiven Layout die Rasterspalten in der Breite flexibel. Die Breitenangaben im CSS-Code basieren daher auf Prozentwerten. Zusätzlich werden Elemente in Zeilen zusammengefasst. Zeilen haben den Vorteil, dass Elemente im Raster leichter horizontal verschoben werden können. Zudem werden Sie häufig als CSS-Clear eingesetzt.
+
+
+Funktionsweise des responsiven CSS-Grids
+
+Der Aufbau eines simplen, maximal dreispaltigen Rasters sieht wie folgt aus:
+Einspaltiges Raster auf kleinen Displays, zweispaltig in den mittleren Größen und dreispaltig in der maximalen Ausdehnung.
+
+.. image:: media/css-grid-example.png
+
+

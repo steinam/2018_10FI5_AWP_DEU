@@ -1,0 +1,181 @@
+Implementierung des JS-Teils
+============================
+
+In this section, you are going to code the Application using JavaScript.
+
+Creating and linking the scripts
+---------------------------------
+
+Die benötighten Javascript-Dateien werden mit Hilfe des ``script``-Tags am Ende des HTML-Files eingefügt. Dies sorgt dafür, dass eventuell vom Javascript benötigte Klassen und IDs bereits im HTMl-Dokument vorhanden sind, wenn das javascript geladen wird.
+
+
+.. code-block:: HTMl
+
+                ....
+                </footer>
+            </div>
+            <script src="questions.js"></script>
+            <script src="script.js"></script>
+        </body>
+    </html>
+
+
+
+Creating the question bank in the form of objects
+---------------------------------------------------
+
+Die jeweiligen Fragen und Antworten müssen in irgendeiner Weise dem Programm zur Verfügung gestellt werden. In unserem Falle stehen diese Informationen in der Datei questions.js. Sie werden in json-Notation definiert. In einer späteren Version werden wir diese Daten remote beziehen, um ein Cheaten zu vermeiden.
+
+.. code-block:: javascript
+
+    var questions = [
+        {
+            "question": "Web pages are designed using?",
+            "option1" : "HTML",
+            "option2": "CSS",
+            "option3": "Javascript",
+            "option4": "Jquery",
+            "answer": 2
+        },
+        {
+            "question": "Web pages are designed using?",
+            "option1" : "HTML",
+            "option2": "CSS",
+            "option3": "Javascript",
+            "option4": "Jquery",
+            "answer": 2
+        },
+        {
+            "question": "____ makes websites dynamic",
+            "option1" : "CSS",
+            "option2": "HTML",
+            "option3": "Javascript",
+            "option4": "Bootstrap",
+            "answer": 3
+        },
+        {
+            "question": "What is HTML used for?",
+            "option1" : "Skeleton of website",
+            "option2": "Design a website",
+            "option3": "Make website dynamic",
+            "option4": "Database of a website",
+            "answer": 1
+        },
+        {
+            "question": "Which CSS property changes background color?",
+            "option1": "colour",
+            "option2": "bgColor",
+            "option3": "color",
+            "option4": "background-color",
+            "answer": 4
+        },
+        {
+            "question": "Which selector selects all the elements in CSS?",
+            "option1": "*",
+            "option2": "+",
+            "option3": "$",
+            "option4": "#",
+            "answer": 1
+        },
+        {
+            "question": "What is the value of a in a+=b where a=10 & b=5?",
+            "option1": "10",
+            "option2": "5",
+            "option3": "15",
+            "option4": "20",
+            "answer": 3
+        },
+        {
+            "question": "What does 'document' denote in a javascript statement?",
+            "option1": "Javascript file",
+            "option2": "Css file",
+            "option3": "HTML page",
+            "option4": "XML document",
+            "answer": 3
+        },
+        {
+            "question": "Which function is used to calculate an expression?",
+            "option1": "calculate()",
+            "option2": "calc()",
+            "option3": "evaluate()",
+            "option4": "eval()",
+            "answer": 4
+        },
+        {
+            "question": "How do you call a function? ",
+            "option1": "call.function_name",
+            "option2": "function_name.call",
+            "option3": "call(function_name)",
+            "option4": "function_name()",
+            "answer": 4
+        },
+        {
+            "question": "Javascript statements should end with a ... ",
+            "option1": "Comma",
+            "option2": "Semicolon",
+            "option3": "Period",
+            "option4": "Exclamation",
+            "answer": 2
+        }
+        ];
+
+
+Step by step algorithm for the JavaScript code of the app
+---------------------------------------------------------
+
+Create and initialize the variables
+-----------------------------------
+
+
+Retrieve the necessary HTML elements to manipulate them later
+-------------------------------------------------------------
+
+
+Initialize more variables
+---------------------------------------------------
+
+Function that sets the random question and options in the app
+-------------------------------------------------------------
+
+Function that updates the progress bar with each question
+---------------------------------------------------------
+
+
+Function that changes the option buttons to their default color
+---------------------------------------------------------------
+
+
+Get question function - consolidates and calls the mini functions
+-----------------------------------------------------------------
+
+Functions to change tracker colors, calculate final score & set result page
+---------------------------------------------------------------------------
+
+
+Generate a unique random number to call a random question/answer set
+--------------------------------------------------------------------
+
+Generate a unique random number to call a random question/answer set - part 2
+-----------------------------------------------------------------------------
+
+Make the timer work - part 1
+----------------------------
+
+Make the timer work - part 2
+----------------------------
+
+Make the timer work - part 3
+------------------------------
+
+Make the option selection work
+------------------------------
+
+Make the next question button work - check and load next question
+-----------------------------------------------------------------
+
+Consolidate everything and make the app work on refresh
+-------------------------------------------------------
+
+Check the output and correct bugs
+---------------------------------
+

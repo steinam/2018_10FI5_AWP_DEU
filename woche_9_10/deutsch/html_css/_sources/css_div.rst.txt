@@ -1,0 +1,55 @@
+Dein bester Freund DIV
+======================
+
+Das **div**-Element ist dazu gedacht, mehrere Elemente wie Text,
+Grafiken, Tabellen usw., in einen gemeinsamen Bereich einzuschließen.
+Dieses allgemeine Element bewirkt nichts weiter als dass es in einer
+neuen Zeile des Fließtextes beginnt. Ansonsten hat es keine
+Eigenschaften. Es ist dazu gedacht, Bereiche zu erzeugen, die mit Hilfe
+von CSS formatiert werden können. div bedeutet *division*, etwa
+Abteilung oder Bereich.
+
+Häufig werden div-Elemente als **wrapper** (englisch für *Verpackung*)
+oder Container-Element verwendet. Dabei wird die
+`semantische <https://wiki.selfhtml.org/wiki/Semantisch>`__ Struktur um
+ein weiteres, semantisch leeres Element ergänzt, dessen einziger Zweck
+beispielsweise die Zentrierung oder die Formatierung mit einer Randlinie
+ist.
+
+Beispiel: Erzeugen Sie folgende Ausgabe
+
+.. image:: media/image36.png
+   :width: 3.77778in
+   :height: 2.74583in
+   :align: right
+
+**Lösung:**
+
+.. code-block:: html
+
+    <!doctype html>
+    <html>
+        <head> <meta charset="utf-8">
+            <title>Allgemeines Block-Element</title>
+            <style> div { border: 1px solid; float: left; } </style>
+        </head>
+        <body>
+            <h1>Allgemeines Blockelement</h1>
+            
+            <div> 
+                <h2>Listenüberschrift</h2>
+                <ul>
+                    <li>Listenpunkt 1</li>
+                    <li>Listenpunkt 2</li>
+                    <li>Listenpunkt 3</li>
+                </ul>
+            </div>
+        </body>
+    </html>
+
+
+
+
+.. |image47| image:: media/image46.png
+   :width: 4.39535in
+   :height: 4.39535in

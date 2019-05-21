@@ -1,0 +1,151 @@
+Float und Clear
+===============
+
+https://css-tricks.com/all-about-floats/
+
+ 
+.. image:: media/image47.png
+   :width: 2.86111in
+   :height: 1.43333in
+   :align: right
+
+**Float** bezeichnet eine Eigenschaft zur Positionierung. Um seinen Zweck zu verstehen, könne wir ein Print-Design betrachten. So können beispielsweise Bilder so gesetzt werden, dass sie von Text umflossen werden.
+
+.. image:: media/image48.png
+   :width: 3.01181in
+   :height: 1.50833in 
+   :align: right
+   
+In Textsatzprogrammen können die Textboxen angewiesen werden, diesen Textumbruch zu beachten oder ihn zu ignorieren. Dies würde beispielsweise dazu führen, dass Text das Bild überschreibt. Das Bild ist damit entweder Teil des Textflusses (Flow) oder eben auch nicht. WebDesign ist hier dem Printdesign sehr ähnlich.
+
+Im WebDesign sind Seitenelemente, die mit der Float-Eigenschaft ausgestattet werden, wie die Bilder im Printdesign zu sehen. Umflossene Elemente bleiben Teil des Textflusses einer Webseite. Dies unterscheidet sich von Seitenelementen, die absolute Positionierung verwenden. Dies werden aus dem Textfluss der Webseite herausgenommen und beeinflussen nicht die Positionierung der anderen Elemente und umgekehrt.
+
+
+
+Die float-Eigenschaft wird in CSS wie folgt gesetzt:
+
+.. code-block:: css
+
+    #sidebar {
+        float: right;
+    }
+
+Es gibt vier gültige Werte für die float-Eigenschaft: ``Left`` und ``Right`` lassen Elemente in die jeweilige Richtung fließen. ``None`` (default) verhindert den Fluss und ``Inherit`` übernimmt den Wert vom übergeordneten Element.
+
+
+.. image:: media/image49.png
+   :width: 3.60833in
+   :height: 2.5in
+   :align: right
+
+Einsatzgebiet
+-------------
+
+
+
+
+`Siehe dazu auch <https://css-tricks.com/all-about-floats/#article-header-id-1>`__
+
+Neben dem oben angesprochenen Beispiel des Umfließens von Bildern können floats zum Erstellen eines ganzen Weblayouts verwendet werden.
+ 
+Auch wenn Web-Layouts heute durch Flexbox und Grid-Layout erstellt werden, haben floats doch einige besondere Eigenschaften.
+
+
+
+Floats sind auch hilfreich bei kleinen Problemen. Wenn wir den Avatar in der nebenstehenden Abbildung ändern, wird der Textfluss entsprechend angepasst.
+
+.. image:: media/image50.png
+   :width: 4.81667in
+   :height: 1.57701in
+   :align: center
+
+.. image:: media/image51.png
+   :width: 4.85833in
+   :height: 1.59065in
+   :align: center
+
+Dasselbe Layout könnte auch mit einer relativen Positionierung für den Container und einer absoluten Positionierung für den Avatar erreicht werden, Der Text wäre aber jetzt vom Avatar nicht abhängig und würde sich bei einer Größenänderung nicht neu ausrichten.
+
+
+
+Clearing the Float
+------------------
+
+.. image:: media/image52.png
+   :width: 5.625in
+   :height: 2.03333in
+   :align: right
+
+
+Die zu float gegensätzliche Eigenschaft ist clear. Ein Element mit dieser Eigenschaft wird sich nicht am float ausrichten, sondern sich hinter den float anordnen. Ein Beispiel soll dies verdeutlichen.
+
+
+.. image:: media/image53.png
+   :width: 5.625in
+   :height: 2.03333in
+   :align: right
+
+
+Im nebenstehenden Beispiel ist die Sidebar rechts vom MainContent und etwas kleiner. Der footer muss nun diese Lücke aufnehmen und das obige Layout ist die Folge. Um dieses Problem zu lösen, kann der Footer mit einer clear-Eigenschaft versehen werden, um seine unten ausgerichtete Anordnung zu garantieren.
+
+.. code-block:: css
+
+    #footer {
+        clear: both;
+    }
+
+
+    ...
+
+Clear hat ebenfalls mehrere Eigenschaften, ``left``, ``right``, ``both``, ``Inherit``,
+``None``. Both ist die am meisten genutzte, die floats aus allen Richtungen beendet.
+
+.. image:: media/image54.png
+   :width: 5.625in
+   :height: 2.35833in
+   :align: center
+
+
+
+The Great Collapse
+------------------
+
+.. image:: media/image55.png
+   :width: 5.625in
+   :height: 1.9in
+   :align: right
+
+One of the more bewildering things about working with floats is how they
+can affect the element that contains them (their "parent" element). If
+this parent element contained nothing but floated elements, the height
+of it would literally collapse to nothing. This isn't always obvious if
+the parent doesn't contain any visually noticeable background, but it is
+important to be aware of.
+
+.. image:: media/image56.png
+   :width: 5.625in
+   :height: 2.5in
+   :align: right
+
+As anti-intuitive as collapsing seems to be, the alternative is worse.
+Consider this scenario:
+
+If the block element on top were to have automatically expanded to
+accommodate the floated element, we would have an unnatural spacing
+break in the flow of text between paragraphs, with no practical way of
+fixing it. If this were the case, us designers would be complaining much
+harder about this behavior than we do about collapsing.
+
+Collapsing almost always needs to be dealt with to prevent strange
+layout and cross-browser problems. We fix it by clearing the float
+**after** the floated elements in the container but **before** the close
+of the container.
+
+I did `a screencast <http://css-tricks.com/video-screencasts/42-all-about-floats-screencast/>`__
+a while back explaining many of these float concepts.
+
+
+
+
+
+

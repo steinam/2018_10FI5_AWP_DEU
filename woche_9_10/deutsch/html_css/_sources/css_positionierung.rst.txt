@@ -1,0 +1,457 @@
+CSS - position
+==============
+
+Quellen:
+
+https://www.codeproject.com/Articles/567385/CSSplusBoxplusModelplusandplusPositioning
+
+http://www.thestyleworks.de/basics/disposfloat.shtml
+
+http://selfhtml.apsel-mv.de/position/position.html
+
+https://medium.freecodecamp.org/how-to-use-the-position-property-in-css-to-align-elements-d8f49c403a26
+
+https://www.w3schools.com/css/css_positioning.asp
+
+
+
+Elemente können durch Verwendung der Eigenschaft **position** aus dem normalen Elementfluss entfernt werden und an jede beliebige Stelle des Viewports positioniert werden. Auf andere Elemente haben positionierte Elemente keinen Einfluss.
+
+.. image:: media/image60.png
+   :width: 3.32917in
+   :height: 1.10278in
+   :align: right
+
+
+**position: static**
+
+position:static ist der Defaultwert der Eigenschaft position. Das Element verbleibt im Textfluss. Die Eigenschaften Top, Bottom, Left, Right werden ignoriert.
+
+**position: absolute**
+
+Mit position:absolute kann man Elemente losgelöst vom Textfluss positionieren, an eine Stelle, die per left, right, top und bottom festgelegt wird. Eine Lücke bleibt dabei nicht bestehen. Größenangaben, wie width und height, oder Abstände, wie margin und padding, sind ebenfalls möglich.
+
+Die Angaben left, right, top und bottom beziehen sich dabei auf das **nächste Vorfahrenelement**, welches mit position: positioniert wurde. Hat das Element keine solchen Vorfahrenelemente, wird als Bezugspunkt das Wurzelelement angesehen - in HTML-Dokumenten also das HTML-Element (bei XML wäre es das XML-Element). Im oberen Beispiel wird deshalb der Link mit der ID "info-box" relativ zum main-Element positioniert, wofür das main-Element die Eigenschaft position:relative erhält.
+
+**position: fixed**
+
+Möchte man ein Element starr am Viewport ausrichten, (beispielsweise eine `fixe Fußzeile <https://wiki.selfhtml.org/wiki/CSS/Tutorials/feststehender_footer>`__ oder einen Link zum Seitenanfang in einer Ecke) dann ist position:fixed das Mittel der Wahl. Genau wie bei position:absolute wird das Element aus dem Textfluss entnommen, es entsteht also keine Lücke. Positioniert wird klassisch mit den CSS-Eigenschaften top, bottom, left und right.
+
+**position: relative**
+
+Wie schon weiter oben erklärt, verwendet man position:relative als Bezugspunkt für absolut positionierte Kindelemente. Das Element an sich wird quasi "an sich selbst" ausgerichtet. Die Lücke im Textfluss bleibt bestehen. Trotzdem kann man das Element mit top, bottom, left und right ausrichten.
+
+**position: sticky**
+
+position: sticky: Elemente mit dieser Eigenschaft behalten ihre Position im Elementfluss, bis sie das obere oder untere Seitenende erreichen und dort "kleben" bleiben.
+
+Ein Beispiel soll dies veranschaulichen:
+
+
+
+**Static:** 
+
+Erzeugen Sie folgende Ausgabe mit Hilfe zweier DIVs
+
+
+.. tabbed:: example_1_position_static
+
+    .. tab:: Ausgabe
+
+        |image62|
+
+    .. tab:: Lösung
+
+        .. activecode:: sol_example_1_position_static
+           :language: html
+
+            <html>
+            <head>
+                <style>
+                    .box-orange{ /*keine Positionsangabe*/    
+                        background:orange;                                 
+                        height: 100px;                                     
+                        width: 100px;                                       
+                    }                                                   
+                                                        
+                    .box-blue{                                          
+                        background: lightskyblue;                           
+                        height: 100px;                                      
+                        width: 100px;                                       
+                        position: static; /* Declared as static */      
+                    }                                                                                                    
+                </style>                                                                                          
+            </head>                                                                                              
+            <body>                                                                                              
+            <p>Position Static ist der default- Wert.                                                           
+            Die Elemente bleiben in ihrer normalen Position</p>                                                
+            <div class="box-orange"></div>                                                                     
+            <div class="box-blue"></div>                                                                       
+            </body>                                                                                              
+           </html>   
+
+
+
+
+**Relative:**
+
+Die Position eines Elements ist relativ zu seiner normalen Position innerhalb des Textflusses. Um eine Änderung zu sehen, müssen Eigenschaften wie top und left angepasst werden.
+
+Ausgehend vom vorherigen Beispiel soll die orangene Box vor die blaue Box geschoben werden.
+
+.. tabbed:: example_2_position_relative
+
+    .. tab:: Ausgabe
+
+        |image64|
+
+        100 px vom top der alten Position
+
+        100 px von links der alten Position
+        
+
+    .. tab:: Lösung
+
+        .. activecode:: example_2_sol_position_realative
+           :language: html
+
+            <html>
+            <head>
+                <style>
+                    .box-orange{                                        
+                        position: relative; /* We can now move the element*/         
+                        background: orange;                
+                        width: 100px;              
+                        height: 100px;         
+                        top: 100px; /* 100px from top relative to its old position */  
+                        left: 100px; /* 100px from left */                             
+                    }                                
+                                 
+                    .box-blue{                                        
+                        background: lightskyblue;      
+                        height: 100px;                             
+                        width: 100px;          
+                        position: static;           
+                    }              
+                </style>                                                                                                          
+            </head>                                                                                              
+            <body>                                                                                              
+                <p>Position Relative bewegt die Box                                                           
+                in Abhängigkeit von ihrer eigentlichen Position</p>                                                
+                <div class="box-orange"></div>                                                                     
+                <div class="box-blue"></div>                                                                       
+            </body>                                                                                              
+           </html>   
+
+
+
+
+
+**Absolute:**
+
+Mit ``position: absolute`` wird ein Element relativ zu seinem Elternelement ausgerichtet. Wenn es kein Elternelement hat, wird es zum <html>-Element ausgerichtet. Das Element wird außerdem aus dem normalen Textfluss herausgenommen und kann damit die Position andere Elemente ebenfalls beeinflussen.
+
+
+.. tabbed:: example_3_position_absolute
+
+    .. tab:: Ausgabe
+
+        |image68|
+
+
+        .. code-block:: html
+
+            <body>
+                <div class="container">
+                    <div class="box-orange"></div>
+                    <div class="box-blue"></div>
+                </div>  
+            </body>
+        
+
+    .. tab:: Lösung
+
+        .. activecode:: example_3_sol_position_absolute
+           :language: html
+
+            <html>
+            <head>
+                <meta charset="utf-8">
+                <meta http-equiv="X-UA-Compatible" content="IE=edge">
+                <title>Position Static Demo</title>
+                <meta name="viewport" content="width=device-width, initial-scale=1">
+                <style>
+                    .box-orange{ /*keine Positionsangabe*/
+                        position: absolute;              
+                        background: orange;
+                        width: 100px;
+                        height: 100px;
+                        }
+                    .box-blue{
+                        background: lightskyblue;
+                        height: 100px;
+                        width: 100px; 
+                        position: static        
+                        }
+                </style>
+
+            </head>
+            <body>
+                <div class="container">
+                    <div class="box-orange"></div>
+                    <div class="box-blue"></div>
+                </div>  
+            </body>
+            </html>
+
+    .. tab:: Erläuterung
+
+        Die orangene Box wird aus dem Textfluss herausgenommen,  die blaue Box bleibt in ihrer Position und wird von der orangenen Box überdeckt.
+
+
+Die Änderung der Position der orangenen Box lässt die blaue Box erscheinen.  
+
+.. tabbed:: example_4_sol_position_absolute_top5
+
+    .. tab:: Ausgabe
+
+        |image69|
+
+
+        .. code-block:: html
+
+            <body>
+                <div class="container">
+                    <div class="box-orange"></div>
+                    <div class="box-blue"></div>
+                </div>  
+            </body>
+        
+
+    .. tab:: Lösung
+
+        .. activecode:: example_4_sol_position_absolute_top5
+           :language: html
+
+            <html>
+            <head>
+                <meta charset="utf-8">
+                <meta http-equiv="X-UA-Compatible" content="IE=edge">
+                <title>Position Static Demo</title>
+                <meta name="viewport" content="width=device-width, initial-scale=1">
+                <style>
+                    .box-orange {
+                        position: absolute;
+                        background: orange;
+                        width: 100px;
+                        height: 100px;
+                        left: 15px;
+                        top: 15px;
+                    }
+
+                    .box-blue{
+                        background: lightskyblue;
+                        height: 100px;
+                        width: 100px; 
+                        position: static;        
+                    
+                </style>
+
+            </head>
+            <body>
+                <div class="container">
+                    <div class="box-orange"></div>
+                    <div class="box-blue"></div>
+                </div>
+            </body>
+            </html>
+
+    .. tab:: Erläuterung
+
+        Top und Left richten div-orange 15 px links und 15 px vom oberen rand des html-Elementes 
+        aus. Damit verdeckt die orange Box nicht mehr die ganze blaue Box.
+
+
+Die Koordinaten eines absolut positionierten Elementes sind relativ zum Elternelement, wenn  dieses nicht-static definiert ist. Da Container nicht im CSS definirt wurde, hat sich bisher die orangene Box am html-Dokument ausgerichtet.                            
+
+.. tabbed:: example_4_sol_position_absolute_rel_to_container
+
+    .. tab:: Ausgabe
+
+        |image70|
+
+
+        .. code-block:: html
+
+            <body>
+                <div class="container">
+                    <div class="box-orange"></div>
+                    <div class="box-blue"></div>
+                </div>  
+            </body>
+        
+
+    .. tab:: Lösung
+
+        .. activecode:: example_4_sol_position_absolute_rel_to_container
+           :language: html
+
+            <html>
+            <head>
+                <meta charset="utf-8">
+                <meta http-equiv="X-UA-Compatible" content="IE=edge">
+                <title>Position Static Demo</title>
+                <meta name="viewport" content="width=device-width, initial-scale=1">
+                <style>
+
+                    .container {
+                        position: relative;
+                        background: lightgray;
+                    }
+
+                    .box-orange {
+                        position: absolute;
+                        background: orange;
+                        width: 100px;
+                        height: 100px;
+                        top: 15px;
+                        right: 5px; /* 5px relative to the most-right of parent */
+                    }
+
+                    .box-blue{
+                        background: lightskyblue;
+                        height: 100px;
+                        width: 100px; 
+                        position: static;        
+                    
+                </style>
+
+            </head>
+            <body>
+                <div class="container">
+                    <div class="box-orange"></div>
+                    <div class="box-blue"></div>
+                </div>
+            </body>
+            </html>
+
+    .. tab:: Erläuterung
+
+        Container ist mit ``position:relative`` ausgezeichnet, deshalb richtet sich jetzt die 
+        orangene Box am Container aus. Vom rechten rand des Containers 5 px, von oben 15px
+
+
+
+**Fixed:**
+
+Auch sie werden aus dem normalen Textfluss herausgenommen. Im Unterscheid zu absolute sind sie allerdings
+
+- nur relative zum html-Element
+- unbeinflusst vom Scrollen im Bowser
+
+.. tabbed:: example_5_fixed
+
+    .. tab:: Ausgabe
+
+        |image71|
+
+
+        .. code-block:: html
+
+            <body>
+                <div class="container">
+                    <div class="box-orange"></div>
+                    <div class="box-blue"></div>
+                    <p>Scroll down the page</p>
+                </div>
+            </body>
+
+        
+
+    .. tab:: Lösung
+
+        .. activecode:: example_5_fixed
+           :language: html
+
+            <html>
+            <head>
+                <meta charset="utf-8">
+                <meta http-equiv="X-UA-Compatible" content="IE=edge">
+                <title>Position Static Demo</title>
+                <meta name="viewport" content="width=device-width, initial-scale=1">
+                <style>
+
+                    .container { 
+                        position: relative;
+                        background: lightgray;
+                        width: 50%;
+                        margin: 0 auto;
+                        height: 1000px;}
+                    .container p {
+                        text-align: center;
+                        font-size: 20px;}
+                    .box-orange {
+                        background: orange;
+                        width: 100px;
+                        height: 100px;
+                        position: fixed;
+                        right: 5px;}
+                    .box-blue {
+                        background: lightblue;
+                        width: 100px;
+                        height: 100px;
+                    }  
+                </style>
+
+            </head>
+            <body>
+                <div class="container">
+                    <div class="box-orange"></div>
+                    <div class="box-blue"></div>
+                    <p>Scroll down the page</p>
+                </div>
+            </body>
+
+            </html>
+
+    .. tab:: Erläuterung
+
+        Die orangene Box richtet sich mit  ``position:fiexe`` am rechten Rand des HTML-Elementes aus undnicht mehr 
+        am Container
+
+
+
+
+
+
+
+.. |image62| image:: media/image61.png
+   :width: 2.06181in
+   :height: 1.31667in
+.. |image63| image:: media/image62.png
+   :width: 2.51042in
+   :height: 1.39583in
+.. |image64| image:: media/image62.png
+   :width: 2.51042in
+   :height: 1.39583in
+.. |image65| image:: media/image63.png
+   :width: 1.71362in
+   :height: 1.07917in
+.. |image66| image:: media/image64.png
+   :width: 1.11458in
+   :height: 1.02083in
+.. |image67| image:: media/image65.png
+   :width: 2.84583in
+   :height: 1.00831in
+.. |image68| image:: media/image63.png
+   :width: 1.71362in
+   :height: 1.07917in
+.. |image69| image:: media/image64.png
+   :width: 1.11458in
+   :height: 1.02083in
+.. |image70| image:: media/image65.png
+   :width: 2.84583in
+   :height: 1.00831in
+.. |image71| image:: media/image66.png
+   :width: 2.24518in
+   :height: 0.7in

@@ -1,0 +1,34 @@
+main {
+	position: relative;
+}
+
+nav,
+nav > ul {
+	width: 100%;
+	margin: 0;
+	padding: 0;
+}
+
+nav > ul > li {
+	position: relative;
+	display: inline-block;
+	padding: 10px;
+	background-color: #FEA;
+	width: 100px;
+}
+
+nav > ul > li > ul {
+	position: absolute;
+	list-style-type: none;
+	margin: 0;
+	padding: 10px;
+	background-color: #AEF;
+	top: 40px;
+	left: 0;
+	width: 100px;
+	display: none;
+}
+
+nav > ul > li:hover > ul {
+	display: block;
+}

@@ -1,0 +1,178 @@
+Die Grundlagen von CSS
+======================
+
+.. toctree::
+   :maxdepth: 2
+
+   css_regeln.rst
+   css_selektor.rst
+   css_selektor_aufgabe.rst
+   css_div.rst
+   css_display.rst
+   css_float_clear.rst
+   css_float_clear_aufgabe.rst
+   css_positionierung.rst
+   css_positionierung_aufgabe.rst
+   css_grid.rst
+   
+
+Im modernen Webdesign kommt den Webtechniken HTML, CSS und JavaScript
+jeweils eine bestimmte Rolle zu.
+
+
+.. image:: media/image17.png
+   :width: 2.75833in
+   :height: 2.64167in
+   :align: right
+
+-  HTML legt fest, was auf der Seite stehen soll (struktureller Aufbau
+   einer Webseite)
+
+-  CSS legt fest, wie es dargestellt werden soll (Formatierung &
+   Gestaltung)
+
+-  JavaScript legt fest, was passieren soll. (interaktive Elemente)
+
+CSS (Cascading Style Sheets, zu deutsch "Mehrstufige Formatvorlagen" ist eine Formatierungssprache für HTML-, SVG- und XML-Dokumente. Der "große Sinn von CSS" besteht in der Trennung von Inhalt und Design. Das hört man oft, stellt sich nichts drunter vor und bastelt dann doch eine besondere Überschrift mit einem inline-style, einen neuen div-container mit einer ganz speziellen id oder Klasse, die später nirgends wieder auftaucht. Das funktioniert auch mehr oder weniger - man wird ohne viel Mühe eine fixe Seite zusammenstellen, die ihren Zweck erfüllt - und vergisst das ganze.
+
+Es ist aber beinahe unmöglich, einen so über die Zeit gewucherten Internetauftritt umzugestalten - man müsste dutzende oder mehr Einzeldateien umschreiben und im Gewusel der Klassen und Elemente wird man sich schnell verlieren. Letztlich dauert die Änderung beinahe länger als die Neuerstellung. Und genau darin liegt die Stärke von CSS: 
+
+uneingeschränkte Flexibilität, wenn z.B. das Layout nicht mehr zeitgemäß ist oder wenn neue Strukturen, vor allem bei dynamischen Seiten, Änderungen erfordern. Dabei wäre man ohne CSS buchstäblich "verloren im Quelltext".
+
+**Das erste Gebot von CSS lautet: „am Anfang ohne.“**
+
+Soll heißen - man gestaltet die Seite erst komplett ohne CSS, nur die Seitenstrukturierung in Kapitel und Absätze, bei diesen dann die Textauszeichnung von Überschriften und Ähnlichem. Es stellt auch die "allgemeine Gültigkeit" des Layouts sicher - ist die Grundlage an sich stimmig, kann man die Seite beliebig umgestalten, jeder Fehler schränkt dies wieder ein.
+
+Eine solche Webseite sieht nicht gut aus, ist aber uneingeschränkt nutzbar. Die einzelnen Elemente werden vom Browser einfach untereinander auf dem Bildschirm angeordnet, und zwar in der Reihenfolge, in der sie in der HTML-Datei aufgeschrieben sind. Die Elemente selbst werden gemäß den Voreinstellungen des Browsers dargestellt; so ist z.B. festgelegt, dass der Hintergrund des Dokuments weiß oder grau darzustellen ist, dass Überschriften in fett und einer Größe von soundsoviel Punkten darzustellen sind.
+
+.. image:: media/image_18_19.png
+
+An diesem Punkt setzen die Cascading Stylesheets ein. Es handelt sich dabei um eine unmittelbare Ergänzungssprache, die vorwiegend für HTML (aber auch für SVG) entwickelt wurde. Sie klinkt sich nahtlos in HTML ein und erlaubt das beliebige Formatieren einzelner HTML-Elemente. Mit Hilfe von Stylesheets können Sie beispielsweise festlegen, dass alle Überschriften 24 Punkt groß sind und mit einem Nachabstand von 16 Punkt und mit einer grünen doppelten Rahmenlinie oberhalb dargestellt werden. 
+
+Schematisch würde dies etwa so aussehen:
+
+
+.. image:: media/image20.png
+   :width: 3.09167in
+   :height: 2.48333in
+   :align: right
+
+CSS erlaubt es, Stile, Farben und Formen zu definieren, beispielsweise für alle Überschriften, oder für alle Textabsätze mit einem bestimmten Klassennamen, oder für kursiv ausgezeichneten Text, der innerhalb einer Tabellenzelle vorkommt.
+
+Die zentralen Formate können sich auf eine HTML-Datei beziehen, aber auch in eine externe Style-Datei ausgelagert werden, die man in beliebig viele Seiten einbinden kann. So werden einheitliche Formatvorgaben möglich, und der HTML-Code wird von unnötigem Ballast befreit. Spätere Änderungen am Design können so leicht durchgeführt werden.
+
+In der folgenden Abbildung dient eine einzige CSS-Datei beispielsweise vier HTML-Dateien als Formatvorlage:
+
+
+
+Größenangaben
+=============
+
+Arten von Farben
+================
+
+Schriftarten
+============
+
+
+.. |image0| image:: media/image2.png
+   :width: 6.1in
+   :height: 4.04932in
+.. |image1| image:: media/image3.png
+   :width: 7.79793in
+   :height: 4.79549in
+.. |image2| image:: media/image4.png
+   :width: 2.91079in
+   :height: 3.01667in
+.. |image3| image:: media/image5.png
+   :width: 4.50523in
+   :height: 2.30833in
+.. |image4| image:: media/image6.png
+   :width: 6.3in
+   :height: 1.77083in
+.. |image5| image:: media/image7.png
+   :width: 3.64375in
+   :height: 1.38125in
+.. |image6| image:: media/image8.png
+   :width: 6.3in
+   :height: 0.48194in
+.. |image7| image:: media/image9.png
+   :width: 3.74199in
+   :height: 0.46671in
+.. |image8| image:: media/image10.png
+   :width: 6.3in
+   :height: 1.675in
+.. |image9| image:: media/image11.png
+   :width: 2.80623in
+   :height: 3.40833in
+.. |image10| image:: media/image12.png
+   :width: 5.55208in
+   :height: 6.52083in
+.. |image11| image:: media/image13.png
+   :width: 3.82326in
+   :height: 2.03246in
+.. |image14| image:: media/image14.png
+   :width: 2.1557in
+   :height: 3.79421in
+.. |Baum der Elemente| image:: media/image15.png
+   :width: 1.93343in
+   :height: 3.8093in
+.. |Baum der Elemente16| image:: media/image16.png
+   :width: 6.14875in
+   :height: 1.7814in
+.. |Baum der Elemente15| image:: media/image15.png
+   :width: 1.93343in
+   :height: 3.8093in
+
+
+
+
+
+.. |image22| image:: media/image22.png
+   :width: 1.88958in
+   :height: 2.20347in
+.. |image23| image:: media/image23.png
+   :width: 2.99236in
+   :height: 0.91111in
+.. |image24| image:: media/image24.png
+   :width: 2.14653in
+   :height: 1.35417in
+.. |image25| image:: media/image25.png
+   :width: 2.09514in
+   :height: 1.15278in
+.. |image26| image:: media/image26.png
+   :width: 2.35833in
+   :height: 1.3125in
+.. |image27| image:: media/image27.png
+   :width: 2.60069in
+   :height: 1.5in
+.. |image28| image:: media/image28.png
+   :width: 5.10465in
+   :height: 1.33356in
+.. |image29| image:: media/image29.png
+   :width: 3.62576in
+   :height: 3.86116in
+.. |image30| image:: media/image30.png
+   :width: 3.04257in
+   :height: 3.38064in
+.. |Baum der Elemente1| image:: media/image16.png
+   :width: 5.46492in
+   :height: 1.58328in
+.. |Veranschaulichung des Selektors am Strukturbaum| image:: media/image31.png
+   :width: 5.75in
+   :height: 1.45833in
+.. |Veranschaulichung des Selektors am Strukturbaum32| image:: media/image32.png
+   :width: 5.75in
+   :height: 1.45833in
+.. |Veranschaulichung des Selektors am Strukturbaum33| image:: media/image33.png
+   :width: 5.75in
+   :height: 1.45833in
+.. |Veranschaulichung des Selektors am Strukturbaum34| image:: media/image34.png
+   :width: 5.75in
+   :height: 1.45833in
+.. |Veranschaulichung des Selektors am Strukturbaum35| image:: media/image35.png
+   :width: 5.75in
+   :height: 1.45833in
+
+
+
