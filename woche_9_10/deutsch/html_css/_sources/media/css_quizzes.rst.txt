@@ -1,7 +1,0 @@
-Fragen zu CSS
-=============
-
-.. toctree::
-   :maxdepth: 2
-
-   css_quiz_allgemein.rst
