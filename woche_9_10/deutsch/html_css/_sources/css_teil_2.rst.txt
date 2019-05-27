@@ -10,10 +10,9 @@ CSS Layouts
    css_media_queries.rst
    css_breakpoints.rst
    css_media_query_beispiel.rst
+   css_grid_layout.rst
+   css_grid_aufgabe.rst
 
-..   css_flex_layout.rst
-..   css_grid_layout.rst
-..   css_grid_aufgabe.rst
 ..   css_gestaltungsraster.rst
 
 ..   css_flex_layout.rst

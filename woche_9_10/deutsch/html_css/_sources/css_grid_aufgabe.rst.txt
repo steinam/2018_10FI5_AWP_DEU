@@ -3,11 +3,11 @@ Aufgabe zu GRID-System
 
 Quelle:
 
-https://medium.com/sketch-app-sources/css-grid-einf%C3%BChrung-in-5-minuten-verstehen-und-in-sketch-umsetzen-9e9e8a16b07e
+.. https://medium.com/sketch-app-sources/css-grid-einf%C3%BChrung-in-5-minuten-verstehen-und-in-sketch-umsetzen-9e9e8a16b07e
 
-https://scrimba.com/g/gR8PTE
+.. https://scrimba.com/g/gR8PTE
 
-http://maddesigns.de/css-grid-layout-2764.html
+.. http://maddesigns.de/css-grid-layout-2764.html
 
 
 Aufgabe 1:
@@ -23,6 +23,8 @@ Wandeln Sie untenstehenden Code in ein Grid-System um, sodass folgendes Lauyout 
 
         .. activecode:: grid_aufgabe_1
             :language: html
+            :enabledownload:
+            :sourcefile: grid_aufgabe_1.html
 
             <html>
             <head>
@@ -79,7 +81,7 @@ Wandeln Sie untenstehenden Code in ein Grid-System um, sodass folgendes Lauyout 
                         grid-template-rows: 150px;
                     }
 
-                    /* in Kurzform übrigens:  
+                    /* in Kurzform übrigens:
                     grid-template-columns: repeat(5, 50px);
                     */
                     .item-1 {
@@ -148,7 +150,7 @@ Fügen sie Rasterabstände von jeweils 30 px  hinzu
                         grid-template-rows: 150px;
                     }
 
-                    /* in Kurzform übrigens:  
+                    /* in Kurzform übrigens:
                     grid-template-columns: repeat(5, 50px);
                     */
                     .item-1 {
@@ -204,7 +206,7 @@ Fügen sie Rasterabstände von jeweils 30 px  hinzu
                         grid-gap: 30px;
                     }
 
-                    /* in Kurzform übrigens:  
+                    /* in Kurzform übrigens:
                     grid-template-columns: repeat(5, 50px);
                     */
                     .item-1 {
@@ -250,8 +252,11 @@ Aufgabe 3:
 ----------
 
 Teilen Sie den zur Verfügung stehenden horizontalen Raum so auf, dass
-- die erste Spalte 1/6 
-- die zweite Spalte 3/3
+
+- die erste Spalte 1/6
+
+- die zweite Spalte 3/6
+
 - die dritte Spalte 2/6
 
 des Raumes einnimmt.
@@ -276,7 +281,7 @@ des Raumes einnimmt.
                         grid-template-rows: 150px;
                     }
 
-                    /* in Kurzform übrigens:  
+                    /* in Kurzform übrigens:
                     grid-template-columns: repeat(5, 50px);
                     */
                     .item-1 {
@@ -330,7 +335,7 @@ des Raumes einnimmt.
                         grid-template-columns: 1fr 3fr 2fr;
                     }
 
-                    /* in Kurzform übrigens:  
+                    /* in Kurzform übrigens:
                     grid-template-columns: repeat(5, 50px);
                     */
                     .item-1 {
@@ -396,7 +401,7 @@ Geben Sie der ersten Spalte eine feste Breite von 300px. Der Rest passt sich dem
                         grid-template-rows: 150px;
                     }
 
-                    /* in Kurzform übrigens:  
+                    /* in Kurzform übrigens:
                     grid-template-columns: repeat(5, 50px);
                     */
                     .item-1 {
@@ -450,7 +455,7 @@ Geben Sie der ersten Spalte eine feste Breite von 300px. Der Rest passt sich dem
                         grid-template-columns: 300px 3fr 2fr;
                     }
 
-                    /* in Kurzform übrigens:  
+                    /* in Kurzform übrigens:
                     grid-template-columns: repeat(5, 50px);
                     */
                     .item-1 {
@@ -518,7 +523,7 @@ Arbeiten Sie mit ``grid-column-start`` , ``grid-column-end`` bzw ``grid-column``
                         grid-template-rows: 150px;
                     }
 
-                    /* in Kurzform übrigens:  
+                    /* in Kurzform übrigens:
                     grid-template-columns: repeat(5, 50px);
                     */
                     .item-1 {
@@ -572,7 +577,7 @@ Arbeiten Sie mit ``grid-column-start`` , ``grid-column-end`` bzw ``grid-column``
                         grid-template-columns: 1fr 3fr 2fr;
                     }
 
-                    /* in Kurzform übrigens:  
+                    /* in Kurzform übrigens:
                     grid-template-columns: repeat(5, 50px);
                     */
                     .item-1 {
@@ -642,7 +647,7 @@ Erstellen Sie folgendes Layout:
                         grid-template-rows: 150px;
                     }
 
-                    /* in Kurzform übrigens:  
+                    /* in Kurzform übrigens:
                     grid-template-columns: repeat(5, 50px);
                     */
                     .item-1 {
@@ -696,7 +701,7 @@ Erstellen Sie folgendes Layout:
                         grid-template-columns: 1fr 3fr 2fr;
                     }
 
-                    /* in Kurzform übrigens:  
+                    /* in Kurzform übrigens:
                     grid-template-columns: repeat(5, 50px);
                     */
                     .item-1 {
@@ -776,7 +781,7 @@ Informieren Sie sich dazu über das Konzept von **Media-Queries** in CSS.
                         grid-template-rows: 150px;
                     }
 
-                    /* in Kurzform übrigens:  
+                    /* in Kurzform übrigens:
                     grid-template-columns: repeat(5, 50px);
                     */
                     .item-1 {
@@ -830,7 +835,7 @@ Informieren Sie sich dazu über das Konzept von **Media-Queries** in CSS.
                         grid-template-columns: 1fr 3fr 2fr;
                     }
 
-                    /* in Kurzform übrigens:  
+                    /* in Kurzform übrigens:
                     grid-template-columns: repeat(5, 50px);
                     */
                     .item-1 {
@@ -856,11 +861,11 @@ Informieren Sie sich dazu über das Konzept von **Media-Queries** in CSS.
                     @media only screen and (max-width: 720px){
                         .container{
                             grid-template-columns: 1fr 1fr;
-                        } 
+                        }
                         .item-1 {
                             grid-column: 1 / 3;
                             grid-row: 2 / 3;
-                        } 
+                        }
                         .item-2 {
                             grid-row: 1 / 1;
                         }
@@ -886,3 +891,113 @@ Informieren Sie sich dazu über das Konzept von **Media-Queries** in CSS.
                 </div>
             </body>
             </html>
+
+
+
+Aufgabe 8
+---------
+
+Ausgangspunkt ist folgende HTML-DAtei:
+
+
+.. code-block:: html
+
+    <html>
+        <head>
+            <style>
+
+            </style>
+        </head>
+        <body>
+
+            <div class="wrapper">
+                <div class="box a">.a</div>
+                <div class="box b">.b</div>
+                <div class="box c">.c</div>
+                <div class="box d">.d</div>
+            </div>
+        </body>
+    </html>
+
+    Ordnen Sie die Boxen mit Hilfe des Grid-Layouts wie folgt an:
+
+.. image:: media/grid_Aufgabe_8.png
+
+**Lösung**
+
+
+.. activecode:: grid_aufgabe_8_loesung
+    :language: html
+    :hidecode:
+
+
+    <!--    Der Vollständigkeit halber hier der Code für die Zellen .c und .d, wenn man die Positionen fixieren möchte.
+            Da sich Gridzellen grundsätzlich im autoflow verteilen, wäre der Code aber für das erwartete Ergebnis unnötig.
+    -->
+
+    <html>
+        <head>
+            <style>
+
+                .wrapper {
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr;
+                    grid-gap: 12px;
+                }
+
+                .a {
+                grid-column: auto / span 2;
+                }
+
+                .b {
+                grid-row: auto / span 2;
+                }
+
+                /*
+                * full styles if we want to fix positioning
+                *
+
+                .a {
+                        grid-column: 1 / span 2;
+                }
+                .b {
+                        grid-column: 3;
+                        grid-row: 1 / span 2;
+                }
+                .c {
+                        grid-column: 1;
+                        grid-row: 2;
+                }
+                .d {
+                        grid-column: 2;
+                        grid-row: 2;
+                }
+                */
+
+                /* demo & defaults */
+                .box {
+                        background-color: #444;
+                        color: #fff;
+                        padding: 1em;
+                }
+
+                * {
+                    box-sizing: border-box;
+                }
+
+                body {
+                    margin: 2em;
+                }
+            </style>
+        </head>
+        <body>
+
+            <div class="wrapper">
+                <div class="box a">.a</div>
+                <div class="box b">.b</div>
+                <div class="box c">.c</div>
+                <div class="box d">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci repudiandae expedita cumque recusandae tempora incidunt, beatae impedit. Nobis maiores numquam libero iure cum quidem vero eius! Obcaecati, et. Reiciendis, vero</div>
+            </div>
+        </body>
+    </html>
+

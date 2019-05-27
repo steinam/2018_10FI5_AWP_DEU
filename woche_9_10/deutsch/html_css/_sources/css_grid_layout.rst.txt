@@ -1,19 +1,27 @@
 Layout mit Grid
 ===============
 
-https://blog.kulturbanause.de/2013/12/css-grid-layout-module/
+Siehe dazu auch: https://tympanus.net/codrops/css_reference/grid/
 
-https://tympanus.net/codrops/css_reference/grid/
+.. https://blog.kulturbanause.de/2013/12/css-grid-layout-module/
 
-https://gridbyexample.com/
+.. https://tympanus.net/codrops/css_reference/grid/
 
-http://maddesigns.de/css-grids/#/4
+.. https://gridbyexample.com/
 
-https://hackernoon.com/how-css-grid-beats-bootstrap-85d5881cf163
+.. http://maddesigns.de/css-grids/#/4
 
-https://scrimba.com/g/gR8PTE
+.. https://hackernoon.com/how-css-grid-beats-bootstrap-85d5881cf163
 
-https://codeburst.io/css-grid-vs-flexbox-building-simple-layouts-43e569a66f0a
+.. https://scrimba.com/g/gR8PTE
+
+.. https://codeburst.io/css-grid-vs-flexbox-building-simple-layouts-43e569a66f0a
+
+.. https://courses.wesbos.com/account/access/5ce9a9b285f96c03c1e465a5
+
+
+.. https://cssgrid.io/
+
 
 .. image:: media/css-grids.png
     :align: right
@@ -33,33 +41,34 @@ Die vier Spalten sind jeweils 25% breit.
 
 .. activecode:: GridExample_1
     :language: html
+    :sourcefile: GridExample_1.html
 
 
     <html>
     <head>
         <style>
-            .container { 
-                display: grid; 
-                grid-template-rows:200px 1fr 100px; 
-                grid-template-columns:25% 25% 25% 25%; 
+            .container {
+                display: grid;
+                grid-template-rows:200px 1fr 100px;
+                grid-template-columns:25% 25% 25% 25%;
             }
         </style>
     </head>
 
     <body>
-        <div class="container"> 
-            <div>Element 1</div> 
-            <div>Element 2</div> 
-            <div>Element 3</div> 
-            <div>Element 4</div> 
-            <div>Element 5</div> 
-            <div>Element 6</div> 
-            <div>Element 7</div> 
-            <div>Element 8</div> 
-            <div>Element 9</div> 
-            <div>Element 10</div> 
-            <div>Element 11</div>  
-            <div>Element 12</div> 
+        <div class="container">
+            <div>Element 1</div>
+            <div>Element 2</div>
+            <div>Element 3</div>
+            <div>Element 4</div>
+            <div>Element 5</div>
+            <div>Element 6</div>
+            <div>Element 7</div>
+            <div>Element 8</div>
+            <div>Element 9</div>
+            <div>Element 10</div>
+            <div>Element 11</div>
+            <div>Element 12</div>
         </div>
     </body>
     </html>
@@ -72,11 +81,11 @@ Wenn innerhalb des Elternelements nun Kind-Elemente liegen, fügen sich die Inha
 
 .. code-block:: css
 
-    .container { 
-        display: grid; 
-        grid-template-rows: 200px 1fr 100px; 
-        grid-template-columns: 25% 25% 25% 25%; 
-        grid-auto-flow: column; 
+    .container {
+        display: grid;
+        grid-template-rows: 200px 1fr 100px;
+        grid-template-columns: 25% 25% 25% 25%;
+        grid-auto-flow: column;
     }
 
 
@@ -165,7 +174,7 @@ Das folgende Code-Beispiel verdeutlicht die Positionierung von Elementen im Rast
         </div>
 
         </body>
-        </html>   
+        </html>
 
 
 **Kurzschreibweise**
@@ -177,9 +186,9 @@ Es existieren auch die Kurzschreibweisen
 
  .. code-block:: css
 
-    header { 
-        grid-column:1 / 5; 
-        grid-row:1 / 2; 
+    header {
+        grid-column:1 / 5;
+        grid-row:1 / 2;
     }
 
 
@@ -191,22 +200,22 @@ Die einzelnen Rasterlinien können auch benannt werden. Dazu wird bei der Defini
 
 .. code-block:: css
 
-    .container { 
-    height:100vh; 
-    display: grid; 
-    grid-template-rows: [line-h-1] 200px [line-h-2] 1fr [line-h-3] 100px [line-h-4]; 
-    grid-template-columns: [line-v-1] 25% [line-v-2] 25% [line-v-3] 25% [line-v-4] 25% [line-v-5]; 
+    .container {
+    height:100vh;
+    display: grid;
+    grid-template-rows: [line-h-1] 200px [line-h-2] 1fr [line-h-3] 100px [line-h-4];
+    grid-template-columns: [line-v-1] 25% [line-v-2] 25% [line-v-3] 25% [line-v-4] 25% [line-v-5];
     }
 
 Bei der Zuweisung der Kind-Elemente wird dann anstelle der Nummer der Spalte bzw. Zeile der jeweilige Name angegeben.
 
 .. code-block:: css
 
-    header { 
-    grid-column: line-v-1 / line-v-5; 
-    grid-row: line-h-1 / line-h-2; 
+    header {
+    grid-column: line-v-1 / line-v-5;
+    grid-row: line-h-1 / line-h-2;
     }
- 
+
 
 Benannte Raster-Bereiche (Rasterzellen)
 ---------------------------------------
@@ -215,33 +224,33 @@ Die einzelnen Bereiche des CSS-Grids können mit Hilfe des Befehls grid-template
 
 .. code-block:: css
 
-    .container { 
-        height:100vh; 
-        display: grid; 
-        grid-template-rows: 200px 1fr 100px; 
-        grid-template-columns: 25% 25% 25% 25%; 
-        grid-template-areas:  
-            "header header header header" 
-            "content content content sidebar" 
-            "footer footer footer footer" 
-        ; 
+    .container {
+        height:100vh;
+        display: grid;
+        grid-template-rows: 200px 1fr 100px;
+        grid-template-columns: 25% 25% 25% 25%;
+        grid-template-areas:
+            "header header header header"
+            "content content content sidebar"
+            "footer footer footer footer"
+        ;
     }
 
 Um Kind-Elemente einem benannten Bereich im Raster zuzuweisen, wird der Befehl grid-area verwendet.
 
 .. code-block:: css
 
-    header { 
-        grid-area: header; 
-    } 
-    article { 
-        grid-area: content; 
-    } 
-    aside { 
-        grid-area: sidebar; 
-    } 
-    footer { 
-        grid-area: footer; 
+    header {
+        grid-area: header;
+    }
+    article {
+        grid-area: content;
+    }
+    aside {
+        grid-area: sidebar;
+    }
+    footer {
+        grid-area: footer;
     }
 
 
@@ -262,7 +271,7 @@ Wenn Bereiche im Raster leer bleiben sollen, dann wird dafür ein Punkt als Plat
             display: grid;
             grid-template-rows: 200px 1fr 100px;
             grid-template-columns: 25% 25% 25% 25%;
-            grid-template-areas: 
+            grid-template-areas:
                 "header header header header"
                 "content content . sidebar"
                 "footer footer footer footer"
@@ -301,7 +310,7 @@ Wenn Abstände zwischen den Spalten bzw. Zeilen des Rasters entstehen sollen, ka
 .. code-block:: css
 
     .container {
-        grid-row-gap: 20px; 
+        grid-row-gap: 20px;
         grid-column-gap: 10px;
         /* weitere eigenschaften */
         }
@@ -309,7 +318,7 @@ Wenn Abstände zwischen den Spalten bzw. Zeilen des Rasters entstehen sollen, ka
         /*Die Kurzschreibweise grid-gap existiert ebenfalls:*/
 
     .container {
-        grid-gap: 20px 10px; 
+        grid-gap: 20px 10px;
         /* weitere eigenschaften */
     }
 
@@ -318,7 +327,7 @@ Wenn Abstände zwischen den Spalten bzw. Zeilen des Rasters entstehen sollen, ka
 
 
 
-Ausrichting innerhalb des Rasters
+Ausrichtung innerhalb des Rasters
 ---------------------------------
 
 In den bisherigen Beispielen strecken sich die Kind-Elemente immer über die volle Fläche einer Rasterzelle, obwohl eigtl. weniger Inhalt enthalten ist. Sowohl für das Elternelement als auch für die einzelnen Kind-Elemente kann dieses Verhalten verändert werden.
@@ -353,7 +362,7 @@ Die Befehle für das Eltern-Element lauten justify-items für das horizontale Ve
         grid-template-columns: 25% 25% 25% 25%;
         justify-items: center;
         align-items: center;
-        grid-template-areas: 
+        grid-template-areas:
             "header header header header"
             "content content content sidebar"
             "footer footer footer footer"
@@ -402,8 +411,8 @@ Wenn lediglich die Ausrichtung einer einzelnen Rasterzelle verändert werden sol
 
 .. code-block:: css
 
-    article { 
-        align-self: start; 
+    article {
+        align-self: start;
     }
 
 
@@ -428,7 +437,7 @@ Wenn lediglich die Ausrichtung einer einzelnen Rasterzelle verändert werden sol
         display: grid;
         grid-template-rows: 200px 1fr 100px;
         grid-template-columns: 25% 25% 25% 25%;
-        grid-template-areas: 
+        grid-template-areas:
             "header header header header"
             "content content content sidebar"
             "footer footer footer footer"
@@ -480,28 +489,28 @@ Wenn es um die Anpassung des Layouts für verschiedene Displaygrößen geht, bie
 
 .. code-block:: css
 
-    .container { 
-        height:100vh; 
-        display: grid; 
-        grid-template-rows: 80px 4fr 1fr 40px; 
-        grid-template-columns: 100%; 
-        grid-template-areas:  
-            "header" 
-            "content" 
-            "sidebar" 
-            "footer" 
-        ; 
-    } 
-    @media screen and (min-width: 44.001em) { 
-        .container { 
-            grid-template-rows: 200px 1fr 100px; 
-            grid-template-columns: 25% 25% 25% 25%; 
-            grid-template-areas:  
-            "header header header header" 
-            "content content content sidebar" 
-            "footer footer footer footer" 
-            ; 
-        } 
+    .container {
+        height:100vh;
+        display: grid;
+        grid-template-rows: 80px 4fr 1fr 40px;
+        grid-template-columns: 100%;
+        grid-template-areas:
+            "header"
+            "content"
+            "sidebar"
+            "footer"
+        ;
+    }
+    @media screen and (min-width: 44.001em) {
+        .container {
+            grid-template-rows: 200px 1fr 100px;
+            grid-template-columns: 25% 25% 25% 25%;
+            grid-template-areas:
+            "header header header header"
+            "content content content sidebar"
+            "footer footer footer footer"
+            ;
+        }
     }
 
 .. activecode:: grid_responsive_media_queries
@@ -525,7 +534,7 @@ Wenn es um die Anpassung des Layouts für verschiedene Displaygrößen geht, bie
         display: grid;
         grid-template-rows: 80px 4fr 1fr 40px;
         grid-template-columns: 100%;
-        grid-template-areas: 
+        grid-template-areas:
             "header"
             "content"
             "sidebar"
@@ -538,7 +547,7 @@ Wenn es um die Anpassung des Layouts für verschiedene Displaygrößen geht, bie
         .container {
             grid-template-rows: 200px 1fr 100px;
             grid-template-columns: 25% 25% 25% 25%;
-            grid-template-areas: 
+            grid-template-areas:
                 "header header header header"
                 "content content content sidebar"
                 "footer footer footer footer"
@@ -592,7 +601,7 @@ Der folgende Code wiederholt das Grid für Zeilen zwei Mal, und das für Spalten
 
 .. code-block:: css
 
-    .container { 
+    .container {
     display:grid;
     grid-template-rows: repeat(2, 100px 50px);
     grid-template-columns: repeat(3, 200px 1fr 200px);
@@ -602,7 +611,7 @@ Anstelle der repeat()-Funktion könnte auch manuell folgender Code geschrieben w
 
 .. code-block:: html
 
-    .container { 
+    .container {
     display:grid;
     grid-template-rows: 100px 50px 100px 50px;
     grid-template-columns: 200px 1fr 200px 200px 1fr 200px 200px 1fr 200px;
@@ -639,7 +648,7 @@ Der folgende Code erzeugt ein CSS Grid mit einer Zeile und zwei Spalten. Die ers
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>CSS Grids minmax-Funktion</title>
     <style>
-        
+
     .container {
     display: grid;
     grid-template-columns: minmax(min-content, 300px) minmax(max-content, 1fr);
@@ -660,14 +669,14 @@ Der folgende Code erzeugt ein CSS Grid mit einer Zeile und zwei Spalten. Die ers
     <div class="container">
     <div>
         <strong>minmax(min-content, 300px)</strong><br>
-        Diese Spalte ist mindestens so breit wie minimale Breite des Inhalts und maximal 300 Pixel breit. Da der Text umbricht, bestimmt das längte Wort die minimale Breite des Inhalts. Das längste Wort ist dieses_hier_am_Ende. 
+        Diese Spalte ist mindestens so breit wie minimale Breite des Inhalts und maximal 300 Pixel breit. Da der Text umbricht, bestimmt das längte Wort die minimale Breite des Inhalts. Das längste Wort ist dieses_hier_am_Ende.
     </div>
     <div>
         <strong>minmax(max-content, 1fr)</strong><br>
         Diese Spalte ist mindestens so breit wie die maximale Ausdehnung des Inhalts und maximal 1fr breit. <br>Der Text in dieser Spalte wird  nie in eine zweite Zeile umbrechen, es sei denn er wurde wie hier mit einem &lt;br&gt; dazu gezwungen.
     </div>
     </div>
-        
+
     </body>
     </html>
 

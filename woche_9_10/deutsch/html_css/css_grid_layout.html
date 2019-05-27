@@ -106,6 +106,8 @@
     <script type="text/javascript" src="_static/presenter_mode.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Aufgabe zu GRID-System" href="css_grid_aufgabe.html" />
+    <link rel="prev" title="Beispiele zu Media Queries" href="css_media_query_beispiel.html" />
 <meta charset='utf-8'>
 <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
 <meta content='width=device-width, initial-scale=1.0' name='viewport' />
@@ -290,7 +292,7 @@
 <li><a class="reference internal" href="#benannte-rasterlinien">Benannte Rasterlinien</a></li>
 <li><a class="reference internal" href="#benannte-raster-bereiche-rasterzellen">Benannte Raster-Bereiche (Rasterzellen)</a></li>
 <li><a class="reference internal" href="#abstande-zwischen-rasterzellen">Abstände zwischen Rasterzellen</a></li>
-<li><a class="reference internal" href="#ausrichting-innerhalb-des-rasters">Ausrichting innerhalb des Rasters</a></li>
+<li><a class="reference internal" href="#ausrichtung-innerhalb-des-rasters">Ausrichtung innerhalb des Rasters</a></li>
 <li><a class="reference internal" href="#responsive-css-grids">Responsive CSS Grids</a></li>
 <li><a class="reference internal" href="#die-repeat-funktion">Die repeat()-Funktion</a></li>
 <li><a class="reference internal" href="#die-minmax-funktion">Die minmax()-Funktion</a></li>
@@ -304,6 +306,18 @@
         
         
           
+  <li id="relations-prev" title="Previous Chapter - Beispiele zu Media Queries" data-toggle="tooltip">
+    <a href="css_media_query_beispiel.html" >
+      <i class='glyphicon glyphicon-backward' style='opacity:0.9;'></i>
+    </a>
+  </li>
+  
+  <li id="relations-next" title='Next Chapter - Aufgabe zu GRID-System' data-toggle="tooltip" >              
+    <a href="css_grid_aufgabe.html" >
+        <i class='glyphicon glyphicon-forward' style='opacity:0.9;'></i>
+    </a>
+  </li>
+  <li class="divider-vertical"></li>
 
 <script type="text/javascript">
   opts = {'placement':'bottom',
@@ -331,13 +345,7 @@
   
   <div class="section" id="layout-mit-grid">
 <h1>Layout mit Grid<a class="headerlink" href="#layout-mit-grid" title="Permalink to this headline">¶</a></h1>
-<p><a class="reference external" href="https://blog.kulturbanause.de/2013/12/css-grid-layout-module/">https://blog.kulturbanause.de/2013/12/css-grid-layout-module/</a></p>
-<p><a class="reference external" href="https://tympanus.net/codrops/css_reference/grid/">https://tympanus.net/codrops/css_reference/grid/</a></p>
-<p><a class="reference external" href="https://gridbyexample.com/">https://gridbyexample.com/</a></p>
-<p><a class="reference external" href="http://maddesigns.de/css-grids/#/4">http://maddesigns.de/css-grids/#/4</a></p>
-<p><a class="reference external" href="https://hackernoon.com/how-css-grid-beats-bootstrap-85d5881cf163">https://hackernoon.com/how-css-grid-beats-bootstrap-85d5881cf163</a></p>
-<p><a class="reference external" href="https://scrimba.com/g/gR8PTE">https://scrimba.com/g/gR8PTE</a></p>
-<p><a class="reference external" href="https://codeburst.io/css-grid-vs-flexbox-building-simple-layouts-43e569a66f0a">https://codeburst.io/css-grid-vs-flexbox-building-simple-layouts-43e569a66f0a</a></p>
+<p>Siehe dazu auch: <a class="reference external" href="https://tympanus.net/codrops/css_reference/grid/">https://tympanus.net/codrops/css_reference/grid/</a></p>
 <img alt="_images/css-grids.png" class="align-right" src="_images/css-grids.png" />
 <p>Komplexe Weblayouts lassen sich weder mit float-basierten Gestaltungsrastern noch mit Flexbox perfekt umsetzen. Die Floating-Technik wurde nicht zur Konstruktion komplexer Layouts entwickelt, was wir u.a. daran merken, dass wir Elemente nicht nach oben und unten verschieben können. Flexbox ermöglicht es zwar die Gestaltung vollständig vom HTML-Code zu trennen, bietet sich aber eher für lineare Strukturen an als für verschachtelte. CSS Grid ermöglicht »echte« Gestaltungsraster auf Basis von CSS. In diesem Beitrag beschreiben wir, wie Layouts mit Hilfe von CSS Grids konstruiert werden können.</p>
 <div class="section" id="grundlegende-funktionsweise-von-css-grid">
@@ -350,7 +358,7 @@
 
 <textarea data-component="activecode" id=GridExample_1 data-lang="htmlmixed" 
       data-timelimit=25000    
-    data-audio=''     
+    data-audio='' data-sourcefile='GridExample_1.html'    
           >
 &lt;html&gt;
 &lt;head&gt;
@@ -602,8 +610,8 @@
 </div>
 <img alt="_images/css-grids-gap.png" src="_images/css-grids-gap.png" />
 </div>
-<div class="section" id="ausrichting-innerhalb-des-rasters">
-<h2>Ausrichting innerhalb des Rasters<a class="headerlink" href="#ausrichting-innerhalb-des-rasters" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="ausrichtung-innerhalb-des-rasters">
+<h2>Ausrichtung innerhalb des Rasters<a class="headerlink" href="#ausrichtung-innerhalb-des-rasters" title="Permalink to this headline">¶</a></h2>
 <p>In den bisherigen Beispielen strecken sich die Kind-Elemente immer über die volle Fläche einer Rasterzelle, obwohl eigtl. weniger Inhalt enthalten ist. Sowohl für das Elternelement als auch für die einzelnen Kind-Elemente kann dieses Verhalten verändert werden.</p>
 <p><strong>Globale Ausrichtung im Eltern-Element festlegen</strong></p>
 <p>Die Befehle für das Eltern-Element lauten justify-items für das horizontale Verhalten, und align-items für das vertikale Verhalten. Es stehen jeweils die Werte start, end, center und stretch zur Wahl. stretch ist der Standardwert und selbstverständlich können justify-items und align-items kombiniert werden.</p>
@@ -966,6 +974,23 @@ Browsersupport</p>
 
   
       
+  <li id="relations-prev" class="navLink" title='Previous Section - Beispiele zu Media Queries' data-toggle="tooltip">
+    <a href="css_media_query_beispiel.html" >
+        <div style="background-color: white; border-style:solid; border-color:lightgrey; border-width:2px; width:100px; height:50px">            
+            <i class='prevNav glyphicon glyphicon-chevron-left' style="top:50%; transform:translateY(-50%)translateX(-50%); left: 50%;"></i>
+        </div>
+    </a>
+  </li>
+  <a class="navLinkBg" id="navLinkBgLeft"  href="css_media_query_beispiel.html" ></a>
+  
+  <li id="relations-next" class="navLink" title='Next Section - Aufgabe zu GRID-System' data-toggle="tooltip" >
+    <a href="css_grid_aufgabe.html" >
+      <div style="background-color: white; border-style:solid; border-color:lightgrey; border-width:2px; width:100px; height:50px">            
+          <i id="relationsNextIcon" class='nextNav glyphicon glyphicon-chevron-right' style="top:50%; transform:translateY(-50%)translateX(-50%); left: 50%;"></i>
+      </div>
+    </a>
+  </li>
+  <a class="navLinkBg navLink" id="navLinkBgRight" href="css_grid_aufgabe.html" >Next Section - Aufgabe zu GRID-System</a>
 
 <script type="text/javascript">
 
