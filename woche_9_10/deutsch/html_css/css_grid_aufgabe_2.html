@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <meta charset="utf-8" />
-    <title>CSS Layouts &#8212; Runestone Interactive Overview</title>
+    <title>Responsive Website mittels GRID &#8212; Runestone Interactive Overview</title>
     <link rel="stylesheet" href="_static/basic.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <link rel="stylesheet" href="_static/bootstrap-3.0.0/css/bootstrap.min.css" type="text/css" />
@@ -106,8 +106,8 @@
     <script type="text/javascript" src="_static/presenter_mode.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="CSS - Grid-Systeme" href="css_gestaltungsraster.html" />
-    <link rel="prev" title="Arbeitsauftrag Layout-Systeme" href="css_layout_einstieg_aufgabe.html" />
+    <link rel="next" title="Fragen zu CSS" href="css_quizzes.html" />
+    <link rel="prev" title="Aufgabe zu GRID-System" href="css_grid_aufgabe.html" />
 <meta charset='utf-8'>
 <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
 <meta content='width=device-width, initial-scale=1.0' name='viewport' />
@@ -265,7 +265,7 @@
             <li><a href='/runestone/static/overview/instructor.html'>Help for Instructors</a></li>
             <li class="divider"></li>
             <li><a href='http://runestoneinteractive.org'>About Runestone</a></li>
-            <li><a href='/runestone/default/reportabug?course=html_css&page=css_teil_2'>Report A Problem</a></li>
+            <li><a href='/runestone/default/reportabug?course=html_css&page=css_grid_aufgabe_2'>Report A Problem</a></li>
           </ul>
         </li>
         <!-- end help menu dropdown -->
@@ -286,12 +286,7 @@
           <li class="dropdown">
   <a href="#" class="dropdown-toggle" data-toggle="dropdown">Page <b class="caret"></b></a>
   <ul class="dropdown-menu localtoc"><ul>
-<li><a class="reference internal" href="#">CSS Layouts</a><ul>
-<li><a class="reference internal" href="#fixed-layout-starres-layout">Fixed Layout (starres Layout)</a></li>
-<li><a class="reference internal" href="#fluid-layout-flussiges-layout">Fluid Layout (flüssiges Layout)</a></li>
-<li><a class="reference internal" href="#elastic-layout-elastisches-layout">Elastic Layout (elastisches Layout)</a></li>
-</ul>
-</li>
+<li><a class="reference internal" href="#">Responsive Website mittels GRID</a></li>
 </ul>
 </ul>
 </li>
@@ -299,14 +294,14 @@
         
         
           
-  <li id="relations-prev" title="Previous Chapter - Arbeitsauftrag Layout-Systeme" data-toggle="tooltip">
-    <a href="css_layout_einstieg_aufgabe.html" >
+  <li id="relations-prev" title="Previous Chapter - Aufgabe zu GRID-System" data-toggle="tooltip">
+    <a href="css_grid_aufgabe.html" >
       <i class='glyphicon glyphicon-backward' style='opacity:0.9;'></i>
     </a>
   </li>
   
-  <li id="relations-next" title='Next Chapter - CSS - Grid-Systeme' data-toggle="tooltip" >              
-    <a href="css_gestaltungsraster.html" >
+  <li id="relations-next" title='Next Chapter - Fragen zu CSS' data-toggle="tooltip" >              
+    <a href="css_quizzes.html" >
         <i class='glyphicon glyphicon-forward' style='opacity:0.9;'></i>
     </a>
   </li>
@@ -336,268 +331,161 @@
 
 <div class="container" id="main-content">
   
-  <div class="section" id="css-layouts">
-<h1>CSS Layouts<a class="headerlink" href="#css-layouts" title="Permalink to this headline">¶</a></h1>
-<div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="css_gestaltungsraster.html">CSS - Grid-Systeme</a></li>
-<li class="toctree-l1"><a class="reference internal" href="css_media_queries.html">Media Queries</a></li>
-<li class="toctree-l1"><a class="reference internal" href="css_breakpoints.html">Breakpoints</a></li>
-<li class="toctree-l1"><a class="reference internal" href="css_media_query_beispiel.html">Beispiele zu Media Queries</a></li>
-<li class="toctree-l1"><a class="reference internal" href="css_grid_layout.html">Layout mit Grid</a></li>
-<li class="toctree-l1"><a class="reference internal" href="css_grid_aufgabe.html">Aufgabe zu GRID-System</a></li>
-<li class="toctree-l1"><a class="reference internal" href="css_grid_aufgabe_2.html">Responsive Website mittels GRID</a></li>
-</ul>
-</div>
-<p>Im 2. Teil geht es um Layout-Systeme</p>
-<p><a class="reference external" href="https://blog.kulturbanause.de/2014/11/gestaltungsraster-css-grids-web-design/">https://blog.kulturbanause.de/2014/11/gestaltungsraster-css-grids-web-design/</a></p>
-<p><a class="reference external" href="https://blog.kulturbanause.de/2012/10/die-layout-typen-einer-website-fixed-fluid-elastic/">https://blog.kulturbanause.de/2012/10/die-layout-typen-einer-website-fixed-fluid-elastic/</a></p>
-<p>Bei der Konzeption einer Website müsst ihr entscheiden, wie sich das Layout im Browser verhalten soll. Soll die Website immer gleich breit sein? Sollen sich die Elemente der Breite des Browserfensters anpassen? Soll sich das Layout gar proportional verkleinern? In diesem Artikel erfahrt ihr welche Vor- und Nachteile die verschiedenen Layout-Typen haben und welche Auswirkungen eure Entscheidung auf die mobile Variante einer Website hat.</p>
-<div class="section" id="fixed-layout-starres-layout">
-<h2>Fixed Layout (starres Layout)<a class="headerlink" href="#fixed-layout-starres-layout" title="Permalink to this headline">¶</a></h2>
-<img alt="_images/fixed_layout.png" class="align-right" src="_images/fixed_layout.png" />
-<p>Layouts mit einem starren Gestaltungsraster, also einem Raster das auf festen Pixelwerten basiert, nennt man „fixed“. Die Website arbeitet dabei mit festgelegten Abmessungen, die sich auch dann nicht verändern, wenn das Browserfenster größer oder kleiner wird. Die Website nimmt einen festgelegten Bereich im Browser ein. Ist das Browserfenster kleiner, wird die Seite nicht vollständig angezeigt und es werden Scrollbalken angezeigt. Im ungünstigsten Fall entstehen sogar Darstellungsfehler. Ist das Browserfenster größer als die Website, entsteht ein Freiraum um die Seite herum. Dieser Freiraum sollte vom Webdesigner ebenfalls möglichst ansprechend gefüllt werden.</p>
-<p>Der Layouttyp „fixed“ ist (immer noch) anzutreffen. Das liegt unter anderem daran, dass sich ein Design mit festen Abmessungen am einfachsten gestalten und technisch umsetzen lässt. Auch der Gestaltungsfreiraum ist am größten, da die verschiedenen Elemente starr sind und daher nicht flexibel gestaltet werden müssen.</p>
-<p><strong>Vorteile eines starren Layouts</strong></p>
-<ul class="simple">
-<li><p>Unkomplizierte Planung des Gestaltungsrasters</p></li>
-<li><p>Viel gestalterische Freiheit</p></li>
-<li><p>Unkomplizierte technische Umsetzung</p></li>
-<li><p>Für den Kunden leicht verständlich</p></li>
-</ul>
-<p><strong>Nachteile eines starren Layouts</strong></p>
-<ul class="simple">
-<li><p>Es wird nur für einen bestimmten Viewport gestaltet. Ist der Viewport größer, wird Platz verschenkt, ist der Viewport zu klein, wird die Seite abgeschnitten.</p></li>
-<li><p>Auf Basis eines starren Rasters kann kein „echtes“ responsive Design erstellt werden, sondern nur ein sog. adaptive Layout (die Begrifflichkeiten sind kontrovers diskutiert).</p></li>
-</ul>
-<p><strong>Beispiel</strong></p>
+  <div class="section" id="responsive-website-mittels-grid">
+<h1>Responsive Website mittels GRID<a class="headerlink" href="#responsive-website-mittels-grid" title="Permalink to this headline">¶</a></h1>
+<p>In dieser Aufgabe wollen wir eine komplette Webseite mit Hilfe eines Grid-Systems erstellen.
+Zusätzlich soll sie repsonsive sein, d.h. mit dem Wechsel der Viewportgröße soll die Darstellung in einer anderen Form erfolgen.</p>
+<p>Ausgangspunkt ist folgende HTML-Datei:</p>
+<div id='grid_example_1' data-component="tabbedStuff"  class='alert alert-warning'><div data-component="tab" data-tabname="Ausgabe" >
 
-<div data-childcomponent="layout_fixed_demo" class="runestone explainer ac_section alert alert-warning">
+<div data-childcomponent="resp_webseite_1" class="runestone explainer ac_section alert alert-warning">
 
-<textarea data-component="activecode" id=layout_fixed_demo data-lang="htmlmixed" 
-      data-timelimit=25000    
+<textarea data-component="activecode" id=resp_webseite_1 data-lang="htmlmixed" 
+      data-timelimit=25000   data-enabledownload="true" 
     data-audio=''     
           >
-&lt;!doctype html&gt;
-&lt;html&gt;
+&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+
 &lt;head&gt;
 &lt;meta charset=&quot;UTF-8&quot;&gt;
-&lt;title&gt;Beispiel für ein fixed Layout&lt;/title&gt;
-&lt;style type=&quot;text/css&quot;&gt;
-#container {
-    margin: 0 auto;
-    width: 960px
-}
-
-header {
-    width: 960px;
-    height: 100px;
-    margin: 0 0 20px 0;
-    float: left;
-    background: #666;
-}
-
-#content {
-    width: 700px;
-    height: 500px;
-    margin: 0 20px 0 0;
-    float: left;
-    background: #CCC;
-}
-
-aside {
-    width: 240px;
-    height: 500px;
-    float: left;
-    background: #666;
-}
-&lt;/style&gt;
+&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+&lt;link rel=&quot;stylesheet&quot; href=&quot;../assets/style.css&quot;&gt;
+&lt;link rel=&quot;stylesheet&quot; href=&quot;./responsive-START.css&quot;&gt;
+&lt;title&gt;Responsive Website!&lt;/title&gt;
 &lt;/head&gt;
 
 &lt;body&gt;
-&lt;div id=&quot;container&quot;&gt;
-&lt;header&gt;Header&lt;/header&gt;
-&lt;div id=&quot;content&quot;&gt;Content&lt;/div&gt;
-&lt;aside&gt;Sidebar&lt;/aside&gt;
+
+&lt;div class=&quot;wrapper&quot;&gt;
+    &lt;div class=&quot;top&quot;&gt;
+    &lt;header class=&quot;hero&quot;&gt;
+        &lt;h1&gt;Terry&#x27;s Taco Joint&lt;/h1&gt;
+        &lt;p&gt;Pretty Good Tacos!&lt;/p&gt;
+    &lt;/header&gt;
+    &lt;div class=&quot;cta cta1&quot;&gt;
+        &lt;p class=&quot;price&quot;&gt;$1.99&lt;/p&gt;
+        &lt;p&gt;Tacos&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;cta cta2&quot;&gt;
+        &lt;p class=&quot;price&quot;&gt;$3.99&lt;/p&gt;
+        &lt;p&gt;Kombucha&lt;/p&gt;
+    &lt;/div&gt;
+
+    &lt;/div&gt;
+    &lt;nav class=&quot;menu&quot;&gt;
+    &lt;button aria-expanded=&quot;false&quot; aria-controls=&quot;menu-list&quot;&gt;
+        &lt;span class=&quot;open&quot;&gt;☰&lt;/span&gt;
+        &lt;span class=&quot;close&quot;&gt;×&lt;/span&gt;
+        Menu
+    &lt;/button&gt;
+    &lt;ul id=&quot;menu-list&quot;&gt;
+        &lt;li&gt;
+        &lt;a href=&quot;&quot;&gt;Tacos&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+        &lt;a href=&quot;&quot;&gt;Beers&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+        &lt;a href=&quot;&quot;&gt;Wines&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+        &lt;a href=&quot;&quot;&gt;Desserts&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+        &lt;a href=&quot;&quot;&gt;Reservations&lt;/a&gt;
+        &lt;/li&gt;
+    &lt;/ul&gt;
+    &lt;/nav&gt;
+
+    &lt;section class=&quot;features&quot;&gt;
+    &lt;div class=&quot;feature&quot;&gt;
+        &lt;span class=&quot;icon&quot;&gt;🌮&lt;/span&gt;
+        &lt;h3&gt;Tacos&lt;/h3&gt;
+        &lt;p&gt;Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi, assumenda.&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;feature&quot;&gt;
+        &lt;span class=&quot;icon&quot;&gt;🍺&lt;/span&gt;
+        &lt;h3&gt;Beer&lt;/h3&gt;
+        &lt;p&gt;Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi, assumenda.&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;feature&quot;&gt;
+        &lt;span class=&quot;icon&quot;&gt;🍷&lt;/span&gt;
+        &lt;h3&gt;Wine&lt;/h3&gt;
+        &lt;p&gt;Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi, assumenda.&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;feature&quot;&gt;
+        &lt;span class=&quot;icon&quot;&gt;🎵&lt;/span&gt;
+        &lt;h3&gt;Music&lt;/h3&gt;
+        &lt;p&gt;Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi, assumenda.&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;/section&gt;
+
+    &lt;section class=&quot;about&quot;&gt;
+    &lt;img src=&quot;images/queso-taco.png&quot; alt=&quot;Yummy Taco&quot; class=&quot;about__mockup&quot;&gt;
+    &lt;div class=&quot;about__details&quot;&gt;
+        &lt;h2&gt;Featured Taco&lt;/h2&gt;
+        &lt;p&gt;Slim Profile, easy to hold and loaded with cheese.&lt;/p&gt;
+        &lt;p&gt;This is the one you have been waiting for&lt;/p&gt;
+        &lt;button&gt;Learn More →&lt;/button&gt;
+    &lt;/div&gt;
+    &lt;/section&gt;
+
+
+    &lt;section class=&quot;gallery&quot;&gt;
+    &lt;h2&gt;Instant Grams&lt;/h2&gt;
+    &lt;img src=&quot;https://source.unsplash.com/random/201x201&quot; alt=&quot;&quot;&gt;
+    &lt;img src=&quot;https://source.unsplash.com/random/202x202&quot; alt=&quot;&quot;&gt;
+    &lt;img src=&quot;https://source.unsplash.com/random/203x203&quot; alt=&quot;&quot;&gt;
+    &lt;img src=&quot;https://source.unsplash.com/random/204x204&quot; alt=&quot;&quot;&gt;
+    &lt;img src=&quot;https://source.unsplash.com/random/205x205&quot; alt=&quot;&quot;&gt;
+    &lt;img src=&quot;https://source.unsplash.com/random/206x206&quot; alt=&quot;&quot;&gt;
+    &lt;img src=&quot;https://source.unsplash.com/random/207x207&quot; alt=&quot;&quot;&gt;
+    &lt;img src=&quot;https://source.unsplash.com/random/207x208&quot; alt=&quot;&quot;&gt;
+    &lt;img src=&quot;https://source.unsplash.com/random/207x209&quot; alt=&quot;&quot;&gt;
+    &lt;img src=&quot;https://source.unsplash.com/random/207x210&quot; alt=&quot;&quot;&gt;
+    &lt;/section&gt;
 &lt;/div&gt;
+
+&lt;script&gt;
+&lt;/script&gt;
+
 &lt;/body&gt;
+
 &lt;/html&gt;
 </textarea>
 </div>
+</div><div data-component="tab" data-tabname="Optik_Large" >
+<img alt="_images/taco_full.png" src="_images/taco_full.png" />
+</div><div data-component="tab" data-tabname="Optik_Medium" >
+<img alt="_images/taco_medium.png" src="_images/taco_medium.png" />
+</div><div data-component="tab" data-tabname="Optik_Small" >
+<img alt="_images/taco_small.png" src="_images/taco_small.png" />
 </div>
-<div class="section" id="fluid-layout-flussiges-layout">
-<h2>Fluid Layout (flüssiges Layout)<a class="headerlink" href="#fluid-layout-flussiges-layout" title="Permalink to this headline">¶</a></h2>
-<img alt="_images/css_layout_fluid.png" class="align-right" src="_images/css_layout_fluid.png" />
-<p>Bei einem fluid Layout passt sich die Website der Breite des Browserfensters an, und nutzt so den zur Verfügung stehenden Platz optimal aus. Auf großen Monitoren können also mehr Inhalte abgebildet werden als auf kleinen Monitoren. Um die notwendige Flexibilität zu erreichen, müssen einige (oder alle) Spalten des Gestaltungsrasters variabel sein. Diese Spalten basieren auf Prozentwerten und nicht auf Pixelwerten. Die Website ist normalerweise nur in der horizontalen Ausrichtung flexibel, die vertikale Ausrichtung bleibt starr. Häufig wird auch eine Obergrenze für die maximale Ausbreitung des Designs festgelegt.</p>
-<p>Ein fluid Design lässt sich nicht so einfach gestalten wie ein fixed Design und auch die technische Umsetzung ist komplizierter. Alle Gestaltungselemente die in einer flexiblen Spalte untergebracht sind, müssen in der Breite skalierbar sein. Prozentwerte sind in Layoutprogrammen jedoch üblicherweise nicht möglich. Der Desiger muss daher im Hinterkopf haben welche Bereiche flexibel sind, und die Grafiken entsprechend vorbereiten.</p>
-<p>Ein fluid Layout wird bei inhaltsschweren Seiten wie Online-Shops, Magazin-Seiten oder Foren verwendet. Es ist auch die Grundlage eines “echten” responsive Designs.</p>
-<p><strong>Vorteile</strong></p>
-<ul class="simple">
-<li><p>Optimale Platznutzung</p></li>
-<li><p>Es können häufig mehr Inhalte dargestellt werden</p></li>
-<li><p>Mit einem flüssigen Raster ist ein „echtes“ responsive Design realisierbar, so wie Ethan Marcotte den Begriff „responsive“ einst definiert hat.</p></li>
-</ul>
-<p><strong>Nachteile</strong></p>
-<ul class="simple">
-<li><p>Komplexere Planung des Gestaltungsrasters</p></li>
-<li><p>Der Designer wird gestalterisch eingeschränkt, da Bereiche flexibel gestaltet werden müssen</p></li>
-<li><p>Die technische Umsetzung ist etwas komplexer als bei einem starren Layout</p></li>
-<li><p>Aufwändige Anpassung der Seiteninhalte</p></li>
-</ul>
+    </div>
 
-<div data-childcomponent="fluid_layout_demo" class="runestone explainer ac_section alert alert-warning">
-
-<textarea data-component="activecode" id=fluid_layout_demo data-lang="htmlmixed" 
-      data-timelimit=25000    
-    data-audio=''     
-          >
-&lt;!doctype html&gt;
-&lt;html&gt;
-&lt;head&gt;
-&lt;meta charset=&quot;UTF-8&quot;&gt;
-&lt;title&gt;Beispiel für ein fluid Layout&lt;/title&gt;
-&lt;style type=&quot;text/css&quot;&gt;
-#container {
-    margin: 0 auto;
-    width: 100%;
-}
-
-header {
-    width: 100%;
-    height: 100px;
-    margin: 0 0 20px 0;
-    float: left;
-    background: #666;
-}
-
-#content {
-    width: 75%;
-    height: 500px;
-    margin: 0 2% 0 0;
-    float: left;
-    background: #CCC;
-}
-
-aside {
-    width: 23%;
-    height: 500px;
-    float: left;
-    background: #666;
-}
-&lt;/style&gt;
-&lt;/head&gt;
-
-&lt;body&gt;
-&lt;div id=&quot;container&quot;&gt;
-&lt;header&gt;Header&lt;/header&gt;
-&lt;div id=&quot;content&quot;&gt;Content&lt;/div&gt;
-&lt;aside&gt;Sidebar&lt;/aside&gt;
-&lt;/div&gt;
-&lt;/body&gt;
-&lt;/html&gt;
-</textarea>
-</div>
-</div>
-<div class="section" id="elastic-layout-elastisches-layout">
-<h2>Elastic Layout (elastisches Layout)<a class="headerlink" href="#elastic-layout-elastisches-layout" title="Permalink to this headline">¶</a></h2>
-<img alt="_images/layout_elastic.png" class="align-right" src="_images/layout_elastic.png" />
-<p>Bei einem elastic Layout sind die Seitenelemente sowohl in der Breite, als auch in der Höhe variabel. Das Design skaliert sich proportional zur Größe des Browserfensters; das Gestaltungsraster wird so aufgebaut, dass Spalten und Zeilen auf Prozentwerten, auf em oder neuerdings rem basieren. Technisch und gestalterisch ist dieser Layouttyp am komplexesten und daher wohl auch am seltensten. Grafiken und Seiteninhalte müssen extrem flexibel sein. Das Layout lässt sich nicht 1:1 in einem Layoutprogramm umsetzen, der Webdesigner muss also genau wissen wie sich die Elemente verhalten, wenn das Browserfenster sich verändert. Auch der Einsatz von Pixelgrafiken kann evtl. zu Problemen führen.</p>
-<p>Ein elastic Design bietet sich besonders dann an, wenn ein Layout den Bildschirm immer vollständig ausfüllen soll, ohne dass die Seite gescrolled werden muss. Dieser Layouttyp wird häufig bei Websites mit großen Foto- oder Videoelementen verwendet. Architektur-Websites, Microsites für Kinofilme oder Videospiele sind einige typische Beispiele. Häufig werden nur wenige Inhalte abgebildet.</p>
-<p><strong>Vorteile</strong></p>
-<ul class="simple">
-<li><p>Perfekte Platznutzung</p></li>
-<li><p>Inhalte werden proportional und so groß wie möglich abgebildet</p></li>
-<li><p>Auf Basis eines elastic Layouts lässt sich ein “echtes” responsive Design entwickeln.</p></li>
-</ul>
-<p><strong>Nachteile</strong></p>
-<ul class="simple">
-<li><p>Komplex in der Planung des Rasters</p></li>
-<li><p>Komplex in der Gestaltung des Layouts</p></li>
-<li><p>Komplex in der technischen Umsetzung</p></li>
-<li><p>Komplex in der Anpassung der Seiteninhalte. Diese sind häufig nicht flexibel genug.</p></li>
-</ul>
-
-<div data-childcomponent="layout_elastic_demo" class="runestone explainer ac_section alert alert-warning">
-
-<textarea data-component="activecode" id=layout_elastic_demo data-lang="htmlmixed" 
-      data-timelimit=25000    
-    data-audio=''     
-          >
-&lt;!doctype html&gt;
-&lt;html&gt;
-&lt;head&gt;
-&lt;meta charset=&quot;UTF-8&quot;&gt;
-&lt;title&gt;Beispiel für ein elastic Layout&lt;/title&gt;
-&lt;style type=&quot;text/css&quot;&gt;
-html, body {
-    height: 98%;
-    margin: 1%;
-}
-
-#container {
-    margin: 0 auto;
-    width: 100%;
-    height: 100%;
-}
-
-header {
-    width: 100%;
-    height: 10%;
-    margin: 0 0 2% 0;
-    background: #666;
-}
-
-#content {
-    width: 75%;
-    height: 80%;
-    margin: 0 2% 0 0;
-    float: left;
-    background: #CCC;
-}
-
-aside {
-    width: 23%;
-    height: 80%;
-    float: left;
-    background: #666;
-}
-&lt;/style&gt;
-&lt;/head&gt;
-
-&lt;body&gt;
-&lt;div id=&quot;container&quot;&gt;
-&lt;header&gt;Header&lt;/header&gt;
-&lt;div id=&quot;content&quot;&gt;Content&lt;/div&gt;
-&lt;aside&gt;Sidebar&lt;/aside&gt;
-&lt;/div&gt;
-&lt;/body&gt;
-&lt;/html&gt;
-</textarea>
-</div>
-<p>Für weitere Unterscheidungen siehe auch <a class="reference external" href="https://blog.kulturbanause.de/2012/11/adaptive-website-vs-responsive-website/">https://blog.kulturbanause.de/2012/11/adaptive-website-vs-responsive-website/</a></p>
-</div>
 </div>
 
 
   
       
-  <li id="relations-prev" class="navLink" title='Previous Section - Arbeitsauftrag Layout-Systeme' data-toggle="tooltip">
-    <a href="css_layout_einstieg_aufgabe.html" >
+  <li id="relations-prev" class="navLink" title='Previous Section - Aufgabe zu GRID-System' data-toggle="tooltip">
+    <a href="css_grid_aufgabe.html" >
         <div style="background-color: white; border-style:solid; border-color:lightgrey; border-width:2px; width:100px; height:50px">            
             <i class='prevNav glyphicon glyphicon-chevron-left' style="top:50%; transform:translateY(-50%)translateX(-50%); left: 50%;"></i>
         </div>
     </a>
   </li>
-  <a class="navLinkBg" id="navLinkBgLeft"  href="css_layout_einstieg_aufgabe.html" ></a>
+  <a class="navLinkBg" id="navLinkBgLeft"  href="css_grid_aufgabe.html" ></a>
   
-  <li id="relations-next" class="navLink" title='Next Section - CSS - Grid-Systeme' data-toggle="tooltip" >
-    <a href="css_gestaltungsraster.html" >
+  <li id="relations-next" class="navLink" title='Next Section - Fragen zu CSS' data-toggle="tooltip" >
+    <a href="css_quizzes.html" >
       <div style="background-color: white; border-style:solid; border-color:lightgrey; border-width:2px; width:100px; height:50px">            
           <i id="relationsNextIcon" class='nextNav glyphicon glyphicon-chevron-right' style="top:50%; transform:translateY(-50%)translateX(-50%); left: 50%;"></i>
       </div>
     </a>
   </li>
-  <a class="navLinkBg navLink" id="navLinkBgRight" href="css_gestaltungsraster.html" >Next Section - CSS - Grid-Systeme</a>
+  <a class="navLinkBg navLink" id="navLinkBgRight" href="css_quizzes.html" >Next Section - Fragen zu CSS</a>
 
 <script type="text/javascript">
 

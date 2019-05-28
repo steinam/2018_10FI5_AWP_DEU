@@ -12,6 +12,7 @@ CSS Layouts
    css_media_query_beispiel.rst
    css_grid_layout.rst
    css_grid_aufgabe.rst
+   css_grid_aufgabe_2.rst
 
 ..   css_gestaltungsraster.rst
 
