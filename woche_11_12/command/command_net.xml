@@ -1,0 +1,114 @@
+<ConversionLog>
+    <Settings>
+        <Setting
+            Name = "LogFile"
+            Value = "command_net.xml"
+        />
+        <Setting
+            Name = "ProjectName"
+            Value = "command_net"
+        />
+        <Setting
+            Name = "OutputDir"
+            Value = "E:\unterricht\java3\12fi_appliedOOP\Design Patterns\command"
+        />
+        <Setting
+            Name = "ProjectPath"
+            Value = "E:\unterricht\java3\headfirst\command\remote"
+        />
+    </Settings>
+    <File
+        OldPath = "E:\unterricht\java3\headfirst\command\remote\CeilingFan.java"
+        NewPath = "E:\unterricht\java3\12fi_appliedOOP\Design Patterns\command\CeilingFan.cs"
+    />
+    <File
+        OldPath = "E:\unterricht\java3\headfirst\command\remote\CeilingFanOffCommand.java"
+        NewPath = "E:\unterricht\java3\12fi_appliedOOP\Design Patterns\command\CeilingFanOffCommand.cs"
+    />
+    <File
+        OldPath = "E:\unterricht\java3\headfirst\command\remote\CeilingFanOnCommand.java"
+        NewPath = "E:\unterricht\java3\12fi_appliedOOP\Design Patterns\command\CeilingFanOnCommand.cs"
+    />
+    <File
+        OldPath = "E:\unterricht\java3\headfirst\command\remote\Command.java"
+        NewPath = "E:\unterricht\java3\12fi_appliedOOP\Design Patterns\command\Command.cs"
+    />
+    <File
+        OldPath = "E:\unterricht\java3\headfirst\command\remote\GarageDoor.java"
+        NewPath = "E:\unterricht\java3\12fi_appliedOOP\Design Patterns\command\GarageDoor.cs"
+    />
+    <File
+        OldPath = "E:\unterricht\java3\headfirst\command\remote\GarageDoorDownCommand.java"
+        NewPath = "E:\unterricht\java3\12fi_appliedOOP\Design Patterns\command\GarageDoorDownCommand.cs"
+    />
+    <File
+        OldPath = "E:\unterricht\java3\headfirst\command\remote\GarageDoorUpCommand.java"
+        NewPath = "E:\unterricht\java3\12fi_appliedOOP\Design Patterns\command\GarageDoorUpCommand.cs"
+    />
+    <File
+        OldPath = "E:\unterricht\java3\headfirst\command\remote\Hottub.java"
+        NewPath = "E:\unterricht\java3\12fi_appliedOOP\Design Patterns\command\Hottub.cs"
+    />
+    <File
+        OldPath = "E:\unterricht\java3\headfirst\command\remote\HottubOffCommand.java"
+        NewPath = "E:\unterricht\java3\12fi_appliedOOP\Design Patterns\command\HottubOffCommand.cs"
+    />
+    <File
+        OldPath = "E:\unterricht\java3\headfirst\command\remote\HottubOnCommand.java"
+        NewPath = "E:\unterricht\java3\12fi_appliedOOP\Design Patterns\command\HottubOnCommand.cs"
+    />
+    <File
+        OldPath = "E:\unterricht\java3\headfirst\command\remote\Light.java"
+        NewPath = "E:\unterricht\java3\12fi_appliedOOP\Design Patterns\command\Light.cs"
+    />
+    <File
+        OldPath = "E:\unterricht\java3\headfirst\command\remote\LightOffCommand.java"
+        NewPath = "E:\unterricht\java3\12fi_appliedOOP\Design Patterns\command\LightOffCommand.cs"
+    />
+    <File
+        OldPath = "E:\unterricht\java3\headfirst\command\remote\LightOnCommand.java"
+        NewPath = "E:\unterricht\java3\12fi_appliedOOP\Design Patterns\command\LightOnCommand.cs"
+    />
+    <File
+        OldPath = "E:\unterricht\java3\headfirst\command\remote\LivingroomLightOffCommand.java"
+        NewPath = "E:\unterricht\java3\12fi_appliedOOP\Design Patterns\command\LivingroomLightOffCommand.cs"
+    />
+    <File
+        OldPath = "E:\unterricht\java3\headfirst\command\remote\LivingroomLightOnCommand.java"
+        NewPath = "E:\unterricht\java3\12fi_appliedOOP\Design Patterns\command\LivingroomLightOnCommand.cs"
+    />
+    <File
+        OldPath = "E:\unterricht\java3\headfirst\command\remote\NoCommand.java"
+        NewPath = "E:\unterricht\java3\12fi_appliedOOP\Design Patterns\command\NoCommand.cs"
+    />
+    <File
+        OldPath = "E:\unterricht\java3\headfirst\command\remote\RemoteControl.java"
+        NewPath = "E:\unterricht\java3\12fi_appliedOOP\Design Patterns\command\RemoteControl.cs"
+    />
+    <File
+        OldPath = "E:\unterricht\java3\headfirst\command\remote\RemoteLoader.java"
+        NewPath = "E:\unterricht\java3\12fi_appliedOOP\Design Patterns\command\RemoteLoader.cs"
+    />
+    <File
+        OldPath = "E:\unterricht\java3\headfirst\command\remote\Stereo.java"
+        NewPath = "E:\unterricht\java3\12fi_appliedOOP\Design Patterns\command\Stereo.cs"
+    />
+    <File
+        OldPath = "E:\unterricht\java3\headfirst\command\remote\StereoOffCommand.java"
+        NewPath = "E:\unterricht\java3\12fi_appliedOOP\Design Patterns\command\StereoOffCommand.cs"
+    />
+    <File
+        OldPath = "E:\unterricht\java3\headfirst\command\remote\StereoOnWithCDCommand.java"
+        NewPath = "E:\unterricht\java3\12fi_appliedOOP\Design Patterns\command\StereoOnWithCDCommand.cs"
+    />
+    <File
+        OldPath = "E:\unterricht\java3\headfirst\command\remote\TV.java"
+        NewPath = "E:\unterricht\java3\12fi_appliedOOP\Design Patterns\command\TV.cs"
+    />
+    <Issue
+        Type = "Global Warning"
+        Number = "4007"
+        Severity = "2"
+    >Die Startklasse &quot;&quot; ist in dem Projekt nicht vorhanden.</Issue>
+</ConversionLog>
+
